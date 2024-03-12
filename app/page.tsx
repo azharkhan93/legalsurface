@@ -1,17 +1,5 @@
-import { Box, Text } from "@/components/styled";
+import { Box, Text } from "@/components";
 
 export default function Home() {
-  return (
-    <Box
-      height={["100px", "300px"]}
-      flexDirection={["row", "column"]}
-      gap={"header"}
-    >
-      <Box>
-        <Text>this is a text element</Text>
-      </Box>
-      <Box>2</Box>
-      <Box>3</Box>
-    </Box>
-  );
+  return <Box height={"100%"} width={"100%"} bg="secondary"></Box>;
 }
