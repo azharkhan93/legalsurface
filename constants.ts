@@ -1,27 +1,52 @@
+import {
+  faBinoculars,
+  faBuildingColumns,
+  faChartLine,
+  faChartSimple,
+  faGear,
+  faSliders,
+} from "@fortawesome/free-solid-svg-icons";
+
 export const SideBarData = [
   {
     heading: "APP DATASETS",
     navLink: [
-      { label: "Overview", icon: "/assets/icons/next.svg", href: "/" },
-      { label: "Edu. Institutes", icon: "/assets/icons/vercel.svg", href: "/" },
+      { label: "Overview", icon: faBinoculars, href: "/dashboard/overview" },
+      {
+        label: "Edu. Institutes",
+        icon: faBuildingColumns,
+        href: "/dashboard/edu-institutes",
+      },
     ],
   },
   {
     heading: "APP CONFIG",
     navLink: [
-      { label: "Listing Settings", icon: "/assets/icons/next.svg", href: "/" },
+      {
+        label: "Listing Settings",
+        icon: faSliders,
+        href: "/dashboard/listing-settings",
+      },
       {
         label: "General Settings",
-        icon: "/assets/icons/vercel.svg",
-        href: "/",
+        icon: faGear,
+        href: "/dashboard/general-settings",
       },
     ],
   },
   {
     heading: "STATS",
     navLink: [
-      { label: "User Stats", icon: "/assets/icons/next.svg", href: "/" },
-      { label: "Platform Stats", icon: "/assets/icons/vercel.svg", href: "/" },
+      {
+        label: "User Stats",
+        icon: faChartSimple,
+        href: "/dashboard/user-stats",
+      },
+      {
+        label: "Platform Stats",
+        icon: faChartLine,
+        href: "/dashboard/platform-stats",
+      },
     ],
   },
 ];

@@ -1,6 +1,7 @@
 export const BASE_FONTS: Record<AppThemeFonts, string> = {
-  headings: "",
-  body: "",
+  heading: "DMSansBold",
+  subHeading: "DMSansSemiBold",
+  body: "DMSansRegular",
 };
 
-export type AppThemeFonts = "headings" | "body";
+export type AppThemeFonts = "heading" | "subHeading" | "body";

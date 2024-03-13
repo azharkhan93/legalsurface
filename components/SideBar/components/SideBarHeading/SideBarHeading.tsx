@@ -7,7 +7,9 @@ type SideBarHeading = {
 export const SideBarHeading: React.FC<SideBarHeading> = ({ heading }) => {
   return (
     <Box width={"90%"}>
-      <Text ml={"xxxxl"}>{heading}</Text>
+      <Text color="grey" ml={"xxxl"} size={11}>
+        {heading}
+      </Text>
     </Box>
   );
 };
