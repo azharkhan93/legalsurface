@@ -1,4 +1,6 @@
-"use client";
+
+"use client"
+
 import { AppButtonVariants } from "@/theme";
 import { StyledWithConfig } from "@/utils";
 import styled from "styled-components";
