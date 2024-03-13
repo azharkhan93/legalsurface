@@ -45,8 +45,8 @@ export const Button = styled.button.withConfig(StyledWithConfig)<ButtonProps>`
   ${variant({
     scale: "buttonVariants", // This should match the key in your themep
   })}
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(105%);
-  }
+  } */
 `;
