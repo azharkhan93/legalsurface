@@ -23,9 +23,12 @@ import {
   compose,
   shadow,
   ShadowProps,
+  backgroundColor,
+  BackgroundColorProps,
 } from "styled-system";
 import { StyledWithConfig } from "@/utils/styled";
 import {
+  BASE_COLORS,
   ThemedBorderRadiusProps,
   ThemedColorProps,
   ThemedPositionProps,
@@ -62,6 +65,7 @@ export type BoxProps = ThemedSpaceProps &
   BorderProps &
   FlexboxProps &
   PositionProps &
+  BackgroundColorProps &
   ShadowProps & {
     gap?: string | number | string[] | number[];
   };
@@ -78,4 +82,11 @@ export const CenterBox = styled(Box)`
   justify-content: center;
   align-items: center;
   ${flexbox}
+`;
+
+export const HoverBox = styled(CenterBox)<BoxProps>`
+  &:hover {
+    background-color: ${BASE_COLORS.greyLight};
+  }
+  cursor: pointer;
 `;

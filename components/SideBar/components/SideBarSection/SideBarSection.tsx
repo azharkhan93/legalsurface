@@ -1,28 +1,34 @@
 import { Column } from "@/components";
 import { SideBarHeading } from "../SideBarHeading";
 import { SideBarNavLink } from "../SideBarNavLink";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 type NavItem = {
   label: string;
-  icon: string;
+  icon: IconProp;
   href: string;
 };
 
 type SideBarSection = {
   heading: string;
-  navLinkData: NavItem[];
+  navLinks: NavItem[];
 };
 
 export const SideBarSection: React.FC<SideBarSection> = ({
   heading,
-  navLinkData,
+  navLinks,
 }) => {
   return (
-    <Column gap={"xl"}>
+    <Column gap={"m"}>
       <SideBarHeading heading={heading} />
       <Column gap={""}>
-        {navLinkData.map((data, index) => (
-          <SideBarNavLink icon={data.icon} label={data.label} />
+        {navLinks.map((link, index) => (
+          <SideBarNavLink
+            key={index}
+            icon={link.icon}
+            label={link.label}
+            href={link.href}
+          />
         ))}
       </Column>
     </Column>
