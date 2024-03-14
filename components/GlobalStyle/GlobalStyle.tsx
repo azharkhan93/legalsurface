@@ -26,4 +26,9 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-display: swap;
     }
+
+* {
+    box-sizing: border-box;
+}
+
 `;
