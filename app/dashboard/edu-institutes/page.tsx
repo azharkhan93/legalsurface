@@ -8,7 +8,7 @@ export default function Page() {
     <CenterBox 
         height={"100%"} bg={"greyLight"} overflow = {"auto"} px= {"xxxl"}  >
 
-        <CRUD updateComponent={Test} modalWidth="" columnWidth={""} />
+        <CRUD updateComponent={Test} modalWidth="40%" columnWidth={"20%"} />
         
         </CenterBox>
   );
