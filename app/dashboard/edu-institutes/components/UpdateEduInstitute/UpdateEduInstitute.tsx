@@ -1,11 +1,7 @@
-import React from 'react'
-
 export const UpdateEduInstitute = () => {
-  return null
-}
+  return null;
+};
 
-
-
-// it should have a form 
+// it should have a form
 
 // it should always accept a accept a edit mode as a prop

@@ -1,17 +1,11 @@
 "use client";
-import { CenterBox, CRUD ,Text } from "@/components";
+import { Box, CRUD, Text } from "@/components";
 import { Test } from "@/components/TestComponent/Test";
-
 
 export default function Page() {
   return (
-
-    <CenterBox 
-        height={"100%"} bg={"greyLight"} overflow = {"auto"} px= {"xxxl"}  >
-
-    
-        <CRUD updateComponent={Test} modalWidth={""} columnWidth={""} />
-        </CenterBox>
-
+    <Box height={"100%"} bg={"greyLight"} overflow={"auto"} p={"xxxl"}>
+      <CRUD updateComponent={Test} modalWidth="40%" columnWidth={"20%"} />
+    </Box>
   );
 }
