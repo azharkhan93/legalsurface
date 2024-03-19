@@ -1,3 +1,4 @@
+
 "use client"
 import { ActionBar } from "./components/ActionBar"
 import { Test } from "../TestComponent/Test";
@@ -31,4 +32,5 @@ export const CRUD: React.FC<CRUDProps> = ({updateComponent, modalWidth, columnWi
     )
        
 }
+
 

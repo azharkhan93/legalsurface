@@ -1,5 +1,10 @@
-"use client"
-import { ThemedColorProps, ThemedSpaceProps } from "@/theme";
+"use client";
+import {
+  BASE_COLORS,
+  BASE_SPACING,
+  ThemedColorProps,
+  ThemedSpaceProps,
+} from "@/theme";
 import { StyledWithConfig } from "@/utils/styled";
 import styled from "styled-components";
 import {
@@ -24,8 +29,9 @@ export const StyledInputBox = styled.input.withConfig(
 )<InputBoxProps>`
   width: 100%;
   outline: none;
-  font-family: galano;
+  font-family: DMSansRegular;
   font-size: 15px;
+  padding-left: ${BASE_SPACING.l}px;
 
   /* &::-webkit-file-upload-button {
     background-color: #3c65f5;
@@ -39,12 +45,11 @@ export const StyledInputBox = styled.input.withConfig(
   } */
   ${border}
   ${background}
-    ${layout}
-    ${space}
-    ${color}
-    &::placeholder {
-    padding-left: 25px;
-    color: #d5d2d2;
+  ${layout}
+  ${space}
+  ${color}
+  &::placeholder {
+    color: ${BASE_COLORS.greyish};
     font-family: galano;
     font-size: 15px;
   }

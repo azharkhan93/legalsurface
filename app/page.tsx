@@ -1,5 +1,9 @@
-import { Box, Text } from "@/components";
+import { LoginPage } from "@/components";
 
 export default function Home() {
-  return <Box height={"100%"} width={"100%"} bg={"grey"}></Box>;
+
+  
+
+  return <LoginPage />;
+
 }

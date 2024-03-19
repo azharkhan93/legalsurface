@@ -26,7 +26,15 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-display: swap;
     }
+
     * {
     font-family: "DMSansRegular"; 
     }
+
+
+* {
+    box-sizing: border-box;
+}
+
+
 `;

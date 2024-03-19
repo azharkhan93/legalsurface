@@ -1,48 +1,21 @@
 "use client";
-import {
-  Box,
-  Column,
-  GlobalStyle,
-  Row,
-  SideBar,
-  StyledSideBar,
-  TopBar,
-} from "@/components";
+import { Box, GlobalStyle } from "@/components";
 import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
-import { useState } from "react";
-import { StyledTopBar } from "@/components/styled/StyledTopBar";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [sideBarWidth, setSideBarWidth] = useState("20%");
-  const [isOpen, setIsOpen] = useState(true);
-  const handleSideBarToggle = () => {
-    setSideBarWidth(sideBarWidth === "20%" ? "0%" : "20%");
-    setIsOpen(!isOpen);
-  };
-
   return (
     <html lang="en">
       <body>
         <GlobalStyle />
         <AppThemeProvider>
-          <Row width={"100vw"} height={"100vh"} gap={"m"}>
-            <StyledSideBar width={sideBarWidth} height={"100%"}>
-              <SideBar handleCollapse={handleSideBarToggle} isOpen={isOpen} />
-            </StyledSideBar>
-            <Column width={"100%"}>
-              <StyledTopBar>
-                <TopBar handleCollapse={handleSideBarToggle} isOpen={isOpen} />
-              </StyledTopBar>
-              <Box width={"100%"} height={"100%"}>
-                {children}
-              </Box>
-            </Column>
-          </Row>
+          <Box width={"100vw"} height={"100vh"}>
+            {children}
+          </Box>
         </AppThemeProvider>
       </body>
     </html>

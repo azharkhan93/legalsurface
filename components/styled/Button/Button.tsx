@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 
 import { AppButtonVariants } from "@/theme";
 import { StyledWithConfig } from "@/utils";

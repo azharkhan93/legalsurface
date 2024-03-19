@@ -1,11 +1,11 @@
-
-"use client"
+"use client";
 
 import { CenterBox, CRUD } from "@/components";
 import { Test } from "@/components/TestComponent/Test";
 
 
 export default function Home() {
+
    
     return (
         <CenterBox 
@@ -16,5 +16,6 @@ export default function Home() {
 
     )
 }
+
 
 
