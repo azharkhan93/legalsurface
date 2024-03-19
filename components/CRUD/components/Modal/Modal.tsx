@@ -1,15 +1,19 @@
 // "use client"
 import React from 'react';
 import { Box, Button, CenterBox, Text } from "@/components/styled";
-import {  faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { BASE_COLORS } from "@/theme";
 
 interface ModalProps {
     onClose: () => void;
-    content: React.ReactNode;
+    content: React.FC<any>;
+    width: string;
 }
-
-export const Modal: React.FC<ModalProps> = ({ onClose, content }) => {
+export const Modal: React.FC<ModalProps> = ({ onClose, content, width }) => {
+    
+    console.log(content)
+    const Content = content;
     return (
         <CenterBox
             width={"100%"}
@@ -18,42 +22,36 @@ export const Modal: React.FC<ModalProps> = ({ onClose, content }) => {
             top={"0"}
             left={"0"}
             bg={"modalOverlayBg"}
-
-            // rgba(0, 0, 0, 0.3)
+            
         >
+
+            
             <Box
-                bg={"white"}
-                height={"80vh"}
-                width={"30vw"}
-                borderRadius={"s"}
+                bg={"modalBg"}
+                height={"85%"}
+                width={width || "200px"}
+                borderRadius={"xs"}
                 alignItems={"center"}
                 justifyContent={"space-between"}
-                position={"relative"} 
+                position={"relative"}
+                boxShadow={BASE_COLORS.modalShadow}
+               
+                
             >
                 <Box
-        padding={"m"}
-        position={"absolute"} 
-        right={0}  
-    >
-        <FontAwesomeIcon
-            icon={faTimes}
-            style={{ cursor: 'pointer', fontSize: '24px' }}
-            onClick={onClose}
-        />
-    </Box>
-                
-                {content}
-                <Button
-                    py={"s"}
-                    px={"xl"}
-                    bg={"secondary"}
-                    color={"white"}
-                    borderRadius={"xl"}
-                    border={"none"}
-                    onClick={onClose}
+                    padding={"m"}
+                    position={"absolute"}
+                    right={0}
                 >
-                    Close Modal
-                </Button>
+                    <FontAwesomeIcon
+                        icon={faTimes}
+                        style={{ cursor: 'pointer', fontSize: '24px' }}
+                        onClick={onClose}
+                    />
+                </Box>
+
+                <Content/>
+
             </Box>
         </CenterBox>
     );

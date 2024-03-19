@@ -1,16 +1,22 @@
 "use client"
 import React, { useState } from 'react';
-import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faSearch} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Box, StyledInputBox, Button } from "@/components";
+import { Box, StyledInputBox, } from "@/components";
 import { Modal } from '../Modal';
+import { BASE_COLORS } from "@/theme";
+import { ActionBarButton } from '../ActionBarButton';
+
+
 
 interface ActionBarProps {
-    updateComponent: React.ReactNode;
+    updateComponent: React.FC;
+    width: string;
 }
 
 
-export const ActionBar: React.FC<ActionBarProps> = ({updateComponent}) => {
+
+export const ActionBar: React.FC<ActionBarProps> = ({ updateComponent, width }) => {
     const [isSearchIconVisible, setSearchIconVisibility] = useState(true);
     const [isModalVisible, setModalVisibility] = useState(false);
 
@@ -21,7 +27,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({updateComponent}) => {
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchIconVisibility(e.target.value === '');
     };
-    
+
 
     const handleAddNewClick = () => {
         setModalVisibility(true);
@@ -32,44 +38,43 @@ export const ActionBar: React.FC<ActionBarProps> = ({updateComponent}) => {
     };
 
     return (
-        <Box
-            height={"8%"}
-            width={"98%"}
-            bg={"secondary"}
-            alignItems={"center"}
-            justifyContent={"space-between"}
-            flexDirection={"row"}
-            borderRadius={"xs"}
-            mx={"m"}
-            px={"l"}
-        >
-            <Box alignItems={"center"} justifyContent={"center"} position={"relative"}>
-                {isSearchIconVisible && <FontAwesomeIcon icon={faSearch} style={{ position: 'absolute', left: '0' }} />}
-                <StyledInputBox
-                    borderRadius={"circle"}
-                    border={"none"}
-                    placeholder={"Type something"}
-                    py={"m"}
-                    px={"m"}
-                    onFocus={handleInputFocus}
-                    onBlur={() => setSearchIconVisibility(true)}
-                    onChange={handleInputChange}
-                />
+        <>
+            <Box
+                py={"m"}
+                width={"98%"}
+                bg={"white"}
+                alignItems={"center"}
+                justifyContent={"space-between"}
+                flexDirection={"row"}
+                borderRadius={"xs"}
+                mx={"m"}
+                px={"l"}
+                boxShadow={BASE_COLORS.shadow}
+
+
+            >
+                <Box alignItems={"center"} justifyContent={"center"} position={"relative"}>
+                    {isSearchIconVisible && <FontAwesomeIcon icon={faSearch} style={{ position: 'absolute', left: '0' }} />}
+                    <StyledInputBox
+                        bg={"greyLight"}
+                        borderRadius={"circle"}
+                        border={"none"}
+                        placeholder={"Type something"}
+                        py={"m"}
+                        px={"m"}
+                        onFocus={handleInputFocus}
+                        onBlur={() => setSearchIconVisibility(true)}
+                        onChange={handleInputChange} />
+                </Box>
+
+                <ActionBarButton onClick={handleAddNewClick}>
+                    Add New
+                </ActionBarButton>
+
+
+                {isModalVisible && <Modal onClose={handleCloseModal} content={updateComponent} width={width} />}
             </Box>
 
-            <Button
-                variant={"primary"}
-                color={"white"}
-                height={"5vh"}
-                width={"11vw"}
-                onClick={handleAddNewClick}
-            >
-                Add New
-                <FontAwesomeIcon icon={faPlus} style={{ marginLeft: '6px' }} />
-            </Button>
-
-
-            {isModalVisible && <Modal onClose={handleCloseModal} content={updateComponent} />}
-        </Box>
+        </>
     );
 };

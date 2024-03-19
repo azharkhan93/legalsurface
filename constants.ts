@@ -50,3 +50,11 @@ export const SideBarData = [
     ],
   },
 ];
+
+
+export const data = [
+  { name: "Helsinki", website: "helsinki.edu", address: "address", status: "undefined", dateTime: "20 Dec, 2023 - 13:41:13" },
+  { name: "Helsinki", website: "helsinki.edu", address: "address", status: "undefined", dateTime: "20 Dec, 2023 - 13:41:13" },
+];
+
+
