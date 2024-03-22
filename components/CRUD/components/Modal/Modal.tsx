@@ -1,18 +1,17 @@
 // "use client"
 import React from 'react';
-import { Box, Button, CenterBox, Text } from "@/components/styled";
+import { Box, CenterBox,  } from "@/components/styled";
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BASE_COLORS } from "@/theme";
 
 interface ModalProps {
     onClose: () => void;
-    content: React.FC<any>;
+    content: React.FC;
     width: string;
 }
 export const Modal: React.FC<ModalProps> = ({ onClose, content, width }) => {
     
-    console.log(content)
     const Content = content;
     return (
         <CenterBox
@@ -24,8 +23,6 @@ export const Modal: React.FC<ModalProps> = ({ onClose, content, width }) => {
             bg={"modalOverlayBg"}
             
         >
-
-            
             <Box
                 bg={"modalBg"}
                 height={"85%"}
@@ -38,6 +35,7 @@ export const Modal: React.FC<ModalProps> = ({ onClose, content, width }) => {
                
                 
             >
+                
                 <Box
                     padding={"m"}
                     position={"absolute"}
@@ -48,7 +46,10 @@ export const Modal: React.FC<ModalProps> = ({ onClose, content, width }) => {
                         style={{ cursor: 'pointer', fontSize: '24px' }}
                         onClick={onClose}
                     />
-                </Box>
+                </Box> 
+
+                
+                
 
                 <Content/>
 

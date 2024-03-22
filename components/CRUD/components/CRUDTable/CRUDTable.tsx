@@ -1,5 +1,6 @@
 import { Box } from "@/components/styled";
 import { BASE_COLORS } from "@/theme";
+import { PaginationBar } from "../PaginationBar";
 import { CRUDTableHeadingBar } from "./components/CRUDTableHeadingBar";
 import { CrudTableRowItems } from "./components/CrudTableRowItems";
 
@@ -14,9 +15,12 @@ export interface DataItem {
 interface CRUDTableProps {
   data: DataItem[];
   columnWidth: string;
+  openUpdateModal: () => void; 
 }
 
-export const CRUDTable: React.FC<CRUDTableProps> = ({ data, columnWidth }) => {
+export const CRUDTable: React.FC<CRUDTableProps> = ({ data, columnWidth, openUpdateModal }) => {
+ 
+
   return (
     <Box
       bg={"modalBg"}
@@ -26,9 +30,11 @@ export const CRUDTable: React.FC<CRUDTableProps> = ({ data, columnWidth }) => {
       borderRadius={"xs"}
       boxShadow={BASE_COLORS.shadow}
     >
+      <PaginationBar />
       <CRUDTableHeadingBar item={data} columnWidth={columnWidth} />
 
-      <CrudTableRowItems data={data} columnWidth={columnWidth} />
+      <CrudTableRowItems openUpdateModal={openUpdateModal} data={data} columnWidth={columnWidth}   />
     </Box>
   );
 };
+

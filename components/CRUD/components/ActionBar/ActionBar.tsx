@@ -1,23 +1,27 @@
-"use client";
+// "use client";
 import React, { useState } from "react";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, StyledInputBox } from "@/components";
-import { Modal } from "../Modal";
 import { BASE_COLORS } from "@/theme";
 import { ActionBarButton } from "../ActionBarButton";
 
 interface ActionBarProps {
   updateComponent: React.FC;
   width: string;
+  onAddNewClick: () => void;
+   onCloseModal: () => void;
+
 }
 
 export const ActionBar: React.FC<ActionBarProps> = ({
-  updateComponent,
-  width,
+
+  onCloseModal,
+  onAddNewClick,
+  
+
 }) => {
   const [isSearchIconVisible, setSearchIconVisibility] = useState(true);
-  const [isModalVisible, setModalVisibility] = useState(false);
 
   const handleInputFocus = () => {
     setSearchIconVisibility(false);
@@ -27,13 +31,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({
     setSearchIconVisibility(e.target.value === "");
   };
 
-  const handleAddNewClick = () => {
-    setModalVisibility(true);
-  };
 
-  const handleCloseModal = () => {
-    setModalVisibility(false);
-  };
 
   return (
     <>
@@ -57,14 +55,14 @@ export const ActionBar: React.FC<ActionBarProps> = ({
           {isSearchIconVisible && (
             <FontAwesomeIcon
               icon={faSearch}
-              style={{ position: "absolute", left: "0" }}
+              style={{ position: "absolute", right: "0", marginRight: "15px" }}
             />
           )}
           <StyledInputBox
             bg={"greyLight"}
             borderRadius={"circle"}
             border={"none"}
-            placeholder={"Type something"}
+            placeholder={"Search Anything"}
             py={"m"}
             px={"m"}
             onFocus={handleInputFocus}
@@ -73,15 +71,8 @@ export const ActionBar: React.FC<ActionBarProps> = ({
           />
         </Box>
 
-        <ActionBarButton onClick={handleAddNewClick}>Add New</ActionBarButton>
+        <ActionBarButton onClick={onAddNewClick}>Add New</ActionBarButton>
 
-        {isModalVisible && (
-          <Modal
-            onClose={handleCloseModal}
-            content={updateComponent}
-            width={width}
-          />
-        )}
       </Box>
     </>
   );
