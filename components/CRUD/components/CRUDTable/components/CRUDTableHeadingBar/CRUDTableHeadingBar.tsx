@@ -38,7 +38,6 @@ export const CRUDTableHeadingBar: React.FC<CrudTableHeadingProps> = ({
             height={30}
           />
         </CenterBox>
-
         <Row width={"100%"} justifyContent={"center"} px={"l"}>
           {capitalizedKeys.map((key, index) => (
             <Box justifyContent={"center"} width={columnWidth} key={index}>
@@ -54,7 +53,6 @@ export const CRUDTableHeadingBar: React.FC<CrudTableHeadingProps> = ({
             </Box>
           ))}
         </Row>
-
         <CenterBox
           bg={"greyLight"}
           width={"25px"}

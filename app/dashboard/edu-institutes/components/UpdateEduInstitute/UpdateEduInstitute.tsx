@@ -108,6 +108,6 @@ export const UpdateEduInstitute: React.FC<UpdateFormValues> = ({
   );
 };
 
-// it should have a form
+// it should have a form use formik
 
 // it should always accept a accept a edit mode as a prop

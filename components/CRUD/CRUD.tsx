@@ -3,6 +3,8 @@ import { ActionBar } from "./components/ActionBar";
 import { RowData } from "@/constants";
 import { CRUDTable } from "./components/CRUDTable";
 import { Box } from "../styled";
+import { useState } from "react";
+import { Modal } from "./components/Modal";
 
 export type RowData = {
   [key: string]: string | undefined;
@@ -21,10 +23,35 @@ export const CRUD: React.FC<CRUDProps> = ({
   columnWidth,
   data,
 }) => {
+  const [isModalVisible, setModalVisibility] = useState(false);
+  const handleAddNewClick = () => {
+    setModalVisibility(true);
+  };
+  const handleCloseModal = () => {
+    setModalVisibility(false);
+  };
   return (
     <Box alignItems={"center"}>
-      <ActionBar updateComponent={updateComponent} width={modalWidth} />
-      <CRUDTable data={data} columnWidth={columnWidth} />
+      <ActionBar
+        updateComponent={updateComponent}
+        width={modalWidth}
+        onAddNewClick={handleAddNewClick}
+        onCloseModal={handleCloseModal}
+      />
+
+      {isModalVisible && (
+        <Modal
+          onClose={handleCloseModal}
+          content={updateComponent}
+          width={modalWidth}
+        />
+      )}
+
+      <CRUDTable
+        data={data}
+        columnWidth={columnWidth}
+        openUpdateModal={handleAddNewClick}
+      />
     </Box>
   );
 };

@@ -7,7 +7,7 @@ import { BASE_COLORS } from "@/theme";
 
 interface ModalProps {
   onClose: () => void;
-  content: React.FC<any>;
+  content: React.FC;
   width: string;
 }
 export const Modal: React.FC<ModalProps> = ({ onClose, content, width }) => {
