@@ -1,17 +1,22 @@
-
-import { DataItem } from "../../CRUDTable";
+import { RowData } from "@/components/CRUD";
 import { CrudTableRowItem } from "../CrudTableRowItem ";
 interface CrudTableRowItemsProps {
-  data: DataItem[] 
-  columnWidth: string
+  data: RowData[];
+  columnWidth: string;
 }
 
-export const CrudTableRowItems: React.FC<CrudTableRowItemsProps> = ({ data, columnWidth }) => {
-
+export const CrudTableRowItems: React.FC<CrudTableRowItemsProps> = ({
+  data,
+  columnWidth,
+}) => {
   return (
     <>
-      {data.map((item, index) => (
-        <CrudTableRowItem key={index} item={item} columnWidth = {columnWidth}  />
+      {data.map((rowData, index) => (
+        <CrudTableRowItem
+          key={index}
+          rowItem={rowData}
+          columnWidth={columnWidth}
+        />
       ))}
     </>
   );

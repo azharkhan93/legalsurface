@@ -2,24 +2,17 @@ import { Box } from "@/components/styled";
 import { BASE_COLORS } from "@/theme";
 import { CRUDTableHeadingBar } from "./components/CRUDTableHeadingBar";
 import { CrudTableRowItems } from "./components/CrudTableRowItems";
-
-export interface DataItem {
-  name: string;
-  website: string;
-  address: string;
-  status: string;
-  dateTime: string;
-}
+import { RowData } from "../../CRUD";
 
 interface CRUDTableProps {
-  data: DataItem[];
+  data: RowData[];
   columnWidth: string;
 }
 
 export const CRUDTable: React.FC<CRUDTableProps> = ({ data, columnWidth }) => {
   return (
     <Box
-      bg={"modalBg"}
+      bg={"white"}
       width={"100%"}
       mt={"l"}
       overflow={"hidden"}
@@ -27,7 +20,6 @@ export const CRUDTable: React.FC<CRUDTableProps> = ({ data, columnWidth }) => {
       boxShadow={BASE_COLORS.shadow}
     >
       <CRUDTableHeadingBar item={data} columnWidth={columnWidth} />
-
       <CrudTableRowItems data={data} columnWidth={columnWidth} />
     </Box>
   );

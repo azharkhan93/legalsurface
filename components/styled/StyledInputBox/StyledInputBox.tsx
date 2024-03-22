@@ -16,33 +16,26 @@ import {
   BorderProps,
   LayoutProps,
   color,
+  width,
+  WidthProps,
 } from "styled-system";
 
 type InputBoxProps = BackgroundProps &
   BorderProps &
   LayoutProps &
   ThemedSpaceProps &
-  ThemedColorProps;
+  ThemedColorProps &
+  WidthProps;
 
 export const StyledInputBox = styled.input.withConfig(
   StyledWithConfig
 )<InputBoxProps>`
-  width: 100%;
+  ${width}
+  height: 40px;
   outline: none;
   font-family: DMSansRegular;
   font-size: 15px;
   padding-left: ${BASE_SPACING.l}px;
-
-  /* &::-webkit-file-upload-button {
-    background-color: #3c65f5;
-    color: white;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    margin-right: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-  } */
   ${border}
   ${background}
   ${layout}
@@ -50,7 +43,19 @@ export const StyledInputBox = styled.input.withConfig(
   ${color}
   &::placeholder {
     color: ${BASE_COLORS.greyish};
-    font-family: galano;
+    font-family: DMSansRegular;
     font-size: 15px;
+  }
+  &::-webkit-file-upload-button {
+    background-color: ${BASE_COLORS.primary};
+    color: ${BASE_COLORS.white};
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-right: ${BASE_SPACING.l}px;
+    padding-left: ${BASE_SPACING.l}px;
+    padding-right: ${BASE_SPACING.l}px;
+    content: "";
   }
 `;
