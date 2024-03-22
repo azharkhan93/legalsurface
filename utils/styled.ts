@@ -20,6 +20,7 @@ const acceptedDOMProps = [
   "cursor",
   "dangerouslySetInnerHTML",
   "disabled",
+  "list",
 ];
 export const StyledWithConfig = {
   shouldForwardProp: (prop: string) => {

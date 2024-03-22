@@ -1,18 +1,18 @@
 import React from "react";
 import { CRUDTableHeadingBar } from "../CRUDTableHeadingBar";
 import { Row } from "@/components/styled";
-import { DataItem } from "../../CRUDTable";
+import { RowData } from "@/components/CRUD";
 
 interface CrudHeadingProps {
-    data: DataItem[];
+  data: RowData[];
 }
 
 export const HeadingBarItems: React.FC<CrudHeadingProps> = ({ data }) => {
-    return (
-        <Row bg={"greyLight"}>
-            {data.map((item, index) => (
-                <CRUDTableHeadingBar key={index} item={[item]} columnWidth={""} /> 
-            ))}
-        </Row>
-    );
+  return (
+    <Row bg={"greyLight"}>
+      {data.map((item, index) => (
+        <CRUDTableHeadingBar key={index} item={[item]} columnWidth={""} />
+      ))}
+    </Row>
+  );
 };

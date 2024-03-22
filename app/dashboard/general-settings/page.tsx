@@ -1,11 +1,17 @@
 "use client";
 import { Box, CRUD } from "@/components";
-import { UpdateGeneralSettings } from "./components/UpdateGeneralSettings";
+import { Test } from "@/components/TestComponent/Test";
+import { RowData } from "@/constants";
 
 export default function Page() {
   return (
     <Box height={"100%"} bg={"greyLight"} overflow={"auto"} p={"xxxl"}>
-      <CRUD updateComponent={UpdateGeneralSettings} modalWidth="40%" columnWidth={"20%"} />
+      <CRUD
+        data={RowData}
+        updateComponent={Test}
+        modalWidth="40%"
+        columnWidth={"20%"}
+      />
     </Box>
   );
 }

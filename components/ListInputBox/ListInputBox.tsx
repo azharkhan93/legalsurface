@@ -1,0 +1,45 @@
+import { BASE_COLORS } from "@/theme";
+import { StyledInputBox } from "../styled";
+import { ChangeEvent } from "react";
+
+export type ListInputBoxProps = {
+  name: string;
+  handleOnChange?: (e: string) => void;
+  placeholder: string;
+  value: string | number;
+  listOptions: string[];
+};
+
+export const ListInputBox: React.FC<ListInputBoxProps> = ({
+  name,
+  handleOnChange,
+  placeholder,
+  value,
+  listOptions,
+}) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (handleOnChange) handleOnChange(e.target.value);
+  };
+  return (
+    <>
+      <datalist id={`datalist-${name}`}>
+        {listOptions
+          ? listOptions.map((option, index) => (
+              <option key={index} value={option} />
+            ))
+          : null}
+      </datalist>
+      <StyledInputBox
+        border={`1px solid ${BASE_COLORS.primary}`}
+        borderRadius={"xs"}
+        width={"100%"}
+        name={name}
+        onChange={onChange}
+        height={"40px"}
+        placeholder={placeholder}
+        value={value}
+        list={`datalist-${name}`}
+      />
+    </>
+  );
+};

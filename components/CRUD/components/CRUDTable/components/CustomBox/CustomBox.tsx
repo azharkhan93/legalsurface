@@ -1,22 +1,20 @@
-
-import styled from 'styled-components';
-import { BASE_COLORS } from '@/theme';
-import { CenterBox } from '@/components/styled';
+import styled from "styled-components";
+import { BASE_COLORS } from "@/theme";
+import { CenterBox } from "@/components/styled";
 
 interface CustomBoxProps {
-    fontSize?: number;
-    children: React.ReactNode;
-  }
- 
+  fontSize?: number;
+  children: React.ReactNode;
+}
 
 const StyledCustomBox = styled(CenterBox)`
   &:hover {
-    background-color: ${BASE_COLORS.greyish};
+    background-color: ${BASE_COLORS.greyLight};
     cursor: pointer;
   }
 `;
 
-export const CustomBox: React.FC<CustomBoxProps> = ({children }) => {
+export const CustomBox: React.FC<CustomBoxProps> = ({ children }) => {
   return (
     <StyledCustomBox
       justifyContent={"start"}
@@ -27,9 +25,7 @@ export const CustomBox: React.FC<CustomBoxProps> = ({children }) => {
       py={"m"}
       px={"xl"}
     >
-        {children}
-    
+      {children}
     </StyledCustomBox>
   );
 };
-

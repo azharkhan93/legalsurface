@@ -1,32 +1,30 @@
 import React, { useState } from "react";
 import { Box, CenterBox, Row, Text } from "@/components/styled";
-import { DataItem } from "../../CRUDTable";
+import { RowData } from "@/components/CRUD";
 import Image from "next/image";
 import { RowHoverBox } from "../RowHoverBox";
 import { CRUDTableRowModal } from "../CRUDTableRowModal";
 import { Test } from "@/components/TestComponent/Test";
 
 interface CrudTableRowItemProps {
-  item: DataItem;
+  rowItem: RowData;
   columnWidth: string;
   openUpdateModal: () => void;
 }
 
 export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
-  item,
+  rowItem,
   columnWidth,
   openUpdateModal,
-  
 }) => {
   const [modalVisible, setModalVisible] = useState(false);
-  
-  const keys = Object.keys(item);
-  
+
+  const keys = Object.keys(rowItem);
 
   const handleIconClick = () => {
     setModalVisible(true);
   };
-  if (!item) {
+  if (!rowItem) {
     return null;
   }
   return (
@@ -47,7 +45,7 @@ export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
           {keys.map((key, index) => (
             <Box key={index} width={columnWidth} justifyContent={"center"}>
               <Text fontSize={15} py={"m"} px={"xl"}>
-                {item[key as keyof DataItem] || ""}
+                {rowItem[key as keyof RowData] || ""}
               </Text>
             </Box>
           ))}
@@ -69,10 +67,14 @@ export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
         </Box>
       </RowHoverBox>
       {modalVisible && (
-        <CRUDTableRowModal openUpdateModal = {openUpdateModal} updateComponent={Test} modalWidth={""} width={""} onClose={() => setModalVisible(false)} 
-            />
+        <CRUDTableRowModal
+          openUpdateModal={openUpdateModal}
+          updateComponent={Test}
+          modalWidth={""}
+          width={""}
+          onClose={() => setModalVisible(false)}
+        />
       )}
     </>
   );
 };
-

@@ -5,6 +5,7 @@ import {
   faChartSimple,
   faGear,
   faSliders,
+  faTableList,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const SideBarData = [
@@ -16,6 +17,11 @@ export const SideBarData = [
         label: "Edu. Institutes",
         icon: faBuildingColumns,
         href: "/dashboard/edu-institutes",
+      },
+      {
+        label: "Product Categories",
+        icon: faTableList,
+        href: "/dashboard/product-categories",
       },
     ],
   },
@@ -51,10 +57,51 @@ export const SideBarData = [
   },
 ];
 
-
-export const data = [
-  { name: "Helsinki", website: "helsinki.edu", address: "address", status: "undefined", dateTime: "20 Dec, 2023 - 13:41:13" },
-  { name: "Helsinki", website: "helsinki.edu", address: "address", status: "undefined", dateTime: "20 Dec, 2023 - 13:41:13" },
+export const RowData = [
+  {
+    name: "Helsinki",
+    website: "helsinki.edu",
+    address: "address",
+    status: "undefined",
+    dateTime: "20 Dec, 2023 - 13:41:13",
+  },
+  {
+    name: "Helsinki",
+    website: "helsinki.edu",
+    address: "address",
+    status: "undefined",
+    dateTime: "20 Dec, 2023 - 13:41:13",
+  },
 ];
 
+export const RowDataEduInstitute = [
+  {
+    name: "Helsinki",
+    website: "helsinki.edu",
+    address: "address",
+    status: "undefined",
+    dateTime: "20 Dec, 2023 - 13:41:13",
+  },
+  {
+    name: "Helsinki",
+    website: "helsinki.edu",
+    address: "address",
+    status: "undefined",
+    dateTime: "20 Dec, 2023 - 13:41:13",
+  },
+];
 
+export const RowDataProductCategories = [
+  {
+    categoryName: "Watches",
+    parent: "Men's Accessories",
+    prefferedGender: "Men",
+    visibility: "Visible",
+  },
+  {
+    categoryName: "Glasses",
+    parent: "Women's Accessories",
+    prefferedGender: "Women",
+    visibility: "Visible",
+  },
+];

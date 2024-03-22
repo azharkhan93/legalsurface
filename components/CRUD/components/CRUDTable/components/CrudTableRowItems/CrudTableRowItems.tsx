@@ -1,21 +1,26 @@
-
-import { DataItem } from "../../CRUDTable";
+import { RowData } from "@/components/CRUD";
 import { CrudTableRowItem } from "../CrudTableRowItem ";
 interface CrudTableRowItemsProps {
-  data: DataItem[] 
+  data: RowData[];
   columnWidth: string;
   openUpdateModal: () => void;
 }
 
-export const CrudTableRowItems: React.FC<CrudTableRowItemsProps> = ({ data, columnWidth, openUpdateModal }) => {
-
+export const CrudTableRowItems: React.FC<CrudTableRowItemsProps> = ({
+  data,
+  columnWidth,
+  openUpdateModal,
+}) => {
   return (
     <>
-      {data.map((item, index) => (
-        <CrudTableRowItem key={index} item={item} columnWidth = {columnWidth}  openUpdateModal={openUpdateModal}  />
+      {data.map((rowData, index) => (
+        <CrudTableRowItem
+          key={index}
+          rowItem={rowData}
+          columnWidth={columnWidth}
+          openUpdateModal={openUpdateModal}
+        />
       ))}
     </>
   );
 };
-
-// now we will forward that updateModalprop to crudtablrowitem
