@@ -30,18 +30,17 @@ export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
   return (
     <>
       <RowHoverBox>
-        <CenterBox>
+        <CenterBox width={"30px"} height={"30px"}>
           <Box>
             <Image
               src={"/assets/icons/checkbox.png"}
               alt={""}
-              width={28}
-              height={28}
+              width={30}
+              height={30}
             />
           </Box>
         </CenterBox>
-
-        <Row width={"100%"} justifyContent={"center"}>
+        <Row width={"100%"} justifyContent={"center"} px={"l"}>
           {keys.map((key, index) => (
             <Box key={index} width={columnWidth} justifyContent={"center"}>
               <Text fontSize={15} py={"m"} px={"xl"}>
@@ -50,8 +49,7 @@ export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
             </Box>
           ))}
         </Row>
-
-        <Box
+        <CenterBox
           borderRadius={"circle"}
           width={"25px"}
           height={"25px"}
@@ -64,7 +62,7 @@ export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
             width={20}
             height={20}
           />
-        </Box>
+        </CenterBox>
       </RowHoverBox>
       {modalVisible && (
         <CRUDTableRowModal
