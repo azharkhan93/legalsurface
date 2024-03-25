@@ -2,6 +2,7 @@
 import { Box, CRUD } from "@/components";
 import { UpdateEduInstitute } from "./components/UpdateEduInstitute";
 import { RowDataEduInstitute } from "@/constants";
+
 export default function Page() {
   const dataKeys = Object.keys(RowDataEduInstitute[0]);
   const dataKeysLength = dataKeys.length;

@@ -1,6 +1,6 @@
 // "use client"
 import React from "react";
-import { Box, Button, CenterBox, Text } from "@/components/styled";
+import { Box, CenterBox } from "@/components/styled";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BASE_COLORS } from "@/theme";
@@ -15,6 +15,7 @@ export const Modal: React.FC<ModalProps> = ({ onClose, content, width }) => {
   const Content = content;
   return (
     <CenterBox
+      zIndex={50}
       width={"100%"}
       height={"100vh"}
       position={"fixed"}
@@ -38,7 +39,6 @@ export const Modal: React.FC<ModalProps> = ({ onClose, content, width }) => {
             onClick={onClose}
           />
         </Box>
-
         <Content />
       </Box>
     </CenterBox>

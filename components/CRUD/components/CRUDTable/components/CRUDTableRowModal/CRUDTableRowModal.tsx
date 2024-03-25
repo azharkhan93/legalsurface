@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Column, Text } from "@/components/styled";
-import { CustomBox } from "../CustomBox";
+import { Column, HoverBox, Text } from "@/components/styled";
 import Image from "next/image";
 import { Modal } from "../../../Modal";
 
@@ -15,11 +14,15 @@ interface CRUDTableModalProps extends ModalProps {
   openUpdateModal: () => void;
 }
 
-export const CRUDTableRowModal: React.FC<CRUDTableModalProps> = ({ onClose, updateComponent, width, openUpdateModal}) => {
+export const CRUDTableRowModal: React.FC<CRUDTableModalProps> = ({
+  onClose,
+  updateComponent,
+  width,
+  openUpdateModal,
+}) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-
-  const handleCloseModal= () => {
+  const handleCloseModal = () => {
     setIsModalVisible(false);
   };
   useEffect(() => {
@@ -39,41 +42,59 @@ export const CRUDTableRowModal: React.FC<CRUDTableModalProps> = ({ onClose, upda
 
   return (
     <Column
+      zIndex={20}
       id="modal"
       borderRadius={"s"}
       bg={"white"}
-      height={"15vh"}
-      width={"8vw"}
       alignItems={"center"}
       justifyContent={"center"}
-      position="fixed"
+      position="absolute"
       right={"0"}
-      mr={"xl"}
+      bottom={"-65px"}
       overflow={"hidden"}
-      style={{ marginTop: "140px" }}
     >
-      
-        <CustomBox >
-          <Image src={"/assets/icons/edit.png"} alt={"edit"} width={24} height={24} />
-          <Text fontSize={15} onClick={openUpdateModal}>Edit</Text>
-        </CustomBox>
-        {isModalVisible && (
-        <Modal onClose={handleCloseModal} content={updateComponent} width={width} />
+      <HoverBox
+        justifyContent={"start"}
+        flexDirection={"row"}
+        gap={"xl"}
+        width={"100%"}
+        bg={"white"}
+        py={"m"}
+        px={"xl"}
+        onClick={openUpdateModal}
+      >
+        <Image
+          src={"/assets/icons/edit.png"}
+          alt={"edit"}
+          width={24}
+          height={24}
+        />
+        <Text fontSize={15}>Edit</Text>
+      </HoverBox>
+      {isModalVisible && (
+        <Modal
+          onClose={handleCloseModal}
+          content={updateComponent}
+          width={width}
+        />
       )}
-     
-        
-
-      <CustomBox>
-        <Image src={"/assets/icons/delete.png"} alt={"delete"} width={24} height={24} />
+      <HoverBox
+        justifyContent={"start"}
+        flexDirection={"row"}
+        gap={"xl"}
+        width={"100%"}
+        bg={"white"}
+        py={"m"}
+        px={"xl"}
+      >
+        <Image
+          src={"/assets/icons/delete.png"}
+          alt={"delete"}
+          width={24}
+          height={24}
+        />
         <Text fontSize={15}>Delete</Text>
-
-      </CustomBox>
-      
+      </HoverBox>
     </Column>
   );
 };
-
-
-
-  
-  

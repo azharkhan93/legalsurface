@@ -24,33 +24,42 @@ export const CRUD: React.FC<CRUDProps> = ({
   data,
 }) => {
   const [isModalVisible, setModalVisibility] = useState(false);
+  // const [modalInitialValues, setModalInitialValues] = useState({
+  //   field1: "",
+  //   field2: "",
+  // });
+
   const handleAddNewClick = () => {
     setModalVisibility(true);
   };
+
+  const handleEditRecordClick = () => {
+    setModalVisibility(true);
+  };
+
   const handleCloseModal = () => {
     setModalVisibility(false);
   };
+
   return (
     <Box alignItems={"center"}>
+      {isModalVisible ? (
+        <Modal
+          onClose={handleCloseModal}
+          content={updateComponent}
+          width={modalWidth}
+        />
+      ) : null}
       <ActionBar
         updateComponent={updateComponent}
         width={modalWidth}
         onAddNewClick={handleAddNewClick}
         onCloseModal={handleCloseModal}
       />
-
-      {isModalVisible && (
-        <Modal
-          onClose={handleCloseModal}
-          content={updateComponent}
-          width={modalWidth}
-        />
-      )}
-
       <CRUDTable
         data={data}
         columnWidth={columnWidth}
-        openUpdateModal={handleAddNewClick}
+        openUpdateModal={handleEditRecordClick}
       />
     </Box>
   );
