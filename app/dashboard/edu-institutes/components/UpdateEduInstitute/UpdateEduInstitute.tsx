@@ -18,7 +18,9 @@ const FormSchema = Yup.object({
   domain: Yup.string().required("Domain Is Required"),
   city: Yup.string().required("City Is Required"),
   state: Yup.string().required("State is Required"),
-  zip: Yup.string().required("Zip Is Required"),
+  zip: Yup.string()
+    .matches(/^[0-9]+$/, "Zip must contain only numbers")
+    .required("Zip Is Required"),
   address: Yup.string().required("Address Is Required"),
 });
 
