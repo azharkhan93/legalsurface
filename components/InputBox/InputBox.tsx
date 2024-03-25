@@ -8,6 +8,8 @@ export type InputBoxProps = {
   placeholder: string;
   type?: "text" | "number" | "email" | "password" | "file";
   value: string | number;
+  onBlur?: () => void;
+  
 };
 export const InputBox: React.FC<InputBoxProps> = ({
   name,
@@ -15,6 +17,8 @@ export const InputBox: React.FC<InputBoxProps> = ({
   placeholder,
   type,
   value,
+  onBlur,
+  
 }) => {
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (handleOnChange) handleOnChange(e.target.value);
@@ -25,7 +29,8 @@ export const InputBox: React.FC<InputBoxProps> = ({
       width={"100%"}
       name={name}
       onChange={onChange}
-      borderRadius={"xs"}
+      onBlur={onBlur}
+    borderRadius={"xs"}
       height={"40px"}
       placeholder={placeholder}
       type={type}

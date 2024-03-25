@@ -1,6 +1,7 @@
 import { Box, Button, CenterBox, Column, Text } from "@/components";
 import { Form, Formik } from "formik";
 import { UpdateFormInputBox } from "@/components";
+import * as Yup from "yup";
 
 type UpdateFormValues = {
   name?: string;
@@ -11,6 +12,15 @@ type UpdateFormValues = {
   address?: string;
   coordinates?: string;
 };
+
+const FormSchema = Yup.object({
+  name: Yup.string().required("Name Is Required"),
+  domain: Yup.string().required("Domain Is Required"),
+  city: Yup.string().required("City Is Required"),
+  state: Yup.string().required("State is Required"),
+  zip: Yup.string().required("Zip Is Required"),
+  address: Yup.string().required("Address Is Required"),
+});
 
 const handleSubmit = (values: UpdateFormValues) => {
   console.log(values);
@@ -38,9 +48,10 @@ export const UpdateEduInstitute: React.FC<UpdateFormValues> = ({
             address: address,
             coordinates: coordinates,
           }}
+          validationSchema={FormSchema}
           onSubmit={(values, { setSubmitting }) => handleSubmit(values)}
         >
-          {({ isSubmitting }) => (
+          {({ isSubmitting, errors }) => (
             <Form
               style={{
                 width: "100%",
@@ -58,6 +69,7 @@ export const UpdateEduInstitute: React.FC<UpdateFormValues> = ({
                     placeholder={"Name"}
                     label={"Name"}
                   />
+
                   <UpdateFormInputBox
                     name={"domain"}
                     placeholder={"Domain"}
