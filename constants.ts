@@ -8,6 +8,8 @@ import {
   faTableList,
 } from "@fortawesome/free-solid-svg-icons";
 
+export const API_HOST = "https://mvp-lit-list.saibbyweb.com";
+
 export const SideBarData = [
   {
     heading: "APP DATASETS",
