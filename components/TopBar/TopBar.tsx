@@ -17,7 +17,7 @@ export const TopBar: React.FC<TopBar> = ({ handleCollapse, isOpen }) => {
       justifyContent={"space-between"}
       alignItems={"center"}
       paddingX={"header"}
-      bg={isOpen ? "transparent" : "primaryLight"}
+      bg={isOpen ? "greyLight" : "primary"}
     >
       <HoverBox
         width={"50px"}

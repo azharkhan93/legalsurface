@@ -25,10 +25,11 @@ export const BASE_BUTTON_VARIANTS = {
   },
   disabled: {
     backgroundColor: "grey",
-    borderColor: BASE_COLORS.secondary,
     border: "none",
     color: "black",
     borderRadius: BASE_BORDER_RADII.xs,
+    padding: "5px",
+    fontSize: BASE_SPACING.l,
     font: BASE_FONTS.body,
     fontWeight: "500",
   },

@@ -7,3 +7,4 @@ export * from "./Button";
 export * from "./StyledSideBarNavLink";
 export * from "./StyledSideBar";
 export * from "./StyledLink";
+export * from "./StyledModal";

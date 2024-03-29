@@ -90,3 +90,10 @@ export const HoverBox = styled(CenterBox)<BoxProps>`
   }
   cursor: pointer;
 `;
+
+export const GreyHoverBox = styled(CenterBox)<BoxProps>`
+  &:hover {
+    background-color: ${BASE_COLORS.grey};
+  }
+  cursor: pointer;
+`;

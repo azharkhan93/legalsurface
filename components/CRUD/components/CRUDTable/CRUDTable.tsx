@@ -1,20 +1,30 @@
-import { Box } from "@/components/styled";
+import { Box, CenterBox, Text } from "@/components/styled";
 import { BASE_COLORS } from "@/theme";
 import { PaginationBar } from "../PaginationBar";
 import { CRUDTableHeadingBar } from "./components/CRUDTableHeadingBar";
 import { CrudTableRowItems } from "./components/CrudTableRowItems";
 import { RowData } from "../../CRUD";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 interface CRUDTableProps {
   data: RowData[];
-  columnWidth: string;
   openUpdateModal: () => void;
+  openDeleteModal: () => void;
+  loading: boolean;
+  handleUpdateFormValues: (data: {}) => void;
+  headings: string[];
+  widths: number[];
 }
 
 export const CRUDTable: React.FC<CRUDTableProps> = ({
   data,
-  columnWidth,
+  loading,
   openUpdateModal,
+  openDeleteModal,
+  handleUpdateFormValues,
+  headings,
+  widths,
 }) => {
   return (
     <Box
@@ -23,15 +33,32 @@ export const CRUDTable: React.FC<CRUDTableProps> = ({
       mt={"l"}
       overflow={"hidden"}
       borderRadius={"xs"}
-      boxShadow={BASE_COLORS.shadow}
     >
       <PaginationBar />
-      <CRUDTableHeadingBar item={data} columnWidth={columnWidth} />
-      <CrudTableRowItems
-        openUpdateModal={openUpdateModal}
-        data={data}
-        columnWidth={columnWidth}
-      />
+      {loading ? (
+        <CenterBox width={"100%"} bg={"greyLight"} py={"xxxxl"}>
+          <CenterBox bg={"transparent"} width={"50%"}>
+            <FontAwesomeIcon
+              icon={faSpinner}
+              className="fa-spin"
+              size="3x"
+              color={`${BASE_COLORS.primary}`}
+            />
+          </CenterBox>
+        </CenterBox>
+      ) : (
+        <>
+          <CRUDTableHeadingBar headings={headings} widths={widths} />
+          <CrudTableRowItems
+            widths={widths}
+            openDeleteModal={openDeleteModal}
+            openUpdateModal={openUpdateModal}
+            data={data}
+            headings={headings}
+            handleUpdateFormValues={handleUpdateFormValues}
+          />
+        </>
+      )}
     </Box>
   );
 };

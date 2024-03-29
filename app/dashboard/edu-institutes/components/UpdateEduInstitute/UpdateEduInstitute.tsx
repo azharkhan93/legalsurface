@@ -1,7 +1,11 @@
 import { Box, Button, CenterBox, Column, Text } from "@/components";
-import { Form, Formik } from "formik";
+import { Form, Formik, FormikHelpers } from "formik";
 import { UpdateFormInputBox } from "@/components";
 import * as Yup from "yup";
+import { useCreateOneEduInstitute } from "../../hooks/useCreateOneEduInstitute";
+import { useUpdateOneEduInsitute } from "../../hooks/useUpdateOneEduInstitute";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 type UpdateFormValues = {
   name?: string;
@@ -11,47 +15,94 @@ type UpdateFormValues = {
   zip?: string;
   address?: string;
   coordinates?: string;
+  id?: string;
+};
+
+type UpdateComponentProps = {
+  data?: UpdateFormValues;
+  onActionComplete: () => void;
 };
 
 const FormSchema = Yup.object({
   name: Yup.string().required("Name Is Required"),
   domain: Yup.string().required("Domain Is Required"),
-  city: Yup.string().required("City Is Required"),
-  state: Yup.string().required("State is Required"),
-  zip: Yup.string()
-    .matches(/^[0-9]+$/, "Zip must contain only numbers")
-    .required("Zip Is Required"),
-  address: Yup.string().required("Address Is Required"),
+  // city: Yup.string().required("City Is Required"),
+  // state: Yup.string().required("State is Required"),
+  // zip: Yup.string()
+  //   .matches(/^[0-9]+$/, "Zip must contain only numbers")
+  //   .required("Zip Is Required"),
+  // address: Yup.string().required("Address Is Required"),
 });
 
-const handleSubmit = (values: UpdateFormValues) => {
-  console.log(values);
-};
+export const UpdateEduInstitute: React.FC<UpdateComponentProps> = (props) => {
+  const editMode = Boolean(props.data?.id);
 
-export const UpdateEduInstitute: React.FC<UpdateFormValues> = ({
-  name,
-  domain,
-  city,
-  state,
-  zip,
-  address,
-  coordinates,
-}) => {
+  const initialValues = {
+    name: props.data?.name,
+    domain: props.data?.domain,
+    city: props.data?.city,
+    state: props.data?.state,
+    zip: props.data?.zip,
+    address: props.data?.address,
+    coordinates: props.data?.coordinates,
+  };
+
+  const { createOneEduInstitute, data: creationData } =
+    useCreateOneEduInstitute();
+  const { updateOneEduInstitute, data: updationData } =
+    useUpdateOneEduInsitute();
+
+  const handleSubmit = async (
+    values: UpdateFormValues,
+    { setSubmitting }: FormikHelpers<UpdateFormValues>
+  ) => {
+    try {
+      setSubmitting(true);
+      if (!editMode) {
+        const { data } = await createOneEduInstitute({
+          variables: {
+            data: {
+              name: values.name,
+              domain: values.domain,
+              city: values.city,
+              state: values.state,
+              zip: values.zip,
+              address: values.address,
+            },
+          },
+        });
+      } else {
+        const { data } = await updateOneEduInstitute({
+          variables: {
+            data: {
+              name: { set: values.name },
+              domain: { set: values.domain },
+              city: { set: values.city },
+              state: { set: values.state },
+              zip: { set: values.zip },
+              address: { set: values.address },
+            },
+            where: {
+              id: props.data?.id,
+            },
+          },
+        });
+      }
+      props.onActionComplete();
+    } catch (error) {
+      alert(`Error: ${error}`);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <>
       <CenterBox width={"100%"} height={"100%"}>
-        <Formik
-          initialValues={{
-            name: name,
-            domain: domain,
-            city: city,
-            state: state,
-            zip: zip,
-            address: address,
-            coordinates: coordinates,
-          }}
+        <Formik<UpdateFormValues>
+          initialValues={initialValues}
           validationSchema={FormSchema}
-          onSubmit={(values, { setSubmitting }) => handleSubmit(values)}
+          onSubmit={handleSubmit}
         >
           {({ isSubmitting, errors }) => (
             <Form
@@ -64,7 +115,9 @@ export const UpdateEduInstitute: React.FC<UpdateFormValues> = ({
               <CenterBox width={"100%"} height={"100%"} px={"l"} py={"xxxxl"}>
                 <Column width={"80%"} gap={"xl"}>
                   <Box paddingY={"s"}>
-                    <Text variant="heading">Add New Edu. Institute</Text>
+                    <Text variant="heading">
+                      {`${editMode ? "Update" : "Add"} Edu. Institute`}
+                    </Text>
                   </Box>
                   <UpdateFormInputBox
                     name={"name"}
@@ -105,11 +158,14 @@ export const UpdateEduInstitute: React.FC<UpdateFormValues> = ({
                   <CenterBox width={"100%"} paddingY={"s"}>
                     <Button
                       width={"60%"}
-                      variant="primary"
+                      variant={isSubmitting ? `disabled` : "primary"}
                       type="submit"
-                      onClick={() => null}
+                      disabled={isSubmitting}
                     >
-                      Add New Edu. Institute
+                      {isSubmitting ? (
+                        <FontAwesomeIcon icon={faSpinner} className="fa-spin" />
+                      ) : null}
+                      {`${editMode ? "Update" : "Add"} Edu. Institute`}
                     </Button>
                   </CenterBox>
                 </Column>
@@ -121,7 +177,3 @@ export const UpdateEduInstitute: React.FC<UpdateFormValues> = ({
     </>
   );
 };
-
-// it should have a form use formik
-
-// it should always accept a accept a edit mode as a prop

@@ -1,6 +1,6 @@
 "use client";
 
-import { AppButtonVariants } from "@/theme";
+import { AppButtonVariants, BASE_COLORS } from "@/theme";
 import { StyledWithConfig } from "@/utils";
 import styled from "styled-components";
 import {
@@ -35,6 +35,10 @@ type ButtonProps = TypographyProps &
   };
 
 export const Button = styled.button.withConfig(StyledWithConfig)<ButtonProps>`
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
   ${typography}
   ${space}
   ${background}
@@ -45,9 +49,10 @@ export const Button = styled.button.withConfig(StyledWithConfig)<ButtonProps>`
   ${flexbox}
   cursor: pointer;
   ${variant({
-    scale: "buttonVariants", // This should match the key in your themep
-  })}/* transition: all 0.3s ease-in-out;
+    scale: "buttonVariants",
+  })}
   &:hover {
-    transform: scale(105%);
-  } */
+    background-color: ${BASE_COLORS.greyLight};
+    color: black;
+  }
 `;

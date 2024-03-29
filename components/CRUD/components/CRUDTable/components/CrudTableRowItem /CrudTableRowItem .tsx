@@ -2,27 +2,33 @@ import React, { useState } from "react";
 import { Box, CenterBox, HoverBox, Row, Text } from "@/components/styled";
 import { RowData } from "@/components/CRUD";
 import Image from "next/image";
+import { RowItemActions } from "./components/RowItemActions";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { CRUDTableRowModal } from "../CRUDTableRowModal";
-import { Test } from "@/components/TestComponent/Test";
-
-interface CrudTableRowItemProps {
+type CrudTableRowItemProps = {
   rowItem: RowData;
-  columnWidth: string;
   openUpdateModal: () => void;
-}
+  openDeleteModal: () => void;
+  handleUpdateFormValues: (data: {}) => void;
+  headings: string[];
+  widths: number[];
+};
 
 export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
   rowItem,
-  columnWidth,
   openUpdateModal,
+  openDeleteModal,
+  handleUpdateFormValues,
+  headings,
+  widths,
 }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
-  const keys = Object.keys(rowItem);
-
+  const keys = headings;
   const handleIconClick = () => {
     setModalVisible(true);
+    handleUpdateFormValues(rowItem);
   };
   if (!rowItem) {
     return null;
@@ -50,11 +56,16 @@ export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
           />
         </Box>
       </CenterBox>
-      <Row width={"100%"} justifyContent={"center"} px={"l"}>
+      <Row width={"100%"} justifyContent={"start"} px={"l"}>
         {keys.map((key, index) => (
-          <Box key={index} width={columnWidth} justifyContent={"center"}>
-            <Text fontSize={15} py={"m"} px={"xl"}>
-              {rowItem[key as keyof RowData] || ""}
+          <Box
+            key={index}
+            width={`${widths[index]}%`}
+            justifyContent={"center"}
+          >
+            <Text variant="body" py={"m"} px={"xl"}>
+              {rowItem[key] || ""}
+              {/* {key === "createdAt" ? "N/A" : rowItem[key]} */}
             </Text>
           </Box>
         ))}
@@ -66,14 +77,12 @@ export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
         bg={"white"}
         onClick={handleIconClick}
       >
-        <Image src={"/assets/icons/dots.png"} alt={""} width={20} height={20} />
+        <FontAwesomeIcon icon={faEllipsis} size="1x" />
       </CenterBox>
       {modalVisible && (
-        <CRUDTableRowModal
+        <RowItemActions
           openUpdateModal={openUpdateModal}
-          updateComponent={Test}
-          modalWidth={""}
-          width={""}
+          openDeleteModal={openDeleteModal}
           onClose={() => setModalVisible(false)}
         />
       )}

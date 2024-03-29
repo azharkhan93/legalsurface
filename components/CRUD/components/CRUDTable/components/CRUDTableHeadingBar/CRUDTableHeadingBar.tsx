@@ -1,21 +1,19 @@
 import { Box, CenterBox, Row, Text } from "@/components/styled";
 import React from "react";
-
 import Image from "next/image";
 import { RowData } from "@/components/CRUD";
 import { BASE_COLORS } from "@/theme";
 
-interface CrudTableHeadingProps {
-  item: RowData[];
-  columnWidth: string;
-}
+type CrudTableHeadingProps = {
+  headings: string[];
+  widths: number[];
+};
 
 export const CRUDTableHeadingBar: React.FC<CrudTableHeadingProps> = ({
-  item,
-  columnWidth,
+  headings,
+  widths,
 }) => {
-  const keys = Object.keys(item[0]);
-
+  const keys = headings;
   const capitalizedKeys = keys.map((str) => {
     return str.charAt(0).toLocaleUpperCase() + str.slice(1);
   });
@@ -25,10 +23,11 @@ export const CRUDTableHeadingBar: React.FC<CrudTableHeadingProps> = ({
       <Row
         py={"xl"}
         px={"xl"}
-        bg={"primaryLight"}
+        bg={"white"}
         width={"100%"}
         alignItems={"center"}
         justifyContent={"space-between"}
+        borderBottom={BASE_COLORS.grey}
       >
         <CenterBox width={"30px"} height={"30px"}>
           <Image
@@ -38,15 +37,22 @@ export const CRUDTableHeadingBar: React.FC<CrudTableHeadingProps> = ({
             height={30}
           />
         </CenterBox>
-        <Row width={"100%"} justifyContent={"center"} px={"l"}>
+        <Row width={"100%"} justifyContent={"start"} px={"l"}>
           {capitalizedKeys.map((key, index) => (
-            <Box justifyContent={"center"} width={columnWidth} key={index}>
+            <Box
+              justifyContent={"center"}
+              width={`${widths[index]}%`}
+              key={index}
+            >
               <Text
-                variant="subHeading"
+                color="white"
+                width={"fit-content"}
+                variant="body"
                 fontSize={15}
-                py={"m"}
+                py={"s"}
                 px={"xl"}
                 borderRadius={"circle"}
+                bg="primary"
               >
                 {key}
               </Text>

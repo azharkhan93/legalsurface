@@ -1,4 +1,5 @@
 import { CenterBox, Column, Row, Text } from "@/components/styled";
+import { BASE_COLORS } from "@/theme";
 import Image from "next/image";
 
 export const PaginationBar: React.FC = () => {
@@ -11,20 +12,21 @@ export const PaginationBar: React.FC = () => {
   };
   return (
     <Row
-      bg={"greyLight"}
+      bg="white"
       width={"100%"}
       alignItems={"center"}
       justifyContent={"space-between"}
+      borderBottom={`2px solid ${BASE_COLORS.greyLight}`}
       px={"xl"}
       py={"m"}
     >
       <Column>
         <Text>Product Categories</Text>
         <Text>
-          db:<span style={{ color: "#5809A3" }}>ProductCategory</span>
+          db:<Text color="primary">ProductCategory</Text>
         </Text>
       </Column>
-      <CenterBox flexDirection={"row"} gap={"m"}>
+      <Row gap={"m"}>
         <Image
           src={"/assets/svgs/chevronleft.png"}
           alt={""}
@@ -41,7 +43,7 @@ export const PaginationBar: React.FC = () => {
           onClick={handleNextPage}
           style={{ cursor: "pointer" }}
         />
-      </CenterBox>
+      </Row>
     </Row>
   );
 };

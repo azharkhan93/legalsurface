@@ -1,26 +1,16 @@
 // "use client";
 import React, { useState } from "react";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Box, StyledInputBox } from "@/components";
+import { Box, StyledInputBox, Button } from "@/components";
 import { BASE_COLORS } from "@/theme";
-import { ActionBarButton } from "../ActionBarButton";
 
 interface ActionBarProps {
-  updateComponent: React.FC;
   width: string;
   onAddNewClick: () => void;
-   onCloseModal: () => void;
-
 }
 
-export const ActionBar: React.FC<ActionBarProps> = ({
-
-  onCloseModal,
-  onAddNewClick,
-  
-
-}) => {
+export const ActionBar: React.FC<ActionBarProps> = ({ onAddNewClick }) => {
   const [isSearchIconVisible, setSearchIconVisibility] = useState(true);
 
   const handleInputFocus = () => {
@@ -30,8 +20,6 @@ export const ActionBar: React.FC<ActionBarProps> = ({
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchIconVisibility(e.target.value === "");
   };
-
-
 
   return (
     <>
@@ -43,9 +31,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({
         justifyContent={"space-between"}
         flexDirection={"row"}
         borderRadius={"xs"}
-        mx={"m"}
         px={"l"}
-        boxShadow={BASE_COLORS.shadow}
       >
         <Box
           alignItems={"center"}
@@ -70,9 +56,15 @@ export const ActionBar: React.FC<ActionBarProps> = ({
             onChange={handleInputChange}
           />
         </Box>
-
-        <ActionBarButton onClick={onAddNewClick}>Add New</ActionBarButton>
-
+        <Button
+          width={"150px"}
+          height={"50px"}
+          variant={"primary"}
+          onClick={onAddNewClick}
+        >
+          Add New
+          <FontAwesomeIcon icon={faPlus} />
+        </Button>
       </Box>
     </>
   );
