@@ -17,6 +17,7 @@ type UpdateFormValues = {
   parentCategory?: string;
   productCategoryIcon?: string;
   featuredImage?: string;
+  helpers?: string;
 };
 
 const handleSubmit = (values: UpdateFormValues) => {
@@ -77,10 +78,12 @@ export const UpdateProductCategories: React.FC<UpdateFormValues> = ({
                   <UpdateFormFileInputBox
                     name={"productCategoryIcon"}
                     label={"Product Category Icon"}
+                    
                   />
                   <UpdateFormFileInputBox
                     name={"featuredImage"}
                     label={"Featured Image"}
+                    
                   />
                   <CenterBox width={"100%"} paddingY={"s"}>
                     <Button
@@ -101,7 +104,3 @@ export const UpdateProductCategories: React.FC<UpdateFormValues> = ({
     </>
   );
 };
-
-// it should have a form
-
-// it should always accept a accept a edit mode as a prop

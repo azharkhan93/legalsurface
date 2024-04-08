@@ -1,3 +1,5 @@
+"use client"
+import React, { useState } from 'react';
 import { BASE_COLORS } from "@/theme";
 import { StyledInputBox } from "../styled";
 import { ChangeEvent } from "react";
@@ -17,29 +19,33 @@ export const ListInputBox: React.FC<ListInputBoxProps> = ({
   value,
   listOptions,
 }) => {
+
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (handleOnChange) handleOnChange(e.target.value);
   };
+
+  
+  
+
   return (
     <>
-      <datalist id={`datalist-${name}`}>
-        {listOptions
-          ? listOptions.map((option, index) => (
-              <option key={index} value={option} />
-            ))
-          : null}
-      </datalist>
       <StyledInputBox
         border={`1px solid ${BASE_COLORS.primary}`}
         borderRadius={"xs"}
         width={"100%"}
         name={name}
-        onChange={onChange}
+        onChange={onChange} 
         height={"40px"}
         placeholder={placeholder}
         value={value}
-        list={`datalist-${name}`}
       />
+      
     </>
   );
 };
+
+
+
+
+
+
