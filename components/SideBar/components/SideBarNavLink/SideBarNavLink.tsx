@@ -41,7 +41,7 @@ export const SideBarNavLink: React.FC<SideBarNavLink> = ({
         alignItems={"center"}
         justifyContent={"start"}
       >
-        <CenterBox>
+        <CenterBox width={"20px"}>
           <FontAwesomeIcon
             icon={icon}
             color={pathname === href ? `${BASE_COLORS.primary}` : "black"}

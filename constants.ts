@@ -6,9 +6,10 @@ import {
   faGear,
   faSliders,
   faTableList,
+  faReceipt,
 } from "@fortawesome/free-solid-svg-icons";
 
-export const API_HOST = "https://mvp-lit-list.saibbyweb.com";
+export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
 
 export const SideBarData = [
   {
@@ -25,38 +26,43 @@ export const SideBarData = [
         icon: faTableList,
         href: "/dashboard/product-categories",
       },
-    ],
-  },
-  {
-    heading: "APP CONFIG",
-    navLink: [
       {
-        label: "Listing Settings",
-        icon: faSliders,
-        href: "/dashboard/listing-settings",
-      },
-      {
-        label: "General Settings",
-        icon: faGear,
-        href: "/dashboard/general-settings",
+        label: "Deals",
+        icon: faReceipt,
+        href: "/dashboard/deals",
       },
     ],
   },
-  {
-    heading: "STATS",
-    navLink: [
-      {
-        label: "User Stats",
-        icon: faChartSimple,
-        href: "/dashboard/user-stats",
-      },
-      {
-        label: "Platform Stats",
-        icon: faChartLine,
-        href: "/dashboard/platform-stats",
-      },
-    ],
-  },
+  // {
+  //   heading: "APP CONFIG",
+  //   navLink: [
+  //     {
+  //       label: "Listing Settings",
+  //       icon: faSliders,
+  //       href: "/dashboard/listing-settings",
+  //     },
+  //     {
+  //       label: "General Settings",
+  //       icon: faGear,
+  //       href: "/dashboard/general-settings",
+  //     },
+  //   ],
+  // },
+  // {
+  //   heading: "STATS",
+  //   navLink: [
+  //     {
+  //       label: "User Stats",
+  //       icon: faChartSimple,
+  //       href: "/dashboard/user-stats",
+  //     },
+  //     {
+  //       label: "Platform Stats",
+  //       icon: faChartLine,
+  //       href: "/dashboard/platform-stats",
+  //     },
+  //   ],
+  // },
 ];
 
 export const RowData = [

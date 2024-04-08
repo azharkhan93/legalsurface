@@ -24,8 +24,8 @@ type UpdateComponentProps = {
 };
 
 const FormSchema = Yup.object({
-  name: Yup.string().required("Name Is Required"),
-  domain: Yup.string().required("Domain Is Required"),
+  name: Yup.string().required("Name is Required"),
+  domain: Yup.string().required("Domain is Required"),
   // city: Yup.string().required("City Is Required"),
   // state: Yup.string().required("State is Required"),
   // zip: Yup.string()
