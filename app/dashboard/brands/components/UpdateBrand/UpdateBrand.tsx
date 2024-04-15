@@ -6,7 +6,7 @@ import { useCreateOneBrand } from "../../hooks/useCreateOneBrand";
 import { useUpdateOneBrand } from "../../hooks/useUpdateOneBrand";
 import { ToggleButton } from "@/components/ToggleButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner, faToggleOff } from "@fortawesome/free-solid-svg-icons";
+import { faSpinner,} from "@fortawesome/free-solid-svg-icons";
 
 type UpdateFormValues = {
   id?: string;
@@ -14,7 +14,7 @@ type UpdateFormValues = {
    active?: boolean;
   image?: string;
   featured: boolean;
-  
+
 };
 
 type UpdateComponentProps = {
@@ -115,29 +115,14 @@ export const UpdateBrand: React.FC<UpdateComponentProps> = (props) => {
                     name={"Brand Logo"}
                     label={"Brand Logo:"}
                   />
-                  <ToggleButton />
-                  {/* <Row border={"1px solid red"} width={"50%"} gap={"xl"}>
-                    <Row alignItems={"center"} gap={"m"}>
-                      <FontAwesomeIcon
-                        icon={faToggleOff}
-                        size={"2x"}
-                        color={"grey"}
-                      />
-                      <Text variant={"body"} color={"primary"}>
-                        Show On App
-                      </Text>
-                    </Row>
-                    <Row alignItems={"center"} gap={"m"}>
-                      <FontAwesomeIcon
-                        icon={faToggleOff}
-                        size={"2x"}
-                        color={"grey"}
-                      />
-                      <Text variant={"body"} color={"primary"}>
-                        Featured
-                      </Text>
-                    </Row>
-                  </Row> */}
+                  <Row 
+                  border = {"1px solid red"}
+                  width = {"100%"}
+                  gap = {"xxl"}
+                  >
+                 <ToggleButton buttonText="Show On App" />
+                 <ToggleButton buttonText="Featured" />
+                 </Row>
 
                   <CenterBox width={"100%"} paddingY={"s"}>
                     <Button
