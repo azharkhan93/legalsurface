@@ -5,7 +5,7 @@ type ToggleButtonProps = {
   buttonText: string;
 };
 
-export const ToggleButton: React.FC = ({ buttonText }) => {
+export const ToggleButton: React.FC<ToggleButtonProps> = ({ buttonText }) => {
   const [isOn, setIsOn] = useState(false);
 
   const toggleSwitch = () => {
@@ -18,10 +18,10 @@ export const ToggleButton: React.FC = ({ buttonText }) => {
         gap={"m"}
         border={"1px solid green"}
         alignItems={"center"}
-        width={"30%"}
+        width={"200px"}
       >
         <Box
-          bg={isOn ? "grey" : "primary"}
+          bg={isOn ? "grey" : "white"}
           border={"1px solid red"}
           width={"30%"}
           height={"18px"}
@@ -31,7 +31,7 @@ export const ToggleButton: React.FC = ({ buttonText }) => {
           style={{ cursor: "pointer" }}
         >
           <CenterBox
-            bg={"white"}
+            bg={"primary"}
             border={"1px solid yellow"}
             borderRadius={"circle"}
             width={"50%"}
