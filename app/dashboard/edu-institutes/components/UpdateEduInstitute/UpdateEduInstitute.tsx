@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 type UpdateFormValues = {
+
+  
   name?: string;
   domain?: string;
   city?: string;

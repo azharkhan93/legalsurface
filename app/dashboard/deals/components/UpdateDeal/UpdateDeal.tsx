@@ -5,6 +5,8 @@ import * as Yup from "yup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import Async, { useAsync } from "react-select/async";
+import { useCreateOneDeal } from "../../hooks/useCreateOneDeal";
+import { useUpdateOneDeal } from "../../hooks/useUpdateOneDeal";
 import AsyncSelect from "react-select/async";
 
 type DealValues = {
@@ -41,39 +43,100 @@ type UpdateDealProps = {
 const FormSchema = Yup.object({
   name: Yup.string().required("Name is Required"),
   image: Yup.string().required("Image is Required"),
-  businessName: Yup.string().required("Business Name is Required"),
-  businessAddress: Yup.string().required("Business Address is Required"),
-  businessLogo: Yup.string().required("Business Logo is Required"),
+  // businessName: Yup.string().required("Business Name is Required"),
+  // businessAddress: Yup.string().required("Business Address is Required"),
+  // businessLogo: Yup.string().required("Business Logo is Required"),
 });
 
 export const UpdateDeal: React.FC<UpdateDealProps> = (props) => {
   const editMode = Boolean(props.data?.id);
 
-  const initialValues = {
-    name: props.data?.name,
-    // active: props.data?.active,
-    image: props.data?.image,
-    businessName: props.data?.business?.name,
-    businessAddress: props.data?.business?.address,
-    businessLogo: props.data?.business?.logo,
-    dealHeading: props.data?.content?.heading,
-    dealParagraph: props.data?.content?.paragraph,
-    dealPointers: props.data?.content?.pointers,
-    url: props.data?.url,
-    type: props.data?.type,
-    couponCode: props.data?.couponCode,
-    startDate: props.data?.validity?.startDate,
-    endDate: props.data?.validity?.endDate,
+  const initialValues: DealValues = {
+    id: props.data?.id,
+    name: props.data?.name || "", 
+    image: props.data?.image || "", 
+    business: {
+      name: props.data?.business?.name || "",
+      address: props.data?.business?.address || "", 
+      logo: props.data?.business?.logo || "", 
+    },
+    content: {
+      heading: props.data?.content?.heading || "", 
+      paragraph: props.data?.content?.paragraph || "", 
+      pointers: props.data?.content?.pointers || "", 
+    },
+    type: props.data?.type || "WITH_COUPON", 
+    url: props.data?.url || "", 
+    couponCode: props.data?.couponCode || "", 
+    validity: {
+      startDate: props.data?.validity?.startDate || "", 
+      endDate: props.data?.validity?.endDate || "", 
+    },
   };
+  
+
+  const { createOneDeal, data: creationData } = useCreateOneDeal();
+  const { updateOneDeal, data: updationData } = useUpdateOneDeal();
 
   const handleSubmit = async (
-    values: InitialValues,
-    { setSubmitting }: FormikHelpers<InitialValues>
+    values: DealValues,
+    { setSubmitting }: FormikHelpers<DealValues>
   ) => {
     console.log(values);
+    try {
+      setSubmitting(true);
+      if (!editMode) {
+      } else {
+        const { data } = await updateOneDeal({
+          variables: {
+            data: {
+              name: { set: values.name },
+              image: { set: values.image },
+              business: {
+                set: {
+                  name: values.business ? values.business.name : "",
+                  address: values.business ? values.business.address : "",
+                  logo: values.business ? values.business.logo : "",
+                },
+              },
+              content: {
+                set: {
+                  heading: values.content.heading,
+                  paragraph: values.content.paragraph,
+                  pointers: values.content.pointers,
+                },
+              },
+              url: { set: values.url },
+              couponCode: { set: values.couponCode },
+              validity: {
+                set: {
+                  startDate: values.validity.startDate,
+                  endDate: values.validity.endDate,
+                },
+              },
+            },
+            where: {
+              id: props.data?.id,
+            },
+          },
+        });
+      }
+      props.onActionComplete();
+    } catch (error) {
+      alert(`Error: ${error}`);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
-  const loadOptions = (inputValue: string, callback) => {
+  // const handleSubmit = async (
+  //   values: InitialValues,
+  //   { setSubmitting }: FormikHelpers<InitialValues>
+  // ) => {
+  //   console.log(values);
+  // };
+
+  const loadOptions = (inputValue: string, callback: (options: Coupon[]) => void) => {
     setTimeout(() => {
       const filteredOptions = Coupon.filter((option) =>
         option.value.includes(inputValue)
@@ -81,6 +144,7 @@ export const UpdateDeal: React.FC<UpdateDealProps> = (props) => {
       callback(filteredOptions);
     }, 1000);
   };
+  
 
   return (
     <>
@@ -119,36 +183,36 @@ export const UpdateDeal: React.FC<UpdateDealProps> = (props) => {
                   </Row>
                   <Row gap={"xxxxl"}>
                     <UpdateFormInputBox
-                      name={"businessName"}
+                      name={"business.name"}
                       placeholder={"Business Name"}
                       label={"Business Name"}
                     />
                     <UpdateFormInputBox
-                      name={"businessAddress"}
+                      name={"business.address"}
                       placeholder={"Address"}
                       label={"Address"}
                     />
                   </Row>
                   <Row gap={"xxxxl"}>
                     <UpdateFormInputBox
-                      name={"businessLogo"}
+                      name={"business.logo"}
                       placeholder={"Logo Url"}
                       label={"Logo"}
                     />
                     <UpdateFormInputBox
-                      name={"dealHeading"}
+                      name={"content.heading"}
                       placeholder={"Heading"}
                       label={"Heading"}
                     />
                   </Row>
                   <Row gap={"xxxxl"}>
                     <UpdateFormInputBox
-                      name={"dealParagraph"}
+                      name={"content.paragraph"}
                       placeholder={"Description"}
                       label={"Description"}
                     />
                     <UpdateFormInputBox
-                      name={"dealPointers"}
+                      name={"content.dealPointers"}
                       placeholder={"Pointers"}
                       label={"Pointers"}
                     />

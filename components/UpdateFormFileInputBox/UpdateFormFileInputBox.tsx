@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+"use client"
 import { Box, CenterBox, Column, FileInputBox, FileInputBoxProps, Row, Text } from "@/components";
 import Image from "next/image";
 import { useField } from "formik";

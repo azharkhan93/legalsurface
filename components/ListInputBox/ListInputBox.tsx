@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+
 import { BASE_COLORS } from "@/theme";
 import { StyledInputBox } from "../styled";
 import { ChangeEvent } from "react";
@@ -17,7 +17,6 @@ export const ListInputBox: React.FC<ListInputBoxProps> = ({
   handleOnChange,
   placeholder,
   value,
-  listOptions,
 }) => {
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {

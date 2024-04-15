@@ -1,33 +1,34 @@
 "use client";
 import { Box, CRUD } from "@/components";
-import { useGetDeals } from "./hooks/useGetDeals";
+import { useGetBrands } from "./hooks/useGetBrands";
 import { formatDate } from "@/utils";
-import { DeleteDeal } from "./components/DeleteDeal";
-import { UpdateDeal } from "./components";
+import { DeleteBrand } from "./components/DeleteBrand";
+import {UpdateBrand} from "./components/UpdateBrand"
+
 
 export default function Page() {
-  const { data, refetch, loading } = useGetDeals();
+  const { data, refetch, loading } = useGetBrands();
 
   const headingKeysWidth = {
     name: {
-      alias: "Name",
+      alias: "Brand Name",
       width: 20,
     },
     active: {
-      alias: "DealActive",
+      alias: "Show On App",
       width: 20,
     },
     couponCode: {
-      alias: "CouponCode",
+      alias: "Featured",
       width: 20,
     },
     createdAt: {
-      alias: "CreatedAt",
+      alias: "Added",
       width: 20,
     },
   };
 
-  const formattedData = data?.deals.map((item: any) => {
+  const formattedData = data?.brands.map((item: any) => {
     return {
       ...item,
       createdAt: formatDate(item.createdAt),
@@ -37,13 +38,13 @@ export default function Page() {
   return (
     <Box height={"100%"} bg={"greyLight"} overflow={"auto"} p={"xl"}>
       <CRUD
-        updateComponent={UpdateDeal}
+        updateComponent={UpdateBrand}
         modalWidth="60%"
         data={formattedData || []}
         headingKeysWidth={headingKeysWidth}
         refetch={refetch}
         loading={loading}
-        deleteComponent={DeleteDeal}
+        deleteComponent={DeleteBrand}
       />
     </Box>
   );

@@ -5,7 +5,7 @@ import { useCallback } from "react";
 import { UpdateFormInputBoxErrorMessage } from "../LoginPage/components/UpdateFormInpuBoxErrorMessage";
 
 type UpdateFormInputBoxProps = Omit<InputBoxProps, "value" | "onBlur"> & {
-  label: string;
+  label?: string;
 };
 
 export const UpdateFormInputBox: React.FC<UpdateFormInputBoxProps> = ({

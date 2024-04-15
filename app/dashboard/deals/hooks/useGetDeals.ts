@@ -34,6 +34,8 @@ export const DEALS_DOCUMENT = gql`
   }
 `;
 
+
+
 export const useGetDeals = () => {
   const response = useQuery(DEALS_DOCUMENT, {
     skip: false,

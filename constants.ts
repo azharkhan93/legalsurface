@@ -31,6 +31,12 @@ export const SideBarData = [
         icon: faReceipt,
         href: "/dashboard/deals",
       },
+
+      {
+        label: "Brands",
+        icon: faSliders,
+        href: "/dashboard/brands",
+      },
     ],
   },
   // {
