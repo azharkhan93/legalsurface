@@ -1,5 +1,5 @@
 // "use client";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { faPlus, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, StyledInputBox, Button } from "@/components";
@@ -8,9 +8,13 @@ import { BASE_COLORS } from "@/theme";
 interface ActionBarProps {
   width: string;
   onAddNewClick: () => void;
+  searchTerm?: Dispatch<SetStateAction<string>>;
 }
 
-export const ActionBar: React.FC<ActionBarProps> = ({ onAddNewClick }) => {
+export const ActionBar: React.FC<ActionBarProps> = ({
+  onAddNewClick,
+  searchTerm,
+}) => {
   const [isSearchIconVisible, setSearchIconVisibility] = useState(true);
 
   const handleInputFocus = () => {
@@ -19,6 +23,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({ onAddNewClick }) => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchIconVisibility(e.target.value === "");
+    searchTerm && searchTerm(e.target.value);
   };
 
   return (

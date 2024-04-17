@@ -3,42 +3,68 @@ import { useState } from "react";
 import { Box, Button, CenterBox, Column, StyledLink, Text } from "@/components";
 import { Formik, Form } from "formik";
 import { LoginFormInputBox } from "./components/LoginFormInputBox";
-import { useRouter } from "next/navigation";
+import { useAdminLogin } from "../../hooks/useAdminLogin";
+import Swal from "sweetalert2";
 
 type FormValues = {
-  email: string;
+  username: string;
   password: string;
 };
 
 export const LoginForm = () => {
-  const [isVerified, setIsVerified] = useState(false);
-  const router = useRouter();
+  const { adminLogin, loading, error, data, postLogin } = useAdminLogin();
 
   const handleSubmit = async (values: FormValues) => {
-    console.log(values);
-    localStorage.setItem('userEmail', values.email);
-    localStorage.setItem('userPassword', values.password);
-
-    const storedPassword = localStorage.getItem('userPassword');
-
     try {
-      if (storedPassword === values.password) {
-        setIsVerified(true);
-        router.push('/dashboard/edu-institutes');
+      Swal.fire({
+        title: "Logging you in",
+        text: "Please wait...",
+        allowEscapeKey: false,
+        allowOutsideClick: false,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+      });
+      const { data } = await adminLogin({
+        variables: {
+          data: {
+            username: values.username,
+            password: values.password,
+            deviceModel: "null",
+            deviceToken: "null",
+            platform: "ANDROID",
+          },
+        },
+      });
+      Swal.close();
+
+      if (data) postLogin(data.adminLogin.accessToken);
+    } catch (e: any) {
+      Swal.close();
+      if (e.graphQLErrors[0].message === "undefined") {
+        Swal.fire({
+          title: `Wrong Email or Password`,
+          text: "Please check your credentials and try again",
+        });
+      } else if (e.graphQLErrors[0].message === "User not found") {
+        Swal.fire({
+          title: `User Not Found`,
+          text: "Please get access and try again",
+        });
       } else {
-        setIsVerified(false);
-        router.push('/dashboard/product-categories');
+        Swal.fire({
+          title: `Something went wrong`,
+          text: "Please try again later",
+        });
       }
-    } catch (error) {
-      console.error('Error occurred during user verification:', error);
     }
-  }
+  };
 
   return (
     <CenterBox width={"100%"} height={"100%"} p={"m"}>
       <Formik
         initialValues={{
-          email: "",
+          username: "",
           password: "",
         }}
         onSubmit={(values, { setSubmitting }) => {
@@ -88,9 +114,10 @@ export const LoginForm = () => {
               >
                 <Box width={"90%"}>
                   <LoginFormInputBox
-                    name={"email"}
-                    placeholder={"Your Email"}
-                    label={"Email"}
+                    name={"username"}
+                    placeholder={"Username"}
+                    label={"Username"}
+                    type="text"
                   />
                 </Box>
                 <Box width={"90%"}>
@@ -131,6 +158,5 @@ export const LoginForm = () => {
     </CenterBox>
   );
 };
-
 
 // login

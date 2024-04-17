@@ -4,12 +4,21 @@ import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "@/utils/apolloClient";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const router = useRouter();
+  useEffect(() => {
+    if (localStorage.getItem("token") === null) {
+      router.push("/");
+    }
+  }, [router]);
+
   return (
     <html lang="en">
       <body>
