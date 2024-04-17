@@ -1,0 +1,23 @@
+import { Box, Column, ListInputBox, Text } from "@/components";
+import { useField } from "formik";
+import { ToggleButton } from "../ToggleButton/ToggeButton";
+type ToggleButtonFormProps = {
+  label: string;
+  name: string;
+};
+
+export const ToggleButtonForm: React.FC<ToggleButtonFormProps> = ({
+  label,
+  name,
+  ...rest
+}) => {
+  const [field, meta, helpers] = useField(name);
+  const onChange = () => {
+    helpers.setValue(!field.value);
+  };
+
+  return (
+    <ToggleButton buttonText={label} active={field.value} onToggle={onChange}  />
+  
+  );
+};

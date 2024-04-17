@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+
+import React from "react";
 import { Box, CenterBox, Text, Row } from "@/components";
 
 type ToggleButtonProps = {
   buttonText: string;
+  active: boolean;
+  onToggle: () => void;
 };
 
-export const ToggleButton: React.FC<ToggleButtonProps> = ({ buttonText }) => {
-  const [isOn, setIsOn] = useState(false);
-
+export const ToggleButton: React.FC<ToggleButtonProps> = ({ buttonText, active, onToggle }) => {
   const toggleSwitch = () => {
-    setIsOn((prevIsOn) => !prevIsOn);
+    onToggle();
   };
 
   return (
@@ -21,7 +22,7 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({ buttonText }) => {
         width={"200px"}
       >
         <Box
-          bg={isOn ? "grey" : "white"}
+          bg={active ? "grey" : "white"}
           border={"1px solid red"}
           width={"30%"}
           height={"18px"}
@@ -37,14 +38,14 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({ buttonText }) => {
             width={"50%"}
             height={"16px"}
             position={"absolute"}
-            left={isOn ? "0" : "calc(100% - 30px)"}
+            left={active ? "50%" : 0}
           />
         </Box>
         <Text variant={"body"} color={"primary"}>
-          {" "}
           {buttonText}
         </Text>
       </Row>
     </>
   );
 };
+

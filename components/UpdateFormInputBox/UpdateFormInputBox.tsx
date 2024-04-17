@@ -6,6 +6,7 @@ import { UpdateFormInputBoxErrorMessage } from "../LoginPage/components/UpdateFo
 
 type UpdateFormInputBoxProps = Omit<InputBoxProps, "value" | "onBlur"> & {
   label?: string;
+  value?: string;
 };
 
 export const UpdateFormInputBox: React.FC<UpdateFormInputBoxProps> = ({

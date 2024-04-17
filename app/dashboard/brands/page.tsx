@@ -14,11 +14,11 @@ export default function Page() {
       alias: "Brand Name",
       width: 20,
     },
-    active: {
+    _active: {
       alias: "Show On App",
       width: 20,
     },
-    couponCode: {
+    _featured: {
       alias: "Featured",
       width: 20,
     },
@@ -31,6 +31,8 @@ export default function Page() {
   const formattedData = data?.brands.map((item: any) => {
     return {
       ...item,
+      _active: item.active ? 'yes' : 'no',
+      _featured: item.featured ? 'yes' : 'no',
       createdAt: formatDate(item.createdAt),
     };
   });

@@ -6,15 +6,16 @@ import { useCreateOneBrand } from "../../hooks/useCreateOneBrand";
 import { useUpdateOneBrand } from "../../hooks/useUpdateOneBrand";
 import { ToggleButton } from "@/components/ToggleButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner,} from "@fortawesome/free-solid-svg-icons";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { ToggleButtonForm } from "@/components/ToggleButtonForm";
 
 type UpdateFormValues = {
   id?: string;
   name?: string;
-   active?: boolean;
+  active?: boolean;
   image?: string;
-  featured: boolean;
-
+  featured?: boolean;
 };
 
 type UpdateComponentProps = {
@@ -28,13 +29,34 @@ const FormSchema = Yup.object({
 });
 
 export const UpdateBrand: React.FC<UpdateComponentProps> = (props) => {
+  const [showOnApp, setShowOnApp] = useState(false);
+  const [featured, setFeatured] = useState(false);
+
+  const handleShowOnAppToggle = () => {
+    setShowOnApp((prevShowOnApp) => {
+      const newState = !prevShowOnApp;
+      console.log("Show On App Toggle State:", newState);
+      return newState;
+    });
+  };
+  
+  const handleFeaturedToggle = () => {
+    setFeatured((prevFeatured) => {
+      const newState = !prevFeatured;
+      console.log("Featured Toggle State:", newState);
+      return newState;
+    });
+  };
+
   const editMode = Boolean(props.data?.id);
 
   const initialValues = {
+    id: props.data?.id,
     name: props.data?.name,
     image: props.data?.image,
     featured: props.data?.featured || false,
   };
+
   const { createOneBrand, data: creationData } = useCreateOneBrand();
   const { updateOneBrand, data: updationData } = useUpdateOneBrand();
 
@@ -50,7 +72,10 @@ export const UpdateBrand: React.FC<UpdateComponentProps> = (props) => {
             data: {
               name: values.name,
               image: values.image,
-              featured: values.featured,
+              
+              //  featured: featured,
+              //  active: showOnApp,
+                featured: values.featured,
             },
           },
         });
@@ -60,7 +85,10 @@ export const UpdateBrand: React.FC<UpdateComponentProps> = (props) => {
             data: {
               name: { set: values.name },
               image: { set: values.image },
-              featured: { set: values.featured },
+              // featured: { set: featured },
+              // active: { set: showOnApp },
+              
+                featured: { set: values.featured },
             },
             where: {
               id: props.data?.id,
@@ -84,7 +112,7 @@ export const UpdateBrand: React.FC<UpdateComponentProps> = (props) => {
           validationSchema={FormSchema}
           onSubmit={handleSubmit}
         >
-          {({ isSubmitting, errors }) => (
+          {({ isSubmitting, errors, values }) => (
             <Form
               style={{
                 width: "100%",
@@ -99,7 +127,17 @@ export const UpdateBrand: React.FC<UpdateComponentProps> = (props) => {
                       {`${editMode ? "Update" : "Insert"} Record`}
                     </Text>
                   </Box>
-                  <UpdateFormInputBox name={"ID"} placeholder={"ID"} />
+                  {editMode ? (
+                    <UpdateFormInputBox
+                      name={"ID"}
+                      placeholder={"ID"}
+                      value={initialValues.id}
+                    />
+                  ) : null}
+
+                  {/* <UpdateFormInputBox name={"ID"} placeholder={"ID"}
+                  value={initialValues.id} 
+                  /> */}
                   <UpdateFormInputBox
                     name={"name"}
                     placeholder={"Name"}
@@ -115,14 +153,18 @@ export const UpdateBrand: React.FC<UpdateComponentProps> = (props) => {
                     name={"Brand Logo"}
                     label={"Brand Logo:"}
                   />
-                  <Row 
-                  border = {"1px solid red"}
-                  width = {"100%"}
-                  gap = {"xxl"}
-                  >
-                 <ToggleButton buttonText="Show On App" />
-                 <ToggleButton buttonText="Featured" />
-                 </Row>
+                  <Row border={"1px solid red"} width={"100%"} gap={"xxl"}>
+                    <ToggleButtonForm
+                      label="Show on App"
+                      name="active"
+                    />
+                    <ToggleButtonForm
+                      label="Set as Featured"
+                      name="featured"
+                    />
+                    {/* <ToggleButton buttonText="Show On App" />
+                 <ToggleButton buttonText="Featured" /> */}
+                  </Row>
 
                   <CenterBox width={"100%"} paddingY={"s"}>
                     <Button
