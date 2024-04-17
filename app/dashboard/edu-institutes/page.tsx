@@ -14,7 +14,7 @@ export default function Page() {
       width: 20,
     },
     domain: {
-      alias: "DomainName",
+      alias: "Domain Name",
       width: 20,
     },
     address: {
@@ -22,7 +22,7 @@ export default function Page() {
       width: 20,
     },
     createdAt: {
-      alias: "CreatedAt",
+      alias: "Created At",
       width: 20,
     },
   };

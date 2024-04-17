@@ -3,48 +3,75 @@ import {
   Button,
   CenterBox,
   Column,
-  Row,
   Text,
   UpdateFormFileInputBox,
   UpdateFormInputBox,
   UpdateFormListInputBox,
 } from "@/components";
 import { Form, Formik } from "formik";
+import AsyncSelect from "react-select/async";
+import * as Yup from "yup";
+import { useGetProductCategories } from "../../hooks/useGetProductCategories";
+import { useMemo } from "react";
 
 type UpdateFormValues = {
+  id?: string;
   name?: string;
-  prefferedGender?: string;
+  preferredGender?: string;
   parentCategory?: string;
   productCategoryIcon?: string;
   featuredImage?: string;
-  helpers?: string;
 };
 
-const handleSubmit = (values: UpdateFormValues) => {
-  console.log(values);
+type UpdateComponentProps = {
+  data?: UpdateFormValues;
+  onActionComplete: () => void;
 };
 
-export const UpdateProductCategories: React.FC<UpdateFormValues> = ({
-  name,
-  prefferedGender,
-  parentCategory,
-  productCategoryIcon,
-  featuredImage,
-}) => {
+const FormSchema = Yup.object({
+  name: Yup.string().required("Name is Required"),
+  image: Yup.string().required("Image is Required"),
+});
+
+type categoryType = {
+  [key: string]: string;
+};
+
+export const UpdateProductCategories: React.FC<UpdateComponentProps> = (
+  props
+) => {
+  const { data: allCats } = useGetProductCategories();
+
+  const allCategories: categoryType[] = useMemo(() => {
+    if (!allCats) return [];
+    return allCats.productCategories.map((obj: any) => ({
+      label: obj.name,
+      value: obj.parentId,
+    }));
+  }, [allCats]);
+
+  const editMode = Boolean(props.data?.id);
+
+  const initialValues = {
+    name: props.data?.name,
+    preferredGender: props.data?.preferredGender,
+    productCategoryIcon: props.data?.productCategoryIcon,
+    featuredImage: props.data?.featuredImage,
+  };
+
+  const handleSubmit = (values: UpdateFormValues) => {
+    console.log(values);
+  };
+
   return (
     <>
       <CenterBox width={"100%"} height={"100%"}>
         <Formik
-          initialValues={{
-            name: name,
-            prefferedGender: prefferedGender,
-            parentCategory: parentCategory,
-            productCategoryIcon: productCategoryIcon,
-            featuredImage: featuredImage,
-          }}
+          validationSchema={FormSchema}
+          initialValues={initialValues}
           onSubmit={(values, { setSubmitting }) => handleSubmit(values)}
         >
-          {({ isSubmitting }) => (
+          {({ isSubmitting, setFieldValue }) => (
             <Form
               style={{
                 width: "100%",
@@ -64,26 +91,24 @@ export const UpdateProductCategories: React.FC<UpdateFormValues> = ({
                     type="text"
                   />
                   <UpdateFormListInputBox
-                    name={"prefferedGender"}
-                    placeholder={"Preffered Gender"}
-                    label={"Preffered Gender"}
+                    name={"preferredGender"}
+                    placeholder={"Preferred Gender"}
+                    label={"Preferred Gender"}
                     listOptions={["Male", "Female", "All"]}
                   />
                   <UpdateFormListInputBox
                     name={"parentCategory"}
                     placeholder={"Parent Category"}
                     label={"Parent Category"}
-                    listOptions={["Shoes", "Shirts", "Pants"]}
+                    listOptions={[]}
                   />
                   <UpdateFormFileInputBox
                     name={"productCategoryIcon"}
                     label={"Product Category Icon"}
-                    
                   />
                   <UpdateFormFileInputBox
                     name={"featuredImage"}
                     label={"Featured Image"}
-                    
                   />
                   <CenterBox width={"100%"} paddingY={"s"}>
                     <Button

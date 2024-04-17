@@ -13,8 +13,9 @@ interface CRUDTableProps {
   openDeleteModal: () => void;
   loading: boolean;
   handleUpdateFormValues: (data: {}) => void;
-  headings: string[];
+  headings: (string | undefined)[];
   widths: number[];
+  keys: string[];
 }
 
 export const CRUDTable: React.FC<CRUDTableProps> = ({
@@ -25,6 +26,7 @@ export const CRUDTable: React.FC<CRUDTableProps> = ({
   handleUpdateFormValues,
   headings,
   widths,
+  keys,
 }) => {
   return (
     <Box
@@ -50,11 +52,11 @@ export const CRUDTable: React.FC<CRUDTableProps> = ({
         <>
           <CRUDTableHeadingBar headings={headings} widths={widths} />
           <CrudTableRowItems
+            keys={keys}
             widths={widths}
             openDeleteModal={openDeleteModal}
             openUpdateModal={openUpdateModal}
             data={data}
-            headings={headings}
             handleUpdateFormValues={handleUpdateFormValues}
           />
         </>

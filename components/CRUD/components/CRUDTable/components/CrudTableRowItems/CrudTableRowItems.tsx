@@ -5,8 +5,8 @@ interface CrudTableRowItemsProps {
   openUpdateModal: () => void;
   openDeleteModal: () => void;
   handleUpdateFormValues: (data: {}) => void;
-  headings: string[];
   widths: number[];
+  keys: string[];
 }
 
 export const CrudTableRowItems: React.FC<CrudTableRowItemsProps> = ({
@@ -14,15 +14,15 @@ export const CrudTableRowItems: React.FC<CrudTableRowItemsProps> = ({
   openUpdateModal,
   openDeleteModal,
   handleUpdateFormValues,
-  headings,
   widths,
+  keys,
 }) => {
   return (
     <>
       {data.map((rowData, index) => (
         <CrudTableRowItem
+          keys={keys}
           widths={widths}
-          headings={headings}
           key={index}
           rowItem={rowData}
           openUpdateModal={openUpdateModal}

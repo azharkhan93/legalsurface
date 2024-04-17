@@ -11,8 +11,8 @@ type CrudTableRowItemProps = {
   openUpdateModal: () => void;
   openDeleteModal: () => void;
   handleUpdateFormValues: (data: {}) => void;
-  headings: string[];
   widths: number[];
+  keys: string[];
 };
 
 export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
@@ -20,12 +20,11 @@ export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
   openUpdateModal,
   openDeleteModal,
   handleUpdateFormValues,
-  headings,
   widths,
+  keys,
 }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
-  const keys = headings;
   const handleIconClick = () => {
     setModalVisible(true);
     handleUpdateFormValues(rowItem);
@@ -65,7 +64,6 @@ export const CrudTableRowItem: React.FC<CrudTableRowItemProps> = ({
           >
             <Text variant="body" py={"m"} px={"xl"}>
               {rowItem[key] || ""}
-              {/* {key === "createdAt" ? "N/A" : rowItem[key]} */}
             </Text>
           </Box>
         ))}

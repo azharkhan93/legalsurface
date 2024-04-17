@@ -43,8 +43,9 @@ export const CRUD: React.FC<CRUDProps> = ({
   const [isDeleteModalVisible, setDeleteModalVisible] = useState(false);
   const [updateFormValues, setUpdateFormValues] = useState({});
 
-  const headings = Object.keys(headingKeysWidth);
-
+  const keys = Object.keys(headingKeysWidth);
+  const headings = keys.map((key) => headingKeysWidth[key].alias);
+  console.log(headings);
   const widths = Object.values(headingKeysWidth).map((item) => item.width);
 
   const handleAddNewClick = () => {
@@ -104,6 +105,7 @@ export const CRUD: React.FC<CRUDProps> = ({
       ) : null}
       <ActionBar width={modalWidth} onAddNewClick={handleAddNewClick} />
       <CRUDTable
+        keys={keys}
         headings={headings}
         data={data}
         loading={loading}

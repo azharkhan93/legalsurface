@@ -1,11 +1,9 @@
 import { Box, CenterBox, Row, Text } from "@/components/styled";
-import React from "react";
 import Image from "next/image";
-import { RowData } from "@/components/CRUD";
 import { BASE_COLORS } from "@/theme";
 
 type CrudTableHeadingProps = {
-  headings: string[];
+  headings: (string | undefined)[];
   widths: number[];
 };
 
@@ -13,11 +11,6 @@ export const CRUDTableHeadingBar: React.FC<CrudTableHeadingProps> = ({
   headings,
   widths,
 }) => {
-  const keys = headings;
-  const capitalizedKeys = keys.map((str) => {
-    return str.charAt(0).toLocaleUpperCase() + str.slice(1);
-  });
-
   return (
     <>
       <Row
@@ -38,7 +31,7 @@ export const CRUDTableHeadingBar: React.FC<CrudTableHeadingProps> = ({
           />
         </CenterBox>
         <Row width={"100%"} justifyContent={"start"} px={"l"}>
-          {capitalizedKeys.map((key, index) => (
+          {headings.map((key, index) => (
             <Box
               justifyContent={"center"}
               width={`${widths[index]}%`}
