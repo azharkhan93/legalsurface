@@ -1,14 +1,9 @@
-"use client"
-import { UpdateProductCategories } from "../dashboard/product-categories/components"
+"use client";
+import { UpdateProductCategories } from "../dashboard/product-categories/components";
 
-
-
+const onActionComplete = () => {
+  return null;
+};
 export default function Page() {
-  
-
-  return (
-    
-    <UpdateProductCategories />
-   
-  )
+  return <UpdateProductCategories onActionComplete={onActionComplete} />;
 }

@@ -5,8 +5,9 @@ export const EDU_INSTITUTES_DOCUMENT = gql`
     $skip: Int
     $orderBy: [EduInstituteOrderByWithRelationInput!]
     $where: EduInstituteWhereInput
+    $take: Int
   ) {
-    eduInstitutes(skip: $skip, orderBy: $orderBy, where: $where) {
+    eduInstitutes(skip: $skip, orderBy: $orderBy, where: $where, take: $take) {
       id
       name
       domain
@@ -21,21 +22,28 @@ export const EDU_INSTITUTES_DOCUMENT = gql`
   }
 `;
 
-export const useGetEduInstitute = (searchTerm: string) => {
-  const response = useQuery(EDU_INSTITUTES_DOCUMENT, {
-    skip: false,
-    variables: {
-      orderBy: [
-        {
-          createdAt: "desc",
-        },
-      ],
-      where: {
-        name: {
-          contains: searchTerm.trim(),
-        },
+export const useGetEduInstitute = (searchTerm: string, skip: number) => {
+  let variables: { orderBy: any[]; where?: any; skip: number; take: number } = {
+    orderBy: [
+      {
+        createdAt: "desc",
       },
-    },
+    ],
+    skip: skip,
+    take: 10,
+  };
+
+  if (searchTerm.trim() !== "") {
+    variables.where = {
+      name: {
+        contains: searchTerm.trim(),
+      },
+    };
+  }
+
+  const response = useQuery(EDU_INSTITUTES_DOCUMENT, {
+    variables,
   });
+
   return response;
 };

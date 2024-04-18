@@ -7,12 +7,14 @@ import {
   faSliders,
   faTableList,
   faReceipt,
+  faUser,
+  faStore,
 } from "@fortawesome/free-solid-svg-icons";
 
-// export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
+export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
 
-export const API_HOST =
-  "https://0d65-2405-201-5505-116b-dcd9-8a32-2e9f-f0e1.ngrok-free.app/admin/graphql";
+// export const API_HOST =
+//   "https://0d65-2405-201-5505-116b-dcd9-8a32-2e9f-f0e1.ngrok-free.app/admin/graphql";
 
 export const SideBarData = [
   {
@@ -42,6 +44,22 @@ export const SideBarData = [
       },
     ],
   },
+  {
+    heading: "PLATFORM",
+    navLink: [
+      {
+        label: "Users",
+        icon: faUser,
+        href: "/dashboard/users",
+      },
+      {
+        label: "Products",
+        icon: faStore,
+        href: "/dashboard/products",
+      },
+    ],
+  },
+
   // {
   //   heading: "APP CONFIG",
   //   navLink: [

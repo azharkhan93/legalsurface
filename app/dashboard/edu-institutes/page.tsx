@@ -4,11 +4,19 @@ import { UpdateEduInstitute } from "./components/UpdateEduInstitute";
 import { useGetEduInstitute } from "./hooks/useGetEduInstitutes";
 import { DeleteEduInstitute } from "./components/DeleteEduInstitute";
 import { formatDate } from "@/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");
-  const { data, refetch, loading } = useGetEduInstitute(searchTerm);
+  const [skipPagination, setSkipPagination] = useState(0);
+  const { data, refetch, loading } = useGetEduInstitute(
+    searchTerm,
+    skipPagination
+  );
+
+  useEffect(() => {
+    setSkipPagination(0);
+  }, [searchTerm]);
 
   const headingKeysWidth = {
     name: {
@@ -39,6 +47,7 @@ export default function Page() {
   return (
     <Box height={"100%"} bg={"greyLight"} overflow={"auto"} p={"xl"}>
       <CRUD
+        nextPage={setSkipPagination}
         searchTerm={setSearchTerm}
         updateComponent={UpdateEduInstitute}
         modalWidth="40%"

@@ -6,6 +6,7 @@ import { CrudTableRowItems } from "./components/CrudTableRowItems";
 import { RowData } from "../../CRUD";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { Dispatch, SetStateAction } from "react";
 
 interface CRUDTableProps {
   data: RowData[];
@@ -16,6 +17,7 @@ interface CRUDTableProps {
   headings: (string | undefined)[];
   widths: number[];
   keys: string[];
+  nextPage: Dispatch<SetStateAction<number>> | undefined;
 }
 
 export const CRUDTable: React.FC<CRUDTableProps> = ({
@@ -27,6 +29,7 @@ export const CRUDTable: React.FC<CRUDTableProps> = ({
   headings,
   widths,
   keys,
+  nextPage,
 }) => {
   return (
     <Box
@@ -36,7 +39,7 @@ export const CRUDTable: React.FC<CRUDTableProps> = ({
       overflow={"hidden"}
       borderRadius={"xs"}
     >
-      <PaginationBar />
+      <PaginationBar nextPage={nextPage} data={data} />
       {loading ? (
         <CenterBox width={"100%"} bg={"greyLight"} py={"xxxxl"}>
           <CenterBox bg={"transparent"} width={"50%"}>

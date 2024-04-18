@@ -48,7 +48,7 @@ export default function Page() {
     <Box height={"100%"} bg={"greyLight"} overflow={"auto"} p={"xxxl"}>
       <CRUD
         updateComponent={UpdateProductCategories}
-        deleteComponent={null}
+        deleteComponent={UpdateProductCategories}
         modalWidth={"40%"}
         data={formattedData || []}
         refetch={refetch}
