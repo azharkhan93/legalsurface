@@ -9,11 +9,13 @@ interface ActionBarProps {
   width: string;
   onAddNewClick: () => void;
   searchTerm?: Dispatch<SetStateAction<string>>;
+  disableActionButton: Boolean | undefined;
 }
 
 export const ActionBar: React.FC<ActionBarProps> = ({
   onAddNewClick,
   searchTerm,
+  disableActionButton,
 }) => {
   const [isSearchIconVisible, setSearchIconVisibility] = useState(true);
 
@@ -61,15 +63,17 @@ export const ActionBar: React.FC<ActionBarProps> = ({
             onChange={handleInputChange}
           />
         </Box>
-        <Button
-          width={"150px"}
-          height={"50px"}
-          variant={"primary"}
-          onClick={onAddNewClick}
-        >
-          Add New
-          <FontAwesomeIcon icon={faPlus} />
-        </Button>
+        {disableActionButton ? null : (
+          <Button
+            width={"150px"}
+            height={"50px"}
+            variant={"primary"}
+            onClick={onAddNewClick}
+          >
+            Add New
+            <FontAwesomeIcon icon={faPlus} />
+          </Button>
+        )}
       </Box>
     </>
   );
