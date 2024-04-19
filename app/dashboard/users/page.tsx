@@ -7,9 +7,15 @@ import { formatDate } from "@/utils";
 import { formatBoolean } from "@/utils/formatBoolean";
 import { useUsers } from "./hooks/useUsers";
 import { shortenEmail } from "@/utils/shortenEmail";
+import { useEffect, useState } from "react";
 
 export default function Page() {
-  const { data, refetch, loading } = useUsers();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [skipPagination, setSkipPagination] = useState(0);
+  const { data, refetch, loading } = useUsers(searchTerm, skipPagination);
+  useEffect(() => {
+    setSkipPagination(0);
+  }, [searchTerm]);
 
   const headingKeysWidth = {
     firstName: {
@@ -44,11 +50,11 @@ export default function Page() {
     };
   });
 
-  console.log(formattedData);
-
   return (
     <Box height={"100%"} bg={"greyLight"} overflow={"auto"} p={"xxxl"}>
       <CRUD
+        nextPage={setSkipPagination}
+        searchTerm={setSearchTerm}
         updateComponent={BlankPage}
         deleteComponent={BlankPage}
         modalWidth={"40%"}
