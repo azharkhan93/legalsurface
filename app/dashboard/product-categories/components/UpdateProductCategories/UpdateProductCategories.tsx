@@ -1,8 +1,10 @@
+"use client"
 import {
   Box,
   Button,
   CenterBox,
   Column,
+  Row,
   Text,
   UpdateFormFileInputBox,
   UpdateFormInputBox,
@@ -13,6 +15,7 @@ import AsyncSelect from "react-select/async";
 import * as Yup from "yup";
 import { useGetProductCategories } from "../../hooks/useGetProductCategories";
 import { useMemo } from "react";
+import { DropDown } from "@/components/DropDown";
 
 type UpdateFormValues = {
   id?: string;
@@ -41,14 +44,21 @@ export const UpdateProductCategories: React.FC<UpdateComponentProps> = (
   props
 ) => {
   const { data: allCats } = useGetProductCategories();
-
-  const allCategories: categoryType[] = useMemo(() => {
+  const allCategories = useMemo(() => {
     if (!allCats) return [];
     return allCats.productCategories.map((obj: any) => ({
       label: obj.name,
       value: obj.parentId,
     }));
   }, [allCats]);
+
+  // const allCategories: categoryType[] = useMemo(() => {
+  //   if (!allCats) return [];
+  //   return allCats.productCategories.map((obj: any) => ({
+  //     label: obj.name,
+  //     value: obj.parentId,
+  //   }));
+  // }, [allCats]);
 
   const editMode = Boolean(props.data?.id);
 
@@ -96,20 +106,29 @@ export const UpdateProductCategories: React.FC<UpdateComponentProps> = (
                     label={"Preferred Gender"}
                     listOptions={["Male", "Female", "All"]}
                   />
-                  <UpdateFormListInputBox
+                  {/* <UpdateFormListInputBox
                     name={"parentCategory"}
                     placeholder={"Parent Category"}
                     label={"Parent Category"}
                     listOptions={[]}
+                  /> */}
+                  <DropDown
+                    placeholder={"Select an option"}
+                    data={allCategories}
+                    label={"Select an option:"}
+                    name="parentCategory"
+                    handleChange={(val) => console.log(val)}
                   />
-                  <UpdateFormFileInputBox
-                    name={"productCategoryIcon"}
-                    label={"Product Category Icon"}
-                  />
-                  <UpdateFormFileInputBox
-                    name={"featuredImage"}
-                    label={"Featured Image"}
-                  />
+                  <Row>
+                    <UpdateFormFileInputBox
+                      name={"productCategoryIcon"}
+                      label={"Product Category Icon"}
+                    />
+                    <UpdateFormFileInputBox
+                      name={"featuredImage"}
+                      label={"Featured Image"}
+                    />
+                  </Row>
                   <CenterBox width={"100%"} paddingY={"s"}>
                     <Button
                       width={"60%"}

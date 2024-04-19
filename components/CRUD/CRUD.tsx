@@ -45,7 +45,7 @@ export const CRUD: React.FC<CRUDProps> = ({
 
   const keys = Object.keys(headingKeysWidth);
   const headings = keys.map((key) => headingKeysWidth[key].alias);
-  console.log(headings);
+  // console.log(headings);
   const widths = Object.values(headingKeysWidth).map((item) => item.width);
 
   const handleAddNewClick = () => {

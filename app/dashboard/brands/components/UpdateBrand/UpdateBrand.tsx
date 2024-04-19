@@ -4,7 +4,7 @@ import { UpdateFormInputBox, UpdateFormFileInputBox } from "@/components";
 import * as Yup from "yup";
 import { useCreateOneBrand } from "../../hooks/useCreateOneBrand";
 import { useUpdateOneBrand } from "../../hooks/useUpdateOneBrand";
-import { ToggleButton } from "@/components/ToggleButton";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
@@ -162,8 +162,6 @@ export const UpdateBrand: React.FC<UpdateComponentProps> = (props) => {
                       label="Set as Featured"
                       name="featured"
                     />
-                    {/* <ToggleButton buttonText="Show On App" />
-                 <ToggleButton buttonText="Featured" /> */}
                   </Row>
 
                   <CenterBox width={"100%"} paddingY={"s"}>
