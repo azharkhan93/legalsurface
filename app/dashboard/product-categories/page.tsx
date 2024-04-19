@@ -13,21 +13,17 @@ export default function Page() {
       alias: "Category Name",
       width: 20,
     },
-    parent: {
-      alias: "Parent",
-      width: 10,
-    },
     preferredGender: {
       alias: "Gender",
-      width: 10,
+      width: 20,
     },
     active: {
       alias: "Visibility",
-      width: 10,
+      width: 20,
     },
     shippable: {
       alias: "Shippable",
-      width: 10,
+      width: 20,
     },
     createdAt: {
       alias: "Created At",

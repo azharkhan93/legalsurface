@@ -20,7 +20,7 @@ export const SideBarData = [
   {
     heading: "APP DATASETS",
     navLink: [
-      { label: "Overview", icon: faBinoculars, href: "/dashboard/overview" },
+      // { label: "Overview", icon: faBinoculars, href: "/dashboard/overview" },
       {
         label: "Edu. Institutes",
         icon: faBuildingColumns,

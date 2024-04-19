@@ -3,8 +3,7 @@ import { Box, CRUD } from "@/components";
 import { useGetBrands } from "./hooks/useGetBrands";
 import { formatDate } from "@/utils";
 import { DeleteBrand } from "./components/DeleteBrand";
-import {UpdateBrand} from "./components/UpdateBrand"
-
+import { UpdateBrand } from "./components/UpdateBrand";
 
 export default function Page() {
   const { data, refetch, loading } = useGetBrands();
@@ -14,11 +13,11 @@ export default function Page() {
       alias: "Brand Name",
       width: 20,
     },
-    _active: {
+    active: {
       alias: "Show On App",
       width: 20,
     },
-    _featured: {
+    couponCode: {
       alias: "Featured",
       width: 20,
     },
@@ -31,8 +30,6 @@ export default function Page() {
   const formattedData = data?.brands.map((item: any) => {
     return {
       ...item,
-      _active: item.active ? 'yes' : 'no',
-      _featured: item.featured ? 'yes' : 'no',
       createdAt: formatDate(item.createdAt),
     };
   });

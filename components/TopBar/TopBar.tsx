@@ -18,6 +18,7 @@ export const TopBar: React.FC<TopBar> = ({ handleCollapse, isOpen }) => {
       alignItems={"center"}
       paddingX={"header"}
       bg={isOpen ? "greyLight" : "primary"}
+      border="1px solid red"
     >
       <HoverBox
         width={"50px"}
@@ -38,6 +39,7 @@ export const TopBar: React.FC<TopBar> = ({ handleCollapse, isOpen }) => {
         p={"m"}
         borderRadius={"circle"}
         bg={"white"}
+        border="1px solid red"
       >
         <FontAwesomeIcon icon={faUser} />
       </HoverBox>

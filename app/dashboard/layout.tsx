@@ -20,9 +20,9 @@ export default function DashboardLayout({
         <SideBar handleCollapse={handleSideBarToggle} isOpen={isOpen} />
       </StyledSideBar>
       <Column width={"100%"}>
-        <StyledTopBar>
+        {/* <StyledTopBar>
           <TopBar handleCollapse={handleSideBarToggle} isOpen={isOpen} />
-        </StyledTopBar>
+        </StyledTopBar> */}
         <Box width={"100%"} height={"100%"}>
           {children}
         </Box>

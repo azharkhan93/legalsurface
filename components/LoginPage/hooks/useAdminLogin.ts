@@ -16,7 +16,7 @@ export const useAdminLogin = () => {
     if (typeof window !== "undefined") {
       window.localStorage.setItem("token", `${accessToken}`);
 
-      router.push("/dashboard");
+      router.push("/dashboard/edu-institutes");
     }
   };
   return { adminLogin, postLogin, loading, error, data };
