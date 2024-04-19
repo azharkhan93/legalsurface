@@ -1,3 +1,4 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CenterBox, Box, Row, Column, Text, HoverBox } from "../styled";
 import { SideBarSection } from "./components";
