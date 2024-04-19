@@ -1,6 +1,6 @@
 
 import { useField } from "formik";
-import { ToggleButton } from "../ToggleButton/ToggeButton";
+import { ToggleButton } from "../ToggleButton/ToggleButton";
 type ToggleButtonFormProps = {
   label: string;
   name: string;
