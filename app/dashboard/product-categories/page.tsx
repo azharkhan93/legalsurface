@@ -4,6 +4,7 @@ import { UpdateProductCategories } from "./components";
 import { useGetProductCategories } from "./hooks/useGetProductCategories";
 import { formatDate } from "@/utils";
 import { formatBoolean } from "@/utils/formatBoolean";
+import { DeleteCategory } from "./components/DeleteCategory";
 
 export default function Page() {
   const { data, refetch, loading } = useGetProductCategories();
@@ -44,7 +45,7 @@ export default function Page() {
     <Box height={"100%"} bg={"greyLight"} overflow={"auto"} p={"xxxl"}>
       <CRUD
         updateComponent={UpdateProductCategories}
-        deleteComponent={UpdateProductCategories}
+        deleteComponent={DeleteCategory}
         modalWidth={"40%"}
         data={formattedData || []}
         refetch={refetch}

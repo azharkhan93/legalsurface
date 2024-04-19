@@ -1,1 +1,1 @@
-export * from "./ToggeButton"
+export * from "./ToggleButton"

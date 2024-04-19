@@ -28,9 +28,9 @@ export const UpdateFormFileInputBox: React.FC<UpdateFormFileInputBoxProps> = ({
           {label}
         </Text>
       </Box>
-      <Row width={"100%"}>
+      <Row width={"100%"} >
         <CenterBox 
-        width = {"40%"}
+        width = {"100%"}
         >
         <FileInputBox handleOnChange={onChange} name={name} />
         </CenterBox>
