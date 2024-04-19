@@ -30,7 +30,7 @@ export type CRUDProps = {
   headingKeysWidth: HeadingKeysWidthType;
   searchTerm?: Dispatch<SetStateAction<string>>;
   nextPage?: Dispatch<SetStateAction<number>>;
-  disableActionButton?: Boolean;
+  disableAddNewButton?: Boolean;
 };
 
 export const CRUD: React.FC<CRUDProps> = ({
@@ -43,7 +43,7 @@ export const CRUD: React.FC<CRUDProps> = ({
   headingKeysWidth,
   searchTerm,
   nextPage,
-  disableActionButton,
+  disableAddNewButton,
 }) => {
   const [isAddUpdateModalVisible, setAddUpdateModalVisible] = useState(false);
   const [isDeleteModalVisible, setDeleteModalVisible] = useState(false);
@@ -113,7 +113,7 @@ export const CRUD: React.FC<CRUDProps> = ({
         width={modalWidth}
         onAddNewClick={handleAddNewClick}
         searchTerm={searchTerm}
-        disableActionButton={disableActionButton}
+        disableAddNewButton={disableAddNewButton}
       />
       <CRUDTable
         nextPage={nextPage}

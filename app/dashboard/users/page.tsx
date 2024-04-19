@@ -62,7 +62,7 @@ export default function Page() {
         refetch={refetch}
         loading={loading}
         headingKeysWidth={headingKeysWidth}
-        disableActionButton={false}
+        disableAddNewButton
       />
     </Box>
   );
