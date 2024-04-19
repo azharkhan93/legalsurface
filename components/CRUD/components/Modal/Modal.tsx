@@ -46,6 +46,8 @@ export const Modal: React.FC<ModalProps> = ({
         borderRadius={"xs"}
         position={"relative"}
         boxShadow={BASE_COLORS.modalShadow}
+        height="90%"
+        overflowY={"scroll"}
       >
         <CenterBox
           padding={"m"}

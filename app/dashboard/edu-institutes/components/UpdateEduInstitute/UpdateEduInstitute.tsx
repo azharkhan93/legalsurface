@@ -8,8 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 type UpdateFormValues = {
-
-  
   name?: string;
   domain?: string;
   city?: string;
@@ -112,6 +110,7 @@ export const UpdateEduInstitute: React.FC<UpdateComponentProps> = (props) => {
                 width: "100%",
                 height: "100%",
                 padding: "5px",
+                marginTop: "100px",
               }}
             >
               <CenterBox width={"100%"} height={"100%"} px={"l"} py={"xxxxl"}>
@@ -163,6 +162,7 @@ export const UpdateEduInstitute: React.FC<UpdateComponentProps> = (props) => {
                       variant={isSubmitting ? `disabled` : "primary"}
                       type="submit"
                       disabled={isSubmitting}
+                      mb="xl"
                     >
                       {isSubmitting ? (
                         <FontAwesomeIcon icon={faSpinner} className="fa-spin" />

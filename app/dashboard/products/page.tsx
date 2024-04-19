@@ -1,43 +1,43 @@
 "use client";
 import { Box, CRUD } from "@/components";
-import { UpdateEduInstitute } from "./components/UpdateEduInstitute";
-import { useGetEduInstitute } from "./hooks/useGetEduInstitutes";
-import { DeleteEduInstitute } from "./components/DeleteEduInstitute";
+
+import { BlankPage } from "./components/BlankPage/BlankPage";
+
 import { formatDate } from "@/utils";
+import { formatBoolean } from "@/utils/formatBoolean";
+
+import { shortenEmail } from "@/utils/shortenEmail";
 import { useEffect, useState } from "react";
+import { useGetProducts } from "./hooks/useGetProducts";
 
 export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");
   const [skipPagination, setSkipPagination] = useState(0);
-  const { data, refetch, loading } = useGetEduInstitute(
-    searchTerm,
-    skipPagination
-  );
-
+  const { data, refetch, loading } = useGetProducts(searchTerm, skipPagination);
   useEffect(() => {
     setSkipPagination(0);
   }, [searchTerm]);
 
   const headingKeysWidth = {
-    name: {
-      alias: "Name",
+    title: {
+      alias: "Title",
       width: 20,
     },
-    domain: {
-      alias: "Domain Name",
+    type: {
+      alias: "Type",
       width: 20,
     },
-    address: {
-      alias: "Address",
+    price: {
+      alias: "price",
       width: 20,
     },
     createdAt: {
-      alias: "Created At",
+      alias: "Member Since",
       width: 20,
     },
   };
 
-  const formattedData = data?.eduInstitutes.map((item: any) => {
+  const formattedData = data?.products.map((item: any) => {
     return {
       ...item,
       createdAt: formatDate(item.createdAt),
@@ -45,17 +45,18 @@ export default function Page() {
   });
 
   return (
-    <Box height={"100%"} bg={"greyLight"} overflow={"auto"} p={"xl"}>
+    <Box height={"100%"} bg={"greyLight"} overflow={"auto"} p={"xxxl"}>
       <CRUD
         nextPage={setSkipPagination}
         searchTerm={setSearchTerm}
-        updateComponent={UpdateEduInstitute}
-        modalWidth="40%"
+        updateComponent={BlankPage}
+        deleteComponent={BlankPage}
+        modalWidth={"40%"}
         data={formattedData || []}
-        headingKeysWidth={headingKeysWidth}
         refetch={refetch}
         loading={loading}
-        deleteComponent={DeleteEduInstitute}
+        headingKeysWidth={headingKeysWidth}
+        disableAddNewButton
       />
     </Box>
   );

@@ -1,14 +1,28 @@
 import { CenterBox, Column, Row, Text } from "@/components/styled";
 import { BASE_COLORS } from "@/theme";
 import Image from "next/image";
+import { Dispatch, SetStateAction } from "react";
+import { RowData } from "../../CRUD";
 
-export const PaginationBar: React.FC = () => {
+type PaginationPropTypes = {
+  nextPage?: Dispatch<SetStateAction<number>>;
+  data: RowData[];
+};
+
+export const PaginationBar: React.FC<PaginationPropTypes> = ({
+  nextPage,
+  data,
+}) => {
+  const dataLength = data.length;
+
   const handleNextPage = () => {
-    console.log(" next page ");
+    nextPage &&
+      nextPage((prevState) => (data.length != 0 ? prevState + 10 : prevState));
   };
 
   const handlePreviousPage = () => {
-    console.log(" previous page");
+    nextPage &&
+      nextPage((prevState) => (prevState > 0 ? prevState - 10 : prevState));
   };
   return (
     <Row

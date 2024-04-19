@@ -3,7 +3,7 @@ import { ActionBar } from "./components/ActionBar";
 import { RowData } from "@/constants";
 import { CRUDTable } from "./components/CRUDTable";
 import { Box } from "../styled";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { GenericUpdateComponentProps, Modal } from "./components/Modal";
 import { ApolloQueryResult, OperationVariables } from "@apollo/client";
 
@@ -28,6 +28,9 @@ export type CRUDProps = {
   ) => Promise<ApolloQueryResult<any>>;
   loading: boolean;
   headingKeysWidth: HeadingKeysWidthType;
+  searchTerm?: Dispatch<SetStateAction<string>>;
+  nextPage?: Dispatch<SetStateAction<number>>;
+  disableAddNewButton?: Boolean;
 };
 
 export const CRUD: React.FC<CRUDProps> = ({
@@ -38,6 +41,9 @@ export const CRUD: React.FC<CRUDProps> = ({
   refetch,
   loading,
   headingKeysWidth,
+  searchTerm,
+  nextPage,
+  disableAddNewButton,
 }) => {
   const [isAddUpdateModalVisible, setAddUpdateModalVisible] = useState(false);
   const [isDeleteModalVisible, setDeleteModalVisible] = useState(false);
@@ -45,7 +51,7 @@ export const CRUD: React.FC<CRUDProps> = ({
 
   const keys = Object.keys(headingKeysWidth);
   const headings = keys.map((key) => headingKeysWidth[key].alias);
-  // console.log(headings);
+
   const widths = Object.values(headingKeysWidth).map((item) => item.width);
 
   const handleAddNewClick = () => {
@@ -103,8 +109,14 @@ export const CRUD: React.FC<CRUDProps> = ({
           updateFormValues={updateFormValues}
         />
       ) : null}
-      <ActionBar width={modalWidth} onAddNewClick={handleAddNewClick} />
+      <ActionBar
+        width={modalWidth}
+        onAddNewClick={handleAddNewClick}
+        searchTerm={searchTerm}
+        disableAddNewButton={disableAddNewButton}
+      />
       <CRUDTable
+        nextPage={nextPage}
         keys={keys}
         headings={headings}
         data={data}
