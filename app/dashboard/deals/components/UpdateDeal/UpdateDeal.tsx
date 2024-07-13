@@ -86,6 +86,7 @@ export const UpdateDeal: React.FC<UpdateDealProps> = (props) => {
     try {
       setSubmitting(true);
       if (!editMode) {
+        
       } else {
         const { data } = await updateOneDeal({
           variables: {
