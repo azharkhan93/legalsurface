@@ -5,5 +5,7 @@ export * from "./Menu"
 export * from "./HeroSection"
 export * from "./ServiceSection"
 export * from "./ServiceCard"
+export * from "./Footer"
+export * from "./NewsLetter"
 
 

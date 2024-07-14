@@ -27,12 +27,12 @@ export const ServiceSection = () => {
             border={"2px solid green"}
             >
                 <Text>what we dosdsdsdsddsjkjjkjjjjjhjjkhjkhjjhjhjkh</Text>
-                <Text>what we dosdsdsdsdds</Text>
-                <Text>ijjidjdkjsdkj</Text>
+                <Text>what we dosdsdsdsdds fghhgfghghhghgfhfgggfhf</Text>
+                <Text>ijjidjdkjsdkj fghfggfhjfhfhhfffghfgh</Text>
                 <Button>hhhjjh</Button>
             </Box>
 
-                <ServiceCard imageUrl={"/images/hom.jpg"} title={"ddfdfssssdsdds"} description={"fdddsddsdsss"} />
+                <ServiceCard imageUrl={"/images/hom.jpg"} title={"ddfdfssssdsddsghhghghjghghggh"} description={"fdddsddsdsss"} />
                 <ServiceCard imageUrl={""} title={"ddfdfsdssss"} description={"fdddsdssdd"} />
                 <ServiceCard imageUrl={""} title={"ddfdfssssd"} description={"fddsssddsdsd"} />
                 

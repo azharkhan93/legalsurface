@@ -1,4 +1,4 @@
-import { Box, Text } from "@/components"; 
+import { Box, CenterBox, Text } from "@/components"; 
 import Image from 'next/image';
 import React from 'react';
 
@@ -12,7 +12,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ imageUrl, title, descr
     return (
         <Box
         border={"2px solid white"}
-        width={"50%"}
+        width={"40%"}
         textAlign={"center"}
         padding={"l"}
         borderTopLeftRadius={"xl"}
@@ -21,24 +21,26 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ imageUrl, title, descr
           borderBottomRightRadius={"xl"}
           alignItems={"center"}
             justifyContent={"center"}
-        >
-            <Box
             
-                borderRadius={"circle"}
-                width={"100px"}
-                height={"100px"}
-                border={"2px solid green"}
+        >
+           
+            <CenterBox
+            gap={10}
+            border={"2px solid green"}
+            width={"100%"}
             >
                 <Image
                     src={imageUrl}
-                    alt="Description of the image"
+                    alt="image"
                     width={95}
                     height={95}
-                    style={{ borderRadius: "50%" }}
+                    style={{ borderRadius: "50%", border: "2px solid blue" }}
                 />
-            </Box>
             <Text>{title}</Text>
             <Text>{description}</Text>
+            </CenterBox>
+
+            
         </Box>
     );
 };
