@@ -1,5 +1,17 @@
-import { LoginPage } from "@/components";
+"use client"
+import { Box,   HeroSection,   ServiceSection,   Text } from "@/components";
+import Navbar from "@/components/Navbar/Navbar";
 
-export default function Home() {
-  return <LoginPage />;
+export default function Page() {
+  return (
+    <>
+    <Navbar />
+
+    <HeroSection />
+    <ServiceSection />
+    
+    </>
+  );
 }
+
+

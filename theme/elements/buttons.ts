@@ -11,7 +11,7 @@ export const BASE_BUTTON_VARIANTS = {
     color: "white",
     border: "none",
     borderRadius: BASE_BORDER_RADII.xs,
-    padding: "5px",
+     padding: "5px",
     fontSize: BASE_SPACING.l,
     font: BASE_FONTS.body,
     fontWeights: "500",

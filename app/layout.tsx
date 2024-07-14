@@ -12,12 +12,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const router = useRouter();
-  useEffect(() => {
-    if (localStorage.getItem("token") === null) {
-      router.push("/");
-    }
-  }, [router]);
+  // const router = useRouter();
+  // useEffect(() => {
+  //   if (localStorage.getItem("token") === null) {
+  //     router.push("/");
+  //   }
+  // }, [router]);
 
   return (
     <html lang="en">
@@ -25,9 +25,9 @@ export default function RootLayout({
         <GlobalStyle />
         <AppThemeProvider>
           <ApolloProvider client={client}>
-            <Box width={"100vw"} height={"100vh"}>
+            {/* <Box width={"100vw"} height={"100vh"}> */}
               {children}
-            </Box>
+            {/* </Box> */}
           </ApolloProvider>
         </AppThemeProvider>
       </body>
