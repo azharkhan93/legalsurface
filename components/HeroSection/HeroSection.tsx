@@ -38,27 +38,37 @@ export const HeroSection = () => {
                 
             </Column>
             <Box 
-            border={"2px solid green"}
+            // border={"2px solid green"}
             borderRadius={"xl"}
             alignItems={"center"}
             justifyContent={"space-between"}
             flexDirection={"row"}
+            gap={"xxl"}
             >
                 
                 <Image
                     src="/images/hom.jpg" 
                     alt="Description of the image"
-                    width={300} // Adjust size as needed
-                    height={300} // Adjust size as needed
-                    style={{zIndex: "999", top: "90px", borderRadius: "20px"}}
+                    width={250} 
+                    height={400} 
+                    style={{zIndex: "999",  borderRadius: "80px"}}
                 />
+                <Box
+                
+                px={"xxl"}
+                py={"xxl"}
+                borderRadius={"circle"}
+                border={"2px solid white"}
+                >
                 <Image
                     src="/images/home3.jpg" 
                     alt="Description of the image"
-                    width={450} 
-                    height={620} 
+                    width={250} 
+                    height={400} 
+                    style={{zIndex: "999",  borderRadius: "80px"}}
                     
                 />
+                </Box>
             </Box>
             
             

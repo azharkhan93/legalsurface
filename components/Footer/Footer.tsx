@@ -14,7 +14,7 @@ export const Footer = () => {
   return (
     <>
       <Box
-        border={"4px solid yellow"}
+        // border={"4px solid yellow"}
         padding={"xl"}
         alignItems={"center"}
         bg={"primary"}
@@ -28,7 +28,7 @@ export const Footer = () => {
           flexDirection={"row"}
           width={"100%"}
           p={"xl"}
-          border={"4px solid black"}
+        //   border={"4px solid black"}
         >
           <Column
             borderRight={"3px solid black"}

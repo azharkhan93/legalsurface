@@ -8,7 +8,7 @@ import Image from 'next/image';
 export const NewsLetter = () => {
     return (
         <Box
-        border={"2px solid white"}
+        borderBottom={"1px solid #D4BDE8"}
         width={"100%"}
        
         p={"xl"}
@@ -19,17 +19,13 @@ export const NewsLetter = () => {
            
             
         >
-           
-           
-          
-               
-                    <Row
+<Row
             gap={20}
             
             width={"80%"}
             alignItems={"center"}
             justifyContent={"center"}
-            borderRight={"2px solid green"}
+            borderRight={"2px solid #2A3277"}
             height={"10vh"}
            
             >
@@ -56,9 +52,7 @@ export const NewsLetter = () => {
                     height={100}
                 />
                  
-                
-           
-            </CenterBox>
+                </CenterBox>
             <CenterBox
             gap={10}
             borderRight={"2px solid green"}
