@@ -6,6 +6,7 @@ export const BASE_BORDER_RADII = {
   m: "12px",
   lg: "17px",
   xl: "40px",
+  none: 0,
 };
 
 export type AppBorderRadii = keyof typeof BASE_BORDER_RADII;

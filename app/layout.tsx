@@ -6,7 +6,7 @@ import { ApolloProvider } from "@apollo/client";
 import { client } from "@/utils/apolloClient";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/Navbar/Navbar";
+import { Navbar } from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/Footer/Footer";
 
 export default function RootLayout({

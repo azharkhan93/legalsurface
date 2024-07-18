@@ -1,7 +1,7 @@
 export const BASE_COLORS = {
-  primary: "#5809A3",
+  primary: "#D4BDE8",
   primaryLight: "#7352c726",
-  secondary: "#D93922",
+  secondary: "#2A3277",
   grey: "#8594A5",
   greyish: "#ACB5BD",
   greyLight: "#E9ECEF",
@@ -14,3 +14,4 @@ export const BASE_COLORS = {
 };
 
 export type AppColors = keyof typeof BASE_COLORS;
+

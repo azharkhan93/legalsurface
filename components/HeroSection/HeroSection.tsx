@@ -9,7 +9,7 @@ import {
   Button,
 } from "@/components";
 import Image from "next/image";
-import Navbar from "../Navbar/Navbar";
+
 
 export const HeroSection = () => {
   return (
@@ -56,7 +56,7 @@ export const HeroSection = () => {
             alt="Description of the image"
             width={250}
             height={400}
-            style={{ zIndex: "999", borderRadius: "80px" }}
+             style={{  borderRadius: "80px" }}
           />
           <Box
             px={"xxl"}
@@ -69,7 +69,7 @@ export const HeroSection = () => {
               alt="Description of the image"
               width={250}
               height={400}
-              style={{ zIndex: "999", borderRadius: "80px" }}
+               style={{  borderRadius: "80px" }}
             />
           </Box>
         </Box>

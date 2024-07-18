@@ -17,7 +17,7 @@ export const Footer = () => {
         // border={"4px solid yellow"}
         padding={"xl"}
         alignItems={"center"}
-        bg={"primary"}
+        bg={"secondary"}
         // height={"40vh"}
         // flexDirection={"column"}
       >
@@ -28,11 +28,11 @@ export const Footer = () => {
           flexDirection={"row"}
           width={"100%"}
           p={"xl"}
-        //   border={"4px solid black"}
+          //   border={"4px solid black"}
         >
           <Column
-            borderRight={"3px solid black"}
-            borderLeft={"3px solid black"}
+            borderRight={"1px solid black"}
+            borderLeft={"1px solid black"}
             textAlign={"center"}
             overflow={"hidden"}
             justifyContent={"center"}
@@ -46,9 +46,7 @@ export const Footer = () => {
             </Row>
           </Column>
           <Column
-            borderRight={"3px solid black"}
-            // borderLeft={"3px solid green"}
-
+            borderRight={"1px solid black"}
             textAlign={"center"}
             overflow={"hidden"}
             justifyContent={"center"}
@@ -67,7 +65,7 @@ export const Footer = () => {
           </Column>
 
           <Column
-            borderRight={"3px solid black"}
+            borderRight={"1px solid black"}
             // borderLeft={"3px solid green"}
             textAlign={"center"}
             overflow={"hidden"}
@@ -87,13 +85,15 @@ export const Footer = () => {
             </Row>
             <Row alignItems={"center"} justifyContent={"center"} gap={"m"}>
               <FaPhone size={23} fill="green" width={"20px"} />
-              <Text variant="body"> Phone: +914445555</Text>
+              <Text variant="body"> Phone: +91444555599999998</Text>
             </Row>
           </Column>
         </Box>
       </Box>
+      <Box height={"1px"} bg={"secondary"} width={"100%"}></Box>
+
       <CenterBox py={"m"}>
-        <Text variant="heading" color="primary">
+        <Text variant="heading" color="secondary">
           copyright sall rights reserved
         </Text>
       </CenterBox>

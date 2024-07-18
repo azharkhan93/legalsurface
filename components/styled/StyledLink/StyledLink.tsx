@@ -25,12 +25,13 @@ export const StyledLink = styled.a<HyperLinkProps>`
     left: 0;
     width: 0;
     height: 3px;
+   
     background-color: ${(props) =>
       props.$UnderlineColor === "blue"
         ? "black"
         : props.$UnderlineColor === "white"
         ? "yellow"
-        : "green"};
+        : "white"};
     transition: width 0.3s ease;
     border-radius: 10px;
   }

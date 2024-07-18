@@ -3,15 +3,15 @@
 export const NavbarData = [
   {
     title: "Home",
-    // link: "/",
+     link: "/link",
   },
   {
     title: "About",
-    // link: "/blog",
+     link: "",
   },
   {
     title: "Services",
-    link: "/pricing",
+     link: "",
   },
   // {
   //   title: "FAQs",
@@ -19,7 +19,7 @@ export const NavbarData = [
   // },
   {
     title: "Clients",
-    // link: "/about#partners",
+     link: "",
   },
   {
     title: "Testimonials",
