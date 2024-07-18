@@ -83,6 +83,9 @@ const Navbar = () => {
       bg={"secondary"}
       position={"relative"}
       padding={"xl"}
+      top={0}
+      borderRadius={"circle"}
+      mx={"header"}
       
 
 

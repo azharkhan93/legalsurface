@@ -6,6 +6,8 @@ import { ApolloProvider } from "@apollo/client";
 import { client } from "@/utils/apolloClient";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Navbar from "@/components/Navbar/Navbar";
+import { Footer } from "@/components/Footer/Footer";
 
 export default function RootLayout({
   children,
@@ -22,14 +24,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        
         <GlobalStyle />
+        
         <AppThemeProvider>
           <ApolloProvider client={client}>
-            {/* <Box width={"100vw"} height={"100vh"}> */}
+          <Navbar />
+           
               {children}
-            {/* </Box> */}
+              <Footer/>
+
           </ApolloProvider>
         </AppThemeProvider>
+       
       </body>
     </html>
   );
