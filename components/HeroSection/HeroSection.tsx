@@ -64,6 +64,7 @@ export const HeroSection = () => {
             borderRadius={"circle"}
             border={"2px solid white"}
           >
+            
             <Image
               src="/images/home3.jpg"
               alt="Description of the image"
@@ -72,6 +73,7 @@ export const HeroSection = () => {
                style={{  borderRadius: "80px" }}
             />
           </Box>
+          
         </Box>
       </CenterBox>
     </>
