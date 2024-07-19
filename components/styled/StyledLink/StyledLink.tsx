@@ -1,16 +1,18 @@
-"use client"
+"use client";
 import { BASE_COLORS } from "@/theme/elements/color";
 import styled from "styled-components";
 import { typography, TypographyProps, color, ColorProps } from "styled-system";
-type HyperLinkProps = TypographyProps &
-  ColorProps & { $UnderlineColor?: string };
+
+type HyperLinkProps = TypographyProps & ColorProps & { $UnderlineColor?: string };
+
 export const StyledLink = styled.a<HyperLinkProps>`
   width: fit-content;
   cursor: pointer;
   text-decoration: none;
   font-family: "panton";
-  font-size: 0.9;
+  font-size: 0.9rem; /* Adjusted font-size to use rem unit */
   font-weight: 400;
+  color: white; 
   ${typography}
   ${color}
   position: relative;
@@ -25,13 +27,12 @@ export const StyledLink = styled.a<HyperLinkProps>`
     left: 0;
     width: 0;
     height: 3px;
-   
     background-color: ${(props) =>
       props.$UnderlineColor === "blue"
-        ? "black"
-        : props.$UnderlineColor === "white"
         ? "yellow"
-        : "white"};
+        : props.$UnderlineColor === "green"
+        ? "yellow"
+        : "green"};
     transition: width 0.3s ease;
     border-radius: 10px;
   }
@@ -44,3 +45,4 @@ export const StyledLink = styled.a<HyperLinkProps>`
     transform: translateX(3px) scale(1); /* Bulge out and move on hover */
   }
 `;
+

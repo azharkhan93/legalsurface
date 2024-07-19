@@ -56,7 +56,7 @@ export const Navbar = () => {
       </Button>
 
       {/* Mobile Menu */}
-      {isOpen && (
+      {isOpen ? (
         <CenterBox
           width={"100vw"}
           height={"100vh"}
@@ -89,7 +89,7 @@ export const Navbar = () => {
             hello
           </Button>
         </CenterBox>
-      )}
+      ): null}
     </Row>
   );
 };
