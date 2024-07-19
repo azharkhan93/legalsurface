@@ -1,5 +1,5 @@
 "use client";
-import { BASE_COLORS } from "@/theme/elements/color";
+
 import styled from "styled-components";
 import { typography, TypographyProps, color, ColorProps } from "styled-system";
 
