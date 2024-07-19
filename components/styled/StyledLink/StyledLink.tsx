@@ -10,7 +10,7 @@ export const StyledLink = styled.a<HyperLinkProps>`
   cursor: pointer;
   text-decoration: none;
   font-family: "panton";
-  font-size: 0.9rem; /* Adjusted font-size to use rem unit */
+  font-size: 0.9rem; 
   font-weight: 400;
   color: white; 
   ${typography}
