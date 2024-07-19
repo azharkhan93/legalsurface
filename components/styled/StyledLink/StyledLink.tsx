@@ -13,6 +13,7 @@ export const StyledLink = styled.a<HyperLinkProps>`
   font-size: 0.9rem; 
   font-weight: 400;
   color: white; 
+  
   ${typography}
   ${color}
   position: relative;
