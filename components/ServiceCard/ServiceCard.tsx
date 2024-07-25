@@ -12,21 +12,25 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ imageUrl, title, descr
     return (
         <Box
         border={"2px solid white"}
-        width={"40%"}
+        // width={"60%"}
         textAlign={"center"}
-        padding={"l"}
+        // padding={"l"}
+        py={"l"}
+        px={"xl"}
         borderTopLeftRadius={"xl"}
         borderTopRightRadius={"xl"}
         
           borderBottomRightRadius={"xl"}
           alignItems={"center"}
             justifyContent={"center"}
+            bg={"secondary"}
+            
             
         >
            
             <CenterBox
-            gap={10}
-            border={"2px solid green"}
+            gap={15}
+            // border={"2px solid green"}
             width={"100%"}
             >
                 <Image
@@ -36,8 +40,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ imageUrl, title, descr
                     height={95}
                     style={{ borderRadius: "50%", border: "2px solid blue" }}
                 />
-            <Text>{title}</Text>
-            <Text>{description}</Text>
+            <Text color="primary">{title}</Text>
+            <Text color="primary">{description}</Text>
             </CenterBox>
 
             

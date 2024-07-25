@@ -31,6 +31,23 @@ export const NavbarData = [
   },
 ];
 
+export const slidesData = [
+  {
+    title: "Discover the Beauty Within You",
+    subtitle: "Experience The Ultimate In Beauty Indulgence At Glam Squad",
+    image: "/images/hom.jpg",
+  },
+  {
+    title: "Unleash Your Inner Glow",
+    subtitle: "Revitalize Your Look with Our Premium Services",
+    image: "/images/home2.jpg",
+  },
+  {
+    title: "Transform Your Style",
+    subtitle: "Expert Care for a Stunning You",
+    image: "/images/home3.jpg",
+  },
+];
 
 export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
 

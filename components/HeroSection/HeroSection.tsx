@@ -12,24 +12,8 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 // import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { slidesData } from "@/constants";
 
-const slideData = [
-  {
-    title: "Discover the Beauty Within You",
-    subtitle: "Experience The Ultimate In Beauty Indulgence At Glam Squad",
-    image: "/images/hom.jpg",
-  },
-  {
-    title: "Unleash Your Inner Glow",
-    subtitle: "Revitalize Your Look with Our Premium Services",
-    image: "/images/home2.jpg",
-  },
-  {
-    title: "Transform Your Style",
-    subtitle: "Expert Care for a Stunning You",
-    image: "/images/home3.jpg",
-  },
-];
 
 export const HeroSection = () => {
   return (
@@ -42,7 +26,7 @@ export const HeroSection = () => {
         loop={true}
         modules={[Autoplay, Pagination]}
       >
-        {slideData.map((slide, index) => (
+        {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
             <CenterBox
               justifyContent={"space-between"}
@@ -81,7 +65,7 @@ export const HeroSection = () => {
               >
                 <Image
                   src={slide.image}
-                  alt="Description of the image"
+                  alt="slider image"
                   width={250}
                   height={400}
                   style={{ borderRadius: "80px" }}
