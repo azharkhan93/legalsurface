@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import {
   Box,
   Text,
@@ -8,11 +9,31 @@ import {
 } from "@/components";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import SwiperCore, { Navigation, Pagination } from "swiper/core";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-// Install Swiper modules
-SwiperCore.use([Navigation, Pagination]);
+const slides = [
+  {
+    id: 1,
+    title: "Discover the Beauty Within You",
+    tagline: "Experience The Ultimate In Beauty Indulgence At Glam Squad",
+    // image: "/images/home1.jpg",
+  },
+  {
+    id: 2,
+    title: "Unleash Your Inner Glow",
+    tagline: "Our Experts Are Here To Pamper You",
+    // image: "/images/home2.jpg",
+  },
+  {
+    id: 3,
+    title: "Transform Your Look",
+    tagline: "Top-notch Services For A New You",
+    // image: "/images/home3.jpg",
+  },
+];
 
 export const HeroSection = () => {
   return (
@@ -29,12 +50,10 @@ export const HeroSection = () => {
         backgroundSize={"cover"}
         backgroundColor={"primaryLight"}
       >
-        <Column textAlign={"center"} maxWidth={"600px"} gap={"m"}>
+        {/* <Column textAlign={"center"} maxWidth={"600px"} gap={"m"}>
           <Text
-            fontSize={"50px "}
-            textShadow={"-moz-initial"}
+            fontSize={"50px"}
             fontWeight={"bold"}
-            fontFamily={""}
           >
             Discover the Beauty Within You
           </Text>
@@ -44,7 +63,7 @@ export const HeroSection = () => {
               hello
             </Button>
           </CenterBox>
-        </Column>
+        </Column> */}
         <Box
           borderRadius={"xl"}
           alignItems={"center"}
@@ -53,62 +72,38 @@ export const HeroSection = () => {
           gap={"xxl"}
         >
           <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
             navigation
-            pagination={{ clickable: true }}
+            pagination={{ type: "bullets", clickable: true }}
+            autoplay={{ delay: 500 }}
+            loop={true}
+            modules={[Autoplay, Navigation, Pagination]}
           >
-            <SwiperSlide>
-              <Box
-                px={"xxl"}
-                py={"xxl"}
-                borderRadius={"circle"}
-                border={"2px solid white"}
-              >
-                <Image
-                  src="/images/home3.jpg"
-                  alt="Slide 1"
-                  width={250}
-                  height={400}
-                  style={{ borderRadius: "80px" }}
-                />
-                <Text fontSize={"20px"} textAlign={"center"}>Slide 1 Description</Text>
-              </Box>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Box
-                px={"xxl"}
-                py={"xxl"}
-                borderRadius={"circle"}
-                border={"2px solid white"}
-              >
-                <Image
-                  src="/images/home2.jpg"
-                  alt="Slide 2"
-                  width={250}
-                  height={400}
-                  style={{ borderRadius: "80px" }}
-                />
-                <Text fontSize={"20px"} textAlign={"center"}>Slide 2 Description</Text>
-              </Box>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Box
-                px={"xxl"}
-                py={"xxl"}
-                borderRadius={"circle"}
-                border={"2px solid white"}
-              >
-                <Image
-                  src="/images/home1.jpg"
-                  alt="Slide 3"
-                  width={250}
-                  height={400}
-                  style={{ borderRadius: "80px" }}
-                />
-                <Text fontSize={"20px"} textAlign={"center"}>Slide 3 Description</Text>
-              </Box>
-            </SwiperSlide>
+            {slides.map(({ id, tagline, title }) => (
+              <SwiperSlide key={id}>
+                <div
+                  // className="h-full w-full"
+                  // style={{
+                  //   background: `url(${image}) center center / cover no-repeat`,
+                  //   height: '400px',
+                  //   borderRadius: '80px'
+                  // }}
+                >
+                  {/* <div className="h-full w-full bg-black opacity-20 rounded-xl" style={{width: "100vh"}}></div> */}
+                  <div className="relative z-10 h-full flex items-center justify-center rounded-xl">
+                    <div className="text-center">
+                      {tagline && (
+                        <p className="text-md sm:text-xl lg:text-3xl font-semibold text-white">
+                          {tagline}
+                        </p>
+                      )}
+                      <p className="text-3xl sm:text-6xl lg:text-8xl font-bold text-white">
+                        {title}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </Box>
       </CenterBox>

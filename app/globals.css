@@ -4,3 +4,14 @@
   overflow-x: hidden;
   background-color: #D4BDE8;
 }
+
+.swiper {
+  height: 100%;
+  width: 100%;
+  border: 2px solid green;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  transform: scale(2);
+  transform-origin: center;
+}
