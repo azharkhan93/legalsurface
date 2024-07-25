@@ -7,13 +7,18 @@ import {
   Button,
 } from "@/components";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import SwiperCore, { Navigation, Pagination } from "swiper/core";
+
+// Install Swiper modules
+SwiperCore.use([Navigation, Pagination]);
 
 export const HeroSection = () => {
   return (
     <>
       {/* <Navbar /> */}
       <CenterBox
-        // style={{backgroundImage: "url(/images/hom.jpg)"}}
         justifyContent={"space-between"}
         flexDirection={"row"}
         padding={"xl"}
@@ -30,8 +35,6 @@ export const HeroSection = () => {
             textShadow={"-moz-initial"}
             fontWeight={"bold"}
             fontFamily={""}
-           
-            
           >
             Discover the Beauty Within You
           </Text>
@@ -43,36 +46,73 @@ export const HeroSection = () => {
           </CenterBox>
         </Column>
         <Box
-          // border={"2px solid green"}
           borderRadius={"xl"}
           alignItems={"center"}
           justifyContent={"space-between"}
           flexDirection={"row"}
           gap={"xxl"}
         >
-          <Image
-            src="/images/hom.jpg"
-            alt="Description of the image"
-            width={250}
-            height={400}
-            style={{ borderRadius: "80px" }}
-          />
-          <Box
-            px={"xxl"}
-            py={"xxl"}
-            borderRadius={"circle"}
-            border={"2px solid white"}
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
           >
-            <Image
-              src="/images/home3.jpg"
-              alt="Description of the image"
-              width={250}
-              height={400}
-              style={{ borderRadius: "80px" }}
-            />
-          </Box>
+            <SwiperSlide>
+              <Box
+                px={"xxl"}
+                py={"xxl"}
+                borderRadius={"circle"}
+                border={"2px solid white"}
+              >
+                <Image
+                  src="/images/home3.jpg"
+                  alt="Slide 1"
+                  width={250}
+                  height={400}
+                  style={{ borderRadius: "80px" }}
+                />
+                <Text fontSize={"20px"} textAlign={"center"}>Slide 1 Description</Text>
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box
+                px={"xxl"}
+                py={"xxl"}
+                borderRadius={"circle"}
+                border={"2px solid white"}
+              >
+                <Image
+                  src="/images/home2.jpg"
+                  alt="Slide 2"
+                  width={250}
+                  height={400}
+                  style={{ borderRadius: "80px" }}
+                />
+                <Text fontSize={"20px"} textAlign={"center"}>Slide 2 Description</Text>
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box
+                px={"xxl"}
+                py={"xxl"}
+                borderRadius={"circle"}
+                border={"2px solid white"}
+              >
+                <Image
+                  src="/images/home1.jpg"
+                  alt="Slide 3"
+                  width={250}
+                  height={400}
+                  style={{ borderRadius: "80px" }}
+                />
+                <Text fontSize={"20px"} textAlign={"center"}>Slide 3 Description</Text>
+              </Box>
+            </SwiperSlide>
+          </Swiper>
         </Box>
       </CenterBox>
     </>
   );
 };
+
