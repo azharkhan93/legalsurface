@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import {
   Box,
   Text,
@@ -11,27 +10,24 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const slides = [
+const slideData = [
   {
-    id: 1,
     title: "Discover the Beauty Within You",
-    tagline: "Experience The Ultimate In Beauty Indulgence At Glam Squad",
-    // image: "/images/home1.jpg",
+    subtitle: "Experience The Ultimate In Beauty Indulgence At Glam Squad",
+    image: "/images/hom.jpg",
   },
   {
-    id: 2,
     title: "Unleash Your Inner Glow",
-    tagline: "Our Experts Are Here To Pamper You",
-    // image: "/images/home2.jpg",
+    subtitle: "Revitalize Your Look with Our Premium Services",
+    image: "/images/home2.jpg",
   },
   {
-    id: 3,
-    title: "Transform Your Look",
-    tagline: "Top-notch Services For A New You",
-    // image: "/images/home3.jpg",
+    title: "Transform Your Style",
+    subtitle: "Expert Care for a Stunning You",
+    image: "/images/home3.jpg",
   },
 ];
 
@@ -39,74 +35,76 @@ export const HeroSection = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <CenterBox
-        justifyContent={"space-between"}
-        flexDirection={"row"}
-        padding={"xl"}
-        height={"90vh"}
-        backgroundImage={"/images/hom.jpg"}
-        backgroundPosition={"center"}
-        backgroundRepeat={"no-repeat"}
-        backgroundSize={"cover"}
-        backgroundColor={"primaryLight"}
+      <Swiper
+        navigation
+        pagination={{ type: "bullets", clickable: true }}
+        autoplay={{ delay: 5000 }}
+        loop={true}
+        modules={[Autoplay, Pagination]}
       >
-        {/* <Column textAlign={"center"} maxWidth={"600px"} gap={"m"}>
-          <Text
-            fontSize={"50px"}
-            fontWeight={"bold"}
-          >
-            Discover the Beauty Within You
-          </Text>
-          <Text fontSize={"30px"}>Experience The Ultimate In Beauty Indulgence At Glam Squad</Text>
-          <CenterBox mt={'l'}>
-            <Button variant={"primary"} borderRadius={"circle"} width={"200px"}>
-              hello
-            </Button>
-          </CenterBox>
-        </Column> */}
-        <Box
-          borderRadius={"xl"}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          flexDirection={"row"}
-          gap={"xxl"}
-        >
-          <Swiper
-            navigation
-            pagination={{ type: "bullets", clickable: true }}
-            autoplay={{ delay: 500 }}
-            loop={true}
-            modules={[Autoplay, Navigation, Pagination]}
-          >
-            {slides.map(({ id, tagline, title }) => (
-              <SwiperSlide key={id}>
-                <div
-                  // className="h-full w-full"
-                  // style={{
-                  //   background: `url(${image}) center center / cover no-repeat`,
-                  //   height: '400px',
-                  //   borderRadius: '80px'
-                  // }}
+        {slideData.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <CenterBox
+              justifyContent={"space-between"}
+              flexDirection={["column","row"]}
+              padding={"xl"}
+              height={"90vh"}
+              backgroundImage={slide.image}
+              backgroundPosition={"center"}
+              backgroundRepeat={"no-repeat"}
+              backgroundSize={"cover"}
+              backgroundColor={"primaryLight"}
+            >
+              <Column textAlign={"center"} maxWidth={"600px"} gap={"m"}>
+                <Text
+                  fontSize={"50px "}
+                  textShadow={"-moz-initial"}
+                  fontWeight={"bold"}
+                  fontFamily={""}
                 >
-                  {/* <div className="h-full w-full bg-black opacity-20 rounded-xl" style={{width: "100vh"}}></div> */}
-                  <div className="relative z-10 h-full flex items-center justify-center rounded-xl">
-                    <div className="text-center">
-                      {tagline && (
-                        <p className="text-md sm:text-xl lg:text-3xl font-semibold text-white">
-                          {tagline}
-                        </p>
-                      )}
-                      <p className="text-3xl sm:text-6xl lg:text-8xl font-bold text-white">
-                        {title}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </Box>
-      </CenterBox>
+                  {slide.title}
+                </Text>
+                <Text fontSize={"30px"}>{slide.subtitle}</Text>
+                <CenterBox mt={"l"}>
+                  <Button variant={"primary"} borderRadius={"circle"} width={"200px"}>
+                    hello
+                  </Button>
+                </CenterBox>
+              </Column>
+              <Box
+              // display={["none", "block"]}
+                borderRadius={"xl"}
+                alignItems={"center"}
+                justifyContent={"space-between"}
+                flexDirection={"row"}
+                gap={"xxl"}
+              >
+                <Image
+                  src={slide.image}
+                  alt="Description of the image"
+                  width={250}
+                  height={400}
+                  style={{ borderRadius: "80px" }}
+                />
+                <Box
+                  px={"xxl"}
+                  py={"xxl"}
+                  borderRadius={"circle"}
+                  border={"2px solid white"}
+                >
+                  <Image
+                    src={slide.image}
+                    alt="no image"
+                    width={250}
+                    height={400}
+                    style={{ borderRadius: "80px" }}
+                  />
+                </Box>
+              </Box>
+            </CenterBox>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </>
   );
 };
