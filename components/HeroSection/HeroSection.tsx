@@ -1,15 +1,12 @@
 "use client";
 import {
   Box,
-  Row,
   Text,
   Column,
-  StyledLink,
   CenterBox,
   Button,
 } from "@/components";
 import Image from "next/image";
-
 
 export const HeroSection = () => {
   return (
@@ -19,7 +16,7 @@ export const HeroSection = () => {
         // style={{backgroundImage: "url(/images/hom.jpg)"}}
         justifyContent={"space-between"}
         flexDirection={"row"}
-        padding={"xlg"}
+        padding={"xl"}
         height={"90vh"}
         backgroundImage={"/images/hom.jpg"}
         backgroundPosition={"center"}
@@ -27,17 +24,19 @@ export const HeroSection = () => {
         backgroundSize={"cover"}
         backgroundColor={"primaryLight"}
       >
-        <Column textAlign={"center"} maxWidth={"600px"}>
+        <Column textAlign={"center"} maxWidth={"600px"} gap={"m"}>
           <Text
-            fontSize={"40px "}
+            fontSize={"50px "}
             textShadow={"-moz-initial"}
             fontWeight={"bold"}
             fontFamily={""}
+           
+            
           >
-            hello
+            Discover the Beauty Within You
           </Text>
-          <Text fontSize={"30px"}>hello njkdjkjdkkjddkdlkdk</Text>
-          <CenterBox>
+          <Text fontSize={"30px"}>Experience The Ultimate In Beauty Indulgence At Glam Squad</Text>
+          <CenterBox mt={'l'}>
             <Button variant={"primary"} borderRadius={"circle"} width={"200px"}>
               hello
             </Button>
@@ -56,7 +55,7 @@ export const HeroSection = () => {
             alt="Description of the image"
             width={250}
             height={400}
-             style={{  borderRadius: "80px" }}
+            style={{ borderRadius: "80px" }}
           />
           <Box
             px={"xxl"}
@@ -64,16 +63,14 @@ export const HeroSection = () => {
             borderRadius={"circle"}
             border={"2px solid white"}
           >
-            
             <Image
               src="/images/home3.jpg"
               alt="Description of the image"
               width={250}
               height={400}
-               style={{  borderRadius: "80px" }}
+              style={{ borderRadius: "80px" }}
             />
           </Box>
-          
         </Box>
       </CenterBox>
     </>

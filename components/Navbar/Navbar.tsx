@@ -19,13 +19,14 @@ export const Navbar = () => {
       alignItems={"center"}
       bg={"secondary"}
       position={"relative"}
-      padding={"xl"}
+      padding={["m", "s"]}
       top={0}
       borderRadius={["none", "circle"]}
       mx={["none", "header"]}
+      px={["l", "header"]}
     >
       <CenterBox>
-        <Image src="" alt="" width={50} height={50} />
+        <Image src="/images/logo.png" alt="" width={70} height={70} />
       </CenterBox>
 
       <Box display={["block", "block", "none"]} onClick={handleToggle}>
