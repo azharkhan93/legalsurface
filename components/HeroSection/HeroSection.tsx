@@ -66,9 +66,9 @@ export const HeroSection = () => {
                 <Image
                   src={slide.image}
                   alt="slider image"
-                  width={250}
-                  height={400}
-                  style={{ borderRadius: "80px" }}
+                  width={190}
+                  height={290}
+                  style={{ borderRadius: "80px", marginTop: "90px" }}
                 />
                 <Box
                   px={"xxl"}

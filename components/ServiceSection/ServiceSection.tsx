@@ -8,8 +8,7 @@ import {
   Button,
   ServiceCard,
 } from "@/components";
-import { Certificate } from "crypto";
-import Image from "next/image";
+
 
 export const ServiceSection = () => {
   return (
