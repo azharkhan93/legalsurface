@@ -7,5 +7,7 @@ export * from "./ServiceSection"
 export * from "./ServiceCard"
 export * from "./Footer"
 export * from "./NewsLetter"
+export * from "./ClientReviews"
+export * from "./ReviewCard"
 
 

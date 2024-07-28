@@ -1,5 +1,5 @@
 "use client"
-import { Box,   HeroSection,   ServiceSection,   Text } from "@/components";
+import { Box,   ClientReviews,   HeroSection,   ServiceSection,   Text } from "@/components";
 
 
 export default function Page() {
@@ -10,6 +10,8 @@ export default function Page() {
     <HeroSection />
     
     <ServiceSection />
+
+    <ClientReviews />
 
    
     

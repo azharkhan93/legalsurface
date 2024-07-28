@@ -49,6 +49,29 @@ export const slidesData = [
   },
 ];
 
+// constants.js
+export const reviewsData = [
+  {
+    image: "/path/to/review1.jpg",
+    alt: "Reviewer 1",
+    name: "Reviewer 1",
+    content: "This is a review content 1.",
+  },
+  {
+    image: "/path/to/review2.jpg",
+    alt: "Reviewer 2",
+    name: "Reviewer 2",
+    content: "This is a review content 2.",
+  },
+  {
+    image: "/path/to/review3.jpg",
+    alt: "Reviewer 3",
+    name: "Reviewer 3",
+    content: "This is a review content 3.",
+  },
+];
+
+
 export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
 
 
