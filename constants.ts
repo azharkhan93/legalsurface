@@ -49,26 +49,13 @@ export const slidesData = [
   },
 ];
 
-// constants.js
-export const reviewsData = [
+export const reviews = [
   {
-    image: "/path/to/review1.jpg",
-    alt: "Reviewer 1",
-    name: "Reviewer 1",
-    content: "This is a review content 1.",
-  },
-  {
-    image: "/path/to/review2.jpg",
-    alt: "Reviewer 2",
-    name: "Reviewer 2",
-    content: "This is a review content 2.",
-  },
-  {
-    image: "/path/to/review3.jpg",
-    alt: "Reviewer 3",
-    name: "Reviewer 3",
-    content: "This is a review content 3.",
-  },
+    image: '/images/home3.jpg',
+    alt: 'John Doe',
+    name: 'John Doe',
+    content: 'This is a short description of the review. The client had a great experience and is sharing positive feedback.'
+  }
 ];
 
 
