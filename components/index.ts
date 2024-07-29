@@ -9,5 +9,6 @@ export * from "./Footer"
 export * from "./NewsLetter"
 export * from "./ClientReviews"
 export * from "./ReviewCard"
+export * from "./SwiperSlides"
 
 

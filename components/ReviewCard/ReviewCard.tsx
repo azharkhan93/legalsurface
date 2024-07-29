@@ -2,7 +2,9 @@ import { Box, CenterBox, Column, Text } from "@/components";
 import Image from "next/image";
 import { FaStar, FaQuoteRight } from "react-icons/fa";
 
-interface Review {
+
+
+type Review = {
   image: string;
   alt: string;
   name: string;
@@ -11,7 +13,7 @@ interface Review {
   content: string;
 }
 
-interface ReviewCardProps {
+type ReviewCardProps = {
   review: Review;
 }
 
@@ -23,7 +25,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
       flexDirection={"column"}
       alignItems="start"
       bg="white"
-      border="1px solid #e5e7eb"
+      // border="1px solid #e5e7eb"
       position={"relative"}
       width={"350px"}
       py={"l"}
@@ -59,7 +61,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
           <Text fontSize="s" color="secondary">
             {review.position}
           </Text>
-          <Box display="flex" alignItems="center" flexDirection={"row"}>
+          <Box display="flex" alignItems="center" flexDirection={"row"} gap={"s"}>
             {[...Array(5)].map((_, i) => (
               <FaStar
                 key={i}
@@ -67,7 +69,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
                 size={20}
               />
             ))}
-            <Text fontSize="s">{review.rating}.5</Text>
+            <Text fontSize="s">{review.rating}</Text>
           </Box>
         </Column>
         <CenterBox
@@ -79,7 +81,6 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
           width={"50px"}
           py={"s"}
           borderRadius={"circle"}
-          // style={{ border: "1px solid black" }}
           bg={"primary"}
         >
           <FaQuoteRight fill="primary" size={25} />

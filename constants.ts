@@ -54,15 +54,15 @@ export const reviews = [
   {
     image: '/images/home3.jpg',
     alt: 'John Doe',
-    name: 'John doe',
+    name: 'Sheikh Shahi',
     position: "Regular Client",
-    rating: 4,
+    rating: 5,
     content: 'This is a short description of the review. The client had a great experience and is sharing positive feedback.'
   },
   {
     image: '/images/home3.jpg',
     alt: 'Jane Smith',
-    name: 'Jane Smith',
+    name: 'Hajra Watali',
     position: "Regular Client",
     rating: 5,
     content: 'This is another short description of the review. The client had a wonderful experience and is sharing positive feedback.'
@@ -70,11 +70,27 @@ export const reviews = [
   {
     image: '/images/home3.jpg',
     alt: 'Alice Johnson',
+    name: 'Aayat Hussain',
+    position: "Regular Client",
+    rating: 5,
+    content: 'This is yet another short description of the review. The client had an average experience and is sharing their feedback.'
+  },
+  {
+    image: '/images/home3.jpg',
+    alt: 'Alice Johnson',
     name: 'Alice Johnson',
     position: "Regular Client",
-    rating: 3,
+    rating: 5,
     content: 'This is yet another short description of the review. The client had an average experience and is sharing their feedback.'
-  }
+  },
+  {
+    image: '/images/home3.jpg',
+    alt: 'Alice Johnson',
+    name: 'Alice Johnson',
+    position: "Regular Client",
+    rating: 5,
+    content: 'This is yet another short description of the review. The client had an average experience and is sharing their feedback.'
+  },
 ];
 
 

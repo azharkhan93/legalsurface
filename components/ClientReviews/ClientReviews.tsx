@@ -1,58 +1,32 @@
-
-
-import { Box, CenterBox, Text } from "@/components";
-import Image from "next/image";
-import { ReviewCard } from "../ReviewCard";
-import { reviews } from "@/constants";
+import { Box, CenterBox, Column, Row, SwiperSlides, Text } from "@/components";
+import { SwiperSlide } from "swiper/react";
 
 export const ClientReviews = () => {
   return (
-    <>
-    <CenterBox
-      
-      flexDirection={"row"}
-      gap={50}
-      alignItems={"start"}
-    >
-      <CenterBox
-        flexDirection={"row"}
-       
-        gap={20}
+    <Box py={"xl"} gap={"xxl"}>
+      <Row
+        py={"xxl"}
+        px={"header"}
+        justifyContent={"space-between"}
+        alignItems={"start"}
       >
-        <Box
-          width="100px"
-          height="100px"
-          borderRadius="circle"
-          overflow="hidden"
-          bg={"primary"}
-          style={{ border: "2px solid black" }}
-        >
-          <Image
-            src="/path/to/your/image.jpg"
-            alt="Testimonial Image"
-            width={100}
-            height={100}
-            style={{ borderRadius: "50%" }} />
-        </Box>
-        <Text fontSize="xl" fontWeight="bold">
-          Testimonials
-        </Text>
-        <Text fontSize="xl" fontWeight="bold">
-          Testimonials jhjhjkl jjjjkjhhhi huhuhuiuhh
-        </Text>
-      </CenterBox>
-    </CenterBox>
-    <CenterBox
-      flexDirection={"row"}
-    >
+        <Column gap={"m"}>
+          <Text color="secondary" fontSize={"30px"}>Testimonial</Text>
+          <Text color="secondary" variant="heading">What Our Clients Say</Text>
+        </Column>
 
+        <CenterBox width={"450px"}>
+          <Text color="secondary" fontSize="xxlg">
+            Discover how our services have positively impacted our clients experiences. 
+            Read their testimonials below to learn more.
+          </Text>
+        </CenterBox>
+      </Row>
 
-        {reviews.map((review, index) => (
-          <ReviewCard key={index} review={review} />
-        ))}
+      <CenterBox py={"m"} flexDirection={"column"}>
+        <SwiperSlides />
       </CenterBox>
-      </>
-    
+    </Box>
   );
 };
 
