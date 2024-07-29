@@ -14,19 +14,20 @@ export const ServicesCard: React.FC<ServicesCardProps> = ({ image, text, text2 }
       borderRadius="lg"
       boxShadow="xl"
       flexDirection={"column"}
-      alignItems="center"
-      bg="white"
+      alignItems={"center"}
+      bg={"primary"}
       border="1px solid #e5e7eb"
       position={"relative"}
       width={"200px"}
       py={"l"}
       gap={"l"}
+      
     >
       <Box
         width="100px"
         height="100px"
         borderRadius="circle"
-        overflow="hidden"
+        overflow={"hidden"}
         bg={"primary"}
         style={{ border: "2px solid black" }}
       >
@@ -37,10 +38,10 @@ export const ServicesCard: React.FC<ServicesCardProps> = ({ image, text, text2 }
           height={100}
         />
       </Box>
-      <Text fontSize="l" fontWeight="bold" textAlign="center">
+      <Text fontSize={"l"} fontWeight={"bold"} textAlign={"center"} color={"secondary"}>
         {text}
       </Text>
-      <Text fontSize="l" fontWeight="bold" textAlign="center">
+      <Text fontSize={"l"} fontWeight={"bold"} textAlign={"center"} color={"secondary"}>
         {text2}
       </Text>
     </Box>

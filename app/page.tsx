@@ -1,24 +1,23 @@
-"use client"
-import { Box,   ClientReviews,   HeroSection,   ServiceSection,   Services,   Text } from "@/components";
-
+"use client";
+import {
+  About,
+  ClientReviews,
+  HeroSection,
+  ServiceSection,
+  Services,
+} from "@/components";
 
 export default function Page() {
   return (
     <>
-    
+      <HeroSection />
+      <Services />
 
-    <HeroSection />
-    <Services />
-    
-    <ServiceSection />
+      <About />
 
-    <ClientReviews />
-    
+      <ServiceSection />
 
-   
-    
+      <ClientReviews />
     </>
   );
 }
-
-

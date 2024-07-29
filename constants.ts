@@ -1,5 +1,4 @@
-import { text } from "stream/consumers";
-import { position } from "styled-system";
+
 
 
 export const NavbarData = [
@@ -126,6 +125,7 @@ export const services = [
     text: 'Service Six',
     text2: 'Service Description Six',
   },
+  
 ];
 
 

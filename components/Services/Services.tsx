@@ -5,6 +5,10 @@ import { services } from "@/constants";
 export const Services: React.FC = () => {
   return (
     <>
+    <Box
+    py={"xxxxl"}
+    bg={"secondary"}
+    >
       <Row
         py={"xxl"}
         px={"header"}
@@ -14,7 +18,7 @@ export const Services: React.FC = () => {
       >
         <Column gap={"m"}>
           <Text color="primary" fontSize={"30px"}>
-            Testimonial
+            Our Services
           </Text>
           <Text color="primary" variant="heading">
             What Our Clients Say
@@ -28,12 +32,15 @@ export const Services: React.FC = () => {
           </Text>
         </CenterBox>
       </Row>
-      <Row
+      <CenterBox
+      border={"2px solid green"}
         gap="l"
-        alignItems={"center"}
-        justifyContent={"center"}
+        flexDirection={"row"}
+       
         bg={"secondary"}
-        py={"xxl"}
+        py={"header"}
+        flexWrap={"wrap"}
+        width={"100%"}
       >
         {services.map((service, index) => (
           <ServicesCard
@@ -43,7 +50,8 @@ export const Services: React.FC = () => {
             text2={service.text2}
           />
         ))}
-      </Row>
+      </CenterBox>
+      </Box>
     </>
   );
 };
