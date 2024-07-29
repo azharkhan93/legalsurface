@@ -1,3 +1,4 @@
+import { text } from "stream/consumers";
 import { position } from "styled-system";
 
 
@@ -92,6 +93,42 @@ export const reviews = [
     content: 'This is yet another short description of the review. The client had an average experience and is sharing their feedback.'
   },
 ];
+
+// constants.ts
+export const services = [
+  {
+    image: '/images/home3.jpg',
+    text: 'Service One',
+    text2: 'Service Description One',
+  },
+  {
+    image: '/images/home3.jpg',
+    text: 'Service Two',
+    text2: 'Service Description Two',
+  },
+  {
+    image: '/images/home3.jpg',
+    text: 'Service Three',
+    text2: 'Service Description Three',
+  },
+  {
+    image: '/images/home3.jpg',
+    text: 'Service Four',
+    text2: 'Service Description Four',
+  },
+  {
+    image: '/images/home3.jpg',
+    text: 'Service Five',
+    text2: 'Service Description Five',
+  },
+  {
+    image: '/images/home3.jpg',
+    text: 'Service Six',
+    text2: 'Service Description Six',
+  },
+];
+
+
 
 
 export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";

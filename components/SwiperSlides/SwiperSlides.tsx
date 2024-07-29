@@ -9,7 +9,7 @@ import { reviews } from "@/constants";
 
 export const SwiperSlides = () => (
   <Swiper
-    autoplay={{ delay: 5000 }}
+    autoplay={{ delay: 2000 }}
     loop={true}
     modules={[Autoplay, Pagination]}
     // pagination={{ clickable: true }}

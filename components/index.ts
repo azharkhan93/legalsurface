@@ -10,5 +10,7 @@ export * from "./NewsLetter"
 export * from "./ClientReviews"
 export * from "./ReviewCard"
 export * from "./SwiperSlides"
+export * from "./Services"
+export * from "./ServicesCard"
 
 
