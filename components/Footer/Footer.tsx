@@ -93,8 +93,8 @@ export const Footer = () => {
       <Box height={"1px"} bg={"secondary"} width={"100%"}></Box>
 
       <CenterBox py={"m"}>
-        <Text variant="heading" color="secondary">
-          copyright sall rights reserved
+        <Text variant="subHeading" color="secondary">
+          © 2024 Glam Squad. All Rights Reserved
         </Text>
       </CenterBox>
     </>

@@ -17,10 +17,10 @@ export const BASE_BUTTON_VARIANTS = {
     fontWeights: "500",
   },
   outline: {
-    backgroundColor: "white",
-    borderColor: BASE_COLORS.primary,
-    color: BASE_COLORS.primary,
-    borderRadius: 1,
+    backgroundColor: BASE_COLORS.primary,
+    borderColor: BASE_COLORS.secondary,
+    color: BASE_COLORS.secondary,
+    borderRadius: BASE_BORDER_RADII.circle,
     padding: "3px",
   },
   disabled: {

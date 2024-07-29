@@ -7,7 +7,7 @@ import {
 
 export const BASE_TEXT_VARIANTS = {
   heading: {
-    fontSize: 24,
+    fontSize: 35,
     fontFamily: BASE_FONTS.heading,
   },
   subHeading: {

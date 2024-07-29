@@ -39,7 +39,7 @@ export const NewsLetter = () => {
         <Text variant="heading" color="primary">
           Opening Hours:
         </Text>
-        <Text variant="heading" color="primary">
+        <Text variant="subHeading" color="primary">
           9am - 10pm
         </Text>
       </CenterBox>

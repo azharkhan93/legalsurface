@@ -1,5 +1,5 @@
 
-
+import { FaHome, FaDollarSign, FaUsers, FaBroom } from "react-icons/fa";
 
 export const NavbarData = [
   {
@@ -90,36 +90,68 @@ export const reviews = [
 export const services = [
   {
     image: '/images/home3.jpg',
-    text: 'Service One',
-    text2: 'Service Description One',
+    text: 'Waxing',
+    text2: 'At Home',
   },
   {
     image: '/images/home3.jpg',
-    text: 'Service Two',
-    text2: 'Service Description Two',
+    text: 'Facial',
+    text2: 'At Home',
   },
   {
     image: '/images/home3.jpg',
-    text: 'Service Three',
-    text2: 'Service Description Three',
+    text: 'Lashes',
+    text2: 'At Home',
   },
   {
     image: '/images/home3.jpg',
-    text: 'Service Four',
-    text2: 'Service Description Four',
+    text: 'Threading',
+    text2: 'At Home',
   },
   {
     image: '/images/home3.jpg',
-    text: 'Service Five',
-    text2: 'Service Description Five',
+    text: 'Hair',
+    text2: 'At Home',
   },
   {
     image: '/images/home3.jpg',
-    text: 'Service Six',
-    text2: 'Service Description Six',
+    text: 'Threading ',
+    text2: 'At Home',
   },
   
 ];
+
+
+
+export const columnCardData = [
+  {
+    id: 1,
+    icon: FaHome,
+    title: "Home Services",
+    description: "Experience the perfect blend of artistry and glamour. Enjoy our luxury salon services at home with just one click."
+  },
+  {
+    id: 2,
+    icon: FaDollarSign,
+    title: "Affordable Price",
+    description: "Experience the perfect blend of artistry and glamour. Enjoy our luxury salon services at home at affordable prices."
+  },
+  {
+    id: 3,
+    icon: FaUsers,
+    title: "Professional Team",
+    description: "Our dedicated team is committed to providing you with exceptional service tailored to your needs. Thank you for considering us!"
+  },
+  {
+    id: 4,
+    icon: FaBroom,
+    title: "Clean And Hygiene",
+    description: "We prioritize hygiene and cleanliness to ensure your safety. Experience the peace of mind that comes with our commitment to cleanliness."
+  }
+];
+
+
+
 
 
 

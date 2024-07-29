@@ -2,8 +2,6 @@ import { Box, CenterBox, Column, Text } from "@/components";
 import Image from "next/image";
 import { FaStar, FaQuoteRight } from "react-icons/fa";
 
-
-
 type Review = {
   image: string;
   alt: string;
@@ -11,11 +9,11 @@ type Review = {
   position: string;
   rating: number;
   content: string;
-}
+};
 
 type ReviewCardProps = {
   review: Review;
-}
+};
 
 export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
   return (
@@ -44,24 +42,32 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
           borderRadius={"circle"}
           overflow={"hidden"}
           bg={"primary"}
-          
         >
           <Image
             src={review.image}
             alt={review.alt}
             width={70}
             height={70}
-            style={{ borderRadius: "50%", border: "1px solid green", padding:"4px" }}
+            style={{
+              borderRadius: "50%",
+              border: "1px solid green",
+              padding: "4px",
+            }}
           />
         </CenterBox>
         <Column alignItems="center" gap={"s"}>
-          <Text fontSize={"l"} fontWeight="bold" color = {"primary"}>
+          <Text fontSize={"l"} fontWeight="bold" color={"primary"}>
             {review.name}
           </Text>
-          <Text fontSize="s"  color = {"primary"} >
+          <Text fontSize="s" color={"primary"}>
             {review.position}
           </Text>
-          <Box display="flex" alignItems={"center"} flexDirection={"row"} gap={"s"}>
+          <Box
+            display="flex"
+            alignItems={"center"}
+            flexDirection={"row"}
+            gap={"s"}
+          >
             {[...Array(5)].map((_, i) => (
               <FaStar
                 key={i}
@@ -69,14 +75,15 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
                 size={20}
               />
             ))}
-            <Text fontSize={"s"} color={"primary"}>{review.rating}</Text>
+            <Text fontSize={"s"} color={"primary"}>
+              {review.rating}
+            </Text>
           </Box>
         </Column>
         <CenterBox
           position={"absolute"}
           right={10}
           color="secondary"
-        
           height={"50px"}
           width={"50px"}
           py={"s"}
@@ -86,7 +93,13 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
           <FaQuoteRight fill="primary" size={25} />
         </CenterBox>
       </Box>
-      <Text fontSize="m" marginBottom="m" textAlign="center" color="primary" px={"l"}>
+      <Text
+        fontSize="m"
+        marginBottom="m"
+        textAlign="center"
+        color="primary"
+        px={"l"}
+      >
         {review.content}
       </Text>
     </Box>

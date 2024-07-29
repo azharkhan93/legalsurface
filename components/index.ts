@@ -13,5 +13,6 @@ export * from "./SwiperSlides"
 export * from "./Services"
 export * from "./ServicesCard"
 export * from "./About"
+export * from "./AboutCards"
 
 
