@@ -1,5 +1,4 @@
-
-import { Box, Column, Text } from "@/components";
+import { Box, CenterBox, Column, Text } from "@/components";
 import Image from "next/image";
 import { FaStar, FaQuoteRight } from "react-icons/fa";
 
@@ -20,76 +19,75 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
   return (
     <Box
       borderRadius="lg"
-      padding="m"
       boxShadow="xl"
-      textAlign="left"
-     
       flexDirection={"column"}
-      alignItems="center"
+      alignItems="start"
       bg="white"
       border="1px solid #e5e7eb"
-      m="m"
       position={"relative"}
+      width={"350px"}
+      py={"l"}
+      gap={"l"}
     >
       <Box
-        display="flex"
         flexDirection="row"
-        justifyContent={"space-between"}
-        alignItems="center"
+        justifyContent={"center"}
+        alignItems={"center"}
         mb={"m"}
+        gap={"l"}
       >
         <Box
-          width="80px"
-          height="80px"
+          width="100px"
+          height="70px"
           borderRadius="circle"
           overflow="hidden"
-          mb="l"
           bg={"primary"}
+          style={{ border: "2px solid black" }}
         >
           <Image
             src={review.image}
             alt={review.alt}
-            width={80}
-            height={80}
+            width={70}
+            height={70}
             style={{ borderRadius: "50%" }}
           />
         </Box>
-        <Column >
-        
-        <Text fontSize="l" fontWeight="bold">
-          {review.name}
-        </Text>
-        <Text fontSize="s" color="primary">
-          {review.position}
-        </Text>
-        <Box display="flex" alignItems="center" flexDirection={"row"} >
-          {[...Array(5)].map((_, i) => (
-            <FaStar
-              key={i}
-              color={i < review.rating ? "#FFD700" : "#e4e5e9"}
-              size={20}
-            />
-          ))}
-          <Text fontSize="s" >
-            {review.rating}.5
+        <Column alignItems="center" gap={"s"}>
+          <Text fontSize="l" fontWeight="bold">
+            {review.name}
           </Text>
-        </Box>
-        <Box
-        position={"absolute"}
-        right={0}
-    
-        color="secondary"
-        fontSize="2em"
-      >
-        <FaQuoteRight fill="green" />
-      </Box>
+          <Text fontSize="s" color="secondary">
+            {review.position}
+          </Text>
+          <Box display="flex" alignItems="center" flexDirection={"row"}>
+            {[...Array(5)].map((_, i) => (
+              <FaStar
+                key={i}
+                color={i < review.rating ? "#FFD700" : "#e4e5e9"}
+                size={20}
+              />
+            ))}
+            <Text fontSize="s">{review.rating}.5</Text>
+          </Box>
         </Column>
+        <CenterBox
+          position={"absolute"}
+          right={10}
+          color="secondary"
+        
+          height={"50px"}
+          width={"50px"}
+          py={"s"}
+          borderRadius={"circle"}
+          // style={{ border: "1px solid black" }}
+          bg={"primary"}
+        >
+          <FaQuoteRight fill="primary" size={25} />
+        </CenterBox>
       </Box>
-      <Text fontSize="m" marginBottom="15px">
+      <Text fontSize="m" marginBottom="m" textAlign="center">
         {review.content}
       </Text>
-      
     </Box>
   );
 };
-

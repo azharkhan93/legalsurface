@@ -1,3 +1,4 @@
+import { position } from "styled-system";
 
 
 export const NavbarData = [
@@ -53,8 +54,26 @@ export const reviews = [
   {
     image: '/images/home3.jpg',
     alt: 'John Doe',
-    name: 'John Doe',
+    name: 'John doe',
+    position: "Regular Client",
+    rating: 4,
     content: 'This is a short description of the review. The client had a great experience and is sharing positive feedback.'
+  },
+  {
+    image: '/images/home3.jpg',
+    alt: 'Jane Smith',
+    name: 'Jane Smith',
+    position: "Regular Client",
+    rating: 5,
+    content: 'This is another short description of the review. The client had a wonderful experience and is sharing positive feedback.'
+  },
+  {
+    image: '/images/home3.jpg',
+    alt: 'Alice Johnson',
+    name: 'Alice Johnson',
+    position: "Regular Client",
+    rating: 3,
+    content: 'This is yet another short description of the review. The client had an average experience and is sharing their feedback.'
   }
 ];
 
