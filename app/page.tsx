@@ -1,6 +1,7 @@
 "use client";
 import {
   About,
+  BookingSteps,
   ClientReviews,
   HeroSection,
   ServiceSection,
@@ -18,6 +19,7 @@ export default function Page() {
       <ServiceSection />
 
       <ClientReviews />
+      <BookingSteps />
     </>
   );
 }

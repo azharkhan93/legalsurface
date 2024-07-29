@@ -150,6 +150,15 @@ export const columnCardData = [
   }
 ];
 
+export const BookingSteps = () => {
+  const steps = [
+    "Choose your desired makeup service.",
+    "Select a convenient date and time address.",
+    "Enter your contact details and address.",
+    "Review your booking and confirm address."
+  ];
+}
+
 
 
 
