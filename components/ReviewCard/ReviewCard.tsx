@@ -86,7 +86,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
           <FaQuoteRight fill="primary" size={25} />
         </CenterBox>
       </Box>
-      <Text fontSize="m" marginBottom="m" textAlign="center" color="primary">
+      <Text fontSize="m" marginBottom="m" textAlign="center" color="primary" px={"l"}>
         {review.content}
       </Text>
     </Box>

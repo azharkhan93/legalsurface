@@ -57,7 +57,7 @@ export const reviews = [
     name: 'Sheikh Shahi',
     position: "Regular Client",
     rating: 5,
-    content: 'This is a short description of the review. The client had a great experience and is sharing positive feedback.'
+    content: 'Thoroughly enjoyed the services provided by our team. They particularly appreciated the efficient and professional manner in which our team worked.'
   },
   {
     image: '/images/home3.jpg',
@@ -65,7 +65,7 @@ export const reviews = [
     name: 'Hajra Watali',
     position: "Regular Client",
     rating: 5,
-    content: 'This is another short description of the review. The client had a wonderful experience and is sharing positive feedback.'
+    content: 'Its the best salon I Have ever been to. The staff is incredibly talented and always makes me feel welcome. The services are top-notch.'
   },
   {
     image: '/images/home3.jpg',
@@ -73,27 +73,20 @@ export const reviews = [
     name: 'Aayat Hussain',
     position: "Regular Client",
     rating: 5,
-    content: 'This is yet another short description of the review. The client had an average experience and is sharing their feedback.'
+    content: 'I can confidently say that its the premier salon in town. The exceptional service and attention to detail always exceed my expectations.'
   },
   {
     image: '/images/home3.jpg',
-    alt: 'Alice Johnson',
-    name: 'Alice Johnson',
+    alt: 'Heena Zargar',
+    name: 'Heena Zargar',
     position: "Regular Client",
     rating: 5,
-    content: 'This is yet another short description of the review. The client had an average experience and is sharing their feedback.'
+    content: 'I can confidently say that its the premier salon in town. The exceptional service and attention to detail always exceed my expectations.'
   },
-  {
-    image: '/images/home3.jpg',
-    alt: 'Alice Johnson',
-    name: 'Alice Johnson',
-    position: "Regular Client",
-    rating: 5,
-    content: 'This is yet another short description of the review. The client had an average experience and is sharing their feedback.'
-  },
+  
 ];
 
-// constants.ts
+
 export const services = [
   {
     image: '/images/home3.jpg',

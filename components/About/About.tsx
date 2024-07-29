@@ -1,6 +1,7 @@
 import { Box, CenterBox, Column, Row, Text } from "@/components";
 import Image from "next/image";
-import { FaStar, FaQuoteRight } from "react-icons/fa";
+import { FaHome, FaDollarSign, FaUsers, FaBroom } from "react-icons/fa";
+
 export const About: React.FC = () => {
   return (
     <>
@@ -9,55 +10,110 @@ export const About: React.FC = () => {
         alignItems={"center"}
         justifyContent={"space-between"}
         px={"header"}
-        py={"xxlg"}
+        py={"header"}
       >
-        <Column>
-          <Text>hello</Text>
-          <Text>hello</Text>
+        <Column
+        gap={"l"}
+        >
+          <Text variant={"heading"} fontWeight={"bold"} color={"secondary"}>About Us</Text>
+          <Text variant="subHeading"  fontWeight={"bold"} color={"secondary"}>Why Choose Us</Text>
         </Column>
-        <CenterBox>
-          <Text>hello hhhjhhhhhhh</Text>
+        <CenterBox width={"450px"}>
+          <Text color="secondary" fontSize="xxlg">
+          We are here to provide you with best makeup services at home. Dont hesitate to reach out, and we will get back to you promptly.
+          </Text>
         </CenterBox>
+        
       </Row>
       <Row
-        border={"2px solid green"}
+       
         alignItems={"center"}
         justifyContent={"space-between"}
         width={"100%"}
         px={"header"}
         gap={"header"}
       >
-        <CenterBox>
+        <CenterBox
+        borderRadius={"m"}
+        >
           <Image
             src={"/images/home3.jpg"}
-            alt=""
+            alt="image error"
             width={400}
             height={500}
+            style={{borderRadius: "20px"}}
           ></Image>
         </CenterBox>
         <CenterBox
-          
           flexWrap={"wrap"}
           flexDirection={"row"}
-          gap={"header"}
-          border={"2px solid green"}
+          gap={"xl"}
+          
         >
-          <Column alignItems={"start"} justifyContent={"start"} border={"2px solid green"} px={"l"} py={"l"} gap={"m"} width={"300px"}>
-            <Image
-              src={"/images/home3.jpg"}
-              alt=""
-              width={100}
-              height={100}
-            ></Image>
+          <Column
+            alignItems={"start"}
+            justifyContent={"start"}
+           
+            px={"l"}
+            py={"l"}
+            gap={"m"}
+            width={"300px"}
+          >
+            <FaHome size={70} color="#2A3277" />
             <Text variant="heading">Home Services</Text>
-            <Text variant="body" width={"290px"}>Experience the perfect blend of artistry and glamour enjoy our luxury salon services at home</Text>
+            <Text variant="body" width={"290px"}>
+              Experience the perfect blend of artistry and glamour enjoy our
+              luxury salon services at home
+            </Text>
           </Column>
-         
-          
-          
-          
-         
-          
+          <Column
+            alignItems={"start"}
+            justifyContent={"start"}
+            
+            px={"l"}
+            py={"l"}
+            gap={"m"}
+            width={"300px"}
+          >
+            <FaDollarSign size={70} color="#2A3277" />
+            <Text variant="heading">Affordable Price</Text>
+            <Text variant="body" width={"290px"}>
+              Experience the perfect blend of artistry and glamour enjoy our
+              luxury salon services at home
+            </Text>
+          </Column>
+          <Column
+            alignItems={"start"}
+            justifyContent={"start"}
+            
+            px={"l"}
+            py={"l"}
+            gap={"m"}
+            width={"300px"}
+          >
+            <FaUsers size={70} color="#2A3277" />
+            <Text variant="heading">Professional Team</Text>
+            <Text variant="body" width={"290px"}>
+              Experience the perfect blend of artistry and glamour enjoy our
+              luxury salon services at home
+            </Text>
+          </Column>
+          <Column
+            alignItems={"start"}
+            justifyContent={"start"}
+           
+            px={"l"}
+            py={"l"}
+            gap={"m"}
+            width={"300px"}
+          >
+            <FaBroom size={70} color="#2A3277" />
+            <Text variant="heading">Clean And Hygiene</Text>
+            <Text variant="body" width={"290px"}>
+              Experience the perfect blend of artistry and glamour enjoy our
+              luxury salon services at home
+            </Text>
+          </Column>
         </CenterBox>
       </Row>
     </>
