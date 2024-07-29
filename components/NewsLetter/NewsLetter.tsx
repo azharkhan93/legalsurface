@@ -23,7 +23,7 @@ export const NewsLetter = () => {
         <FaFacebook size={30} fill="#D4BDE8" />
 
         <FaInstagram size={30} fill="#D4BDE8" />
-        <FaYoutube size={30} fill="#D4BDE8"  />
+        <FaYoutube size={30} fill="#D4BDE8" />
         <FaLinkedin size={30} fill="#D4BDE8" />
       </Row>
 
@@ -36,8 +36,12 @@ export const NewsLetter = () => {
         />
       </CenterBox>
       <CenterBox gap={10} borderRight={"1px solid #D4BDE8"} width={"100%"}>
-        <Text variant="heading" color="primary">Opening Hours:</Text>
-        <Text variant="heading" color="primary">9am - 10pm</Text>
+        <Text variant="heading" color="primary">
+          Opening Hours:
+        </Text>
+        <Text variant="heading" color="primary">
+          9am - 10pm
+        </Text>
       </CenterBox>
     </Box>
   );
