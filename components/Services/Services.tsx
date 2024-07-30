@@ -13,15 +13,21 @@ import { services } from "@/constants";
 export const Services: React.FC = () => {
   return (
     <>
-      <Box py={"xxxxl"} bg={"secondary"}>
-        <Row
-          py={"xxl"}
-          px={"header"}
+      <Column
+        
+        bg={"secondary"}
+        flexDirection={["column", "row"]}
+        border={"2px solid green"}
+      
+        py={"header"}
+      >
+        <Box
+          flexDirection={["column", "row"]}
           justifyContent={"space-between"}
-          alignItems={"start"}
-          bg={"secondary"}
+          gap={"l"}
+          px={"xl"}
         >
-          <Column gap={"m"}>
+          <Column gap={["xl", "m"]}>
             <Text color={"primary"} variant={"heading"}>
               Our Services
             </Text>
@@ -32,18 +38,18 @@ export const Services: React.FC = () => {
               ml={"header"}
               borderRadius={"circle"}
             ></Box>
-            <Text color="primary" variant={"subHeading"}>
+            <Text color={"primary"} variant={"subHeading"}>
               What Our Clients Say
             </Text>
           </Column>
 
-          <CenterBox width={"450px"}>
+          <CenterBox width={["100%", "450px"]}>
             <Text color="primary" variant="body">
               Discover how our services have positively impacted our clients
               experiences. Read their testimonials below to learn more.
             </Text>
           </CenterBox>
-        </Row>
+        </Box>
         <CenterBox
           gap={"l"}
           flexDirection={"row"}
@@ -72,7 +78,7 @@ export const Services: React.FC = () => {
             </Button>
           </CenterBox>
         </CenterBox>
-      </Box>
+      </Column>
     </>
   );
 };

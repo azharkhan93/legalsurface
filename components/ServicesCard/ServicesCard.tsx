@@ -18,7 +18,7 @@ export const ServicesCard: React.FC<ServicesCardProps> = ({ image, text, text2 }
       bg={"primary"}
       border="1px solid #e5e7eb"
       position={"relative"}
-      width={"200px"}
+      width={["170px","200px"]}
       py={"l"}
       gap={"l"}
       

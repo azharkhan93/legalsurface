@@ -5,19 +5,19 @@ import { stepsData } from "@/constants";
 
 export const BookingSteps = () => {
   return (
-    <CenterBox
-      bg={"secondary"}
-      width={"100%"}
-      px={"header"}
-      flexDirection={"column"}
-    >
-      <Row
-        alignItems={"center"}
-        justifyContent={"space-between"}
+    <Column
+        bg={"secondary"}
+        flexDirection={["column", "row"]}
+        border={"2px solid green"}
         py={"header"}
-        width={"100%"}
       >
-        <Column gap={"l"}>
+      <Box
+        flexDirection={["column", "row"]}
+        justifyContent={"space-between"}
+        gap={"l"}
+        px={"xl"}
+      >
+        <Column gap={["xl", "m"]}>
           <Text variant={"heading"} fontWeight={"bold"} color={"primary"}>
           How To Book 
           </Text>
@@ -32,7 +32,7 @@ export const BookingSteps = () => {
           A Service
           </Text>
         </Column>
-        <CenterBox width={"450px"}>
+        <CenterBox  width={["100%", "450px"]}>
           <Text color={"primary"} variant={"body"}>
           We make it easy for you to book makeup services at your convenience.
             Just follow these steps, and you will be all set. From choosing your
@@ -40,8 +40,8 @@ export const BookingSteps = () => {
             makeup services right at your doorstep!
           </Text>
         </CenterBox>
-      </Row>
-      <CenterBox flexDirection={"row"} gap={"xl"} py={"xxxl"}>
+      </Box>
+      <CenterBox flexDirection={["column","row"]} gap={["xxl","xl"]} py={"header"} px={["xxl","header"]}>
         {stepsData.map((step, index) => (
           <Column
             key={index}
@@ -83,6 +83,6 @@ export const BookingSteps = () => {
           </Column>
         ))}
       </CenterBox>
-    </CenterBox>
+      </Column>
   );
 };
