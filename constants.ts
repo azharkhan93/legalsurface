@@ -2,7 +2,7 @@
 import { FaHome, FaDollarSign, FaUsers, FaBroom } from "react-icons/fa";
 import step1Animation from "@/animations/bookings.json";
 import step2Animation from "@/animations/order.json";
-import step3Animation from "@/animations/placing.json";
+import step3Animation from "@/animations/details.json";
 import step4Animation from "@/animations/service.json";
 
 export const NavbarData = [
@@ -149,7 +149,7 @@ export const columnCardData = [
   {
     id: 4,
     icon: FaBroom,
-    title: "Clean And Hygiene",
+    title: "Clean & Hygiene",
     description: "We prioritize hygiene and cleanliness to ensure your safety. Experience the peace of mind that comes with our commitment to cleanliness."
   }
 ];

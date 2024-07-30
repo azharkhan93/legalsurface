@@ -37,9 +37,10 @@ export const Footer = () => {
             overflow={"hidden"}
             justifyContent={"center"}
             flex={"1"}
+            color={"primary"}
             gap={"l"}
           >
-            <Text variant="subHeading">About Company</Text>
+            <Text variant={"subHeading"}>About Company</Text>
 
             <Row alignItems={"center"} justifyContent={"center"} gap={"m"}>
               <Text variant="body">Address: Rajbagh Srinagar India</Text>
@@ -52,10 +53,11 @@ export const Footer = () => {
             justifyContent={"center"}
             flex={"1"}
             gap={"l"}
+            color={"primary"}
           >
             <Text variant="subHeading">Useful Links</Text>
 
-            <Column alignItems={"center"} justifyContent={"center"} gap={"m"}>
+            <Column alignItems={"center"} justifyContent={"center"} gap={"m"}   color={"primary"}>
               <Text variant="body">Home</Text>
 
               <Text variant="body"> India</Text>
@@ -72,6 +74,7 @@ export const Footer = () => {
             justifyContent={"center"}
             flex={"1"}
             gap={"l"}
+            color={"primary"}
           >
             <Text variant="subHeading">Our Location</Text>
 
@@ -93,7 +96,7 @@ export const Footer = () => {
       <Box height={"1px"} bg={"secondary"} width={"100%"}></Box>
 
       <CenterBox py={"m"}>
-        <Text variant="subHeading" color="secondary">
+        <Text variant={"subHeading"} color={"secondary"}>
           © 2024 Glam Squad. All Rights Reserved
         </Text>
       </CenterBox>

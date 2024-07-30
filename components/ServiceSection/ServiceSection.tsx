@@ -29,22 +29,24 @@ export const ServiceSection = () => {
       >
         <Column
           textAlign={"left"}
-          border={"2px solid green"}
+          // border={"2px solid green"}
           gap={20}
           py={"xxl"}
         >
           <Text
-            fontSize={"30px"}
-            fontWeight={"extraBold"}
-            border={"2px solid green"}
+          width={"390px"}
+           variant={"subHeading"}
+            fontWeight={"Bold"}
+            color={"secondary"}
+            
           >
             Our Opertaional Approach
           </Text>
-          <Text fontWeight={"bold"} fontSize={"25px"}>
+          <Text fontWeight={"bold"} variant={"subHeading"} color={"secondary"}>
             {" "}
             How We Operate
           </Text>
-          <Text variant="body">
+          <Text variant="body" color={"secondary"}>
             Our operational approach is designed to pamper you from head to toe.
             We understand the importance of self-care and strive to provide you
             with the ultimate beauty experience

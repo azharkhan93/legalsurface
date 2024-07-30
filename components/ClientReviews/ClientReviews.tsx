@@ -11,12 +11,12 @@ export const ClientReviews = () => {
         alignItems={"start"}
       >
         <Column gap={"m"}>
-          <Text color="secondary" fontSize={"30px"}>Testimonial</Text>
-          <Text color="secondary" variant="heading">What Our Clients Say</Text>
+          <Text color="secondary" variant="heading">Testimonial</Text>
+          <Text color="secondary" variant="subHeading">What Our Clients Say</Text>
         </Column>
 
         <CenterBox width={"450px"}>
-          <Text color="secondary" fontSize="xxlg">
+          <Text color={"secondary"} variant={"body"} >
             Discover how our services have positively impacted our clients experiences. 
             Read their testimonials below to learn more.
           </Text>

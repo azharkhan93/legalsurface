@@ -16,12 +16,12 @@ export const About: React.FC = () => {
           <Text variant={"heading"} fontWeight={"bold"} color={"secondary"}>
             About Us
           </Text>
-          <Text variant="subHeading" fontWeight={"bold"} color={"secondary"}>
+          <Text variant={"subHeading"} fontWeight={"bold"} color={"secondary"}>
             Why Choose Us
           </Text>
         </Column>
         <CenterBox width={"450px"}>
-          <Text color="secondary" fontSize="xxlg">
+          <Text color={"secondary"} variant={"body"}>
             We are here to provide you with best makeup services at home. Dont
             hesitate to reach out, and we will get back to you promptly.
           </Text>

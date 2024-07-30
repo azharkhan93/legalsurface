@@ -22,16 +22,18 @@ export const Services: React.FC = () => {
           bg={"secondary"}
         >
           <Column gap={"m"}>
-            <Text color="primary" fontSize={"30px"}>
+            <Text color={"primary"} variant={"heading"}>
               Our Services
             </Text>
-            <Text color="primary" variant="heading">
+            <Box height={"2px"} bg={"primary"} width={"70%"} ml={"header"} borderRadius={"circle"}></Box>
+            <Text color="primary" variant={"subHeading"}>
               What Our Clients Say
             </Text>
+            
           </Column>
 
           <CenterBox width={"450px"}>
-            <Text color="primary" fontSize="xxlg">
+            <Text color="primary" variant="body">
               Discover how our services have positively impacted our clients
               experiences. Read their testimonials below to learn more.
             </Text>

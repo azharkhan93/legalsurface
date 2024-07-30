@@ -36,10 +36,10 @@ export const NewsLetter = () => {
         />
       </CenterBox>
       <CenterBox gap={10} borderRight={"1px solid #D4BDE8"} width={"100%"}>
-        <Text variant="heading" color="primary">
+        <Text variant={"subHeading"} color={"primary"}>
           Opening Hours:
         </Text>
-        <Text variant="subHeading" color="primary">
+        <Text variant={"subHeading"} color={"primary"}>
           9am - 10pm
         </Text>
       </CenterBox>

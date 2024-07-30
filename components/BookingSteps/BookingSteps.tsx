@@ -9,29 +9,28 @@ export const BookingSteps = () => {
       bg={"secondary"}
       width={"100%"}
       px={"header"}
-     
       flexDirection={"column"}
-     
     >
       <Row
         alignItems={"center"}
         justifyContent={"space-between"}
-       
         py={"header"}
         width={"100%"}
       >
         <Column gap={"l"}>
           <Text variant={"heading"} fontWeight={"bold"} color={"primary"}>
-            About Us
+          How To Book 
           </Text>
-          <Text variant="subHeading" fontWeight={"bold"} color={"primary"}>
-            Why Choose Us
+          <Text variant={"subHeading"} fontWeight={"bold"} color={"primary"}>
+          A Service
           </Text>
         </Column>
         <CenterBox width={"450px"}>
-          <Text color={"primary"} fontSize={"xxlg"}>
-            We are here to provide you with best makeup services at home. Dont
-            hesitate to reach out, and we will get back to you promptly.
+          <Text color={"primary"} variant={"body"}>
+          We make it easy for you to book makeup services at your convenience.
+            Just follow these steps, and you will be all set. From choosing your
+            desired service to confirming your booking. Get ready to enjoy top-notch
+            makeup services right at your doorstep!
           </Text>
         </CenterBox>
       </Row>
@@ -47,7 +46,6 @@ export const BookingSteps = () => {
             border={"1px solid white"}
             py={"xxxl"}
             bg={"primary"}
-            
             borderTopRightRadius={"xl"}
             borderBottomLeftRadius={"xl"}
           >
@@ -62,14 +60,15 @@ export const BookingSteps = () => {
               textAlign={"center"}
               borderRadius={"circle"}
               border={"2px solid white"}
-              
             >
               {index + 1}
             </Text>
-            <CenterBox
-            mt={"m"}
-            >
-              <Lottie animationData={step.animation} loop={true} style={{ width: 200, height: 200,  }} />
+            <CenterBox mt={"m"}>
+              <Lottie
+                animationData={step.animation}
+                loop={true}
+                style={{ width: 200, height: 200 }}
+              />
             </CenterBox>
             <Text ml={"l"} variant={"body"} color={"secondary"}>
               {step.text}
@@ -80,4 +79,3 @@ export const BookingSteps = () => {
     </CenterBox>
   );
 };
-
