@@ -1,5 +1,9 @@
 
 import { FaHome, FaDollarSign, FaUsers, FaBroom } from "react-icons/fa";
+import step1Animation from "@/animations/bookings.json";
+import step2Animation from "@/animations/order.json";
+import step3Animation from "@/animations/placing.json";
+import step4Animation from "@/animations/service.json";
 
 export const NavbarData = [
   {
@@ -150,14 +154,28 @@ export const columnCardData = [
   }
 ];
 
-export const BookingSteps = () => {
-  const steps = [
-    "Choose your desired makeup service.",
-    "Select a convenient date and time address.",
-    "Enter your contact details and address.",
-    "Review your booking and confirm address."
-  ];
-}
+export const stepsData = [
+  {
+    text: "Choose your desired makeup service.",
+     animation: step4Animation
+    
+  },
+  {
+    text: "Select a convenient date and time for booking.",
+    animation: step1Animation
+    
+  },
+  {
+    text: "Enter your contact details and address.",
+    animation: step3Animation
+  },
+  {
+    text: "Review your booking and confirm your order.",
+    animation: step2Animation
+    
+    
+  }
+];
 
 
 

@@ -1,21 +1,14 @@
-import { Box, Row, CenterBox, Text, Column } from "@/components";
 import React from "react";
+import Lottie from "lottie-react";
+import { Box, CenterBox, Text, Column } from "@/components";
+import { stepsData } from "@/constants";
 
 export const BookingSteps = () => {
-  const steps = [
-    "Choose your desired makeup service.",
-    "Select a convenient date and time address.",
-    "Enter your contact details and address.",
-    "Review your booking and confirm address."
-  ];
-
   return (
     <Box
       borderBottom={"1px solid #D4BDE8"}
       width={"100%"}
       px={"header"}
-     
-      
       alignItems={"center"}
       flexDirection={"column"}
       justifyContent={"center"}
@@ -23,46 +16,45 @@ export const BookingSteps = () => {
       <Text variant="heading" color="secondary" mb={"m"}>
         How to Book a Makeup Service
       </Text>
-      <CenterBox 
-      flexDirection={"row"}
-      gap={'l'}
-      >
-      {steps.map((step, index) => (
-        <Column
-          key={index}
-          gap={"xl"}
-          width={"100%"}
-          alignItems={"center"}
-          justifyContent={"flex-start"}
-         
-          position={"relative"}
-          px={"xl"}
-          border={"4px solid black"}
-          py={"header"}
-        >
-          <Text
-            variant="subHeading"
-            color="primary"
-            position="absolute"
-            left={4}
-            top={0}
-            bg="white"
-            width={"50px"}
-            textAlign={"center"}
-            
-            // height={"200px"}
-            
-            borderRadius="circle"
-            border="1px solid #D4BDE8"
+      <CenterBox flexDirection={"row"} gap={"xl"}>
+        {stepsData.map((step, index) => (
+          <Column
+            key={index}
+            gap={"xl"}
+            width={"100%"}
+            alignItems={"center"}
+            justifyContent={"flex-start"}
+            position={"relative"}
+            border={"2px solid black"}
+            py={"xxxl"}
           >
-            {index + 1}
-          </Text>
-          <Text ml={"l"} variant="body" color="secondary" mt={"xl"}>
-            {step}
-          </Text>
-        </Column>
-      ))}
+            <Text
+              variant={"heading"}
+              color={"primary"}
+              position={"absolute"}
+              left={2}
+              top={6}
+              bg={"secondary"}
+              width={"50px"}
+              textAlign={"center"}
+              borderRadius={"circle"}
+              border={"2px solid green"}
+              
+            >
+              {index + 1}
+            </Text>
+            <CenterBox
+            mt={"m"}
+            >
+              <Lottie animationData={step.animation} loop={true} style={{ width: 200, height: 200,  }} />
+            </CenterBox>
+            <Text ml={"l"} variant="body" color="secondary">
+              {step.text}
+            </Text>
+          </Column>
+        ))}
       </CenterBox>
     </Box>
   );
 };
+
