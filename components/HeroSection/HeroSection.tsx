@@ -22,7 +22,7 @@ export const HeroSection = () => {
       <Swiper
         navigation
         pagination={{ type: "bullets", clickable: true }}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 1000000 }}
         loop={true}
         modules={[Autoplay, Pagination]}
       >
@@ -41,14 +41,16 @@ export const HeroSection = () => {
             >
               <Column textAlign={"center"} maxWidth={"600px"} gap={"m"}>
                 <Text
-                  fontSize={"50px "}
+                  variant={["heading", "heading"]}
+                  fontFamily={["Arial, sans-serif", "Arial, sans-serif"]}
                   textShadow={"-moz-initial"}
                   fontWeight={"bold"}
-                  fontFamily={""}
+                  color={"secondary"}
+                  
                 >
                   {slide.title}
                 </Text>
-                <Text fontSize={"30px"}>{slide.subtitle}</Text>
+                <Text variant={["body","subHeading"]} color="secondary">{slide.subtitle}</Text>
                 <CenterBox mt={"l"}>
                   <Button variant={"primary"} borderRadius={"circle"} width={"200px"}>
                     hello
@@ -56,7 +58,7 @@ export const HeroSection = () => {
                 </CenterBox>
               </Column>
               <Box
-              // display={["none", "block"]}
+               
                 borderRadius={"xl"}
                 alignItems={"center"}
                 justifyContent={"space-between"}
@@ -68,9 +70,10 @@ export const HeroSection = () => {
                   alt="slider image"
                   width={190}
                   height={290}
-                  style={{ borderRadius: "80px", marginTop: "90px" }}
+                  style={{ borderRadius: "80px", marginTop: "90px"}}
                 />
                 <Box
+                display={["none", "block"]}
                   px={"xxl"}
                   py={"xxl"}
                   borderRadius={"circle"}

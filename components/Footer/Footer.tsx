@@ -41,10 +41,15 @@ export const Footer = () => {
             gap={"l"}
           >
             <Text variant={"subHeading"}>About Company</Text>
-            
 
             <Row alignItems={"center"} justifyContent={"center"} gap={"m"}>
-              <Text variant="body" width={"390px"}>We invite you to embark on a journey of self-discovery, self-love, and self-confidence with us. Come indulge your senses, pamper your soul, and let your inner radiance shine bright. Your beauty journey begins here. We believe in nurturing not only our clients but also the planet we call home</Text>
+              <Text variant="body" width={"390px"}>
+                We invite you to embark on a journey of self-discovery,
+                self-love, and self-confidence with us. Come indulge your
+                senses, pamper your soul, and let your inner radiance shine
+                bright. Your beauty journey begins here. We believe in nurturing
+                not only our clients but also the planet we call home
+              </Text>
             </Row>
           </Column>
           <Column
@@ -73,39 +78,32 @@ export const Footer = () => {
           </Column>
 
           <Column
-      borderRight={"1px solid #D4BDE8"}
-      textAlign={"center"}
-      overflow={"hidden"}
-      justifyContent={"center"}
-      flex={"1"}
-      gap={"l"}
-      color={"primary"}
-    >
-      <Text variant="subHeading">Our Location</Text>
+            borderRight={"1px solid #D4BDE8"}
+            textAlign={"center"}
+            overflow={"hidden"}
+            justifyContent={"center"}
+            flex={"1"}
+            gap={"l"}
+            color={"primary"}
+          >
+            <Text variant="subHeading">Our Location</Text>
 
-      <Row alignItems={"center"} justifyContent={"center"} gap={"l"} >
-       
-          <FaMapMarkerAlt size={23} fill="#D4BDE8" />
-    
-        <Text variant="body">Address: Rajbagh Srinagar, India</Text>
-      </Row>
-      <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
-        
-          <FaPhone size={23} fill="#D4BDE8" />
-        
-        <Text variant="body">Contact Detail: +91 8899355648</Text>
-      </Row>
+            <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
+              <FaMapMarkerAlt size={23} fill="#D4BDE8" />
 
-      <Row alignItems={"center"} justifyContent={"center"}  gap={"l"} >
-       
-          <FaEnvelope size={23} fill="#D4BDE8" />
-          <Text variant="body">Email: glam90239@gmail.com</Text>
-       
-        
-      </Row>
+              <Text variant="body">Address: Rajbagh Srinagar, India</Text>
+            </Row>
+            <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
+              <FaPhone size={23} fill="#D4BDE8" />
 
-      
-    </Column>
+              <Text variant="body">Contact Detail: +91 8899355648</Text>
+            </Row>
+
+            <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
+              <FaEnvelope size={23} fill="#D4BDE8" />
+              <Text variant="body">Email: glam90239@gmail.com</Text>
+            </Row>
+          </Column>
         </Box>
       </Box>
       <Box height={"1px"} bg={"primary"} width={"100%"}></Box>

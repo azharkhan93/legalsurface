@@ -1,37 +1,8 @@
-"use client";
-import {
-  ThemedBorderRadiusProps,
-  ThemedColorProps,
-  ThemedSpaceProps,
-} from "@/theme";
-
-import { AppThemeWeights, AppThemeFonts, AppTextVariants } from "@/theme";
+"use cient"
+import { AppTextVariants, AppThemeFonts, AppThemeWeights, BASE_TEXT_VARIANTS, ThemedBorderRadiusProps, ThemedColorProps, ThemedSpaceProps } from "@/theme";
 import { StyledWithConfig } from "@/utils";
 import styled from "styled-components";
-import {
-  width,
-  WidthProps,
-  height,
-  HeightProps,
-  space,
-  SpaceProps,
-  color,
-  ColorProps,
-  typography,
-  TypographyProps,
-  layout,
-  LayoutProps,
-  border,
-  BorderProps,
-  background,
-  BackgroundProps,
-  position,
-  PositionProps,
-  shadow,
-  ShadowProps,
-  system,
-  variant,
-} from "styled-system";
+import { BackgroundProps, BorderProps, HeightProps, LayoutProps, PositionProps, ShadowProps, SpaceProps, TypographyProps, WidthProps, background, border, color, height, position, shadow, space, system, typography, variant, width } from "styled-system";
 
 const customTypography = system({
   font: {
@@ -65,7 +36,7 @@ type TextProps = WidthProps &
     font?: AppThemeFonts;
     weight?: AppThemeWeights;
     size?: ResponsiveValue<number | string>;
-    variant?: AppTextVariants;
+    variant?: ResponsiveValue<AppTextVariants>; // Updated type to handle arrays
   };
 
 export const Text = styled.span.withConfig(StyledWithConfig)<TextProps>`
@@ -80,6 +51,12 @@ export const Text = styled.span.withConfig(StyledWithConfig)<TextProps>`
   ${shadow}
   ${customTypography}
   ${variant({
-    scale: "textVariants", // This should match the key in your theme
+    scale: "textVariants",
+    variants: {
+      heading: BASE_TEXT_VARIANTS.heading,
+      subHeading: BASE_TEXT_VARIANTS.subHeading,
+      body: BASE_TEXT_VARIANTS.body,
+    }
   })}
 `;
+
