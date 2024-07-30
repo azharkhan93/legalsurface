@@ -6,11 +6,11 @@ import { stepsData } from "@/constants";
 export const BookingSteps = () => {
   return (
     <Column
-        bg={"secondary"}
-        flexDirection={["column", "row"]}
-        border={"2px solid green"}
-        py={"header"}
-      >
+      bg={"secondary"}
+      flexDirection={["column", "row"]}
+      border={"2px solid green"}
+      py={"header"}
+    >
       <Box
         flexDirection={["column", "row"]}
         justifyContent={"space-between"}
@@ -19,29 +19,34 @@ export const BookingSteps = () => {
       >
         <Column gap={["xl", "m"]}>
           <Text variant={"heading"} fontWeight={"bold"} color={"primary"}>
-          How To Book 
+            How To Book
           </Text>
           <Box
-              height={"3px"}
-              bg={"primary"}
-              width={"70%"}
-              ml={"header"}
-              borderRadius={"circle"}
-            ></Box>
+            height={"3px"}
+            bg={"primary"}
+            width={"70%"}
+            ml={"header"}
+            borderRadius={"circle"}
+          ></Box>
           <Text variant={"subHeading"} fontWeight={"bold"} color={"primary"}>
-          A Service
+            A Service
           </Text>
         </Column>
-        <CenterBox  width={["100%", "450px"]}>
+        <CenterBox width={["100%", "450px"]}>
           <Text color={"primary"} variant={"body"}>
-          We make it easy for you to book makeup services at your convenience.
+            We make it easy for you to book makeup services at your convenience.
             Just follow these steps, and you will be all set. From choosing your
-            desired service to confirming your booking. Get ready to enjoy top-notch
-            makeup services right at your doorstep!
+            desired service to confirming your booking. Get ready to enjoy
+            top-notch makeup services right at your doorstep!
           </Text>
         </CenterBox>
       </Box>
-      <CenterBox flexDirection={["column","row"]} gap={["xxl","xl"]} py={"header"} px={["xxl","header"]}>
+      <CenterBox
+        flexDirection={["column", "row"]}
+        gap={["xxl", "xl"]}
+        py={"header"}
+        px={["xxl", "header"]}
+      >
         {stepsData.map((step, index) => (
           <Column
             key={index}
@@ -83,6 +88,6 @@ export const BookingSteps = () => {
           </Column>
         ))}
       </CenterBox>
-      </Column>
+    </Column>
   );
 };
