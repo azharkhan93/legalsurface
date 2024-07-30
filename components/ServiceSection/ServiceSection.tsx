@@ -42,6 +42,13 @@ export const ServiceSection = () => {
           >
             Our Opertaional Approach
           </Text>
+          <Box
+              height={"3px"}
+              bg={"secondary"}
+              width={"70%"}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
           <Text fontWeight={"bold"} variant={"subHeading"} color={"secondary"}>
             {" "}
             How We Operate

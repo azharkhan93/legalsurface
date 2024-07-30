@@ -12,6 +12,13 @@ export const ClientReviews = () => {
       >
         <Column gap={"m"}>
           <Text color="secondary" variant="heading">Testimonial</Text>
+          <Box
+              height={"3px"}
+              bg={"secondary"}
+              width={"70%"}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
           <Text color="secondary" variant="subHeading">What Our Clients Say</Text>
         </Column>
 

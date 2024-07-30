@@ -16,6 +16,13 @@ export const About: React.FC = () => {
           <Text variant={"heading"} fontWeight={"bold"} color={"secondary"}>
             About Us
           </Text>
+          <Box
+              height={"3px"}
+              bg={"secondary"}
+              width={"70%"}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
           <Text variant={"subHeading"} fontWeight={"bold"} color={"secondary"}>
             Why Choose Us
           </Text>

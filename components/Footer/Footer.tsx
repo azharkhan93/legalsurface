@@ -41,9 +41,10 @@ export const Footer = () => {
             gap={"l"}
           >
             <Text variant={"subHeading"}>About Company</Text>
+            
 
             <Row alignItems={"center"} justifyContent={"center"} gap={"m"}>
-              <Text variant="body">Address: Rajbagh Srinagar India</Text>
+              <Text variant="body" width={"390px"}>We invite you to embark on a journey of self-discovery, self-love, and self-confidence with us. Come indulge your senses, pamper your soul, and let your inner radiance shine bright. Your beauty journey begins here. We believe in nurturing not only our clients but also the planet we call home</Text>
             </Row>
           </Column>
           <Column
@@ -57,7 +58,12 @@ export const Footer = () => {
           >
             <Text variant="subHeading">Useful Links</Text>
 
-            <Column alignItems={"center"} justifyContent={"center"} gap={"m"}   color={"primary"}>
+            <Column
+              alignItems={"center"}
+              justifyContent={"center"}
+              gap={"m"}
+              color={"primary"}
+            >
               <Text variant="body">Home</Text>
 
               <Text variant="body"> India</Text>
@@ -78,17 +84,17 @@ export const Footer = () => {
           >
             <Text variant="subHeading">Our Location</Text>
 
-            <Row alignItems={"center"} justifyContent={"center"} gap={"m"}>
-              <FaMapMarkerAlt size={23} fill="green" width={"20px"} />
-              <Text variant="body">Address: Rajbagh Srinagar India</Text>
+            <Row alignItems={"center"} justifyContent={"space-between"}  border={"2px solid green"}  >
+              <FaMapMarkerAlt size={23} fill="green" width={"20px"} style={{marginLeft: "100px"}}  />
+              <Text variant="body">Address: Rajbagh Srinagar, India</Text>
             </Row>
-            <Row alignItems={"center"} justifyContent={"center"} gap={"m"}>
-              <FaEnvelope size={23} fill="green" width={"20px"} />
-              <Text variant="body"> Email: jhkjhsddhjs@glamsquad.in</Text>
+            <Row alignItems={"center"} justifyContent={"center"} border={"2px solid green"} >
+              <FaEnvelope size={23} fill="green" width={"20px"} style={{marginLeft: "120]px"}} />
+              <Text variant="body"> Email: Malihashaikh24524@gmail.com</Text>
             </Row>
-            <Row alignItems={"center"} justifyContent={"center"} gap={"m"}>
-              <FaPhone size={23} fill="green" width={"20px"} />
-              <Text variant="body"> Phone: +91444555599999998</Text>
+            <Row alignItems={"center"} justifyContent={"center"} gap={"header"} border={"2px solid green"}>
+              <FaPhone size={23} fill="green" width={"20px"} style={{marginLeft: "100px"}} />
+              <Text variant="body"> Phone: +91 8899355648</Text>
             </Row>
           </Column>
         </Box>

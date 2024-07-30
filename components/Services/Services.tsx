@@ -25,11 +25,16 @@ export const Services: React.FC = () => {
             <Text color={"primary"} variant={"heading"}>
               Our Services
             </Text>
-            <Box height={"2px"} bg={"primary"} width={"70%"} ml={"header"} borderRadius={"circle"}></Box>
+            <Box
+              height={"3px"}
+              bg={"primary"}
+              width={"70%"}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
             <Text color="primary" variant={"subHeading"}>
               What Our Clients Say
             </Text>
-            
           </Column>
 
           <CenterBox width={"450px"}>
@@ -40,7 +45,6 @@ export const Services: React.FC = () => {
           </CenterBox>
         </Row>
         <CenterBox
-          
           gap={"l"}
           flexDirection={"row"}
           bg={"secondary"}
@@ -61,10 +65,10 @@ export const Services: React.FC = () => {
               variant="outline"
               border={"none"}
               height={"40px"}
-              width={"300px"}
+              width={"230px"}
               borderRadius={"circle"}
             >
-              <Text variant="subHeading">View More</Text>
+              <Text variant={"body"}>View More</Text>
             </Button>
           </CenterBox>
         </CenterBox>

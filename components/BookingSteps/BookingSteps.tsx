@@ -21,6 +21,13 @@ export const BookingSteps = () => {
           <Text variant={"heading"} fontWeight={"bold"} color={"primary"}>
           How To Book 
           </Text>
+          <Box
+              height={"3px"}
+              bg={"primary"}
+              width={"70%"}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
           <Text variant={"subHeading"} fontWeight={"bold"} color={"primary"}>
           A Service
           </Text>
