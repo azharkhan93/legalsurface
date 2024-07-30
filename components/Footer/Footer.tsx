@@ -31,8 +31,8 @@ export const Footer = () => {
           //   border={"4px solid black"}
         >
           <Column
-            borderRight={"1px solid black"}
-            borderLeft={"1px solid black"}
+            borderRight={"1px solid #D4BDE8"}
+            borderLeft={"1px solid #D4BDE8"}
             textAlign={"center"}
             overflow={"hidden"}
             justifyContent={"center"}
@@ -48,7 +48,7 @@ export const Footer = () => {
             </Row>
           </Column>
           <Column
-            borderRight={"1px solid black"}
+            borderRight={"1px solid #D4BDE8 "}
             textAlign={"center"}
             overflow={"hidden"}
             justifyContent={"center"}
@@ -66,43 +66,52 @@ export const Footer = () => {
             >
               <Text variant="body">Home</Text>
 
-              <Text variant="body"> India</Text>
-              <Text variant="body">India</Text>
-              <Text variant="body">India</Text>
+              <Text variant="body"> About Us</Text>
+              <Text variant="body">Contact Us</Text>
+              <Text variant="body">Services</Text>
             </Column>
           </Column>
 
           <Column
-            borderRight={"1px solid black"}
-            // borderLeft={"3px solid green"}
-            textAlign={"center"}
-            overflow={"hidden"}
-            justifyContent={"center"}
-            flex={"1"}
-            gap={"l"}
-            color={"primary"}
-          >
-            <Text variant="subHeading">Our Location</Text>
+      borderRight={"1px solid #D4BDE8"}
+      textAlign={"center"}
+      overflow={"hidden"}
+      justifyContent={"center"}
+      flex={"1"}
+      gap={"l"}
+      color={"primary"}
+    >
+      <Text variant="subHeading">Our Location</Text>
 
-            <Row alignItems={"center"} justifyContent={"space-between"}  border={"2px solid green"}  >
-              <FaMapMarkerAlt size={23} fill="green" width={"20px"} style={{marginLeft: "100px"}}  />
-              <Text variant="body">Address: Rajbagh Srinagar, India</Text>
-            </Row>
-            <Row alignItems={"center"} justifyContent={"center"} border={"2px solid green"} >
-              <FaEnvelope size={23} fill="green" width={"20px"} style={{marginLeft: "120]px"}} />
-              <Text variant="body"> Email: Malihashaikh24524@gmail.com</Text>
-            </Row>
-            <Row alignItems={"center"} justifyContent={"center"} gap={"header"} border={"2px solid green"}>
-              <FaPhone size={23} fill="green" width={"20px"} style={{marginLeft: "100px"}} />
-              <Text variant="body"> Phone: +91 8899355648</Text>
-            </Row>
-          </Column>
+      <Row alignItems={"center"} justifyContent={"center"} gap={"l"} >
+       
+          <FaMapMarkerAlt size={23} fill="#D4BDE8" />
+    
+        <Text variant="body">Address: Rajbagh Srinagar, India</Text>
+      </Row>
+      <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
+        
+          <FaPhone size={23} fill="#D4BDE8" />
+        
+        <Text variant="body">Contact Detail: +91 8899355648</Text>
+      </Row>
+
+      <Row alignItems={"center"} justifyContent={"center"}  gap={"l"} >
+       
+          <FaEnvelope size={23} fill="#D4BDE8" />
+          <Text variant="body">Email: glam90239@gmail.com</Text>
+       
+        
+      </Row>
+
+      
+    </Column>
         </Box>
       </Box>
-      <Box height={"1px"} bg={"secondary"} width={"100%"}></Box>
+      <Box height={"1px"} bg={"primary"} width={"100%"}></Box>
 
       <CenterBox py={"m"}>
-        <Text variant={"subHeading"} color={"secondary"}>
+        <Text variant={"body"} color={"secondary"}>
           © 2024 Glam Squad. All Rights Reserved
         </Text>
       </CenterBox>
