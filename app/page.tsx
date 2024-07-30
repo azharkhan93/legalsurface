@@ -17,9 +17,10 @@ export default function Page() {
       <About />
 
       <ServiceSection />
+      <BookingSteps />
 
       <ClientReviews />
-      <BookingSteps />
+      
     </>
   );
 }
