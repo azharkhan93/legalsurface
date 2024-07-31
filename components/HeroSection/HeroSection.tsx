@@ -22,7 +22,7 @@ export const HeroSection = () => {
       <Swiper
         navigation
         pagination={{ type: "bullets", clickable: true }}
-        autoplay={{ delay: 1000000 }}
+        autoplay={{ delay: 2000 }}
         loop={true}
         modules={[Autoplay, Pagination]}
       >
