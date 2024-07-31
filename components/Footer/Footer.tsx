@@ -18,17 +18,24 @@ export const Footer = () => {
         padding={"xl"}
         alignItems={"center"}
         bg={"secondary"}
+       
+        // flexDirection={["column", "row"]}
         // height={"40vh"}
         // flexDirection={"column"}
       >
         <NewsLetter />
         <Box
+       
           justifyContent={"space-between"}
-          height={"40vh"}
-          flexDirection={"row"}
+          // height={"40vh"}
+          flexDirection={["column","row"]}
+          
           width={"100%"}
-          p={"xl"}
-          //   border={"4px solid black"}
+          p={["none","xl"]}
+          gap={"xxxl"}
+          
+
+          
         >
           <Column
             borderRight={"1px solid #D4BDE8"}
@@ -39,10 +46,11 @@ export const Footer = () => {
             flex={"1"}
             color={"primary"}
             gap={"l"}
+           
           >
             <Text variant={"subHeading"}>About Company</Text>
 
-            <Row alignItems={"center"} justifyContent={"center"} gap={"m"}>
+            <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
               <Text variant="body" width={"390px"}>
                 We invite you to embark on a journey of self-discovery,
                 self-love, and self-confidence with us. Come indulge your
@@ -96,12 +104,12 @@ export const Footer = () => {
             <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
               <FaPhone size={23} fill="#D4BDE8" />
 
-              <Text variant="body">Contact Detail: +91 8899355648</Text>
+              <Text variant={"body"}>Contact Detail: +91 8899355648</Text>
             </Row>
 
             <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
               <FaEnvelope size={23} fill="#D4BDE8" />
-              <Text variant="body">Email: glam90239@gmail.com</Text>
+              <Text variant={"body"}>Email: glam90239@gmail.com</Text>
             </Row>
           </Column>
         </Box>

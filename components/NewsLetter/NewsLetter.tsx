@@ -9,12 +9,14 @@ export const NewsLetter = () => {
       width={"100%"}
       p={"xl"}
       alignItems={"center"}
-      flexDirection={"row"}
+      flexDirection={["column-reverse", "row"]}
       justifyContent={"space-between"}
+      // border={"2px solid green"}
+      py={"l"}
     >
       <Row
         gap={20}
-        width={"80%"}
+        width={"100%"}
         alignItems={"center"}
         justifyContent={"center"}
         borderRight={"1px solid #D4BDE8"}
