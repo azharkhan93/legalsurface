@@ -3,15 +3,22 @@ import { SwiperSlide } from "swiper/react";
 
 export const ClientReviews = () => {
   return (
-    <Box py={"xl"} gap={"xxl"}>
-      <Row
-        py={"xxl"}
-        px={"header"}
+    <Column
+      bg={"primary"}
+      flexDirection={["column", "row"]}
+      border={"2px solid green"}
+      py={["xxl","header"]}
+    >
+      <Box
+        flexDirection={["column", "row"]}
         justifyContent={"space-between"}
-        alignItems={"start"}
+        gap={"l"}
+        px={"xl"}
       >
-        <Column gap={"m"}>
-          <Text color="secondary" variant="heading">Testimonial</Text>
+    
+      
+    <Column gap={["xl", "m"]}>
+          <Text color={"secondary"} variant={"heading"} fontWeight={"bold"} >Testimonial</Text>
           <Box
               height={"3px"}
               bg={"secondary"}
@@ -19,21 +26,21 @@ export const ClientReviews = () => {
               ml={"header"}
               borderRadius={"circle"}
             ></Box>
-          <Text color="secondary" variant="subHeading">What Our Clients Say</Text>
+          <Text color={"secondary"} variant={"subHeading"} fontWeight={"bold"}  >What Our Clients Say</Text>
         </Column>
 
-        <CenterBox width={"450px"}>
+        <CenterBox width={["100%", "450px"]}>
           <Text color={"secondary"} variant={"body"} >
             Discover how our services have positively impacted our clients experiences. 
             Read their testimonials below to learn more.
           </Text>
         </CenterBox>
-      </Row>
+      </Box>
 
       <CenterBox py={"m"} flexDirection={"column"}>
         <SwiperSlides />
       </CenterBox>
-    </Box>
+      </Column>
   );
 };
 

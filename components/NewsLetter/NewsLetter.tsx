@@ -19,7 +19,7 @@ export const NewsLetter = () => {
         width={"100%"}
         alignItems={"center"}
         justifyContent={"center"}
-        borderRight={"1px solid #D4BDE8"}
+       
         height={"10vh"}
       >
         <FaFacebook size={30} fill="#D4BDE8" />
@@ -29,7 +29,7 @@ export const NewsLetter = () => {
         <FaLinkedin size={30} fill="#D4BDE8" />
       </Row>
 
-      <CenterBox gap={10} borderRight={"1px solid #D4BDE8"} width={"100%"}>
+      <CenterBox gap={10} width={"100%"}>
         <Image
           src="/images/logo.png"
           alt="logo image"
@@ -37,7 +37,7 @@ export const NewsLetter = () => {
           height={130}
         />
       </CenterBox>
-      <CenterBox gap={10} borderRight={"1px solid #D4BDE8"} width={"100%"}>
+      <CenterBox gap={10} width={"100%"}>
         <Text variant={"subHeading"} color={"primary"}>
           Opening Hours:
         </Text>

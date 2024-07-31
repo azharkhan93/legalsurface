@@ -25,33 +25,38 @@ export const Footer = () => {
       >
         <NewsLetter />
         <Box
+        py={"xxxxl"}
        
           justifyContent={"space-between"}
           // height={"40vh"}
           flexDirection={["column","row"]}
           
           width={"100%"}
-          p={["none","xl"]}
+          // p={["none","xl"]}
           gap={"xxxl"}
+          
           
 
           
         >
           <Column
-            borderRight={"1px solid #D4BDE8"}
-            borderLeft={"1px solid #D4BDE8"}
+            // borderRight={"1px solid #D4BDE8"}
+            // borderLeft={"1px solid #D4BDE8"}
             textAlign={"center"}
             overflow={"hidden"}
             justifyContent={"center"}
             flex={"1"}
             color={"primary"}
             gap={"l"}
+            
+            py={"xl"}
+           
            
           >
             <Text variant={"subHeading"}>About Company</Text>
 
             <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
-              <Text variant="body" width={"390px"}>
+              <Text variant="body" width={"370px"}>
                 We invite you to embark on a journey of self-discovery,
                 self-love, and self-confidence with us. Come indulge your
                 senses, pamper your soul, and let your inner radiance shine
@@ -61,13 +66,14 @@ export const Footer = () => {
             </Row>
           </Column>
           <Column
-            borderRight={"1px solid #D4BDE8 "}
+            // borderRight={"1px solid #D4BDE8 "}
             textAlign={"center"}
             overflow={"hidden"}
             justifyContent={"center"}
             flex={"1"}
             gap={"l"}
             color={"primary"}
+            py={"xl"}
           >
             <Text variant="subHeading">Useful Links</Text>
 
@@ -86,13 +92,14 @@ export const Footer = () => {
           </Column>
 
           <Column
-            borderRight={"1px solid #D4BDE8"}
+            // borderRight={"1px solid #D4BDE8"}
             textAlign={"center"}
             overflow={"hidden"}
             justifyContent={"center"}
             flex={"1"}
             gap={"l"}
             color={"primary"}
+            py={"xl"}
           >
             <Text variant="subHeading">Our Location</Text>
 
