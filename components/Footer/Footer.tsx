@@ -49,7 +49,7 @@ export const Footer = () => {
             color={"primary"}
             gap={"l"}
             
-            py={"xl"}
+            py={["l","xl"]}
            
            
           >
@@ -73,7 +73,7 @@ export const Footer = () => {
             flex={"1"}
             gap={"l"}
             color={"primary"}
-            py={"xl"}
+            py={["l","xl"]}
           >
             <Text variant="subHeading">Useful Links</Text>
 
@@ -99,7 +99,7 @@ export const Footer = () => {
             flex={"1"}
             gap={"l"}
             color={"primary"}
-            py={"xl"}
+            py={["l","xl"]}
           >
             <Text variant="subHeading">Our Location</Text>
 

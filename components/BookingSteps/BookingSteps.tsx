@@ -47,6 +47,8 @@ export const BookingSteps = () => {
         py={["m", "header"]}
         // py={"header"}
         px={["xxl", "header"]}
+       
+        mt={["xxxl", "none"]}
       >
         {stepsData.map((step, index) => (
           <Column
