@@ -29,19 +29,20 @@ export const HeroSection = () => {
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
             <CenterBox
+         
               justifyContent={"space-between"}
               flexDirection={["column","row"]}
-              padding={"xl"}
-              height={"90vh"}
+              // padding={"xl"}
+              height={"100vh"}
               backgroundImage={slide.image}
               backgroundPosition={"center"}
               backgroundRepeat={"no-repeat"}
               backgroundSize={"cover"}
               backgroundColor={"primaryLight"}
             >
-              <Column textAlign={"center"} maxWidth={"600px"} gap={"m"}>
+              <Column textAlign={"center"} maxWidth={"600px"} gap={"l"}  py={"xl"}>
                 <Text
-                  variant={["heading", "heading"]}
+                  variant={["subHeading", "heading"]}
                   fontFamily={["Arial, sans-serif", "Arial, sans-serif"]}
                   textShadow={"-moz-initial"}
                   fontWeight={"bold"}
@@ -64,6 +65,8 @@ export const HeroSection = () => {
                 justifyContent={"space-between"}
                 flexDirection={"row"}
                 gap={"xxl"}
+
+                // boxShadow={"modalOverlay"}
               >
                 <Image
                   src={slide.image}
@@ -74,7 +77,7 @@ export const HeroSection = () => {
                 />
                 <Box
                 display={["none", "block"]}
-                  px={"xxl"}
+                  // px={"xxl"}
                   py={"xxl"}
                   borderRadius={"circle"}
                   border={"2px solid white"}

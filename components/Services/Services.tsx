@@ -39,7 +39,7 @@ export const Services: React.FC = () => {
               borderRadius={"circle"}
             ></Box>
             <Text color={"primary"} variant={"subHeading"}>
-              What Our Clients Say
+              Explore Our Services
             </Text>
           </Column>
 
@@ -58,6 +58,7 @@ export const Services: React.FC = () => {
           // py={"header"}
           flexWrap={"wrap"}
           width={"100%"}
+          mt={["xxxl", "none"]}
         >
           {services.map((service, index) => (
             <ServicesCard

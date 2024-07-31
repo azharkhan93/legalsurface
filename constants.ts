@@ -42,14 +42,15 @@ export const slidesData = [
     subtitle: "Experience The Ultimate In Beauty Indulgence At Glam Squad",
     image: "/images/hom.jpg",
   },
+  
   {
-    title: "Unleash Your Inner Glow",
+    title: "Transform Your Look Unleash Your Inner Glow",
     subtitle: "Revitalize Your Look with Our Premium Services",
     image: "/images/home2.jpg",
   },
   {
-    title: "Transform Your Style",
-    subtitle: "Expert Care for a Stunning You",
+    title: "Pamper Yourself Elevate Your Beauty Experience",
+    subtitle: "Expert Care for a Your Stunning Beauty",
     image: "/images/home3.jpg",
   },
 ];
