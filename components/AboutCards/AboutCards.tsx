@@ -17,10 +17,10 @@ export const AboutCards: React.FC<AboutCardProps> = ({
   <Column
     alignItems={"start"}
     justifyContent={"start"}
-    px={"l"}
+    px={["none","l"]}
     py={"l"}
     gap={"m"}
-    width={"300px"}
+    width={["327px","300px"]}
   >
     <Icon size={65} color={"#2A3277"} />
     <Text variant={"subHeading"} color={"secondary"}>

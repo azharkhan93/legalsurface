@@ -44,7 +44,7 @@ export const About: React.FC = () => {
               Why Choose Us
             </Text>
           </Column>
-          {/* </Box> */}
+
           <CenterBox width={["100%", "450px"]}>
             <Text color={"secondary"} variant={"body"}>
               We are here to provide you with best makeup services at home. Dont
@@ -54,12 +54,10 @@ export const About: React.FC = () => {
         </Box>
         <Box
           flexDirection={["column-reverse", "row"]}
-          py={["xl", "header"]}
           alignItems={"center"}
           justifyContent={"space-between"}
           width={"100%"}
-          px={"header"}
-          gap={"header"}
+          px={["none", "header"]}
         >
           <CenterBox borderRadius={"m"}>
             <Image
@@ -70,7 +68,12 @@ export const About: React.FC = () => {
               style={{ borderRadius: "20px" }}
             ></Image>
           </CenterBox>
-          <CenterBox flexWrap={"wrap"} flexDirection={"row"} gap={"xl"}>
+          <CenterBox
+            flexWrap={"wrap"}
+            flexDirection={"row"}
+            gap={"xl"}
+            py={["m", "header"]}
+          >
             {columnCardData.map((card) => (
               <AboutCards
                 key={card.id}

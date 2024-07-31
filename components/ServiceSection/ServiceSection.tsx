@@ -12,24 +12,57 @@ import {
 
 export const ServiceSection = () => {
   return (
-    <Row
-      flexDirection={"row"}
+    <Box
+    flexDirection={"column"}
+      // flexDirection={["column","row"]}
       alignItems={"center"}
       justifyContent={"center"}
       bg={"primary"}
-      padding={"m"}
+      
+    
       // height={"100vh"}
     >
-      <CenterBox
+      <Column
         border={"2px solid white"}
-        flexDirection={"row"}
+        flexDirection={["column","column"]}
         width={"100%"}
         gap={20}
         py={"header"}
       >
-        <Column
+        <Box
+          flexDirection={["column", "row"]}
+          justifyContent={"space-between"}
+          gap={"l"}
+          px={"xl"}
+          width={"100%"}
+        >
+          <Column gap={["xl", "m"]}>
+            <Text color={"secondary"} variant={"heading"}>
+            Our Opertaional Approach
+            </Text>
+            <Box
+              height={"3px"}
+              bg={"secondary"}
+              width={"70%"}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
+            <Text color={"secondary"} variant={"subHeading"}>
+            Our Opertaional Approach
+            </Text>
+          </Column>
+
+          <CenterBox width={["100%", "450px"]}>
+            <Text color="secondary" variant="body">
+            Our operational approach is designed to pamper you from head to toe.
+            We understand the importance of self-care and strive to provide you
+            with the ultimate beauty experience
+            </Text>
+          </CenterBox>
+        </Box>
+        {/* <Column
           textAlign={"left"}
-          // border={"2px solid green"}
+       
           gap={20}
           py={"xxl"}
         >
@@ -63,7 +96,15 @@ export const ServiceSection = () => {
               Explore Now
             </Button>
           </CenterBox>
-        </Column>
+        </Column> */}
+        <Box
+       flexDirection={["column", "row"]}
+       gap={["xxl", "xl"]}
+       py={["m", "header"]}
+      //  py={"header"}
+       px={["xxl", "header"]}
+
+        >
 
         <ServiceCard
           imageUrl={"/images/hom.jpg"}
@@ -86,7 +127,9 @@ export const ServiceSection = () => {
             "Our dedicated team is committed to providing you with exceptional service tailored to your needs. Thank you for considering us!"
           }
         />
-      </CenterBox>
-    </Row>
+        </Box>
+      </Column>
+      
+    </Box>
   );
 };

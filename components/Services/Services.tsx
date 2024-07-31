@@ -54,7 +54,8 @@ export const Services: React.FC = () => {
           gap={"l"}
           flexDirection={"row"}
           bg={"secondary"}
-          py={"header"}
+          py={["m", "header"]}
+          // py={"header"}
           flexWrap={"wrap"}
           width={"100%"}
         >

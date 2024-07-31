@@ -44,7 +44,8 @@ export const BookingSteps = () => {
       <CenterBox
         flexDirection={["column", "row"]}
         gap={["xxl", "xl"]}
-        py={"header"}
+        py={["m", "header"]}
+        // py={"header"}
         px={["xxl", "header"]}
       >
         {stepsData.map((step, index) => (
