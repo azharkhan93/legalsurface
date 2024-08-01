@@ -42,7 +42,7 @@ export const HeroSection = () => {
               backgroundColor={"primaryLight"}
               px={["none","xl"]}
             >
-              <Column textAlign={"center"} maxWidth={"600px"} gap={"l"}  py={"xl"} border={"2px solid green"}>
+              <Column textAlign={"center"} maxWidth={"600px"} gap={"l"}  py={"xl"} >
                 <Text
                   variant={["subHeading", "heading"]}
                   fontFamily={["Arial, sans-serif", "Arial, sans-serif"]}
@@ -57,7 +57,7 @@ export const HeroSection = () => {
                 </Text>
                 <Text variant={["body","body"]} color={"secondary"} px={["l","header"]}>{slide.subtitle}</Text>
                 <CenterBox mt={"l"}>
-                  <Button variant={"primary"} borderRadius={"circle"} py={"s"} background={"secondary"}  px={"xxxl"} style={{background: "#2A3277"}} >
+                  <Button variant={"primary"} borderRadius={"circle"} py={"m"} background={"secondary"}  px={"xxxl"} style={{background: "#2A3277"}} >
                     Explore More
                   </Button>
                 </CenterBox>

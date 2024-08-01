@@ -20,7 +20,7 @@ export const AboutCards: React.FC<AboutCardProps> = ({
     px={["none","l"]}
     py={"l"}
     gap={"m"}
-    width={["327px","300px"]}
+    width={["350px","300px"]}
   >
     <Icon size={65} color={"#2A3277"} />
     <Text variant={"subHeading"} color={"secondary"}>

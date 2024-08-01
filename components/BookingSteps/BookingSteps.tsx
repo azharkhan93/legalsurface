@@ -9,7 +9,8 @@ export const BookingSteps = () => {
       bg={"secondary"}
       flexDirection={["column", "row"]}
       border={"2px solid green"}
-      py={"header"}
+      py={["xxl", "header"]}
+      // py={"header"}
     >
       <Box
         flexDirection={["column", "row"]}

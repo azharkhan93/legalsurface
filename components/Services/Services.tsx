@@ -17,15 +17,16 @@ export const Services: React.FC = () => {
         
         bg={"secondary"}
         flexDirection={["column", "row"]}
-        border={"2px solid green"}
-      
-        py={"header"}
+        // border={"2px solid green"}
+        py={["xxl", "header"]}
+    
       >
         <Box
           flexDirection={["column", "row"]}
           justifyContent={"space-between"}
           gap={"l"}
           px={"xl"}
+          
         >
           <Column gap={["xl", "m"]}>
             <Text color={"primary"} variant={"heading"}>

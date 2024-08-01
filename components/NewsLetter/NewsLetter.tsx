@@ -12,7 +12,7 @@ export const NewsLetter = () => {
       flexDirection={["column-reverse", "row"]}
       justifyContent={"space-between"}
       // border={"2px solid green"}
-      py={"l"}
+      py={["xxl", "header"]}
     >
       <Row
         gap={20}

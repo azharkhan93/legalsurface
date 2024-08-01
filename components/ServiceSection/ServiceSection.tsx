@@ -18,16 +18,16 @@ export const ServiceSection = () => {
       alignItems={"center"}
       justifyContent={"center"}
       bg={"primary"}
-      
+      py={["xxl", "header"]}
     
       // height={"100vh"}
     >
       <Column
-        border={"2px solid white"}
+        // border={"2px solid white"}
         flexDirection={["column","column"]}
         width={"100%"}
         gap={20}
-        py={"header"}
+        // py={"header"}
       >
         <Box
           flexDirection={["column", "row"]}
@@ -53,7 +53,7 @@ export const ServiceSection = () => {
           </Column>
 
           <CenterBox width={["100%", "450px"]}>
-            <Text color="secondary" variant="body">
+            <Text color={"secondary"} variant={"body"}>
             Our operational approach is designed to pamper you from head to toe.
             We understand the importance of self-care and strive to provide you
             with the ultimate beauty experience

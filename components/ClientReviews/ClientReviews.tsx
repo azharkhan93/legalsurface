@@ -6,7 +6,7 @@ export const ClientReviews = () => {
     <Column
       bg={"primary"}
       flexDirection={["column", "row"]}
-      border={"2px solid green"}
+      // border={"2px solid green"}
       py={["xxl", "header"]}
     >
       <Box
