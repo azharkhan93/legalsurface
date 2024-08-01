@@ -1,6 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { Box, Button, CenterBox, Column, Row, StyledLink } from "@/components";
+import {
+  Box,
+  Button,
+  CenterBox,
+  Column,
+  Row,
+  StyledLink,
+  Text,
+} from "@/components";
 import { FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import { NavbarData } from "@/constants";
@@ -20,15 +28,20 @@ export const Navbar: React.FC = () => {
 
   return (
     <Row
+      position="fixed"
+      top={0}
+      width={["100%", "90%"]}
       justifyContent="space-between"
       alignItems="center"
+      justifyItems="center"
       bg="secondary"
-      position="relative"
-      padding={["m", "s"]}
-      top={0}
+      // padding={["none", "s"]}
       borderRadius={["none", "circle"]}
       mx={["none", "header"]}
-      px={["l", "xxl"]}
+      px={["m", "xxl"]}
+      style={{
+        zIndex: "50",
+      }}
     >
       <CenterBox>
         <Image src="/images/logo.png" alt="Logo" width={100} height={100} />
@@ -67,7 +80,7 @@ export const Navbar: React.FC = () => {
               </StyledLink>
               {dropdownOpen && (
                 <Box
-                  zIndex={999}
+                  // zIndex={}
                   position="absolute"
                   top={30}
                   left={0}
@@ -75,13 +88,8 @@ export const Navbar: React.FC = () => {
                   p={"l"}
                   width={"180px"}
                   borderRadius={"s"}
-                  
                 >
-                  <Column
-                    alignItems="start"
-                    gap={15}
-                    border={"2px solid green"}
-                  >
+                  <Column alignItems={"start"} gap={15}>
                     <StyledLink href="/service1">Service 1</StyledLink>
                     <StyledLink href="/service2">Service 2</StyledLink>
                     <StyledLink href="/service3">Service 3</StyledLink>
@@ -97,11 +105,13 @@ export const Navbar: React.FC = () => {
         )}
       </Box>
 
-      <Button variant={"primary"} display={["none", "block"]} py={"m"}
-      borderRadius={"circle"}
-      px={"xl"}
-      bg={"primary"}
-
+      <Button
+        variant={"primary"}
+        display={["none", "block"]}
+        py={"m"}
+        borderRadius={"circle"}
+        px={"xl"}
+        bg={"primary"}
       >
         Book An Appointment
       </Button>
@@ -112,31 +122,47 @@ export const Navbar: React.FC = () => {
           height="100vh"
           flexDirection="column"
           bg="secondary"
-          zIndex={50}
-          p={"m"}
+          zIndex={9999}
+          // p={"m"}
           display={["flex", "none"]}
           position="fixed"
           top={0}
           left={0}
+          gap={"xxl"}
         >
-          <Box position="absolute" top={4} right={4} onClick={handleToggle}>
-            <FaTimes size={28} color="white" />
+          <CenterBox position={"absolute"} top={"none"} left={0}>
+            <Image src="/images/logo.png" alt="Logo" width={100} height={100} />
+          </CenterBox>
+          <Box
+            position="absolute"
+            top={"xxl"}
+            right={"xl"}
+            onClick={handleToggle}
+            bg={"primary"}
+            py={"s"}
+            px={"s"}
+            borderRadius={"circle"}
+          >
+            <FaTimes size={30} color="#2A3277" />
           </Box>
 
           <Column
-            alignItems="center"
-            gap={8}
-            justifyContent="center"
-            fontSize="20px"
+            alignItems={"center"}
+            gap={"xl"}
+            justifyContent={"center"}
+            fontSize={"40px"}
+            border={"2px solid green"}
+            width={"100%"}
           >
             {NavbarData.map((item, index) =>
               item.title === "Services" ? (
-                <Box key={index} position="relative">
+                <Box key={index} position={"relative"} border={"2px solid red"}>
                   <StyledLink
                     onClick={handleDropdownToggle}
                     style={{ display: "flex", alignItems: "center" }}
                   >
                     {item.title}
+
                     {dropdownOpen ? (
                       <FaChevronUp size={16} />
                     ) : (
@@ -146,12 +172,11 @@ export const Navbar: React.FC = () => {
                   {dropdownOpen ? (
                     <Box
                       position="absolute"
-                      top="100%"
+                      top={"100%"}
                       left={0}
-                      bg="secondary"
-                      p="m"
-                      borderRadius="s"
-                      boxShadow="0 4px 6px rgba(0, 0, 0, 0.1)"
+                      bg={"secondary"}
+                      p={"m"}
+                      borderRadius={"s"}
                     >
                       <Column alignItems="center" gap={2}>
                         <StyledLink href="/service1">Service 1</StyledLink>
@@ -168,11 +193,15 @@ export const Navbar: React.FC = () => {
               )
             )}
           </Column>
-          
-          <Button display={["block", "none"]} variant={"primary"} bg={"primary"} py={"s"}>
+
+          <Button
+            display={["block", "none"]}
+            variant={"primary"}
+            bg={"primary"}
+            py={"s"}
+          >
             Book An Appointment
           </Button>
-          
         </CenterBox>
       ) : null}
     </Row>
