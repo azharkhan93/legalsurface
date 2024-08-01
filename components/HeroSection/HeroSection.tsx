@@ -5,6 +5,7 @@ import {
   Column,
   CenterBox,
   Button,
+  Row,
 } from "@/components";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -39,48 +40,56 @@ export const HeroSection = () => {
               backgroundRepeat={"no-repeat"}
               backgroundSize={"cover"}
               backgroundColor={"primaryLight"}
+              px={["none","xl"]}
             >
-              <Column textAlign={"center"} maxWidth={"600px"} gap={"l"}  py={"xl"}>
+              <Column textAlign={"center"} maxWidth={"600px"} gap={"l"}  py={"xl"} border={"2px solid green"}>
                 <Text
                   variant={["subHeading", "heading"]}
                   fontFamily={["Arial, sans-serif", "Arial, sans-serif"]}
                   textShadow={"-moz-initial"}
                   fontWeight={"bold"}
                   color={"secondary"}
+                  px={["xl", "xxxl"]}
+                  pt={"xxxl"}
                   
                 >
                   {slide.title}
                 </Text>
-                <Text variant={["body","subHeading"]} color="secondary">{slide.subtitle}</Text>
+                <Text variant={["body","body"]} color={"secondary"} px={["l","header"]}>{slide.subtitle}</Text>
                 <CenterBox mt={"l"}>
-                  <Button variant={"primary"} borderRadius={"circle"} width={"200px"}>
-                    hello
+                  <Button variant={"primary"} borderRadius={"circle"} py={"s"} background={"secondary"}  px={"xxxl"} style={{background: "#2A3277"}} >
+                    Explore More
                   </Button>
                 </CenterBox>
               </Column>
-              <Box
+              <Row
+            
                
                 borderRadius={"xl"}
                 alignItems={"center"}
                 justifyContent={"space-between"}
                 flexDirection={"row"}
                 gap={"xxl"}
+                // mr={"header"}
+                // border={"2px solid yellow"}
+                mb={"header"}
 
                 // boxShadow={"modalOverlay"}
               >
                 <Image
                   src={slide.image}
                   alt="slider image"
-                  width={190}
-                  height={290}
-                  style={{ borderRadius: "80px", marginTop: "90px"}}
+                  width={290}
+                  height={320}
+                  style={{ borderRadius: "80px", }}
                 />
                 <Box
+                mb={"header"}
                 display={["none", "block"]}
                   // px={"xxl"}
                   py={"xxl"}
                   borderRadius={"circle"}
-                  border={"2px solid white"}
+                  // border={"2px solid red"}
                 >
                   <Image
                     src={slide.image}
@@ -90,7 +99,7 @@ export const HeroSection = () => {
                     style={{ borderRadius: "80px" }}
                   />
                 </Box>
-              </Box>
+              </Row>
             </CenterBox>
           </SwiperSlide>
         ))}

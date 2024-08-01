@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
       px={["l", "xxl"]}
     >
       <CenterBox>
-        <Image src="/images/logo.png" alt="Logo" width={70} height={70} />
+        <Image src="/images/logo.png" alt="Logo" width={100} height={100} />
       </CenterBox>
 
       <Box display={["block", "none"]} onClick={handleToggle}>
@@ -51,7 +51,12 @@ export const Navbar: React.FC = () => {
             <Box key={index} position="relative">
               <StyledLink
                 onClick={handleDropdownToggle}
-                style={{ display: "flex", alignItems: "center", gap: "8px", justifyContent: "center" }}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  justifyContent: "center",
+                }}
               >
                 {item.title}
                 {dropdownOpen ? (
@@ -62,18 +67,22 @@ export const Navbar: React.FC = () => {
               </StyledLink>
               {dropdownOpen && (
                 <Box
-                zIndex={999}
+                  zIndex={999}
                   position="absolute"
                   top={30}
-                   left={0}
+                  left={0}
                   bg="secondary"
-                 p={"l"}
-                 width={"180px"}
+                  p={"l"}
+                  width={"180px"}
                   borderRadius={"s"}
-                  boxShadow="0 4px 6px rgba(0, 0, 0, 0.1)"
+                  
                 >
-                  <Column alignItems="start" gap={15} border={"2px solid green"} >
-                    <StyledLink href="/service1" >Service 1</StyledLink>
+                  <Column
+                    alignItems="start"
+                    gap={15}
+                    border={"2px solid green"}
+                  >
+                    <StyledLink href="/service1">Service 1</StyledLink>
                     <StyledLink href="/service2">Service 2</StyledLink>
                     <StyledLink href="/service3">Service 3</StyledLink>
                   </Column>
@@ -88,8 +97,13 @@ export const Navbar: React.FC = () => {
         )}
       </Box>
 
-      <Button variant="primary" display={["none", "block"]}>
-        hello
+      <Button variant={"primary"} display={["none", "block"]} py={"m"}
+      borderRadius={"circle"}
+      px={"xl"}
+      bg={"primary"}
+
+      >
+        Book An Appointment
       </Button>
 
       {isOpen ? (
@@ -145,7 +159,7 @@ export const Navbar: React.FC = () => {
                         <StyledLink href="/service3">Service 3</StyledLink>
                       </Column>
                     </Box>
-                  ): null}
+                  ) : null}
                 </Box>
               ) : (
                 <StyledLink key={index} href={item.link} onClick={handleToggle}>
@@ -154,11 +168,13 @@ export const Navbar: React.FC = () => {
               )
             )}
           </Column>
-          <Button display={["block", "none"]} variant="primary">
-            hello
+          
+          <Button display={["block", "none"]} variant={"primary"} bg={"primary"} py={"s"}>
+            Book An Appointment
           </Button>
+          
         </CenterBox>
-      ): null}
+      ) : null}
     </Row>
   );
 };

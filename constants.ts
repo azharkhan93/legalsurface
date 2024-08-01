@@ -38,19 +38,19 @@ export const NavbarData = [
 
 export const slidesData = [
   {
-    title: "Discover the Beauty Within You",
-    subtitle: "Experience The Ultimate In Beauty Indulgence At Glam Squad",
+    title: "Discover the Hidden Beauty Within You Today",
+    subtitle: "Experience the ultimate in beauty indulgence at Glam Squad,our expert team transforms your look with luxurious services tailored to your unique style",
     image: "/images/hom.jpg",
   },
   
   {
     title: "Transform Your Look Unleash Your Inner Glow",
-    subtitle: "Revitalize Your Look with Our Premium Services",
+    subtitle: "Transform your beauty routine with our expert makeup services, tailored to enhance your natural beauty",
     image: "/images/home2.jpg",
   },
   {
     title: "Pamper Yourself Elevate Your Beauty Experience",
-    subtitle: "Expert Care for a Your Stunning Beauty",
+    subtitle: "Trust us to provide expert care that leaves you feeling confident and looking stunning. Book your appointment today and let us help you shine",
     image: "/images/home3.jpg",
   },
 ];
