@@ -150,45 +150,56 @@ export const Navbar: React.FC = () => {
             alignItems={"center"}
             gap={"xl"}
             justifyContent={"center"}
-            fontSize={"40px"}
-            border={"2px solid green"}
             width={"100%"}
           >
             {NavbarData.map((item, index) =>
               item.title === "Services" ? (
-                <Box key={index} position={"relative"} border={"2px solid red"}>
+                <Box key={index} position={"relative"}  >
                   <StyledLink
                     onClick={handleDropdownToggle}
-                    style={{ display: "flex", alignItems: "center" }}
+                    style={{ display: "flex", alignItems: "center", gap: "10px" }}
                   >
+                    <Text
+                    variant={"body"}
+                    >
                     {item.title}
+                    </Text>
 
                     {dropdownOpen ? (
-                      <FaChevronUp size={16} />
+                      <FaChevronUp size={18} />
                     ) : (
-                      <FaChevronDown size={16} />
+                      <FaChevronDown size={18} />
                     )}
                   </StyledLink>
                   {dropdownOpen ? (
                     <Box
                       position="absolute"
-                      top={"100%"}
+                       top={"170%"}
                       left={0}
-                      bg={"secondary"}
-                      p={"m"}
+                      bg={"primary"}
+                      // p={"m"}
                       borderRadius={"s"}
+                      px={"m"}
+                      py={"xl"}
+                     
+                      zIndex={9999}
                     >
-                      <Column alignItems="center" gap={2}>
-                        <StyledLink href="/service1">Service 1</StyledLink>
-                        <StyledLink href="/service2">Service 2</StyledLink>
-                        <StyledLink href="/service3">Service 3</StyledLink>
+                      <Column alignItems={"start"} gap={"xl"} width={"150px"}>
+                        <StyledLink href="/service1">Service 1drffrrfrffr</StyledLink>
+                        <StyledLink href="/service2">Service 2frrrfrfrrf</StyledLink>
+                        <StyledLink href="/service3">Service 3rfrrfrfrfr</StyledLink>
                       </Column>
                     </Box>
                   ) : null}
                 </Box>
               ) : (
                 <StyledLink key={index} href={item.link} onClick={handleToggle}>
+                  <Text
+                  variant={"body"}
+                  
+                  >
                   {item.title}
+                  </Text>
                 </StyledLink>
               )
             )}
