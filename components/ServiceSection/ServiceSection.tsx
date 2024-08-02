@@ -102,7 +102,7 @@ export const ServiceSection = () => {
        gap={["xxl", "xl"]}
        py={["m", "header"]}
       //  py={"header"}
-       px={["xxl", "header"]}
+       px={["xxxl", "header"]}
 
         >
 

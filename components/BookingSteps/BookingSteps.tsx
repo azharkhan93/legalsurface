@@ -47,7 +47,7 @@ export const BookingSteps = () => {
         gap={["xxl", "xl"]}
         py={["m", "header"]}
         // py={"header"}
-        px={["xxl", "header"]}
+        px={["xxxl", "header"]}
        
         mt={["xxxl", "none"]}
       >
