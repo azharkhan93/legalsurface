@@ -174,10 +174,10 @@ export const stepsData = [
 ];
 
 export const faqItems = [
-  { question: "What is your return policy?", answer: "Our return policy is..." },
-  { question: "How do I track my order?", answer: "You can track your order by..." },
-  { question: "What is your return policy?", answer: "Our return policy is..." },
-  { question: "How do I track my order?", answer: "You can track your order by..." },
+  { question: "How Can I Book A Services On Glam Squad?", answer: "Yes, you can book our services from our website and browse through the categories of services provided by us. Click the service you need, choose your date and time. You will be asked to make payment for the service. You will get the service at home." },
+  { question: "Does Glam Squad Offers All Kinds Of Services At Home?", answer: "Yes, we provide all available beauty services like waxing, threading, skin cleanup, manicure/pedicure. If you have any questions, you can discuss with our beautification. The makeup artist will do those during your session." },
+  { question: "Does Galam Up beauticans bring their own beauty kit?", answer: "Yes, our home salon beauticians will get their own beauty products and facials. You don't have to worry about arranging them before the service." },
+  { question: "Do Glam Squad accepts online payments?", answer: "Yes, we provide multiple online payment options including online payment like Paytm, GPay, PhonePe, and we accept cash also." },
   
 ];
 
