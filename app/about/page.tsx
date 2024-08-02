@@ -8,7 +8,7 @@ export default function Page() {
     <>
       <TopBar
         backgroundImage={"/images/topimg.webp"}
-        aboutText={"Abot Us"}
+        aboutText={"About Us"}
         whoWeAreText={"Who We Are"}
       />
       <KnowUs />

@@ -178,7 +178,7 @@ export const faqItems = [
   { question: "How do I track my order?", answer: "You can track your order by..." },
   { question: "What is your return policy?", answer: "Our return policy is..." },
   { question: "How do I track my order?", answer: "You can track your order by..." },
-  // Add more items as needed
+  
 ];
 
 

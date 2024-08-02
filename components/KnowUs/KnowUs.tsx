@@ -32,6 +32,7 @@ export const KnowUs = () => {
             Every Treatment Tells a Story
           </Text>
           <Text
+          textAlign={["start", "center"]}
             variant={"body"}
             // variant={["subHeading", "subHeading"]}
             color={"secondary"}
