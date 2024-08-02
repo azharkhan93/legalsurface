@@ -16,7 +16,7 @@ export const About: React.FC = () => {
       <Column
         bg={"primary"}
         flexDirection={["column", "row"]}
-        // border={"2px solid green"}
+        
         py={["xxl", "header"]}
       >
         <Box
@@ -53,15 +53,16 @@ export const About: React.FC = () => {
           </CenterBox>
         </Box>
         <Box
+      
           flexDirection={["column-reverse", "row"]}
           alignItems={"center"}
           justifyContent={"space-between"}
           width={"100%"}
           px={["none", "header"]}
         >
-          <CenterBox borderRadius={"m"}>
+          <CenterBox borderRadius={"m"} height={["170px", "500px"]}  mt={['xlg', "none"]} mb={['xxxl', "none"]} >
             <Image
-              src={"/images/home3.jpg"}
+              src={"/images/img3.jpg"}
               alt="image error"
               width={400}
               height={500}

@@ -29,21 +29,21 @@ export const TopBar: React.FC<TopNavBarProps> = ({
           <Box
             height={"3px"}
             bg={"primary"}
-            width={["23%","5%"]}
+            width={["23%", "5%"]}
             borderRadius={"circle"}
           ></Box>
           <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"}>
             {aboutText}
           </Text>
         </Row>
-        <Row alignItems={"center"} gap={"m"} justifyContent={"center"}>
+        <Row alignItems={"center"} gap={"m"}>
           <Text variant={"heading"} color="primary" fontWeight={"bold"}>
             {whoWeAreText}
           </Text>
           <Box
             height={"3px"}
             bg={"primary"}
-            width={["30%","8%"]}
+            width={["30%", "8%"]}
             borderRadius={"circle"}
           ></Box>
         </Row>
