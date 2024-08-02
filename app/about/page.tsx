@@ -1,25 +1,13 @@
 "use client";
-import {
-  About,
-  BookingSteps,
-  ClientReviews,
-  HeroSection,
-  ServiceSection,
-  Services,
-} from "@/components";
+
+import { TopBar } from "@/components";
+
+
 
 export default function Page() {
   return (
     <>
-      <HeroSection />
-      <Services />
-
-      <About />
-
-      <ServiceSection />
-      <BookingSteps />
-
-      <ClientReviews />
+      <TopBar backgroundImage={"/images/home3.jpg"} aboutText={"Aboput Us"} whoWeAreText={"who we are"} />
       
     </>
   );

@@ -1,7 +1,6 @@
 export * from "./styled";
 export * from "./GlobalStyle"
 export * from "./Navbar"
-
 export * from "./HeroSection"
 export * from "./ServiceSection"
 export * from "./ServiceCard"
@@ -15,5 +14,6 @@ export * from "./ServicesCard"
 export * from "./About"
 export * from "./AboutCards"
 export * from "./BookingSteps"
+export * from "./TopBar"
 
 
