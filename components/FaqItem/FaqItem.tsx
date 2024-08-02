@@ -13,7 +13,7 @@ export const FaqItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   return (
     <Column width={"100%"} gap={"m"} py={"l"} borderBottom={"1px solid #ddd"}>
       <Row justifyContent={"space-between"} alignItems={"center"}>
-        <Text variant={"body"} fontWeight={"bold"}>
+        <Text variant={"body"} fontWeight={"bold"} color={"secondary"}>
           {question}
         </Text>
         <Box onClick={() => setIsOpen(!isOpen)} >
@@ -22,7 +22,7 @@ export const FaqItem: React.FC<FAQItemProps> = ({ question, answer }) => {
       </Row>
       {isOpen ? (
         <Box mt={"m"}>
-          <Text variant={"body"}>{answer}</Text>
+          <Text variant={"body"} color={"secondary"}>{answer}</Text>
         </Box>
       ): null}
     </Column>
