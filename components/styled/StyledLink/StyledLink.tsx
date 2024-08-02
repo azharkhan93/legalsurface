@@ -1,5 +1,4 @@
 "use client";
-
 import styled from "styled-components";
 import { typography, TypographyProps, color, ColorProps } from "styled-system";
 

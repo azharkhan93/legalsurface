@@ -5,6 +5,7 @@ import step2Animation from "@/animations/order.json";
 import step3Animation from "@/animations/details.json";
 import step4Animation from "@/animations/service.json";
 
+// constants/NavbarData.ts
 export const NavbarData = [
   {
     title: "Home",
@@ -16,15 +17,12 @@ export const NavbarData = [
   },
   {
     title: "Services",
-    link: "/services",
-  },
-  {
-    title: "Clients",
-    link: "/clients",
-  },
-  {
-    title: "Testimonials",
-    link: "/testimonials",
+    link: "/services", 
+    dropdown: [
+      { title: "Waxing", link: "/waxing" },
+      { title: "Nails", link: "/waxing" },
+      { title: "Hair", link: "/waxing" },
+    ],
   },
   {
     title: "Contact",
