@@ -1,6 +1,7 @@
 "use client";
 
-import { KnowUs, TopBar } from "@/components";
+import { Faq, KnowUs, TopBar } from "@/components";
+import { faqItems } from "@/constants";
 
 export default function Page() {
   return (
@@ -11,6 +12,7 @@ export default function Page() {
         whoWeAreText={"Who We Are"}
       />
       <KnowUs />
+      <Faq items={faqItems} />
     </>
   );
 }

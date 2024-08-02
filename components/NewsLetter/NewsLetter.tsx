@@ -11,8 +11,8 @@ export const NewsLetter = () => {
       alignItems={"center"}
       flexDirection={["column-reverse", "row"]}
       justifyContent={"space-between"}
-      // border={"2px solid green"}
-      py={["xxl", "header"]}
+    
+      py={["xxl", "xl"]}
     >
       <Row
         gap={20}

@@ -29,7 +29,7 @@ export const TopBar: React.FC<TopNavBarProps> = ({
           <Box
             height={"3px"}
             bg={"primary"}
-            width={"8%"}
+            width={"5%"}
             borderRadius={"circle"}
           ></Box>
           <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"}>
