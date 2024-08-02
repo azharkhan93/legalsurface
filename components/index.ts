@@ -15,5 +15,6 @@ export * from "./About"
 export * from "./AboutCards"
 export * from "./BookingSteps"
 export * from "./TopBar"
+export * from "./KnowUs"
 
 

@@ -1,4 +1,4 @@
-import { Box, CenterBox, Column, Text } from "../styled";
+import { Box, CenterBox, Column, Row, Text } from "../styled";
 
 interface TopNavBarProps {
   backgroundImage: string;
@@ -12,29 +12,42 @@ export const TopBar: React.FC<TopNavBarProps> = ({
   whoWeAreText,
 }) => {
   return (
-    <CenterBox
-     
-      width="100%"
-      height="400px"
-      
+    <Column
+      alignItems={"start"}
+      justifyContent={"center"}
+      height={"470px"}
+      width={"100%"}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        
       }}
     >
-      <Column  alignItems={"start"} justifyContent={"start"} width={"100%"}
-     pt={'header'}
-      gap={"xxxl"}
-      pl={"header"}
-      >
-        <Text variant="heading"  color="primary"  >
-          {aboutText}
-        </Text>
-        <Text variant="heading" color="primary"  >{whoWeAreText}</Text>
+      <Column px={"xl"} mt={"header"} py={"xxlg"} width={"100%"} gap={"xxxl"}>
+        <Row alignItems={"center"} gap={"m"}>
+          <Box
+            height={"3px"}
+            bg={"primary"}
+            width={"8%"}
+            borderRadius={"circle"}
+          ></Box>
+          <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"}>
+            {aboutText}
+          </Text>
+        </Row>
+        <Row alignItems={"center"} gap={"m"}>
+          <Text variant={"heading"} color="primary" fontWeight={"bold"}>
+            {whoWeAreText}
+          </Text>
+          <Box
+            height={"3px"}
+            bg={"primary"}
+            width={"8%"}
+            borderRadius={"circle"}
+          ></Box>
+        </Row>
       </Column>
-    </CenterBox>
+    </Column>
   );
 };
