@@ -1,7 +1,7 @@
 export * from "./styled";
 export * from "./GlobalStyle"
 export * from "./Navbar"
-export * from "./Menu"
+
 export * from "./HeroSection"
 export * from "./ServiceSection"
 export * from "./ServiceCard"

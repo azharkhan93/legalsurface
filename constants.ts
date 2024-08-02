@@ -8,33 +8,30 @@ import step4Animation from "@/animations/service.json";
 export const NavbarData = [
   {
     title: "Home",
-     link: "/",
+    link: "/",
   },
   {
     title: "About",
-     link: "",
+    link: "/about",
   },
   {
     title: "Services",
-     link: "",
+    link: "/services",
   },
-  // {
-  //   title: "FAQs",
-  //   link: "#",
-  // },
   {
     title: "Clients",
-     link: "",
+    link: "/clients",
   },
   {
     title: "Testimonials",
-    // link: "/about#testimonial",
+    link: "/testimonials",
   },
   {
-    title: "About",
-    // link: "/about",
+    title: "Contact",
+    link: "/contact",
   },
 ];
+
 
 export const slidesData = [
   {
