@@ -15,11 +15,7 @@ interface FAQProps {
 
 export const Faq: React.FC<FAQProps> = ({ items }) => {
   return (
-    <Column
-      
-      flexDirection={["column", "row"]}
-      py={["xxl", "header"]}
-    >
+    <Column flexDirection={["column", "row"]} py={["xxl", "header"]}>
       <Box
         flexDirection={["column", "row"]}
         justifyContent={"space-between"}
@@ -28,7 +24,7 @@ export const Faq: React.FC<FAQProps> = ({ items }) => {
       >
         <Column gap={["xl", "m"]}>
           <Text color={"secondary"} variant={"heading"} fontWeight={"bold"}>
-          Frequently Asked Questions
+            Frequently Asked Questions
           </Text>
           <Box
             height={"3px"}
@@ -38,35 +34,35 @@ export const Faq: React.FC<FAQProps> = ({ items }) => {
             borderRadius={"circle"}
           ></Box>
           <Text color={"secondary"} variant={"subHeading"}>
-          Answers to Common Queries
+            Answers to Common Queries
           </Text>
         </Column>
 
         <CenterBox width={["100%", "450px"]}>
           <Text color={"secondary"} variant={"body"}>
-          Find answers to the most frequently asked questions about our services.
-        If you have any other queries, feel free to contact us.
+            Find answers to the most frequently asked questions about our
+            services. If you have any other queries, feel free to contact us.
           </Text>
         </CenterBox>
       </Box>
       <CenterBox
-      py={["l","xl"]}
-        
-        
+        py={["l", "xl"]}
         flexDirection={["column-reverse", "row"]}
-        gap={["none","header"]}
+        gap={["none", "header"]}
       >
-        <Box
-        
-       
-        >
+        <Box>
           <Lottie
             animationData={AboutAnimation}
             loop={true}
-            style={{ height: "420px", width: "500px", paddingLeft: "76px", paddingRight: "76px" }}
+            style={{
+              height: "420px",
+              width: "500px",
+              paddingLeft: "76px",
+              paddingRight: "76px",
+            }}
           />
         </Box>
-        <Column width={["100%", "45%"]} py={["s","m"]} px={'xl'} >
+        <Column width={["100%", "45%"]} py={["s", "m"]} px={"xl"}>
           {items.map((item, index) => (
             <FaqItem
               key={index}

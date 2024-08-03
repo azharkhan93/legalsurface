@@ -18,5 +18,7 @@ export * from "./TopBar"
 export * from "./KnowUs"
 export * from "./Faq"
 export * from "./FaqItem"
+export * from "./ContactSection"
+export * from "./ContactCards"
 
 
