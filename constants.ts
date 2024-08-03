@@ -214,10 +214,16 @@ export const contactCardData = [
     text1: "Address:",
     text2: "Rajbagh, Srinanagar J & K",
   },
+  
+  {
+    icon: FaPhone,
+    text1: "Opening Hours:",
+    text2: "Mon - Sat 9:00 AM - 10:00 PM ",
+  },
   {
     icon: FaPhone,
     text1: "Email Address:",
-    text2: "+91 8899355648",
+    text2: "glam90239@gmail.com",
   },
   
 ];

@@ -8,12 +8,15 @@ interface ContactCardProps {
   text2: string;
 }
 
-export const ContactCards: React.FC<ContactCardProps> = ({ icon: Icon, text1, text2 }) => {
+export const ContactCards: React.FC<ContactCardProps> = ({
+  icon: Icon,
+  text1,
+  text2,
+}) => {
   return (
     <Column
-    maxWidth={"350px"}
-    px={"xl"}
-    //   px={"header"}
+      maxWidth={"350px"}
+      px={"xl"}
       py={"xl"}
       gap={"l"}
       alignItems={"center"}
@@ -21,12 +24,15 @@ export const ContactCards: React.FC<ContactCardProps> = ({ icon: Icon, text1, te
       bg={"secondary"}
       borderTopLeftRadius={"xl"}
     >
-      <Box><Icon fill="#D4BDE8" size={30} /></Box>
-      <Text variant={"body"} color="primary">{text1}</Text>
-      <Text variant={"body"} color="primary" textAlign={"start"}>{text2}</Text>
+      <Box>
+        <Icon fill="#D4BDE8" size={30} />
+      </Box>
+      <Text variant={"body"} color="primary">
+        {text1}
+      </Text>
+      <Text variant={"body"} color="primary" textAlign={"start"}>
+        {text2}
+      </Text>
     </Column>
   );
 };
-
-
-

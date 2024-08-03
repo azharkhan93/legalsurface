@@ -14,4 +14,3 @@ export const BASE_COLORS = {
 };
 
 export type AppColors = keyof typeof BASE_COLORS;
-
