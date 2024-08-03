@@ -8,8 +8,11 @@ import {
   Button,
   ServiceCard,
   ContactCards,
+  StyledInputBox,
 } from "@/components";
 import { contactCardData } from "@/constants";
+import Lottie from "lottie-react";
+import ContactAnimation from "../../animations/contact.json"
 
 
 export const ContactSection = () => {
@@ -20,7 +23,7 @@ export const ContactSection = () => {
       alignItems={"center"}
       justifyContent={"center"}
       bg={"primary"}
-      py={["xxl", "header"]}
+      // py={["xxl", "header"]}
     
       
     >
@@ -83,6 +86,54 @@ export const ContactSection = () => {
           />
         ))}
       </Row>
+      <CenterBox
+      width={"100%"}
+      justifyContent={"space-between"}
+      flexDirection={"row"}
+      px={"header"}
+      >
+       <Box
+       border={"2px solid green"}
+       >
+       <Lottie
+            animationData={ContactAnimation}
+            loop={true}
+            style={{
+              height: "500px",
+              width: "500px",
+              
+            }}
+          />
+
+
+
+       </Box>
+       <CenterBox
+       border={"2px solid green"}
+       >
+       <Column
+       border={"2px solid green"}
+       >
+
+       <StyledInputBox
+       width={"500px"}
+        />
+         <StyledInputBox
+       width={"500px"}
+        />
+         <StyledInputBox
+       width={"500px"}
+        />
+         <StyledInputBox
+       width={"500px"}
+        />
+       
+
+
+
+       </Column>
+       </CenterBox>
+      </CenterBox>
       
     </Box>
   );

@@ -1,4 +1,4 @@
-import { FaHome, FaDollarSign, FaUsers, FaBroom, FaPhone } from "react-icons/fa";
+import { FaHome, FaDollarSign, FaUsers, FaBroom, FaPhone, FaMapMarkerAlt, FaClock, FaEnvelope, } from "react-icons/fa";
 import step1Animation from "@/animations/bookings.json";
 import step2Animation from "@/animations/order.json";
 import step3Animation from "@/animations/details.json";
@@ -210,18 +210,18 @@ export const contactCardData = [
     text2: "+91 8899355648",
   },
   {
-    icon: FaPhone,
+    icon: FaMapMarkerAlt,
     text1: "Address:",
     text2: "Rajbagh, Srinanagar J & K",
   },
   
   {
-    icon: FaPhone,
+    icon: FaClock,
     text1: "Opening Hours:",
     text2: "Mon - Sat 9:00 AM - 10:00 PM ",
   },
   {
-    icon: FaPhone,
+    icon: FaEnvelope,
     text1: "Email Address:",
     text2: "glam90239@gmail.com",
   },
