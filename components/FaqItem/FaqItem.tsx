@@ -17,7 +17,7 @@ export const FaqItem: React.FC<FAQItemProps> = ({ question, answer }) => {
           {question}
         </Text>
         <Box onClick={() => setIsOpen(!isOpen)} >
-          {isOpen ? <FaMinus fill="#2A3277" /> : <FaPlus fill="#2A3277" />}
+          {isOpen ? <FaMinus fill="#2A3277" size={20} /> : <FaPlus fill="#2A3277" size={20} />}
         </Box>
       </Row>
       {isOpen ? (
