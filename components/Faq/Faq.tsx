@@ -28,7 +28,7 @@ export const Faq: React.FC<FAQProps> = ({ items }) => {
       >
         <Column gap={["xl", "m"]}>
           <Text color={"secondary"} variant={"heading"} fontWeight={"bold"}>
-            Testimonial
+          Frequently Asked Questions
           </Text>
           <Box
             height={"3px"}
@@ -38,14 +38,14 @@ export const Faq: React.FC<FAQProps> = ({ items }) => {
             borderRadius={"circle"}
           ></Box>
           <Text color={"secondary"} variant={"subHeading"}>
-            What Our Clients Say
+          Answers to Common Queries
           </Text>
         </Column>
 
         <CenterBox width={["100%", "450px"]}>
           <Text color={"secondary"} variant={"body"}>
-            Discover how our services have positively impacted our clients
-            experiences. Read their testimonials below to learn more.
+          Find answers to the most frequently asked questions about our services.
+        If you have any other queries, feel free to contact us.
           </Text>
         </CenterBox>
       </Box>

@@ -16,17 +16,21 @@ export const FaqItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         <Text variant={"body"} fontWeight={"bold"} color={"secondary"}>
           {question}
         </Text>
-        <Box onClick={() => setIsOpen(!isOpen)} >
-          {isOpen ? <FaMinus fill="#2A3277" size={20} /> : <FaPlus fill="#2A3277" size={20} />}
+        <Box onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <FaMinus fill="#2A3277" size={20} />
+          ) : (
+            <FaPlus fill="#2A3277" size={20} />
+          )}
         </Box>
       </Row>
       {isOpen ? (
         <Box mt={"m"}>
-          <Text variant={"body"} color={"secondary"}>{answer}</Text>
+          <Text variant={"body"} color={"secondary"}>
+            {answer}
+          </Text>
         </Box>
-      ): null}
+      ) : null}
     </Column>
   );
 };
-
-
