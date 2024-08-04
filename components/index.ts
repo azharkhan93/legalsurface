@@ -20,5 +20,8 @@ export * from "./Faq"
 export * from "./FaqItem"
 export * from "./ContactSection"
 export * from "./ContactCards"
+export * from "./InputBox"
+export * from "./UpdateForm"
+export * from "./FormInputBoxErrorMessage"
 
 

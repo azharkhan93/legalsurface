@@ -9,10 +9,12 @@ import {
   ServiceCard,
   ContactCards,
   StyledInputBox,
+  InputBox,
 } from "@/components";
 import { contactCardData } from "@/constants";
 import Lottie from "lottie-react";
 import ContactAnimation from "../../animations/contact.json"
+import { Test } from "../Test";
 
 
 export const ContactSection = () => {
@@ -108,31 +110,9 @@ export const ContactSection = () => {
 
 
        </Box>
-       <CenterBox
-       border={"2px solid green"}
-       >
-       <Column
-       border={"2px solid green"}
-       >
-
-       <StyledInputBox
-       width={"500px"}
-        />
-         <StyledInputBox
-       width={"500px"}
-        />
-         <StyledInputBox
-       width={"500px"}
-        />
-         <StyledInputBox
-       width={"500px"}
-        />
-       
-
-
-
-       </Column>
-       </CenterBox>
+       <Test onActionComplete={function (): void {
+          throw new Error("Function not implemented.");
+        } } /> 
       </CenterBox>
       
     </Box>
