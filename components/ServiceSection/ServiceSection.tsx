@@ -60,43 +60,7 @@ export const ServiceSection = () => {
             </Text>
           </CenterBox>
         </Box>
-        {/* <Column
-          textAlign={"left"}
        
-          gap={20}
-          py={"xxl"}
-        >
-          <Text
-          width={"390px"}
-           variant={"subHeading"}
-            fontWeight={"Bold"}
-            color={"secondary"}
-            
-          >
-            Our Opertaional Approach
-          </Text>
-          <Box
-              height={"3px"}
-              bg={"secondary"}
-              width={"70%"}
-              ml={"header"}
-              borderRadius={"circle"}
-            ></Box>
-          <Text fontWeight={"bold"} variant={"subHeading"} color={"secondary"}>
-            {" "}
-            How We Operate
-          </Text>
-          <Text variant="body" color={"secondary"}>
-            Our operational approach is designed to pamper you from head to toe.
-            We understand the importance of self-care and strive to provide you
-            with the ultimate beauty experience
-          </Text>
-          <CenterBox>
-            <Button variant={"primary"} bg={"secondary"} width={"50%"}>
-              Explore Now
-            </Button>
-          </CenterBox>
-        </Column> */}
         <Box
        flexDirection={["column", "row"]}
        gap={["xxl", "xl"]}

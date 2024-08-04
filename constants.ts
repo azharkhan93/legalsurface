@@ -164,19 +164,19 @@ export const columnCardData = [
 
 export const stepsData = [
   {
-    text: "Choose your desired makeup service.",
+    text: "Choose your desired makeup service from our extensive range of professional options.",
     animation: step4Animation,
   },
   {
-    text: "Select a convenient date and time for booking.",
+    text: "Select a convenient date and time for your booking to ensure you get the perfect...",
     animation: step1Animation,
   },
   {
-    text: "Enter your contact details and address.",
+    text: "Enter your contact details and address to help us provide you with the best service possible.",
     animation: step3Animation,
   },
   {
-    text: "Review your booking and confirm your order.",
+    text: "Review your booking and confirm your order to finalize your appointment.",
     animation: step2Animation,
   },
 ];

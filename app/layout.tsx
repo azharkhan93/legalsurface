@@ -1,5 +1,5 @@
 "use client";
-import { Box, GlobalStyle } from "@/components";
+import { Box, Cart, GlobalStyle } from "@/components";
 import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { ApolloProvider } from "@apollo/client";
@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/Footer/Footer";
+import { CartProvider } from "@/contexts";
 
 export default function RootLayout({
   children,
@@ -29,10 +30,13 @@ export default function RootLayout({
         
         <AppThemeProvider>
           <ApolloProvider client={client}>
+          <CartProvider>
           <Navbar />
            
               {children}
               <Footer/>
+              <Cart />
+              </CartProvider>
 
           </ApolloProvider>
         </AppThemeProvider>
