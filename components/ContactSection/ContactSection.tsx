@@ -69,10 +69,10 @@ export const ContactSection = () => {
         </Box>
         
       </Column>
-      <Row
+      <Box
       
       width={"100%"}
-      flexDirection={"row"}
+      flexDirection={["column","row"]}
       justifyContent={"space-between"}
       gap={"header"}
       py={"xl"}
@@ -87,7 +87,7 @@ export const ContactSection = () => {
             text2={card.text2}
           />
         ))}
-      </Row>
+      </Box>
       <CenterBox
       py= {"header"}
       width={"85%"}
