@@ -1,11 +1,21 @@
 "use client";
-import { ProductCards } from "@/components";
+import { ProductCards, Row, TopBar } from "@/components";
 
 export default function Page() {
   return (
     <>
-    <h1>hello</h1>
-      
+    <TopBar backgroundImage={"/images/home3.jpg"} aboutText={"Waxing"} whoWeAreText={"Explore Now"} />
+  
+      <Row
+      border={"2px solid green"}
+      width={"100%"}
+      alignItems={"center"}
+      justifyContent={"center"}
+      px={"xl"}
+      flexWrap={"wrap"}
+      gap={"header"}
+     
+      >
     <ProductCards 
         imageUrl="/images/home3.jpg"
         productName="Luxury Leo Repechage facial"
@@ -18,6 +28,19 @@ export default function Page() {
         productDes={"Service Time: 40 Mins"}
         price={500}       
         />
+        <ProductCards 
+        imageUrl="/images/home3.jpg"
+        productName="waxing full body"
+        productDes={"Service Time: 40 Mins"}
+        price={500}       
+        />
+        <ProductCards 
+        imageUrl="/images/home3.jpg"
+        productName="waxing full body"
+        productDes={"Service Time: 40 Mins"}
+        price={500}       
+        />
+        </Row>
       
     </>
     
