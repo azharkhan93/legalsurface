@@ -28,22 +28,25 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
 
   return (
     <Box
-    width={["376px","490px"]}
+    // width={["376px","490px"]}
       gap={"xl"}
       boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
     overflow={"hidden"}
-      flexDirection="row"
+      flexDirection="column"
       alignItems="center"
       borderTopLeftRadius={"xl"}
       borderBottomRightRadius={"lg"}
       borderBottomLeftRadius={"lg"}
       border={"1px solid white"}
       bg={"secondary"}
+      
     >
       <Box borderRadius={"sm"} position="relative">
-        <Image src={imageUrl} alt={productName} width={200} height={200} style={{borderRadius: "20px"}}/>
+        <Image src={imageUrl} alt={productName} width={270} height={200} style={{borderRadius: "20px"}}/>
       </Box>
       <Column gap={"xl"} justifyContent="space-between"
+      px={"l"}
+      pb={"l"}
      
       >
         <Text variant="body"  color='primary'>

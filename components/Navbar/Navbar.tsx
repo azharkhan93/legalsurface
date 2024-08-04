@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Button, CenterBox, Column, Row, StyledLink, Text } from "@/components";
-import { FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp, FaTimes, FaShoppingCart, FaUser } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
@@ -36,10 +36,27 @@ export const Navbar: React.FC = () => {
       <CenterBox>
         <Image src="/images/logo.png" alt="Logo" width={100} height={100} />
       </CenterBox>
-
-      <Box display={["block", "none"]} onClick={handleToggle}>
+      
+      <Box display={["flex", "none"]} flexDirection={'row'} gap={"xl"}>
+      
+      <Box
+      flexDirection={"row"}
+      justifyContent={"center"}
+      alignItems={"center"}
+      gap={"l"}
+      >
+        <FaUser size={23} color="white" />
+        <FaShoppingCart size={23} color="white" />
+      </Box>
+     
+      <Box onClick={handleToggle}>
         <CiMenuFries size={30} color="white" />
       </Box>
+    </Box>
+
+      {/* <Box display={["block", "none"]} onClick={handleToggle}>
+        <CiMenuFries size={30} color="white" />
+      </Box> */}
 
       <Box
         display={["none", "flex"]}
