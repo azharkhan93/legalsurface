@@ -70,7 +70,7 @@ export const ContactSection = () => {
         
       </Column>
       <Row
-      border={"2px solid green"}
+      
       width={"100%"}
       flexDirection={"row"}
       justifyContent={"space-between"}
@@ -89,13 +89,15 @@ export const ContactSection = () => {
         ))}
       </Row>
       <CenterBox
-      width={"100%"}
+      py= {"header"}
+      width={"85%"}
       justifyContent={"space-between"}
       flexDirection={"row"}
-      px={"header"}
+      gap={"circle"}
+      // px={"header"}
       >
        <Box
-       border={"2px solid green"}
+      
        >
        <Lottie
             animationData={ContactAnimation}

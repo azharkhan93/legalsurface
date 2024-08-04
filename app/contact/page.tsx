@@ -1,5 +1,5 @@
 "use client";
-import { ContactSection, TopBar } from "@/components";
+import { ContactSection, Mapsection, TopBar } from "@/components";
 
 export default function Page() {
   return (
@@ -10,6 +10,7 @@ export default function Page() {
         whoWeAreText={"Reach Out Us"}
       />
       <ContactSection />
+      <Mapsection />
     </>
   );
 }

@@ -23,5 +23,5 @@ export * from "./ContactCards"
 export * from "./InputBox"
 export * from "./UpdateForm"
 export * from "./FormInputBoxErrorMessage"
-
+export * from "./MapSection"
 
