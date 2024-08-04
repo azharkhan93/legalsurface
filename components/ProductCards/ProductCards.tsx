@@ -29,10 +29,10 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
   return (
     <Box
       mt="header"
-      width={"450px"}
+      width={["376px","450px"]}
       gap={"l"}
       boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
-      ml={"header"}
+      ml={["none" , "header"]}
       overflow={"hidden"}
       flexDirection="row"
       alignItems="center"
