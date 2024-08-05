@@ -30,7 +30,7 @@ export const Modal: React.FC<ModalProps> = ({
     >
       <StyledModal
         bg={"secondary"}
-        width={"45%"}
+        width={["97%","45%"]}
         borderRadius={"xs"}
         position={"relative"}
         boxShadow={BASE_COLORS.modalShadow}
@@ -38,10 +38,9 @@ export const Modal: React.FC<ModalProps> = ({
         overflowY={"scroll"}
       >
         <CenterBox
-        p={"s"}
+          p={"s"}
           bg={"primary"}
           borderRadius={"circle"}
-        
           height={"33px"}
           width={"33px"}
           position={"absolute"}

@@ -22,7 +22,7 @@ export const Login = () => {
   return (
     <>
       {!showSignUp ? (
-        <CenterBox width={"80%"} height={"100%"} p={"m"}>
+        <CenterBox width={["100%","80%"]} height={"100%"} p={"m"}>
           <Formik
             initialValues={{
               username: "",
@@ -72,7 +72,7 @@ export const Login = () => {
                     justifyContent={"center"}
                     gap={"xxxl"}
                   >
-                    <Box width={"80%"}>
+                    <Box width={["100%","80%"]}>
                       <UpdateForm
                         name={"username"}
                         placeholder={"Username"}
@@ -80,7 +80,8 @@ export const Login = () => {
                         type="text"
                       />
                     </Box>
-                    <Box width={"80%"}>
+                    <Box width={["100%","80%"]}
+                    >
                       <UpdateForm
                         name={"password"}
                         placeholder={"Your Password"}
@@ -89,7 +90,7 @@ export const Login = () => {
                       />
                     </Box>
                     <Box
-                      width={"80%"}
+                      width={["100%","80%"]}
                       justifyContent={"space-between"}
                       flexDirection={"row"}
                       pt={"xl"}

@@ -72,7 +72,7 @@ export const SignUp = () => {
                     justifyContent={"center"}
                     gap={"xxl"}
                   >
-                    <Box width={"80%"}>
+                    <Box width={["100%","80%"]}>
                       <UpdateForm
                         name={"username"}
                         placeholder={"Username"}
@@ -80,7 +80,7 @@ export const SignUp = () => {
                         type="text"
                       />
                     </Box>
-                    <Box width={"80%"}>
+                    <Box width={["100%","80%"]}>
                       <UpdateForm
                         name={"email"}
                         placeholder={"Enter Email"}
@@ -88,7 +88,7 @@ export const SignUp = () => {
                         type="email"
                       />
                     </Box>
-                    <Box width={"80%"}>
+                    <Box width={["100%","80%"]}>
                       <UpdateForm
                         name={"password"}
                         placeholder={"Your Password"}
@@ -96,7 +96,7 @@ export const SignUp = () => {
                         type="password"
                       />
                     </Box>
-                    <Box width={"80%"}>
+                    <Box width={["100%","80%"]}>
                       <UpdateForm
                         name={"confirmpassword"}
                         placeholder={"Enter Password"}
@@ -105,7 +105,7 @@ export const SignUp = () => {
                       />
                     </Box>
                     <Box
-                      width={"80%"}
+                      width={["100%","80%"]}
                       justifyContent={"space-between"}
                       flexDirection={"row"}
                     //   pt={"xl"}
