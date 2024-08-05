@@ -1,5 +1,5 @@
 {
-  "name": "lit-list-admin-panel",
+  "name": "glamsquad",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,6 +18,7 @@
     "formik": "^2.4.6",
     "graphql": "^16.8.1",
     "lottie-react": "^2.4.0",
+    "mongoose": "^8.5.2",
     "next": "14.1.3",
     "react": "^18",
     "react-dom": "^18",
@@ -31,6 +32,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.11.97",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

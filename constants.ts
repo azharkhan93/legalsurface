@@ -228,4 +228,4 @@ export const contactCardData = [
   
 ];
 
-export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
+export const API_HOST = "http://localhost:4000/";

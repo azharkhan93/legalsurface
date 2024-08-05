@@ -20,7 +20,7 @@ export const SignUp = () => {
   return (
     <>
       {showSignUp && (
-        <CenterBox width={"100%"} height={"100%"} p={"m"}>
+        <CenterBox width={["100%","90%"]} height={"100%"} p={"m"}>
           <Formik
             initialValues={{
               username: "",
