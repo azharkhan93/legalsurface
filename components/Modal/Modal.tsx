@@ -11,7 +11,11 @@ type ModalProps = {
   component: React.FC;
 };
 
-export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, component: Component}) => {
+export const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  component: Component,
+}) => {
   if (!isOpen) return null;
 
   return (
@@ -25,7 +29,6 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, component: Compon
       bg={"modalOverlayBg"}
     >
       <StyledModal
-      
         bg={"secondary"}
         width={"45%"}
         borderRadius={"xs"}
@@ -35,18 +38,21 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, component: Compon
         overflowY={"scroll"}
       >
         <CenterBox
-          padding={"m"}
+          bg={"primary"}
+          borderRadius={"circle"}
+        
+          height={"40px"}
+          width={"40px"}
           position={"absolute"}
           right={5}
           top={5}
           onClick={onClose}
           style={{ cursor: "pointer" }}
         >
-          <FontAwesomeIcon icon={faTimes} size="2x" color="#D4BDE8" />
+          <FontAwesomeIcon icon={faTimes} size="2x" color="#2A3277" />
         </CenterBox>
         <Component />
       </StyledModal>
     </CenterBox>
   );
 };
-
