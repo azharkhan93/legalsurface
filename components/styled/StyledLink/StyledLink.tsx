@@ -4,7 +4,7 @@ import { typography, TypographyProps, color, ColorProps } from "styled-system";
 
 type HyperLinkProps = TypographyProps & ColorProps & { $UnderlineColor?: string };
 
-export const StyledLink = styled.a<HyperLinkProps>`
+export const StyledLink = styled.div<HyperLinkProps>`
   width: fit-content;
   cursor: pointer;
   text-decoration: none;

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Box, Button, CenterBox, Column, Row, StyledLink, Text } from "@/components";
 import { FaChevronDown, FaChevronUp, FaTimes, FaShoppingCart, FaUser } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
 
-
 export const Navbar: React.FC = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -16,6 +17,11 @@ export const Navbar: React.FC = () => {
 
   const handleDropdownToggle = () => {
     setDropdownOpen(!dropdownOpen);
+  };
+
+  const navigateTo = (link: string) => {
+    router.push(link);
+    setIsOpen(false); 
   };
 
   return (
@@ -54,10 +60,6 @@ export const Navbar: React.FC = () => {
       </Box>
     </Box>
 
-      {/* <Box display={["block", "none"]} onClick={handleToggle}>
-        <CiMenuFries size={30} color="white" />
-      </Box> */}
-
       <Box
         display={["none", "flex"]}
         flex={1}
@@ -77,7 +79,6 @@ export const Navbar: React.FC = () => {
                   gap: "8px",
                   justifyContent: "center",
                 }}
-                href="#"
               >
                 {item.title}
                 {dropdownOpen ? (
@@ -98,7 +99,7 @@ export const Navbar: React.FC = () => {
                 >
                   <Column alignItems={"start"} gap={15}>
                     {item.dropdown.map((dropdownItem, idx) => (
-                      <StyledLink key={idx} href={dropdownItem.link}>
+                      <StyledLink key={idx} onClick={() => navigateTo(dropdownItem.link)}>
                         {dropdownItem.title}
                       </StyledLink>
                     ))}
@@ -107,7 +108,7 @@ export const Navbar: React.FC = () => {
               )}
             </Box>
           ) : (
-            <StyledLink key={index} href={item.link}>
+            <StyledLink key={index} onClick={() => navigateTo(item.link)}>
               {item.title}
             </StyledLink>
           )
@@ -166,7 +167,6 @@ export const Navbar: React.FC = () => {
                   <StyledLink
                     onClick={handleDropdownToggle}
                     style={{ display: "flex", alignItems: "center", gap: "10px" }}
-                    href="#"
                   >
                     <Text variant={"body"}>{item.title}</Text>
                     {dropdownOpen ? (
@@ -188,7 +188,7 @@ export const Navbar: React.FC = () => {
                     >
                       <Column alignItems={"start"} gap={"l"} width={"150px"} >
                         {item.dropdown.map((dropdownItem, idx) => (
-                          <StyledLink key={idx} href={dropdownItem.link}>
+                          <StyledLink key={idx} onClick={() => navigateTo(dropdownItem.link)}>
                             <Text variant={"body"} color={"secondary"}>
                               {dropdownItem.title}
                             </Text>
@@ -199,7 +199,7 @@ export const Navbar: React.FC = () => {
                   ): null}
                 </Box>
               ) : (
-                <StyledLink key={index} href={item.link} onClick={handleToggle}>
+                <StyledLink key={index} onClick={() => navigateTo(item.link)}>
                   <Text variant={"body"} color={"primary"}>{item.title}</Text>
                 </StyledLink>
               )
@@ -219,4 +219,5 @@ export const Navbar: React.FC = () => {
     </Row>
   );
 };
+
 
