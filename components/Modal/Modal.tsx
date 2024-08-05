@@ -38,11 +38,12 @@ export const Modal: React.FC<ModalProps> = ({
         overflowY={"scroll"}
       >
         <CenterBox
+        p={"s"}
           bg={"primary"}
           borderRadius={"circle"}
         
-          height={"40px"}
-          width={"40px"}
+          height={"33px"}
+          width={"33px"}
           position={"absolute"}
           right={9}
           top={7}

@@ -1,32 +1,32 @@
 "use client";
-
 import { useState } from "react";
 import { Box, Button, CenterBox, Column, StyledLink, UpdateForm } from "@/components";
 import { Formik, Form } from "formik";
-import { SignUp } from "../SignUp";
-
 
 type FormValues = {
   username: string;
+  email: string;
   password: string;
+  confirmpassword: string;
 };
 
-export const Login = () => {
-  const [showSignUp, setShowSignUp] = useState(false);
+export const SignUp = () => {
+  const [showSignUp, setShowSignUp] = useState(true);
 
   const handleSubmit = async (values: FormValues) => {
-    // Your form submission logic here
     console.log("Form values:", values);
   };
 
   return (
     <>
-      {!showSignUp ? (
-        <CenterBox width={"80%"} height={"100%"} p={"m"}>
+      {showSignUp && (
+        <CenterBox width={"100%"} height={"100%"} p={"m"}>
           <Formik
             initialValues={{
               username: "",
+              email: "",
               password: "",
+              confirmpassword: "",
             }}
             onSubmit={(values, { setSubmitting }) => {
               handleSubmit(values);
@@ -44,19 +44,19 @@ export const Login = () => {
                   width={"100%"}
                   height={"100%"}
                   alignItems={"center"}
-                  py={"xl"}
-                  gap={"xxxl"}
+                //   py={"xl"}
+                //   gap={"xxxl"}
                 >
                   <Box
                     width={"100%"}
-                    height={"30%"}
+                    height={"19%"}
                     justifyContent={"center"}
                     alignItems={"center"}
                   >
-                    <CenterBox width={"90%"} gap={"m"} justifyContent={"center"}>
+                    <CenterBox width={"90%"} justifyContent={"center"}>
                       <Box
-                        width={"200px"}
-                        height={"200px"}
+                        width={"150px"}
+                        height={"150px"}
                         style={{
                           backgroundImage: `url("/images/logo.png")`,
                           backgroundPosition: "center",
@@ -67,10 +67,10 @@ export const Login = () => {
                   </Box>
                   <Column
                     width={"100%"}
-                    height={"90%"}
+                    height={"100%"}
                     alignItems={"center"}
                     justifyContent={"center"}
-                    gap={"xxxl"}
+                    gap={"xxl"}
                   >
                     <Box width={"80%"}>
                       <UpdateForm
@@ -82,9 +82,25 @@ export const Login = () => {
                     </Box>
                     <Box width={"80%"}>
                       <UpdateForm
+                        name={"email"}
+                        placeholder={"Enter Email"}
+                        label={"Email"}
+                        type="email"
+                      />
+                    </Box>
+                    <Box width={"80%"}>
+                      <UpdateForm
                         name={"password"}
                         placeholder={"Your Password"}
                         label={"Password"}
+                        type="password"
+                      />
+                    </Box>
+                    <Box width={"80%"}>
+                      <UpdateForm
+                        name={"confirmpassword"}
+                        placeholder={"Enter Password"}
+                        label={"Confirm Password"}
                         type="password"
                       />
                     </Box>
@@ -92,15 +108,15 @@ export const Login = () => {
                       width={"80%"}
                       justifyContent={"space-between"}
                       flexDirection={"row"}
-                      pt={"xl"}
+                    //   pt={"xl"}
                     >
                       <Button
-                        width={"50%"}
+                        width={"40%"}
                         variant="primary"
                         type="submit"
                         disabled={isSubmitting}
                       >
-                        Login
+                        SignUp
                       </Button>
                       <Box>
                         <StyledLink
@@ -108,7 +124,7 @@ export const Login = () => {
                           onClick={() => setShowSignUp(true)}
                           style={{ cursor: "pointer" }}
                         >
-                          Sign Up?
+                          Already Have Account SignIn
                         </StyledLink>
                       </Box>
                     </Box>
@@ -118,8 +134,6 @@ export const Login = () => {
             )}
           </Formik>
         </CenterBox>
-      ) : (
-        <SignUp />
       )}
     </>
   );
