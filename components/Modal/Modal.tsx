@@ -44,8 +44,8 @@ export const Modal: React.FC<ModalProps> = ({
           height={"40px"}
           width={"40px"}
           position={"absolute"}
-          right={5}
-          top={5}
+          right={9}
+          top={7}
           onClick={onClose}
           style={{ cursor: "pointer" }}
         >
