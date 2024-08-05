@@ -26,5 +26,6 @@ export * from "./FormInputBoxErrorMessage"
 export * from "./MapSection"
 export * from "./ProductCards"
 export * from "./Cart"
+export * from "./Modal"
 
 
