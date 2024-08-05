@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import axios from "axios";
 import { Box, Button, CenterBox, Column, StyledLink, UpdateForm } from "@/components";
 import { Formik, Form } from "formik";
 
@@ -14,13 +15,20 @@ export const SignUp = () => {
   const [showSignUp, setShowSignUp] = useState(true);
 
   const handleSubmit = async (values: FormValues) => {
-    console.log("Form values:", values);
+    try {
+      const response = await axios.post('/api/signup', values);
+      console.log("Server response:", response.data);
+      // Handle success (e.g., redirect to login page or show success message)
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error (e.g., show error message)
+    }
   };
 
   return (
     <>
       {showSignUp && (
-        <CenterBox width={["100%","90%"]} height={"100%"} p={"m"}>
+        <CenterBox width={["100%", "90%"]} height={"100%"} p={"m"}>
           <Formik
             initialValues={{
               username: "",
@@ -44,8 +52,6 @@ export const SignUp = () => {
                   width={"100%"}
                   height={"100%"}
                   alignItems={"center"}
-                //   py={"xl"}
-                //   gap={"xxxl"}
                 >
                   <Box
                     width={"100%"}
@@ -72,7 +78,7 @@ export const SignUp = () => {
                     justifyContent={"center"}
                     gap={"xxl"}
                   >
-                    <Box width={["100%","80%"]}>
+                    <Box width={["100%", "80%"]}>
                       <UpdateForm
                         name={"username"}
                         placeholder={"Username"}
@@ -80,7 +86,7 @@ export const SignUp = () => {
                         type="text"
                       />
                     </Box>
-                    <Box width={["100%","80%"]}>
+                    <Box width={["100%", "80%"]}>
                       <UpdateForm
                         name={"email"}
                         placeholder={"Enter Email"}
@@ -88,7 +94,7 @@ export const SignUp = () => {
                         type="email"
                       />
                     </Box>
-                    <Box width={["100%","80%"]}>
+                    <Box width={["100%", "80%"]}>
                       <UpdateForm
                         name={"password"}
                         placeholder={"Your Password"}
@@ -96,7 +102,7 @@ export const SignUp = () => {
                         type="password"
                       />
                     </Box>
-                    <Box width={["100%","80%"]}>
+                    <Box width={["100%", "80%"]}>
                       <UpdateForm
                         name={"confirmpassword"}
                         placeholder={"Enter Password"}
@@ -105,10 +111,9 @@ export const SignUp = () => {
                       />
                     </Box>
                     <Box
-                      width={["100%","80%"]}
+                      width={["100%", "80%"]}
                       justifyContent={"space-between"}
                       flexDirection={"row"}
-                    //   pt={"xl"}
                     >
                       <Button
                         width={"40%"}
@@ -138,4 +143,5 @@ export const SignUp = () => {
     </>
   );
 };
+
 

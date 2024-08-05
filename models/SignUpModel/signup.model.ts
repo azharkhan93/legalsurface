@@ -1,7 +1,8 @@
 import mongoose, { Document, Schema, Model } from "mongoose";
 
+// Define the Auth interface
 export interface Auth extends Document {
-  name: string;
+  username: string;
   email: string;
   password: string;
   otp: string | null;
@@ -10,7 +11,7 @@ export interface Auth extends Document {
 
 const SignUpSchema: Schema<Auth> = new mongoose.Schema(
   {
-    name: { type: String, required: true },
+    username: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
     otp: { type: String, default: null },
@@ -19,5 +20,5 @@ const SignUpSchema: Schema<Auth> = new mongoose.Schema(
   { timestamps: true }
 );
 
-export const SignupModel: Model<Auth> =
-  mongoose.models.Auth|| mongoose.model<Auth>("SignUp", SignUpSchema);
+export const SignUpModel: Model<Auth> =
+  mongoose.models.SignUp || mongoose.model<Auth>("SignUp", SignUpSchema);

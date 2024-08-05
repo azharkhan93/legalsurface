@@ -4,10 +4,11 @@ import { useState } from "react";
 import { Box, Button, CenterBox, Column, StyledLink, UpdateForm } from "@/components";
 import { Formik, Form } from "formik";
 import { SignUp } from "../SignUp";
+import axios from "axios";
 
 
 type FormValues = {
-  username: string;
+  email: string;
   password: string;
 };
 
@@ -15,8 +16,14 @@ export const Login = () => {
   const [showSignUp, setShowSignUp] = useState(false);
 
   const handleSubmit = async (values: FormValues) => {
-    // Your form submission logic here
-    console.log("Form values:", values);
+    try {
+      const response = await axios.post('/api/login', values);
+      console.log("Server response:", response.data);
+      // Handle success (e.g., redirect to login page or show success message)
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error (e.g., show error message)
+    }
   };
 
   return (
@@ -25,7 +32,7 @@ export const Login = () => {
         <CenterBox width={["100%","80%"]} height={"100%"} p={"m"}>
           <Formik
             initialValues={{
-              username: "",
+              email: "",
               password: "",
             }}
             onSubmit={(values, { setSubmitting }) => {
@@ -72,12 +79,12 @@ export const Login = () => {
                     justifyContent={"center"}
                     gap={"xxxl"}
                   >
-                    <Box width={["100%","80%"]}>
+                     <Box width={["100%", "80%"]}>
                       <UpdateForm
-                        name={"username"}
-                        placeholder={"Username"}
-                        label={"Username"}
-                        type="text"
+                        name={"email"}
+                        placeholder={"Enter Email"}
+                        label={"Email"}
+                        type="email"
                       />
                     </Box>
                     <Box width={["100%","80%"]}
