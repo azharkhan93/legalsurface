@@ -228,4 +228,37 @@ export const contactCardData = [
   
 ];
 
+export const products = [
+  {
+    imageUrl: '/images/home3.jpg',
+    productName: 'Luxury Leo Repechage facial',
+    productDes: 'Service Time: 40 Mins',
+    price: 200,
+  },
+  {
+    imageUrl: '/images/home3.jpg',
+    productName: 'Waxing full body',
+    productDes: 'Service Time: 40 Mins',
+    price: 500,
+  },
+  {
+    imageUrl: '/images/home3.jpg',
+    productName: 'Waxing full body',
+    productDes: 'Service Time: 40 Mins',
+    price: 500,
+  },
+  {
+    imageUrl: '/images/home3.jpg',
+    productName: 'Waxing full body',
+    productDes: 'Service Time: 40 Mins',
+    price: 500,
+  },
+  {
+    imageUrl: '/images/home3.jpg',
+    productName: 'Waxing full body',
+    productDes: 'Service Time: 40 Mins',
+    price: 500,
+  },
+];
+
 export const API_HOST = "http://localhost:4000/";

@@ -6,7 +6,7 @@ import { FaClock, FaShoppingCart } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import { useCart } from '@/contexts';
 
-interface ProductCardsProps {
+type ProductCardsProps = {
   imageUrl: string;
   productName: string;
   price: number;

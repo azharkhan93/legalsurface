@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Box,
@@ -28,6 +28,11 @@ export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    setIsLoggedIn(!!token); 
+  }, []);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -47,6 +52,12 @@ export const Navbar: React.FC = () => {
 
   const handleModalClose = () => {
     setIsModalOpen(false);
+  };
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
+    setDropdownOpen(false);
+    router.push('/');
   };
 
   return (
