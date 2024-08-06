@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { Box, Column, Row, Text } from "../styled";
 import { FaPlus, FaMinus } from "react-icons/fa";

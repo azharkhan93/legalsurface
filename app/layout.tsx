@@ -1,5 +1,5 @@
 "use client";
-import { Box, Cart, GlobalStyle } from "@/components";
+import { Box, GlobalStyle } from "@/components";
 import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { ApolloProvider } from "@apollo/client";
@@ -35,7 +35,7 @@ export default function RootLayout({
            
               {children}
               <Footer/>
-              <Cart />
+              
               </CartProvider>
 
           </ApolloProvider>

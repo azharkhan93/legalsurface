@@ -2,7 +2,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { Box, Button, CenterBox, Column, StyledLink, UpdateForm } from "@/components";
-import { Formik, Form } from "formik";
+import { Formik, Form, Field } from "formik";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 type FormValues = {
   username: string;
@@ -13,11 +14,14 @@ type FormValues = {
 
 export const SignUp = () => {
   const [showSignUp, setShowSignUp] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const handleSubmit = async (values: FormValues) => {
+  const handleSubmit = async (values: FormValues, resetForm: () => void) => {
     try {
       const response = await axios.post('/api/signup', values);
       console.log("Server response:", response.data);
+      resetForm();
       // Handle success (e.g., redirect to login page or show success message)
     } catch (error) {
       console.error("Error:", error);
@@ -36,8 +40,8 @@ export const SignUp = () => {
               password: "",
               confirmpassword: "",
             }}
-            onSubmit={(values, { setSubmitting }) => {
-              handleSubmit(values);
+            onSubmit={(values, { setSubmitting, resetForm }) => {
+              handleSubmit(values, resetForm);
               setSubmitting(false);
             }}
           >
@@ -94,21 +98,42 @@ export const SignUp = () => {
                         type="email"
                       />
                     </Box>
-                    <Box width={["100%", "80%"]}>
+                    <Box width={["100%", "80%"]} position="relative">
                       <UpdateForm
                         name={"password"}
                         placeholder={"Your Password"}
                         label={"Password"}
-                        type="password"
+                        type={showPassword ? "text" : "password"}
                       />
+                      <Box
+                        position="absolute"
+                        top="53%"
+                        right="10px"
+                        // transform="translateY(-50%)"
+                        onClick={() => setShowPassword(!showPassword)}
+                        style={{ cursor: "pointer", }}
+                      >
+                        {showPassword ? <FaEyeSlash size={23} fill="gray" /> : <FaEye size={23} fill="gray" />}
+                      </Box>
                     </Box>
-                    <Box width={["100%", "80%"]}>
+                    <Box width={["100%", "80%"]} position="relative">
                       <UpdateForm
                         name={"confirmpassword"}
-                        placeholder={"Enter Password"}
+                        placeholder={"Confirm Password"}
                         label={"Confirm Password"}
-                        type="password"
+                        type={showConfirmPassword ? "text" : "password"}
                       />
+                      <Box
+                      // border={"2px solid red"}
+                        position="absolute"
+                        top="53%"
+                        right="10px"
+                        // transform="translateY(-50%)"
+                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                        style={{ cursor: "pointer",}}
+                      >
+                        {showConfirmPassword ? <FaEyeSlash size={23} fill="gray" /> : <FaEye size={23} fill="gray"  />}
+                      </Box>
                     </Box>
                     <Box
                       width={["100%", "80%"]}
@@ -143,5 +168,6 @@ export const SignUp = () => {
     </>
   );
 };
+
 
 
