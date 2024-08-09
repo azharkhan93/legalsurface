@@ -1,7 +1,9 @@
-import React from "react";
+"use client"
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import { Box, CenterBox, Column, Row, Text } from "../styled";
 import { FaqItem } from "../FaqItem";
-import Lottie from "lottie-react";
 import AboutAnimation from "@/animations/about.json";
 
 interface FAQItemProps {

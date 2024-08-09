@@ -1,10 +1,11 @@
 "use client"
-import React from 'react';
+
 import Image from 'next/image';
 import { Box, Text, Column, Button, Row, CenterBox } from '@/components';
 import { FaClock, FaShoppingCart } from 'react-icons/fa';
-import { useRouter } from 'next/navigation';
 import { useCart } from '@/contexts';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
 
 type ProductCardsProps = {
   imageUrl: string;
@@ -19,13 +20,24 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
   price,
   productDes,
 }) => {
-  const router = useRouter();
+  const router = useRouter(); 
   const { addToCart } = useCart();
-  
+
   const handleAddToCart = () => {
-    addToCart({ imageUrl, productName, price, quantity: 1 });
-    router.push('/cart'); 
+    const product = {
+      imageUrl,
+      productName,
+      price,
+      quantity: 1,
+    };
+    addToCart(product);
+    toast.success(`${productName} has been added to the cart!`, {
+      position: "top-right",
+      theme: "dark"
+    });
   };
+
+  
 
   return (
     <Box
@@ -41,7 +53,7 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
       bg={"secondary"}
     >
       <Box borderRadius={"sm"} position="relative">
-        <Image src={imageUrl} alt={productName} width={270} height={200} style={{borderRadius: "20px"}}/>
+        <Image src={imageUrl} alt={productName} width={270} height={200} style={{ borderRadius: "20px" }} />
       </Box>
       <Column gap={"xl"} justifyContent="space-between" px={"l"} pb={"l"}>
         <Text variant="body" color='primary'>
@@ -67,17 +79,16 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
         <CenterBox flexDirection={"row"} gap={"l"}>
           <Button variant="outline" onClick={handleAddToCart}>
             <FaShoppingCart />
-            View Product
-          </Button>
-          <Button variant="outline" onClick={handleAddToCart}>
-            <FaShoppingCart />
             Add to Cart
           </Button>
+          
         </CenterBox>
       </Column>
     </Box>
   );
 };
+
+
 
 
 

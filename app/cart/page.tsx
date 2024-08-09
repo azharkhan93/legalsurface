@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
-import { Box, Text, Column, Button, TopBar } from "@/components";
+import { Box, Text, Button, TopBar, Row, Column } from "@/components";
 import { useCart } from "@/contexts";
 
 export default function Page() {
   const { cart, removeFromCart } = useCart();
+
   const calculateGrandTotal = () => {
-    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
 
   return (
@@ -16,30 +17,82 @@ export default function Page() {
         aboutText={"Cart"}
         whoWeAreText={"View Cart"}
       />
-      <Box flexDirection="column" alignItems="center" p="l">
-        <Text variant="heading">Shopping Cart</Text>
-        {cart.map((item, index) => (
-          <Box key={index} border="1px solid gray" p="m" my="m" width="100%">
-            <Text variant="heading">{item.productName}</Text>
-            <Text variant="body">Price: {item.price} /Rs</Text>
-            <Text variant="body">Quantity: {item.quantity}</Text>
-            <Button
-              variant="outline"
-              onClick={() => removeFromCart(item.productName)}
+      
+      <Column  alignItems="center" 
+      gap={"xl"}
+      
+      >
+        <Text variant="heading" textAlign={"start"} mt={"xl"}>Shopping Cart</Text>
+        <Row
+        width="100%" 
+          justifyContent={"center"}
+          flexWrap={"wrap"}
+          gap={"xl"}
+
+          alignItems="flex-start"  
+        >
+          {cart.length > 0 ? (
+            cart.map((item, index) => (
+              <Box
+              width={"350px"}
+              px={"s"}
+                key={index}
+                border="1px solid gray"
+                
+               flexDirection="column"
+                gap="l"
+                py={"m"}
+              >
+                <Row
+                alignItems={"center"}
+                justifyContent={"space-between"}
+                >
+                <Text variant="subHeading">{item.productName}</Text>
+                <Text variant="body">Price: {item.price} /Rs</Text>
+                </Row>
+                <Row
+                alignItems={"center"}
+                justifyContent={"space-between"}
+                >
+                <Text variant="body">Quantity: {item.quantity}</Text>
+                <Button
+                  width="140px"
+                  variant="outline"
+
+                  onClick={() => removeFromCart(item.productName)}
+                >
+                  Remove from Cart
+                </Button>
+                </Row>
+              </Box>
+            ))
+          ) : (
+            <Text variant="body">Your cart is empty</Text>
+          )}
+        </Row>
+        {cart.length > 0 ? (
+          <>
+            <Box width="90%"  textAlign="center"
+            py={"xl"}
+            alignItems={"flex-end"}
+            gap={"xl"}
             >
-              Remove from Cart
+              <Text variant="subHeading">
+                Grand Total: {calculateGrandTotal()} /Rs
+              </Text>
+              <Button variant="outline" width={"24%"} 
+              height={"35px"} onClick={() => alert("Proceed to Checkout")}
+              >
+              Checkout
             </Button>
-          </Box>
-        ))}
-        <Box width="100%" p="m" my="m" textAlign="center">
-          <Text variant="heading">
-            Grand Total: {calculateGrandTotal()} /Rs
-          </Text>
-        </Box>
-        <Button variant="outline" onClick={() => alert("Proceed to Checkout")}>
-          Checkout
-        </Button>
-      </Box>
+            </Box>
+            
+          </>
+        ) : null}
+      </Column>
     </>
   );
 }
+
+
+

@@ -22,6 +22,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
 import { Login } from "../Auth";
+import { useCart } from '@/contexts'; 
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
@@ -58,6 +59,9 @@ export const Navbar: React.FC = () => {
     setIsLoggedIn(false);
     setDropdownOpen(false);
     router.push('/');
+  };
+  const handleCartClick = () => {
+    router.push('/cart'); 
   };
 
   return (
@@ -167,6 +171,7 @@ export const Navbar: React.FC = () => {
               style={{ cursor: "pointer" }}
             />
             <FaShoppingCart
+            onClick={handleCartClick}
               size={23}
               color="white"
               style={{ cursor: "pointer" }}

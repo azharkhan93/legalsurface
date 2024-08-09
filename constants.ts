@@ -237,27 +237,39 @@ export const products = [
   },
   {
     imageUrl: '/images/home3.jpg',
-    productName: 'Waxing full body',
+    productName: 'full body',
     productDes: 'Service Time: 40 Mins',
-    price: 500,
+    price: 550,
   },
   {
     imageUrl: '/images/home3.jpg',
-    productName: 'Waxing full body',
+    productName: 'Hair',
     productDes: 'Service Time: 40 Mins',
-    price: 500,
+    price: 700,
   },
   {
     imageUrl: '/images/home3.jpg',
-    productName: 'Waxing full body',
+    productName: 'Nails',
     productDes: 'Service Time: 40 Mins',
-    price: 500,
+    price: 50,
   },
   {
     imageUrl: '/images/home3.jpg',
-    productName: 'Waxing full body',
+    productName: 'Wax body',
     productDes: 'Service Time: 40 Mins',
-    price: 500,
+    price: 10,
+  },
+  {
+    imageUrl: '/images/home3.jpg',
+    productName: 'ody',
+    productDes: 'Service Time: 40 Mins',
+    price: 10,
+  },
+  {
+    imageUrl: '/images/home3.jpg',
+    productName: 'hands',
+    productDes: 'Service Time: 40 Mins',
+    price: 10,
   },
 ];
 

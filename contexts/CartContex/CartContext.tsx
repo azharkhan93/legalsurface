@@ -1,14 +1,14 @@
 "use client"
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-interface CartItem {
+type CartItem = {
   imageUrl: string;
   productName: string;
   price: number;
   quantity: number;
 }
 
-interface CartContextType {
+type CartContextType = {
   cart: CartItem[];
   addToCart: (item: CartItem) => void;
   removeFromCart: (productName: string) => void;
@@ -19,14 +19,34 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
+  useEffect(() => {
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+      setCart(JSON.parse(storedCart));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
   const addToCart = (item: CartItem) => {
-    setCart((prevCart) => [...prevCart, item]);
+    setCart((prevCart) => {
+      const itemExists = prevCart.find(cartItem => cartItem.productName === item.productName);
+      if (itemExists) {
+        // Update quantity if the item is already in the cart
+        return prevCart.map(cartItem =>
+          cartItem.productName === item.productName
+            ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+            : cartItem
+        );
+      }
+      return [...prevCart, item];
+    });
   };
 
   const removeFromCart = (productName: string) => {
-    setCart((prevCart) =>
-      prevCart.filter((item) => item.productName !== productName)
-    );
+    setCart((prevCart) => prevCart.filter(item => item.productName !== productName));
   };
 
   return (
@@ -38,9 +58,10 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
 export const useCart = () => {
   const context = useContext(CartContext);
-  if (context === undefined) {
-    throw new Error("context api is not working");
+  if (!context) {
+    throw new Error("useCart must be used within a CartProvider");
   }
   return context;
 };
+
 
