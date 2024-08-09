@@ -47,7 +47,7 @@ export default function Page() {
                 alignItems={"center"}
                 justifyContent={"space-between"}
                 >
-                <Text variant="subHeading">{item.productName}</Text>
+                <Text variant="subHeading" fontWeight={"regular"}>{item.productName}</Text>
                 <Text variant="body">Price: {item.price} /Rs</Text>
                 </Row>
                 <Row
@@ -67,7 +67,7 @@ export default function Page() {
               </Box>
             ))
           ) : (
-            <Text variant="body">Your cart is empty</Text>
+            <Text variant="subHeading" py={"l"}>Your cart is empty</Text>
           )}
         </Row>
         {cart.length > 0 ? (
