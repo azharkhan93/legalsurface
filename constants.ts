@@ -29,7 +29,7 @@ export const NavbarData = [
   },
   {
     title: "Blogs",
-    link: "/contact",
+    link: "/blog",
   },
   {
     title: "Franchise",

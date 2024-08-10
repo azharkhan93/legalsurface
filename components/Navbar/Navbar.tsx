@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
             gap={"l"}
           >
             <FaUser size={23} color="white" onClick={handleModalOpen} />
-            <FaShoppingCart size={23} color="white" />
+            <FaShoppingCart size={23} color="white"   />
           </Box>
 
           <Box onClick={handleToggle}>
@@ -171,6 +171,7 @@ export const Navbar: React.FC = () => {
               style={{ cursor: "pointer" }}
             />
             <FaShoppingCart
+            
             onClick={handleCartClick}
               size={23}
               color="white"

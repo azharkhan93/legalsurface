@@ -14,16 +14,15 @@ type NotionMultiSelectProperty = {
 }
 
 type NotionPageProperties = {
-  Title: NotionTitleProperty;
   'Files & media': NotionFileProperty;
+  Title: NotionTitleProperty;
   Description: NotionMultiSelectProperty;
 }
 
 
 type BlogPost = {
-  id: string;
+  id: string;file?: string;
   title: string;
-  file?: string;
   description: string;
 }
 
