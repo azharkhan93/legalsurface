@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { BlogSection, TopBar } from "@/components";
+import {  TopBar } from "@/components";
+import { BlogSection } from "@/components/BlogSection";
+
 
 export default function Home() {
   return (
