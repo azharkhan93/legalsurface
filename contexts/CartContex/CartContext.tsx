@@ -1,41 +1,50 @@
-"use client"
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+"use client";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 
 type CartItem = {
   imageUrl: string;
   productName: string;
   price: number;
   quantity: number;
-}
+};
 
 type CartContextType = {
   cart: CartItem[];
   addToCart: (item: CartItem) => void;
   removeFromCart: (productName: string) => void;
-}
+};
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const CartProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
+    const storedCart = localStorage.getItem("cart");
     if (storedCart) {
       setCart(JSON.parse(storedCart));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (item: CartItem) => {
     setCart((prevCart) => {
-      const itemExists = prevCart.find(cartItem => cartItem.productName === item.productName);
+      const itemExists = prevCart.find(
+        (cartItem) => cartItem.productName === item.productName
+      );
       if (itemExists) {
-        // Update quantity if the item is already in the cart
-        return prevCart.map(cartItem =>
+        return prevCart.map((cartItem) =>
           cartItem.productName === item.productName
             ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
             : cartItem
@@ -46,7 +55,9 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const removeFromCart = (productName: string) => {
-    setCart((prevCart) => prevCart.filter(item => item.productName !== productName));
+    setCart((prevCart) =>
+      prevCart.filter((item) => item.productName !== productName)
+    );
   };
 
   return (
@@ -63,5 +74,3 @@ export const useCart = () => {
   }
   return context;
 };
-
-

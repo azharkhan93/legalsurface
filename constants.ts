@@ -1,9 +1,17 @@
-import { FaHome, FaDollarSign, FaUsers, FaBroom, FaPhone, FaMapMarkerAlt, FaClock, FaEnvelope, } from "react-icons/fa";
+import {
+  FaHome,
+  FaDollarSign,
+  FaUsers,
+  FaBroom,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaClock,
+  FaEnvelope,
+} from "react-icons/fa";
 import step1Animation from "@/animations/bookings.json";
 import step2Animation from "@/animations/order.json";
 import step3Animation from "@/animations/details.json";
 import step4Animation from "@/animations/service.json";
-
 
 export const NavbarData = [
   {
@@ -214,7 +222,7 @@ export const contactCardData = [
     text1: "Address:",
     text2: "Rajbagh, Srinanagar J & K",
   },
-  
+
   {
     icon: FaClock,
     text1: "Opening Hours:",
@@ -225,50 +233,49 @@ export const contactCardData = [
     text1: "Email Address:",
     text2: "glam90239@gmail.com",
   },
-  
 ];
 
 export const products = [
   {
-    imageUrl: '/images/home3.jpg',
-    productName: 'Luxury Leo Repechage facial',
-    productDes: 'Service Time: 40 Mins',
+    imageUrl: "/images/home3.jpg",
+    productName: "Luxury Leo Repechage facial",
+    productDes: "Service Time: 40 Mins",
     price: 200,
   },
   {
-    imageUrl: '/images/home3.jpg',
-    productName: 'full body',
-    productDes: 'Service Time: 40 Mins',
+    imageUrl: "/images/home3.jpg",
+    productName: "full body",
+    productDes: "Service Time: 40 Mins",
     price: 550,
   },
   {
-    imageUrl: '/images/home3.jpg',
-    productName: 'Hair',
-    productDes: 'Service Time: 40 Mins',
+    imageUrl: "/images/home3.jpg",
+    productName: "Hair",
+    productDes: "Service Time: 40 Mins",
     price: 700,
   },
   {
-    imageUrl: '/images/home3.jpg',
-    productName: 'Nails',
-    productDes: 'Service Time: 40 Mins',
+    imageUrl: "/images/home3.jpg",
+    productName: "Nails",
+    productDes: "Service Time: 40 Mins",
     price: 50,
   },
   {
-    imageUrl: '/images/home3.jpg',
-    productName: 'Wax body',
-    productDes: 'Service Time: 40 Mins',
+    imageUrl: "/images/home3.jpg",
+    productName: "Wax body",
+    productDes: "Service Time: 40 Mins",
     price: 10,
   },
   {
-    imageUrl: '/images/home3.jpg',
-    productName: 'ody',
-    productDes: 'Service Time: 40 Mins',
+    imageUrl: "/images/home3.jpg",
+    productName: "ody",
+    productDes: "Service Time: 40 Mins",
     price: 10,
   },
   {
-    imageUrl: '/images/home3.jpg',
-    productName: 'hands',
-    productDes: 'Service Time: 40 Mins',
+    imageUrl: "/images/home3.jpg",
+    productName: "hands",
+    productDes: "Service Time: 40 Mins",
     price: 10,
   },
 ];
