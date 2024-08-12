@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import Image from 'next/image';
-import { Box, Text, Column, Button, Row, CenterBox } from '@/components';
-import { FaClock, FaShoppingCart } from 'react-icons/fa';
-import { useCart } from '@/contexts';
-import { toast } from 'react-toastify';
-import { useRouter } from 'next/navigation';
+import Image from "next/image";
+import { Box, Text, Column, Button, Row, CenterBox } from "@/components";
+import { FaClock, FaShoppingCart } from "react-icons/fa";
+import { useCart } from "@/contexts";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 type ProductCardsProps = {
   imageUrl: string;
   productName: string;
   price: number;
   productDes: string;
-}
+};
 
 export const ProductCards: React.FC<ProductCardsProps> = ({
   imageUrl,
@@ -20,7 +20,7 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
   price,
   productDes,
 }) => {
-  const router = useRouter(); 
+  const router = useRouter();
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
@@ -33,11 +33,9 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
     addToCart(product);
     toast.success(`${productName} has been added to the cart!`, {
       position: "top-right",
-      theme: "dark"
+      theme: "dark",
     });
   };
-
-  
 
   return (
     <Box
@@ -53,10 +51,16 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
       bg={"secondary"}
     >
       <Box borderRadius={"sm"} position="relative">
-        <Image src={imageUrl} alt={productName} width={270} height={200} style={{ borderRadius: "20px" }} />
+        <Image
+          src={imageUrl}
+          alt={productName}
+          width={270}
+          height={200}
+          style={{ borderRadius: "20px" }}
+        />
       </Box>
       <Column gap={"xl"} justifyContent="space-between" px={"l"} pb={"l"}>
-        <Text variant="body" color='primary'>
+        <Text variant="body" color="primary">
           {productName}
         </Text>
         <Row
@@ -69,7 +73,7 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
           px={"s"}
         >
           <FaClock size={20} />
-          <Text variant="body" color='secondary'>
+          <Text variant="body" color="secondary">
             {productDes}
           </Text>
         </Row>
@@ -81,15 +85,8 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
             <FaShoppingCart />
             Add to Cart
           </Button>
-          
         </CenterBox>
       </Column>
     </Box>
   );
 };
-
-
-
-
-
-

@@ -4,6 +4,7 @@ import axios from "axios";
 import { Box, Button, CenterBox, Column, StyledLink, UpdateForm } from "@/components";
 import { Formik, Form, Field } from "formik";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Login } from "../Login";
 
 type FormValues = {
   username: string;
@@ -13,7 +14,7 @@ type FormValues = {
 };
 
 export const SignUp = () => {
-  const [showSignUp, setShowSignUp] = useState(true);
+  const [showLogin, setShowLogin] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -29,9 +30,11 @@ export const SignUp = () => {
     }
   };
 
+  
+
   return (
     <>
-      {showSignUp && (
+      {!showLogin ? (
         <CenterBox width={["100%", "90%"]} height={"100%"} p={"m"}>
           <Formik
             initialValues={{
@@ -151,7 +154,8 @@ export const SignUp = () => {
                       <Box>
                         <StyledLink
                           $UnderlineColor="primary"
-                          onClick={() => setShowSignUp(true)}
+                          onClick={() => setShowLogin
+                        (true)}
                           style={{ cursor: "pointer" }}
                         >
                           Already Have Account SignIn
@@ -164,6 +168,8 @@ export const SignUp = () => {
             )}
           </Formik>
         </CenterBox>
+      ):  (
+        <Login />
       )}
     </>
   );

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
@@ -22,7 +22,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
 import { Login } from "../Auth";
-import { useCart } from '@/contexts'; 
+import { useCart } from '@/contexts';
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
@@ -30,6 +30,7 @@ export const Navbar: React.FC = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   useEffect(() => {
     const token = localStorage.getItem('token');
     setIsLoggedIn(!!token); 
@@ -47,6 +48,7 @@ export const Navbar: React.FC = () => {
     router.push(link);
     setIsOpen(false);
   };
+
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
@@ -54,14 +56,14 @@ export const Navbar: React.FC = () => {
   const handleModalClose = () => {
     setIsModalOpen(false);
   };
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    setIsLoggedIn(false);
-    setDropdownOpen(false);
-    router.push('/');
-  };
+
   const handleCartClick = () => {
-    router.push('/cart'); 
+    if (!isLoggedIn) {
+      setIsModalOpen(true);
+    } else {
+      
+      router.push("/cart")
+    }
   };
 
   return (
@@ -92,7 +94,7 @@ export const Navbar: React.FC = () => {
             gap={"l"}
           >
             <FaUser size={23} color="white" onClick={handleModalOpen} />
-            <FaShoppingCart size={23} color="white"   />
+            <FaShoppingCart size={23} color="white" onClick={handleCartClick} />
           </Box>
 
           <Box onClick={handleToggle}>
@@ -171,11 +173,10 @@ export const Navbar: React.FC = () => {
               style={{ cursor: "pointer" }}
             />
             <FaShoppingCart
-            
-            onClick={handleCartClick}
               size={23}
               color="white"
               style={{ cursor: "pointer" }}
+              onClick={handleCartClick}
             />
           </Box>
           <Button
@@ -307,3 +308,4 @@ export const Navbar: React.FC = () => {
     </>
   );
 };
+
