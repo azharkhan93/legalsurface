@@ -29,5 +29,6 @@ export * from "./WaxingSection"
 export * from "./Modal"
 export * from "./FranchiseSection"
 export * from "./BlogSection"
+export * from "./HairSection"
 
 

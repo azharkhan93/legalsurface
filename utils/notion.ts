@@ -46,9 +46,7 @@ export async function getProducts(categoryFilter: string) {
         "";
 
       const productDes =
-        page.properties["Service"]?.multi_select
-          ?.map((item: any) => item.name)
-          .join(", ") || "";
+        page.properties["Service"]?.rich_text?.[0].plain_text || "";
 
       const price = page.properties["Price"]?.number || 0;
 
@@ -67,25 +65,3 @@ export async function getProducts(categoryFilter: string) {
         product.category.toLowerCase() === categoryFilter.toLowerCase()
     );
 }
-
-// console.log("Image URL:", imageUrl);
-// console.log("Title:", productName);
-// console.log("Description:", productDes);
-// console.log("Price:", `₹${price.toLocaleString('en-IN')}`);
-
-// export async function getProducts() {
-//   const response = await notion.databases.query({
-//     database_id: process.env.NOTION_PRODUCTS_DATABASE_ID!,
-//   });
-
-//   return response.results.map((page: any) => {
-//     const price = page.properties["Price"]?.number || 0;
-
-//     return {
-//       imageUrl: page.properties["Image URL"]?.files?.[0]?.file?.url || "",
-//       productName: page.properties["Product Name"]?.title?.[0]?.plain_text || "",
-//       productDes: page.properties["Product Description"]?.rich_text?.[0]?.plain_text || "",
-//       price: `₹${price.toLocaleString('en-IN')}`,
-//     };
-//   });
-// }

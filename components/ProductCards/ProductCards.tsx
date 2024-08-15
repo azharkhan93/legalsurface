@@ -59,11 +59,14 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
           style={{ borderRadius: "20px" }}
         />
       </Box>
-      <Column gap={"xl"} justifyContent="space-between" px={"l"} pb={"l"}>
+      <Column gap={"xl"} justifyContent="space-between" px={["s","l"]} pb={"l"} 
+      width={"272px"}
+      >
         <Text variant="body" color="primary">
           {productName}
         </Text>
         <Row
+     
           alignItems="center"
           justifyContent={"center"}
           gap={"m"}
@@ -81,8 +84,8 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
           Price: {price} /Rs
         </Text>
         <CenterBox flexDirection={"row"} gap={"l"}>
-          <Button variant="outline" onClick={handleAddToCart}>
-            <FaShoppingCart />
+          <Button variant="outline" width={"150px"} height={"30px"} onClick={handleAddToCart}>
+            <FaShoppingCart size={20}  />
             Add to Cart
           </Button>
         </CenterBox>
