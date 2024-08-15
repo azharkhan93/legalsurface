@@ -1,6 +1,5 @@
 import mongoose, { Document, Schema, Model } from "mongoose";
 
-// Define the Auth interface
 export interface Auth extends Document {
   username: string;
   email: string;

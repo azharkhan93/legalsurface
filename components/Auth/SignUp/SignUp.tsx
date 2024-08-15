@@ -23,10 +23,10 @@ export const SignUp = () => {
       const response = await axios.post('/api/signup', values);
       console.log("Server response:", response.data);
       resetForm();
-      // Handle success (e.g., redirect to login page or show success message)
+      
     } catch (error) {
       console.error("Error:", error);
-      // Handle error (e.g., show error message)
+      
     }
   };
 
