@@ -47,6 +47,8 @@ export const Navbar: React.FC = () => {
   const navigateTo = (link: string) => {
     router.push(link);
     setIsOpen(false);
+    setDropdownOpen(false);
+
   };
 
   const handleModalOpen = () => {
