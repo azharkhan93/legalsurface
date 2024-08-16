@@ -1,8 +1,16 @@
 "use client";
+
 import { useState } from "react";
 import axios from "axios";
-import { Box, Button, CenterBox, Column, StyledLink, UpdateForm } from "@/components";
-import { Formik, Form, Field } from "formik";
+import {
+  Box,
+  Button,
+  CenterBox,
+  Column,
+  StyledLink,
+  UpdateForm,
+} from "@/components";
+import { Formik, Form } from "formik";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Login } from "../Login";
 
@@ -12,25 +20,24 @@ type FormValues = {
   password: string;
   confirmpassword: string;
 };
+type SignUpProps = {
+  onClose: () => void;  
+}
 
-export const SignUp = () => {
+export const SignUp: React.FC<SignUpProps> = ({onClose}) => {
   const [showLogin, setShowLogin] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleSubmit = async (values: FormValues, resetForm: () => void) => {
     try {
-      const response = await axios.post('/api/signup', values);
+      const response = await axios.post("/api/signup", values);
       console.log("Server response:", response.data);
       resetForm();
-      
     } catch (error) {
       console.error("Error:", error);
-      
     }
   };
-
-  
 
   return (
     <>
@@ -55,11 +62,7 @@ export const SignUp = () => {
                   height: "100%",
                 }}
               >
-                <Box
-                  width={"100%"}
-                  height={"100%"}
-                  alignItems={"center"}
-                >
+                <Box width={"100%"} height={"100%"} alignItems={"center"}>
                   <Box
                     width={"100%"}
                     height={"19%"}
@@ -112,11 +115,14 @@ export const SignUp = () => {
                         position="absolute"
                         top="53%"
                         right="10px"
-                        // transform="translateY(-50%)"
                         onClick={() => setShowPassword(!showPassword)}
-                        style={{ cursor: "pointer", }}
+                        style={{ cursor: "pointer" }}
                       >
-                        {showPassword ? <FaEyeSlash size={23} fill="gray" /> : <FaEye size={23} fill="gray" />}
+                        {showPassword ? (
+                          <FaEyeSlash size={23} fill="gray" />
+                        ) : (
+                          <FaEye size={23} fill="gray" />
+                        )}
                       </Box>
                     </Box>
                     <Box width={["100%", "80%"]} position="relative">
@@ -127,15 +133,19 @@ export const SignUp = () => {
                         type={showConfirmPassword ? "text" : "password"}
                       />
                       <Box
-                      // border={"2px solid red"}
                         position="absolute"
                         top="53%"
                         right="10px"
-                        // transform="translateY(-50%)"
-                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                        style={{ cursor: "pointer",}}
+                        onClick={() =>
+                          setShowConfirmPassword(!showConfirmPassword)
+                        }
+                        style={{ cursor: "pointer" }}
                       >
-                        {showConfirmPassword ? <FaEyeSlash size={23} fill="gray" /> : <FaEye size={23} fill="gray"  />}
+                        {showConfirmPassword ? (
+                          <FaEyeSlash size={23} fill="gray" />
+                        ) : (
+                          <FaEye size={23} fill="gray" />
+                        )}
                       </Box>
                     </Box>
                     <Box
@@ -149,16 +159,15 @@ export const SignUp = () => {
                         type="submit"
                         disabled={isSubmitting}
                       >
-                        SignUp
+                        Sign Up
                       </Button>
                       <Box>
                         <StyledLink
                           $UnderlineColor="primary"
-                          onClick={() => setShowLogin
-                        (true)}
+                          onClick={() => setShowLogin(true)}
                           style={{ cursor: "pointer" }}
                         >
-                          Already Have Account SignIn
+                          Already Have an Account? Sign In
                         </StyledLink>
                       </Box>
                     </Box>
@@ -168,12 +177,9 @@ export const SignUp = () => {
             )}
           </Formik>
         </CenterBox>
-      ):  (
-        <Login />
+      ) : (
+        <Login onClose={onClose} />
       )}
     </>
   );
 };
-
-
-

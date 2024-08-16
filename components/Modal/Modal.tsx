@@ -3,19 +3,17 @@ import { Box, CenterBox, StyledModal, Text } from "@/components/styled";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BASE_COLORS } from "@/theme";
-import { Login } from "../Auth";
 
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  component: React.FC;
+  component: React.FC<{ onClose: () => void }>;  
 };
 
 export const Modal: React.FC<ModalProps> = ({
-  isOpen,
-  onClose,
-  component: Component,
-}) => {
+  isOpen, onClose, component: Component }
+ 
+) => {
   if (!isOpen) return null;
 
   return (
@@ -51,7 +49,7 @@ export const Modal: React.FC<ModalProps> = ({
         >
           <FontAwesomeIcon icon={faTimes} size="2x" color="#2A3277" />
         </CenterBox>
-        <Component />
+        <Component onClose={onClose} /> 
       </StyledModal>
     </CenterBox>
   );

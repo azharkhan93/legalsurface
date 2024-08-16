@@ -12,13 +12,20 @@ import {
 import { Formik, Form } from "formik";
 import { SignUp } from "../SignUp";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 type FormValues = {
   email: string;
   password: string;
 };
+type LoginProps = {
+  onClose: () => void;  
+}
 
-export const Login = () => {
+
+
+export const Login: React.FC<LoginProps>= ({onClose}) => {
+  const router = useRouter();
   const [showSignUp, setShowSignUp] = useState(false);
 
   const handleSubmit = async (values: FormValues) => {
@@ -26,6 +33,8 @@ export const Login = () => {
       const response = await axios.post("/api/login", values);
       console.log("Server response:", response.data);
       localStorage.setItem("token", response.data.token);
+      router.push('/cart');
+      onClose();
     } catch (error) {
       console.error("Error:", error);
     }
@@ -130,8 +139,9 @@ export const Login = () => {
           </Formik>
         </CenterBox>
       ) : (
-        <SignUp />
+        <SignUp onClose={onClose}  />
       )}
     </>
   );
 };
+
