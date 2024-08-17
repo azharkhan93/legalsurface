@@ -1,18 +1,11 @@
 "use client";
-
-import { useState } from "react";
-import {
-  Box,
-  Button,
-  CenterBox,
-  Column,
-  StyledLink,
-  UpdateForm,
-} from "@/components";
-import { Formik, Form } from "formik";
-import { SignUp } from "../SignUp";
-import axios from "axios";
 import { useRouter } from "next/navigation";
+import { useAuth } from '@/contexts/AuthContext/AuthContext';
+import axios from "axios";
+import { useState } from "react";
+import { Formik, Form } from "formik";
+import { Box, Button, CenterBox, Column, StyledLink, UpdateForm } from "@/components";
+import { SignUp } from "../SignUp";
 
 type FormValues = {
   email: string;
@@ -22,18 +15,23 @@ type LoginProps = {
   onClose: () => void;  
 }
 
-
-
-export const Login: React.FC<LoginProps>= ({onClose}) => {
+export const Login: React.FC<LoginProps> = ({ onClose }) => {
   const router = useRouter();
+  const { setUser } = useAuth();
   const [showSignUp, setShowSignUp] = useState(false);
 
   const handleSubmit = async (values: FormValues) => {
     try {
       const response = await axios.post("/api/login", values);
-      console.log("Server response:", response.data);
-      localStorage.setItem("token", response.data.token);
-      router.push('/cart');
+      const { token, userId, email } = response.data;
+      localStorage.setItem("token", token);
+      localStorage.setItem("userId", userId);
+      localStorage.setItem("userInfo", JSON.stringify({ id: userId, email }));
+      
+      // Set user in context
+      setUser({ id: userId, email });
+      
+      router.push('/');
       onClose();
     } catch (error) {
       console.error("Error:", error);
@@ -45,10 +43,7 @@ export const Login: React.FC<LoginProps>= ({onClose}) => {
       {!showSignUp ? (
         <CenterBox width={["100%", "80%"]} height={"100%"} p={"m"}>
           <Formik
-            initialValues={{
-              email: "",
-              password: "",
-            }}
+            initialValues={{ email: "", password: "" }}
             onSubmit={(values, { setSubmitting }) => {
               handleSubmit(values);
               setSubmitting(false);
@@ -139,9 +134,10 @@ export const Login: React.FC<LoginProps>= ({onClose}) => {
           </Formik>
         </CenterBox>
       ) : (
-        <SignUp onClose={onClose}  />
+        <SignUp onClose={onClose} />
       )}
     </>
   );
 };
+
 

@@ -19,36 +19,38 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
+import { RxAvatar } from "react-icons/rx";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
 import { Login } from "../Auth";
-import { useCart } from '@/contexts';
+import { useAuth } from '@/contexts/AuthContext/AuthContext'; 
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+ const [navbarDropdownOpen, setNavbarDropdownOpen] = useState<number | null>(null);
+  const [avatarDropdownOpen, setAvatarDropdownOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    setIsLoggedIn(!!token); 
-  }, []);
+  const { user, setUser } = useAuth(); 
+  const isLoggedIn = Boolean(user); 
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleDropdownToggle = () => {
-    setDropdownOpen(!dropdownOpen);
+  const handleNavbarDropdownToggle = (index: number) => {
+    setNavbarDropdownOpen(prev => (prev === index ? null : index));
+  };
+
+  const handleAvatarDropdownToggle = () => {
+    setAvatarDropdownOpen(!avatarDropdownOpen);
   };
 
   const navigateTo = (link: string) => {
     router.push(link);
-    setIsOpen(false);
-    setDropdownOpen(false);
-
+    setNavbarDropdownOpen(null);
+    setAvatarDropdownOpen(false);
   };
 
   const handleModalOpen = () => {
@@ -63,10 +65,21 @@ export const Navbar: React.FC = () => {
     if (!isLoggedIn) {
       setIsModalOpen(true);
     } else {
-      
-      router.push("/cart")
+      router.push("/cart");
     }
   };
+  
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userInfo'); 
+    setUser(null); 
+    router.push('/');
+  };
+
+  // const handleLogout = () => {
+  //   localStorage.removeItem('token');
+  //   router.push('/');
+  // };
 
   return (
     <>
@@ -95,7 +108,40 @@ export const Navbar: React.FC = () => {
             alignItems={"center"}
             gap={"l"}
           >
-            <FaUser size={23} color="white" onClick={handleModalOpen} />
+            {isLoggedIn ? (
+              <Box position="relative">
+                <RxAvatar
+                  size={35}
+                  color="white"
+                  onClick={handleAvatarDropdownToggle}
+                  style={{ cursor: "pointer" }}
+                />
+                {avatarDropdownOpen && (
+                  <Box
+                    alignItems={"flex-start"}
+                    position="absolute"
+                    top={40}
+                    right={0}
+                    bg="primary"
+                    p={"l"}
+                    borderRadius={"s"}
+                    border={"1px solid white"}
+                    px={"xl"}
+                  >
+                    <Text
+                      variant={"body"}
+                      borderBottom={"2px solid black"}
+                      onClick={handleLogout}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Logout
+                    </Text>
+                  </Box>
+                )}
+              </Box>
+            ) : (
+              <FaUser size={23} color="white" onClick={handleModalOpen} />
+            )}
             <FaShoppingCart size={23} color="white" onClick={handleCartClick} />
           </Box>
 
@@ -116,7 +162,7 @@ export const Navbar: React.FC = () => {
             item.dropdown ? (
               <Box key={index} position="relative">
                 <StyledLink
-                  onClick={handleDropdownToggle}
+                  onClick={() => handleNavbarDropdownToggle(index)}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -125,13 +171,13 @@ export const Navbar: React.FC = () => {
                   }}
                 >
                   {item.title}
-                  {dropdownOpen ? (
+                  {navbarDropdownOpen === index ? (
                     <FaChevronUp size={14} />
                   ) : (
                     <FaChevronDown size={14} />
                   )}
                 </StyledLink>
-                {dropdownOpen && (
+                {navbarDropdownOpen === index && (
                   <Box
                     position="absolute"
                     top={30}
@@ -161,6 +207,7 @@ export const Navbar: React.FC = () => {
             )
           )}
         </Box>
+
         <Box display={["none", "flex"]} flexDirection={"row"} gap={"xl"}>
           <Box
             flexDirection={"row"}
@@ -168,12 +215,39 @@ export const Navbar: React.FC = () => {
             alignItems={"center"}
             gap={"l"}
           >
-            <FaUser
-              size={23}
-              color="white"
-              onClick={handleModalOpen}
-              style={{ cursor: "pointer" }}
-            />
+            {isLoggedIn ? (
+              <Box position="relative">
+                <RxAvatar
+                  size={40}
+                  color={"white"}
+                  onClick={handleAvatarDropdownToggle}
+                  style={{ cursor: "pointer" }}
+                />
+                {avatarDropdownOpen ? (
+                  <Box
+                    position="absolute"
+                    top={45}
+                    right={0}
+                    bg="primary"
+                    p={"l"}
+                    borderRadius={"s"}
+                    borderBottom={"2px solid black"}
+                    px={"xl"}
+                  >
+                    <Text onClick={handleLogout} style={{ cursor: "pointer" }}>
+                      Logout
+                    </Text>
+                  </Box>
+                ): null}
+              </Box>
+            ) : (
+              <FaUser
+                size={23}
+                color="white"
+                onClick={handleModalOpen}
+                style={{ cursor: "pointer" }}
+              />
+            )}
             <FaShoppingCart
               size={23}
               color="white"
@@ -181,24 +255,28 @@ export const Navbar: React.FC = () => {
               onClick={handleCartClick}
             />
           </Box>
-          <Button
-            variant={"primary"}
-            display={["none", "block"]}
-            py={"m"}
-            borderRadius={"circle"}
-            px={"xl"}
-            bg={"primary"}
-          >
-            Book An Appointment
-          </Button>
+
+          {!isLoggedIn ? (
+            <Button
+              variant={"primary"}
+              display={["none", "block"]}
+              py={"m"}
+              borderRadius={"circle"}
+              px={"xl"}
+              bg={"primary"}
+            >
+              Book An Appointment
+            </Button>
+          ): null}
         </Box>
 
-        {isOpen ? (
+        {isOpen && (
           <CenterBox
+            border={"4px solid black"}
             width="100vw"
             height="100vh"
             flexDirection="column"
-            bg="secondary"
+            bg={"secondary"}
             zIndex={9999}
             display={["flex", "none"]}
             position="fixed"
@@ -215,7 +293,7 @@ export const Navbar: React.FC = () => {
               />
             </CenterBox>
             <Box
-              position="absolute"
+              position={"absolute"}
               top={"xxl"}
               right={"xl"}
               onClick={handleToggle}
@@ -241,7 +319,7 @@ export const Navbar: React.FC = () => {
                 item.dropdown ? (
                   <Box key={index} position={"relative"}>
                     <StyledLink
-                      onClick={handleDropdownToggle}
+                      onClick={() => handleNavbarDropdownToggle(index)}
                       style={{
                         display: "flex",
                         alignItems: "center",
@@ -249,65 +327,62 @@ export const Navbar: React.FC = () => {
                       }}
                     >
                       <Text variant={"body"}>{item.title}</Text>
-                      {dropdownOpen ? (
+                      {navbarDropdownOpen === index ? (
                         <FaChevronUp size={18} />
                       ) : (
                         <FaChevronDown size={18} />
                       )}
                     </StyledLink>
-                    {dropdownOpen ? (
+                    {navbarDropdownOpen === index && (
                       <Box
                         position="absolute"
                         top={"170%"}
                         left={0}
                         bg={"primary"}
                         borderRadius={"s"}
-                        px={"m"}
-                        py={"xl"}
-                        zIndex={9999}
+                        p={"l"}
+                        width={"180px"}
                       >
-                        <Column alignItems={"start"} gap={"l"} width={"150px"}>
+                        <Column alignItems={"start"} gap={15}>
                           {item.dropdown.map((dropdownItem, idx) => (
                             <StyledLink
                               key={idx}
                               onClick={() => navigateTo(dropdownItem.link)}
                             >
-                              <Text variant={"body"} color={"secondary"}>
-                                {dropdownItem.title}
-                              </Text>
+                              {dropdownItem.title}
                             </StyledLink>
                           ))}
                         </Column>
                       </Box>
-                    ) : null}
+                    )}
+                    
                   </Box>
                 ) : (
-                  <StyledLink key={index} onClick={() => navigateTo(item.link)}>
-                    <Text variant={"body"} color={"primary"}>
-                      {item.title}
-                    </Text>
+                  <StyledLink
+                    key={index}
+                    onClick={() => navigateTo(item.link)}
+                  >
+                    {item.title}
                   </StyledLink>
                 )
+                
               )}
+               
+            
+         
             </Column>
-
-            <Button
-              display={["block", "none"]}
-              variant={"primary"}
-              bg={"primary"}
-              py={"s"}
-            >
-              Book An Appointment
-            </Button>
           </CenterBox>
-        ) : null}
+        )}
       </Row>
       <Modal
         isOpen={isModalOpen}
         onClose={handleModalClose}
         component={Login}
       />
+      
     </>
   );
 };
+
+
 

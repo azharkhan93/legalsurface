@@ -1,11 +1,9 @@
 "use client";
-
 import Image from "next/image";
 import { Box, Text, Column, Button, Row, CenterBox } from "@/components";
 import { FaClock, FaShoppingCart } from "react-icons/fa";
 import { useCart } from "@/contexts";
 import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
 
 type ProductCardsProps = {
   imageUrl: string;
@@ -20,7 +18,6 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
   price,
   productDes,
 }) => {
-  const router = useRouter();
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
@@ -59,14 +56,17 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
           style={{ borderRadius: "20px" }}
         />
       </Box>
-      <Column gap={"xl"} justifyContent="space-between" px={["s","l"]} pb={"l"} 
-      width={"272px"}
+      <Column
+        gap={"xl"}
+        justifyContent="space-between"
+        px={["s", "l"]}
+        pb={"l"}
+        width={"272px"}
       >
         <Text variant="body" color="primary">
           {productName}
         </Text>
         <Row
-     
           alignItems="center"
           justifyContent={"center"}
           gap={"m"}
@@ -81,11 +81,16 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
           </Text>
         </Row>
         <Text variant="body" color="primary">
-          Price: {price} /Rs
+          Price: ₹{price.toLocaleString("en-IN")} /Rs
         </Text>
         <CenterBox flexDirection={"row"} gap={"l"}>
-          <Button variant="outline" width={"150px"} height={"30px"} onClick={handleAddToCart}>
-            <FaShoppingCart size={20}  />
+          <Button
+            variant="outline"
+            width={"150px"}
+            height={"30px"}
+            onClick={handleAddToCart}
+          >
+            <FaShoppingCart size={20} />
             Add to Cart
           </Button>
         </CenterBox>
@@ -93,3 +98,4 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
     </Box>
   );
 };
+

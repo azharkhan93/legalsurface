@@ -56,7 +56,8 @@ export async function getProducts(categoryFilter: string) {
         imageUrl,
         productName,
         productDes,
-        price: `₹${price.toLocaleString("en-IN")}`,
+        price, 
+        // price: `₹${price.toLocaleString("en-IN")}`,
         category,
       };
     })

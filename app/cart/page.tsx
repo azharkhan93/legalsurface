@@ -1,16 +1,31 @@
 "use client";
-import React from "react";
-import { Box, Text, Button, TopBar, Row, Column } from "@/components";
+import React, { useEffect } from "react";
+import { Box, Text, Button, TopBar, Row, Column, CenterBox } from "@/components";
 import { useCart } from "@/contexts";
+import router, { useRouter } from "next/navigation";
 
 export default function Page() {
+  const router = useRouter();
   const { cart, removeFromCart } = useCart();
 
-  const calculateGrandTotal = () => {
-    return cart
-      .reduce((total, item) => total + item.price * item.quantity, 0)
-      .toFixed(2);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      router.push('/');
+    }
+  }, [router]);
+
+  useEffect(() => {
+    console.log("Current Cart:", cart);
+  }, [cart]);
+
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => {
+      return total + item.price * item.quantity;
+    }, 0);
   };
+
+  const grandTotal = calculateTotal();
 
   return (
     <>
@@ -42,22 +57,28 @@ export default function Page() {
                 gap="l"
                 py={"m"}
               >
-                <Row alignItems={"center"} justifyContent={"space-between"}>
-                  <Text variant="subHeading" fontWeight={"regular"}>
+                <Box alignItems={"flex-start"} justifyContent={"space-between"}>
+                  <Text variant="body" fontWeight={"regular"}>
                     {item.productName}
                   </Text>
-                  <Text variant="body">Price: {item.price} /Rs</Text>
-                </Row>
+                  
+                </Box>
                 <Row alignItems={"center"} justifyContent={"space-between"}>
                   <Text variant="body">Quantity: {item.quantity}</Text>
-                  <Button
+                  <Text variant="body">
+                    Price: ₹{item.price.toLocaleString("en-IN")} /Rs
+                  </Text>
+                  
+                </Row>
+                <CenterBox>
+                <Button
                     width="140px"
                     variant="outline"
                     onClick={() => removeFromCart(item.productName)}
                   >
                     Remove from Cart
                   </Button>
-                </Row>
+                  </CenterBox> 
               </Box>
             ))
           ) : (
@@ -67,29 +88,29 @@ export default function Page() {
           )}
         </Row>
         {cart.length > 0 ? (
-          <>
-            <Box
-              width="90%"
-              textAlign="center"
-              py={"xl"}
-              alignItems={"flex-end"}
-              gap={"xl"}
+          <Box
+            width="90%"
+            textAlign="center"
+            py={"xl"}
+            alignItems={"flex-end"}
+            gap={"xl"}
+          >
+            <Text variant="subHeading">
+              Grand Total: ₹{grandTotal.toFixed(2)} /Rs
+            </Text>
+            <Button
+              variant="outline"
+              width={"24%"}
+              height={"35px"}
+              onClick={() => alert("Proceed to Checkout")}
             >
-              <Text variant="subHeading">
-                Grand Total: {calculateGrandTotal()} /Rs
-              </Text>
-              <Button
-                variant="outline"
-                width={"24%"}
-                height={"35px"}
-                onClick={() => alert("Proceed to Checkout")}
-              >
-                Checkout
-              </Button>
-            </Box>
-          </>
+              Checkout
+            </Button>
+          </Box>
         ) : null}
       </Column>
     </>
   );
 }
+
+

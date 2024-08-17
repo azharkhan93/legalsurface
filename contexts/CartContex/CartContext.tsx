@@ -1,4 +1,3 @@
-"use client";
 import React, {
   createContext,
   useContext,
@@ -6,6 +5,7 @@ import React, {
   useEffect,
   ReactNode,
 } from "react";
+import { useAuth } from "../AuthContext/AuthContext";
 
 type CartItem = {
   imageUrl: string;
@@ -25,18 +25,23 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
+  const { user } = useAuth();
   const [cart, setCart] = useState<CartItem[]>([]);
 
   useEffect(() => {
-    const storedCart = localStorage.getItem("cart");
-    if (storedCart) {
-      setCart(JSON.parse(storedCart));
+    if (user) {
+      const storedCart = localStorage.getItem(`cart_${user.id}`);
+      if (storedCart) {
+        setCart(JSON.parse(storedCart));
+      }
     }
-  }, []);
+  }, [user]);
 
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+    if (user) {
+      localStorage.setItem(`cart_${user.id}`, JSON.stringify(cart));
+    }
+  }, [cart, user]);
 
   const addToCart = (item: CartItem) => {
     setCart((prevCart) => {
