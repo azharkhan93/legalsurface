@@ -21,9 +21,11 @@ type FormValues = {
 };
 type SignUpProps = {
   onClose: () => void;  
+  onSignUpSuccess: () => void;
+  
 }
 
-export const SignUp: React.FC<SignUpProps> = ({onClose}) => {
+export const SignUp: React.FC<SignUpProps> = ({onClose, onSignUpSuccess}) => {
   const [showLogin, setShowLogin] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -32,6 +34,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose}) => {
     try {
       const response = await axios.post("/api/signup", values);
       console.log("Server response:", response.data);
+      onSignUpSuccess();
       resetForm();
     } catch (error) {
       console.error("Error:", error);

@@ -11,6 +11,7 @@ type FormValues = {
   email: string;
   password: string;
 };
+
 type LoginProps = {
   onClose: () => void;  
 }
@@ -19,6 +20,10 @@ export const Login: React.FC<LoginProps> = ({ onClose }) => {
   const router = useRouter();
   const { setUser } = useAuth();
   const [showSignUp, setShowSignUp] = useState(false);
+
+  const handleSignUpSuccess = () => {
+    setShowSignUp(false); 
+  };
 
   const handleSubmit = async (values: FormValues) => {
     try {
@@ -134,10 +139,13 @@ export const Login: React.FC<LoginProps> = ({ onClose }) => {
           </Formik>
         </CenterBox>
       ) : (
-        <SignUp onClose={onClose} />
+        <SignUp onClose={onClose} onSignUpSuccess={handleSignUpSuccess} />
       )}
     </>
   );
 };
+
+
+
 
 

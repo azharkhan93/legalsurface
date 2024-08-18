@@ -5,8 +5,6 @@ const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 import { Box, Row, Text, Column, CenterBox, ContactCards } from "@/components";
 import { contactCardData } from "@/constants";
-
-// import Lottie from "lottie-react";
 import ContactAnimation from "../../animations/contact.json";
 import { Test } from "../Test";
 
@@ -17,14 +15,11 @@ export const ContactSection = () => {
       alignItems={"center"}
       justifyContent={"center"}
       bg={"primary"}
-      // py={["xxl", "header"]}
     >
       <Column
-        // border={"2px solid white"}
         flexDirection={["column", "column"]}
         width={"100%"}
         gap={20}
-        // py={"header"}
       >
         <Box
           flexDirection={["column", "row"]}
@@ -81,7 +76,7 @@ export const ContactSection = () => {
         justifyContent={"space-between"}
         flexDirection={"row"}
         gap={"circle"}
-        // px={"header"}
+       
       >
         <Box>
           <Lottie
