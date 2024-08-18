@@ -221,7 +221,7 @@ export const contactCardData = [
   {
     icon: FaMapMarkerAlt,
     text1: "Address:",
-    text2: "Rajbagh, Srinanagar J & K",
+    text2: "Rajbagh, Srinagar J & K",
   },
 
   {

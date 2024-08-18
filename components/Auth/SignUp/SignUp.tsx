@@ -20,12 +20,11 @@ type FormValues = {
   confirmpassword: string;
 };
 type SignUpProps = {
-  onClose: () => void;  
+  onClose: () => void;
   onSignUpSuccess: () => void;
-  
-}
+};
 
-export const SignUp: React.FC<SignUpProps> = ({onClose, onSignUpSuccess}) => {
+export const SignUp: React.FC<SignUpProps> = ({ onClose, onSignUpSuccess }) => {
   const [showLogin, setShowLogin] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -90,7 +89,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose, onSignUpSuccess}) => {
                     justifyContent={"center"}
                     gap={"xxl"}
                   >
-                    <Box width={["97%", "80%"]} >
+                    <Box width={["97%", "80%"]}>
                       <UpdateForm
                         name={"username"}
                         placeholder={"Username"}
@@ -98,7 +97,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose, onSignUpSuccess}) => {
                         type="text"
                       />
                     </Box>
-                    <Box width={["97%", "80%"]} >
+                    <Box width={["97%", "80%"]}>
                       <UpdateForm
                         name={"email"}
                         placeholder={"Enter Email"}
@@ -106,7 +105,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose, onSignUpSuccess}) => {
                         type="email"
                       />
                     </Box>
-                    <Box width={["97%", "80%"]}  position="relative">
+                    <Box width={["97%", "80%"]} position="relative">
                       <UpdateForm
                         name={"password"}
                         placeholder={"Your Password"}
@@ -156,7 +155,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose, onSignUpSuccess}) => {
                       flexDirection={"row"}
                     >
                       <Button
-                        width={["27%","40%"]}
+                        width={["27%", "40%"]}
                         variant={"primary"}
                         type="submit"
                         disabled={isSubmitting}
@@ -169,7 +168,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose, onSignUpSuccess}) => {
                           onClick={() => setShowLogin(true)}
                           style={{ cursor: "pointer" }}
                         >
-                         Have an Account? Sign In
+                          Have an Account? Sign In
                         </StyledLink>
                       </Box>
                     </Box>

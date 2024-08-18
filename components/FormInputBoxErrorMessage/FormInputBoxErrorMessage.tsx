@@ -7,7 +7,7 @@ export const FormInputBoxErrorMessage: React.FC<ErrorMessagrprops> = ({
   error,
 }) => {
   return (
-    <Text variant={"body"} fontSize={16} color={"primary"}>
+    <Text variant={"body"} fontSize={16} color={"red"}>
       {error}
     </Text>
   );

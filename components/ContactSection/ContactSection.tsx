@@ -17,11 +17,12 @@ export const ContactSection = () => {
       bg={"primary"}
     >
       <Column
-        flexDirection={["column", "column"]}
+        
         width={"100%"}
         gap={20}
       >
         <Box
+        py={["xxxl", "header"]}
           flexDirection={["column", "row"]}
           justifyContent={"space-between"}
           gap={"l"}
@@ -54,12 +55,14 @@ export const ContactSection = () => {
         </Box>
       </Column>
       <Box
+      border={"2px solid green"}
         width={"100%"}
-        flexDirection={["column", "row"]}
-        justifyContent={"space-between"}
-        gap={"header"}
+        flexDirection={"row"}
+        justifyContent={["center","space-between"]}
+        gap={["xl","header"]}
         py={"xl"}
-        px={"header"}
+        flexWrap={["wrap", "nowrap"]}
+        // px={"header"}
       >
         {contactCardData.map((card, index) => (
           <ContactCards
@@ -71,20 +74,24 @@ export const ContactSection = () => {
         ))}
       </Box>
       <CenterBox
-        py={"header"}
-        width={"85%"}
+        py={["xxxl","header"]}
+        
+        width={["100%","85%",]}
         justifyContent={"space-between"}
-        flexDirection={"row"}
+        flexDirection={["column-reverse","row"]}
         gap={"circle"}
        
       >
-        <Box>
+        <Box
+        alignItems={"center"}
+        // px={"header"}
+        >
           <Lottie
             animationData={ContactAnimation}
             loop={true}
             style={{
               height: "500px",
-              width: "500px",
+              width: "450px",
             }}
           />
         </Box>

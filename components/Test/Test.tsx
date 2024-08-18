@@ -64,7 +64,7 @@ export const Test: React.FC<UpdateComponentProps> = ({
           >
             <CenterBox width={"100%"} height={"100%"}>
               <Column
-                width={"70%"}
+                width={["96%","70%"]}
                 gap={"xl"}
                 border={"1px solid white"}
                 py={"l"}
@@ -97,7 +97,6 @@ export const Test: React.FC<UpdateComponentProps> = ({
                 />
                 <CenterBox width={"100%"} paddingY={"s"}>
                   <Button
-                  // borderTopRightRadius={"circle"}
                     py={"m"}
                     width={"70%"}
                     variant={isSubmitting ? `disabled` : "primary"}

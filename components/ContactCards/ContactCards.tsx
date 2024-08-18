@@ -15,14 +15,14 @@ export const ContactCards: React.FC<ContactCardProps> = ({
 }) => {
   return (
     <Column
-      maxWidth={"350px"}
-      px={"xl"}
+    width={["170px","350px"]}
+      px={["none","xl"]}
       py={"xl"}
       gap={"l"}
       alignItems={"center"}
       justifyContent={"center"}
       bg={"secondary"}
-      borderTopLeftRadius={"xl"}
+      borderTopLeftRadius={["m","xl"]}
     >
       <Box>
         <Icon fill="#D4BDE8" size={30} />

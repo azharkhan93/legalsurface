@@ -11,8 +11,7 @@ import { Footer } from "@/components/Footer/Footer";
 import { CartProvider } from "@/contexts";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { AuthProvider } from "@/contexts/AuthContext/AuthContext";
-// import { SkeletonThemeProvider } from "@/components/BlogSection/components/SkeltonTheme";
+import { AuthProvider } from "@/contexts/AuthContext/AuthContext";;
 
 export default function RootLayout({
   children,

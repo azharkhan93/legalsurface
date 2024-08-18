@@ -5,7 +5,7 @@ export const BASE_COLORS = {
   grey: "#8594A5",
   greyish: "#ACB5BD",
   greyLight: "#E9ECEF",
-  transparent: "",
+  red : "#FF0000",
   white: "#ffffff",
   modalOverlayBg: "rgba(0,0,0,0.3)",
   shadow: "rgba(115, 82, 199, 0.176) 0px 0.5rem 1.25rem",
