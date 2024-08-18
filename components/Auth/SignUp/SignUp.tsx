@@ -1,15 +1,9 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
-import {
-  Box,
-  Button,
-  CenterBox,
-  Column,
-  StyledLink,
-  UpdateForm,
-} from "@/components";
+import { Box, Button, CenterBox, Column, StyledLink, UpdateForm } from "@/components";
 import { Formik, Form } from "formik";
+import * as Yup from "yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Login } from "../Login";
 
@@ -19,10 +13,25 @@ type FormValues = {
   password: string;
   confirmpassword: string;
 };
+
 type SignUpProps = {
   onClose: () => void;
   onSignUpSuccess: () => void;
 };
+
+const FormSchema = Yup.object({
+  username: Yup.string()
+    .required("Username is required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+  password: Yup.string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Password is required"),
+  confirmpassword: Yup.string()
+    .oneOf([Yup.ref('password'),], "Passwords must match")
+    .required("Confirm Password is required")
+});
 
 export const SignUp: React.FC<SignUpProps> = ({ onClose, onSignUpSuccess }) => {
   const [showLogin, setShowLogin] = useState(false);
@@ -51,12 +60,13 @@ export const SignUp: React.FC<SignUpProps> = ({ onClose, onSignUpSuccess }) => {
               password: "",
               confirmpassword: "",
             }}
+            validationSchema={FormSchema}
             onSubmit={(values, { setSubmitting, resetForm }) => {
               handleSubmit(values, resetForm);
               setSubmitting(false);
             }}
           >
-            {({ isSubmitting }) => (
+            {({ isSubmitting, errors, touched }) => (
               <Form
                 style={{
                   width: "100%",
@@ -95,6 +105,7 @@ export const SignUp: React.FC<SignUpProps> = ({ onClose, onSignUpSuccess }) => {
                         placeholder={"Username"}
                         label={"Username"}
                         type="text"
+                        
                       />
                     </Box>
                     <Box width={["97%", "80%"]}>
@@ -103,6 +114,7 @@ export const SignUp: React.FC<SignUpProps> = ({ onClose, onSignUpSuccess }) => {
                         placeholder={"Enter Email"}
                         label={"Email"}
                         type="email"
+                       
                       />
                     </Box>
                     <Box width={["97%", "80%"]} position="relative">
@@ -111,6 +123,7 @@ export const SignUp: React.FC<SignUpProps> = ({ onClose, onSignUpSuccess }) => {
                         placeholder={"Your Password"}
                         label={"Password"}
                         type={showPassword ? "text" : "password"}
+                        
                       />
                       <Box
                         position="absolute"
@@ -132,6 +145,7 @@ export const SignUp: React.FC<SignUpProps> = ({ onClose, onSignUpSuccess }) => {
                         placeholder={"Confirm Password"}
                         label={"Confirm Password"}
                         type={showConfirmPassword ? "text" : "password"}
+                       
                       />
                       <Box
                         position="absolute"
@@ -184,3 +198,4 @@ export const SignUp: React.FC<SignUpProps> = ({ onClose, onSignUpSuccess }) => {
     </>
   );
 };
+

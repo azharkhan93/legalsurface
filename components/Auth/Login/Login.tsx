@@ -4,6 +4,7 @@ import { useAuth } from '@/contexts/AuthContext/AuthContext';
 import axios from "axios";
 import { useState } from "react";
 import { Formik, Form } from "formik";
+import * as Yup from "yup";
 import { Box, Button, CenterBox, Column, StyledLink, UpdateForm } from "@/components";
 import { SignUp } from "../SignUp";
 
@@ -15,6 +16,15 @@ type FormValues = {
 type LoginProps = {
   onClose: () => void;  
 }
+
+const FormSchema = Yup.object({
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is Required"),
+  password: Yup.string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Password is Required")
+});
 
 export const Login: React.FC<LoginProps> = ({ onClose }) => {
   const router = useRouter();
@@ -33,7 +43,6 @@ export const Login: React.FC<LoginProps> = ({ onClose }) => {
       localStorage.setItem("userId", userId);
       localStorage.setItem("userInfo", JSON.stringify({ id: userId, email }));
       
-      // Set user in context
       setUser({ id: userId, email });
       
       router.push('/');
@@ -49,8 +58,9 @@ export const Login: React.FC<LoginProps> = ({ onClose }) => {
         <CenterBox width={["100%", "80%"]} height={"100%"} p={"m"}>
           <Formik
             initialValues={{ email: "", password: "" }}
-            onSubmit={(values, { setSubmitting }) => {
-              handleSubmit(values);
+            validationSchema={FormSchema}
+            onSubmit={async (values, { setSubmitting }) => {
+              await handleSubmit(values);
               setSubmitting(false);
             }}
           >
@@ -144,6 +154,7 @@ export const Login: React.FC<LoginProps> = ({ onClose }) => {
     </>
   );
 };
+
 
 
 
