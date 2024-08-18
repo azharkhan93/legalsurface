@@ -5,13 +5,7 @@ import { connectDB } from "@/utils/connectDb";
 
 
 export async function POST(request: Request) {
-  if (request.method !== "POST") {
-    return new Response(JSON.stringify({ error: "Method Not Allowed" }), {
-      status: 405,
-    });
-  }
-
-  try {
+try {
     await connectDB();
     const body = await request.json();
     const { email, password } = body;
