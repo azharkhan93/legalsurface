@@ -57,8 +57,7 @@ export const BlogSection = () => {
 
         return <PostCards key={(item as Post).id} post={item as Post} loading={false} />;
       })}
-      {!loading && posts.length === 0 && <p>No posts available</p>}
-      {error && <p>{error}</p>}
+      
     </Box>
   );
 };

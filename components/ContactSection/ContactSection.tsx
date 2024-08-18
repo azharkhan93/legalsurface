@@ -1,8 +1,6 @@
 "use client";
 import dynamic from 'next/dynamic';
-
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
-
 import { Box, Row, Text, Column, CenterBox, ContactCards } from "@/components";
 import { contactCardData } from "@/constants";
 import ContactAnimation from "../../animations/contact.json";

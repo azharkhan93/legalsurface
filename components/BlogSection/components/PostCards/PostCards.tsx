@@ -1,5 +1,5 @@
-
-import { Column, Text } from "@/components";
+"use client"
+import { Box, Column, Text } from "@/components";
 import Image from "next/image";
 import React from "react";
 import { Post } from "../../BlogSection";
@@ -32,7 +32,7 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
           style={{ width: "100%", height: "auto", borderRadius: "0 0 0 0" }}
         />
       ) : (
-        <div
+        <Box
           style={{
             width: "100%",
             height: "270px",

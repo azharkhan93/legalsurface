@@ -26,7 +26,7 @@ export const NavbarData = [
     title: "Services",
     link: "/services",
     dropdown: [
-      { title: "Waxing And The One More Link", link: "/waxing" },
+      { title: "Waxing", link: "/waxing" },
       { title: "Nails", link: "/waxing" },
       { title: "Hair", link: "/hair" },
       

@@ -11,7 +11,10 @@ import { Footer } from "@/components/Footer/Footer";
 import { CartProvider } from "@/contexts";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { AuthProvider } from "@/contexts/AuthContext/AuthContext";;
+import { AuthProvider } from "@/contexts/AuthContext/AuthContext";
+import { LoaderProvider } from "@/contexts/LoadingContex/LoadingContext";
+
+
 
 export default function RootLayout({
   children,
@@ -32,6 +35,7 @@ export default function RootLayout({
         
           <AppThemeProvider>
             <ApolloProvider client={client}>
+            <LoaderProvider>
             <AuthProvider>
               <CartProvider>
                 <ToastContainer />
@@ -40,6 +44,7 @@ export default function RootLayout({
                 <Footer />
                 </CartProvider>
             </AuthProvider>
+            </LoaderProvider>
             </ApolloProvider>
           </AppThemeProvider>
         

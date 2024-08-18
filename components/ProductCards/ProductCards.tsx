@@ -4,12 +4,14 @@ import { Box, Text, Column, Button, Row, CenterBox } from "@/components";
 import { FaClock, FaShoppingCart } from "react-icons/fa";
 import { useCart } from "@/contexts";
 import { toast } from "react-toastify";
+import { LoadingCard } from "../BlogSection/components/LoadingCard";
 
 type ProductCardsProps = {
   imageUrl: string;
   productName: string;
   price: number;
   productDes: string;
+  loading?: boolean; 
 };
 
 export const ProductCards: React.FC<ProductCardsProps> = ({
@@ -17,9 +19,15 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
   productName,
   price,
   productDes,
+  loading = false, 
 }) => {
+  
   const { addToCart } = useCart();
 
+  if (loading) {
+    return <LoadingCard />; 
+  }
+  
   const handleAddToCart = () => {
     const product = {
       imageUrl,
@@ -37,7 +45,6 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
   return (
     <Box
       gap={"xl"}
-      boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
       overflow={"hidden"}
       flexDirection="column"
       alignItems="center"
@@ -98,4 +105,5 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
     </Box>
   );
 };
+
 
