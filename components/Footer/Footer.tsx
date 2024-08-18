@@ -14,14 +14,11 @@ export const Footer = () => {
   return (
     <>
       <Box
-        // border={"4px solid yellow"}
-        padding={"xl"}
-        alignItems={"center"}
+        padding={"m"}
+        alignItems={["flex-start","center"]}
         bg={"secondary"}
        
-        // flexDirection={["column", "row"]}
-        // height={"40vh"}
-        // flexDirection={"column"}
+       
       >
         <NewsLetter />
         <Box
@@ -34,40 +31,33 @@ export const Footer = () => {
           width={"100%"}
           // p={["none","xl"]}
           gap={"xxxl"}
+         
+           alignItems={["flex-start", "center"]}
           
           
 
           
         >
-          <Column
-            // borderRight={"1px solid #D4BDE8"}
-            // borderLeft={"1px solid #D4BDE8"}
-            textAlign={"center"}
-            overflow={"hidden"}
-            justifyContent={"center"}
-            flex={"1"}
+      
+            <Column
             color={"primary"}
-            gap={"l"}
-            
-            py={["l","xl"]}
-           
-           
-          >
+            alignItems={["flex-start","center"]}
+            gap = {"xl"}
+            >
             <Text variant={"subHeading"}>About Company</Text>
 
-            <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
-              <Text variant="body" width={"370px"}>
+           
+              <Text variant="body" width={["100%","420px"]} textAlign={["start" ,"center"]}>
                 We invite you to embark on a journey of self-discovery,
                 self-love, and self-confidence with us. Come indulge your
                 senses, pamper your soul, and let your inner radiance shine
                 bright. Your beauty journey begins here. We believe in nurturing
                 not only our clients but also the planet we call home
               </Text>
-            </Row>
-          </Column>
+              </Column>
+            
           <Column
-            // borderRight={"1px solid #D4BDE8 "}
-            textAlign={"center"}
+            textAlign={["start","center"]}
             overflow={"hidden"}
             justifyContent={"center"}
             flex={"1"}
@@ -78,13 +68,12 @@ export const Footer = () => {
             <Text variant="subHeading">Useful Links</Text>
 
             <Column
-              alignItems={"center"}
-              justifyContent={"center"}
+              alignItems={["flex-start","center"]}
+             
               gap={"m"}
               color={"primary"}
             >
               <Text variant="body">Home</Text>
-
               <Text variant="body"> About Us</Text>
               <Text variant="body">Contact Us</Text>
               <Text variant="body">Services</Text>
@@ -92,18 +81,15 @@ export const Footer = () => {
           </Column>
 
           <Column
-            // borderRight={"1px solid #D4BDE8"}
-            textAlign={"center"}
+             textAlign={["start","center"]}
             overflow={"hidden"}
-            justifyContent={"center"}
-            flex={"1"}
             gap={"l"}
             color={"primary"}
             py={["l","xl"]}
           >
             <Text variant="subHeading">Our Location</Text>
 
-            <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
+            <Row alignItems={"center"}  gap={"l"} >
               <FaMapMarkerAlt size={23} fill="#D4BDE8" />
 
               <Text variant="body">Address: Rajbagh Srinagar, India</Text>
