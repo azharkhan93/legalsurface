@@ -87,7 +87,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose}) => {
                     justifyContent={"center"}
                     gap={"xxl"}
                   >
-                    <Box width={["100%", "80%"]}>
+                    <Box width={["97%", "80%"]} >
                       <UpdateForm
                         name={"username"}
                         placeholder={"Username"}
@@ -95,7 +95,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose}) => {
                         type="text"
                       />
                     </Box>
-                    <Box width={["100%", "80%"]}>
+                    <Box width={["97%", "80%"]} >
                       <UpdateForm
                         name={"email"}
                         placeholder={"Enter Email"}
@@ -103,7 +103,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose}) => {
                         type="email"
                       />
                     </Box>
-                    <Box width={["100%", "80%"]} position="relative">
+                    <Box width={["97%", "80%"]}  position="relative">
                       <UpdateForm
                         name={"password"}
                         placeholder={"Your Password"}
@@ -124,7 +124,7 @@ export const SignUp: React.FC<SignUpProps> = ({onClose}) => {
                         )}
                       </Box>
                     </Box>
-                    <Box width={["100%", "80%"]} position="relative">
+                    <Box width={["97%", "80%"]} position="relative">
                       <UpdateForm
                         name={"confirmpassword"}
                         placeholder={"Confirm Password"}
@@ -153,8 +153,8 @@ export const SignUp: React.FC<SignUpProps> = ({onClose}) => {
                       flexDirection={"row"}
                     >
                       <Button
-                        width={"40%"}
-                        variant="primary"
+                        width={["27%","40%"]}
+                        variant={"primary"}
                         type="submit"
                         disabled={isSubmitting}
                       >
@@ -162,11 +162,11 @@ export const SignUp: React.FC<SignUpProps> = ({onClose}) => {
                       </Button>
                       <Box>
                         <StyledLink
-                          $UnderlineColor="primary"
+                          $UnderlineColor={"primary"}
                           onClick={() => setShowLogin(true)}
                           style={{ cursor: "pointer" }}
                         >
-                          Already Have an Account? Sign In
+                         Have an Account? Sign In
                         </StyledLink>
                       </Box>
                     </Box>

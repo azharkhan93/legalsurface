@@ -27,6 +27,8 @@ export const Modal: React.FC<ModalProps> = ({
       bg={"modalOverlayBg"}
     >
       <StyledModal
+      mt={["xlg", "none"]}
+      
         bg={"secondary"}
         width={["97%","45%"]}
         borderRadius={"xs"}

@@ -51,6 +51,7 @@ export const Navbar: React.FC = () => {
     router.push(link);
     setNavbarDropdownOpen(null);
     setAvatarDropdownOpen(false);
+    setIsOpen(false);
   };
 
   const handleModalOpen = () => {
@@ -116,7 +117,7 @@ export const Navbar: React.FC = () => {
                   onClick={handleAvatarDropdownToggle}
                   style={{ cursor: "pointer" }}
                 />
-                {avatarDropdownOpen && (
+                {avatarDropdownOpen ? (
                   <Box
                     alignItems={"flex-start"}
                     position="absolute"
@@ -137,12 +138,12 @@ export const Navbar: React.FC = () => {
                       Logout
                     </Text>
                   </Box>
-                )}
+                ): null}
               </Box>
             ) : (
-              <FaUser size={23} color="white" onClick={handleModalOpen} />
+              <FaUser size={23} color={"white"} onClick={handleModalOpen} />
             )}
-            <FaShoppingCart size={23} color="white" onClick={handleCartClick} />
+            <FaShoppingCart size={23} color={"white"} onClick={handleCartClick} />
           </Box>
 
           <Box onClick={handleToggle}>
@@ -179,15 +180,17 @@ export const Navbar: React.FC = () => {
                 </StyledLink>
                 {navbarDropdownOpen === index && (
                   <Box
+                  border={"2px solid #D4BDE8"}
                     position="absolute"
                     top={30}
                     left={0}
                     bg="secondary"
-                    p={"l"}
-                    width={"180px"}
+                    p={"s"}
+                    py={"l"}
+                    
                     borderRadius={"s"}
                   >
-                    <Column alignItems={"start"} gap={15}>
+                    <Box alignItems={"start"} gap={15} flexDirection={"row"} flexWrap={"wrap"} width={"200px"} >
                       {item.dropdown.map((dropdownItem, idx) => (
                         <StyledLink
                           key={idx}
@@ -196,7 +199,7 @@ export const Navbar: React.FC = () => {
                           {dropdownItem.title}
                         </StyledLink>
                       ))}
-                    </Column>
+                    </Box>
                   </Box>
                 )}
               </Box>
@@ -270,9 +273,9 @@ export const Navbar: React.FC = () => {
           ): null}
         </Box>
 
-        {isOpen && (
+        {isOpen ? (
           <CenterBox
-            border={"4px solid black"}
+            
             width="100vw"
             height="100vh"
             flexDirection="column"
@@ -335,25 +338,32 @@ export const Navbar: React.FC = () => {
                     </StyledLink>
                     {navbarDropdownOpen === index && (
                       <Box
-                        position="absolute"
-                        top={"170%"}
-                        left={0}
-                        bg={"primary"}
-                        borderRadius={"s"}
-                        p={"l"}
-                        width={"180px"}
-                      >
-                        <Column alignItems={"start"} gap={15}>
-                          {item.dropdown.map((dropdownItem, idx) => (
-                            <StyledLink
-                              key={idx}
-                              onClick={() => navigateTo(dropdownItem.link)}
+                      position="absolute"
+                      top={"120%"}
+                      left={0}
+                      bg={"primary"}
+                      borderRadius={"s"}
+                      p={"s"}
+                      zIndex={9999}
+                      
+                      // width={"180px"}
+                    >
+                      <Column alignItems={"start"} gap={15} flexWrap={"wrap"} width={"230px"}>
+                        {item.dropdown.map((dropdownItem, idx) => (
+                          <StyledLink
+                            key={idx}
+                            onClick={() => navigateTo(dropdownItem.link)}
+                          >
+                            <Text variant={"body"} color={"secondary"} 
+                            borderBottom={"2px solid black"}
                             >
                               {dropdownItem.title}
-                            </StyledLink>
-                          ))}
-                        </Column>
-                      </Box>
+                            </Text>
+                          </StyledLink>
+                        ))}
+                      </Column>
+                    </Box>
+                      
                     )}
                     
                   </Box>
@@ -372,7 +382,7 @@ export const Navbar: React.FC = () => {
          
             </Column>
           </CenterBox>
-        )}
+        ): null}
       </Row>
       <Modal
         isOpen={isModalOpen}

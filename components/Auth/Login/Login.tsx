@@ -87,7 +87,7 @@ export const Login: React.FC<LoginProps> = ({ onClose }) => {
                     justifyContent={"center"}
                     gap={"xxxl"}
                   >
-                    <Box width={["100%", "80%"]}>
+                    <Box width={["97%", "80%"]}>
                       <UpdateForm
                         name={"email"}
                         placeholder={"Enter Email"}
@@ -95,7 +95,7 @@ export const Login: React.FC<LoginProps> = ({ onClose }) => {
                         type="email"
                       />
                     </Box>
-                    <Box width={["100%", "80%"]}>
+                    <Box width={["97%", "80%"]}>
                       <UpdateForm
                         name={"password"}
                         placeholder={"Your Password"}
@@ -104,7 +104,7 @@ export const Login: React.FC<LoginProps> = ({ onClose }) => {
                       />
                     </Box>
                     <Box
-                      width={["100%", "80%"]}
+                      width={["97%", "80%"]}
                       justifyContent={"space-between"}
                       flexDirection={"row"}
                       pt={"xl"}
@@ -123,7 +123,7 @@ export const Login: React.FC<LoginProps> = ({ onClose }) => {
                           onClick={() => setShowSignUp(true)}
                           style={{ cursor: "pointer" }}
                         >
-                          Sign Up?
+                         New User Sign Up?
                         </StyledLink>
                       </Box>
                     </Box>
