@@ -1,4 +1,4 @@
-// lib/axios.ts
+
 import axios, { AxiosInstance } from 'axios';
 
 export const notionApi: AxiosInstance = axios.create({

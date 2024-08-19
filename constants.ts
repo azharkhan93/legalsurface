@@ -20,30 +20,21 @@ export const NavbarData = [
   },
   {
     title: "About",
-    link: "/about",
+    link: "/abouts",
   },
   {
     title: "Services",
-    link: "/services",
-    dropdown: [
-      { title: "Waxing", link: "/waxing" },
-      { title: "Nails", link: "/waxing" },
-      { title: "Hair", link: "/hair" },
-      
-    ],
+    link: "/servicess",
   },
   {
     title: "Contact",
-    link: "/contact",
+    link: "/contacts",
   },
   {
     title: "Blogs",
-    link: "/blog",
+    link: "/blogs",
   },
-  {
-    title: "Franchise",
-    link: "/contact",
-  },
+
 ];
 
 export const slidesData = [
