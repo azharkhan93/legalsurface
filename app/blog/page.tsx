@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 "use client";
 
 import {  TopBar } from "@/components";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <TopBar
-        backgroundImage={"/images/topimg.webp"}
+        backgroundImage={"/images/banner.jpg"}
         aboutText={"Blogs"}
         whoWeAreText={"Eplore Our New Blogs"}
       />

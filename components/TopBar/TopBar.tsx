@@ -13,9 +13,9 @@ export const TopBar: React.FC<TopNavBarProps> = ({
 }) => {
   return (
     <Column
-      alignItems={"start"}
+      alignItems={"center"}
       justifyContent={"center"}
-      height={"470px"}
+      height={"500px"}
       width={"100%"}
       style={{
         backgroundImage: `url(${backgroundImage})`,
@@ -25,18 +25,19 @@ export const TopBar: React.FC<TopNavBarProps> = ({
       }}
     >
       <Column px={"xl"} mt={"header"} py={"xxlg"} width={"100%"} gap={"xxxl"}>
-        <Row alignItems={"center"} gap={"m"}>
+        <Row alignItems={"center"} gap={"m"} justifyContent={"center"}>
+          
+          <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"}>
+            {aboutText}
+          </Text>
           <Box
             height={"3px"}
             bg={"primary"}
             width={["23%", "5%"]}
             borderRadius={"circle"}
           ></Box>
-          <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"}>
-            {aboutText}
-          </Text>
         </Row>
-        <Row alignItems={"center"} gap={"m"}>
+        <Row alignItems={"center"} gap={"m"} justifyContent={"center"}>
           <Text variant={"heading"} color="primary" fontWeight={"bold"}>
             {whoWeAreText}
           </Text>

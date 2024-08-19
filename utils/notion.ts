@@ -13,55 +13,57 @@ export async function getBlogPosts() {
         ? page.properties["Files & media"].files[0].external.url
         : page.properties["Files & media"]?.files?.[0]?.file?.url || "";
 
-    const title = page.properties.Name?.title?.[0]?.plain_text || "";
-    const description =
-      page.properties.Description?.multi_select
-        ?.map((item: any) => item.name)
-        .join(", ") || "";
+        const title =
+        page.properties["Title"]?.rich_text?.[0]?.plain_text ||
+        page.properties["Name"]?.title?.[0]?.plain_text ||
+        "";
+
+   const description = page.properties["Description"]?.rich_text?.[0].plain_text || "";
+    
 
     return {
       id: page.id,
       title,
       file,
-      description,
+      description ,
     };
   });
 }
 
-export async function getProducts(categoryFilter: string) {
-  const response = await notion.databases.query({
-    database_id: process.env.NOTION_PRODUCTS_DATABASE_ID!,
-  });
+// export async function getProducts(categoryFilter: string) {
+//   const response = await notion.databases.query({
+//     database_id: process.env.NOTION_PRODUCTS_DATABASE_ID!,
+//   });
 
-  return response.results
-    .map((page: any) => {
-      const imageUrl =
-        page.properties["Files & media"]?.files?.[0]?.type === "external"
-          ? page.properties["Files & media"].files[0].external.url
-          : page.properties["Files & media"]?.files?.[0]?.file?.url || "";
+//   return response.results
+//     .map((page: any) => {
+//       const imageUrl =
+//         page.properties["Files & media"]?.files?.[0]?.type === "external"
+//           ? page.properties["Files & media"].files[0].external.url
+//           : page.properties["Files & media"]?.files?.[0]?.file?.url || "";
 
-      const productName =
-        page.properties["Title"]?.rich_text?.[0]?.plain_text ||
-        page.properties["Name"]?.title?.[0]?.plain_text ||
-        "";
+//       const productName =
+//         page.properties["Title"]?.rich_text?.[0]?.plain_text ||
+//         page.properties["Name"]?.title?.[0]?.plain_text ||
+//         "";
 
-      const productDes =
-        page.properties["Service"]?.rich_text?.[0].plain_text || "";
+//       const productDes =
+//         page.properties["Service"]?.rich_text?.[0].plain_text || "";
 
-      const price = page.properties["Price"]?.number || 0;
+//       const price = page.properties["Price"]?.number || 0;
 
-      const category = page.properties["Category"]?.select?.name || "";
+//       const category = page.properties["Category"]?.select?.name || "";
 
-      return {
-        imageUrl,
-        productName,
-        productDes,
-        price, 
-        category,
-      };
-    })
-    .filter(
-      (product) =>
-        product.category.toLowerCase() === categoryFilter.toLowerCase()
-    );
-}
+//       return {
+//         imageUrl,
+//         productName,
+//         productDes,
+//         price, 
+//         category,
+//       };
+//     })
+//     .filter(
+//       (product) =>
+//         product.category.toLowerCase() === categoryFilter.toLowerCase()
+//     );
+// }

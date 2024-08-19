@@ -32,7 +32,7 @@ export const NavbarData = [
   },
   {
     title: "Blogs",
-    link: "/blogs",
+    link: "/blog",
   },
 
 ];
