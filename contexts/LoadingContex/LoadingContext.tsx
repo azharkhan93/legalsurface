@@ -23,9 +23,9 @@ const StyledSkeletonLoader = styled(SkeletonLoader)<{ color?: string }>`
 
 const Loader = () => (
   <Column mt={"l"} width={"95%"} gap={"m"} borderRadius="xl">
-    <StyledSkeletonLoader height={270} width="100%" wave color="#2A3277" />
-    <StyledSkeletonLoader height={50} width="80%" wave color="#2A3277" />
-    <StyledSkeletonLoader height={30} width="70%" wave color="#2A3277" />
+    <StyledSkeletonLoader height={270} width="100%" wave color="#181716" />
+    <StyledSkeletonLoader height={50} width="80%" wave color="#181716" />
+    <StyledSkeletonLoader height={30} width="70%" wave color="#181716" />
   </Column>
 );
 

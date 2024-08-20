@@ -39,24 +39,19 @@ export const NavbarData = [
 
 export const slidesData = [
   {
-    title: "Discover the Hidden Beauty Within You Today",
+    title: "Expert Legal Representation for All Your Needs",
     subtitle:
-      "Experience the ultimate in beauty indulgence at Glam Squad,our expert team transforms your look with luxurious services tailored to your unique style",
-    image: "/images/hom.jpg",
+      "Trust our seasoned attorneys to provide unparalleled legal expertise. Whether you're facing a complex legal battle or seeking guidance on important matters, our dedicated team is here to protect your rights and advocate for your best interests with precision and car",
+    
   },
 
   {
-    title: "Transform Your Look Unleash Your Inner Glow",
+    title: "Your Trusted Legal Advisors for Lifelong Support",
     subtitle:
-      "Transform your beauty routine with our expert makeup services, tailored to enhance your natural beauty",
-    image: "/images/home2.jpg",
+      "Navigate complex legal challenges with unwavering confidence. Our experienced team is committed to offering clear, strategic, and effective guidance tailored to your unique situation. Whether you're dealing with personal or business matters, we stand by you every step of the way, ensuring your legal journey is as smooth and successful as possible",
+   
   },
-  {
-    title: "Pamper Yourself Elevate Your Beauty Experience",
-    subtitle:
-      "Trust us to provide expert care that leaves you feeling confident and looking stunning. Book your appointment today and let us help you shine",
-    image: "/images/home3.jpg",
-  },
+  
 ];
 
 export const reviews = [

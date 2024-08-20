@@ -6,11 +6,15 @@ import { PostCards } from "./components/PostCards";
 import { LoadingCard } from "./components/LoadingCard";
 
 export type Post = {
-  placeholder: string | undefined;
   id: string;
   title: string;
-  file?: string;
+  file: string;
   description: string;
+  createdDate: string;
+  createdBy: string;
+  status: string;
+  url: string;
+  publicUrl: string;
 };
 
 export const BlogSection = () => {

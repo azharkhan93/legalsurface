@@ -1,116 +1,71 @@
 "use client";
-import { Box, Text, Column, CenterBox, Button, Row } from "@/components";
-import Image from "next/image";
+import { Box, Text, Column, Button } from "@/components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
-// import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { slidesData } from "@/constants";
 
 export const HeroSection = () => {
   return (
     <>
-      {/* <Navbar /> */}
       <Swiper
         navigation
-        pagination={{ type: "bullets", clickable: true }}
         autoplay={{ delay: 2000 }}
         loop={true}
         modules={[Autoplay, Pagination]}
       >
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
-            <CenterBox
-              mt={"header"}
-              justifyContent={"space-between"}
+            <Box
+              alignItems={"center"}
+              justifyContent={"center"}
               flexDirection={["column", "row"]}
-              // padding={"xl"}
-              height={["100vh", "90vh"]}
-              // backgroundImage={slide.image}
-              // backgroundPosition={"center"}
-              // backgroundRepeat={"no-repeat"}
-              // backgroundSize={"cover"}
-              // backgroundColor={"primaryLight"}
-              px={["none", "xl"]}
+              height={["100vh", "100vh"]}
+              bg={"secondary"}
             >
               <Column
-                textAlign={"center"}
-                maxWidth={"600px"}
-                gap={"l"}
-                py={"xl"}
+                px={"m"}
+                alignItems={"center"}
+                justifyContent={"center"}
+                gap={"xxxl"}
+                py={"s"}
+                width={["100%", "690px"]}
               >
                 <Text
+                  textAlign={["start", "center"]}
                   variant={["subHeading", "heading"]}
-                  fontFamily={["Arial, sans-serif", "Arial, sans-serif"]}
-                  textShadow={"-moz-initial"}
                   fontWeight={"bold"}
-                  color={"secondary"}
-                  px={["xl", "xxxl"]}
-                  pt={"xxxl"}
+                  color={"primary"}
                 >
                   {slide.title}
                 </Text>
                 <Text
+                  textAlign={["start", "center"]}
                   variant={["body", "body"]}
-                  color={"secondary"}
-                  px={["l", "header"]}
+                  color={"primary"}
+                  width={["100%", "590px"]}
                 >
                   {slide.subtitle}
                 </Text>
-                <CenterBox mt={"l"}>
+
+                <Box alignItems={["flex-start", "center"]} width={"100%"}>
                   <Button
                     variant={"primary"}
                     borderRadius={"circle"}
                     py={"m"}
-                    background={"secondary"}
+                    bg={"white"}
                     px={"xxxl"}
-                    style={{ background: "#2A3277" }}
                   >
-                    Explore More
+                    Know More
                   </Button>
-                </CenterBox>
-              </Column>
-              <Row
-                borderRadius={"xl"}
-                alignItems={"center"}
-                justifyContent={"space-between"}
-                flexDirection={"row"}
-                gap={"xxl"}
-                // mr={"header"}
-                // border={"2px solid yellow"}
-                // mb={"header"}
-
-                // boxShadow={"modalOverlay"}
-              >
-                <Image
-                  src={slide.image}
-                  alt="slider image"
-                  width={290}
-                  height={300}
-                  style={{ borderRadius: "80px" }}
-                />
-                <Box
-                  // mb={"header"}
-                  display={["none", "block"]}
-                  // px={"xxl"}
-                  py={"xxl"}
-                  borderRadius={"circle"}
-                  // border={"2px solid red"}
-                >
-                  <Image
-                    src={slide.image}
-                    alt="no image"
-                    width={250}
-                    height={400}
-                    style={{ borderRadius: "80px" }}
-                  />
                 </Box>
-              </Row>
-            </CenterBox>
+              </Column>
+            </Box>
           </SwiperSlide>
         ))}
       </Swiper>
     </>
   );
 };
+

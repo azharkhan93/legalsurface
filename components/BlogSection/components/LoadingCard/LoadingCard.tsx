@@ -12,7 +12,7 @@ export const LoadingCard: React.FC = () => {
       width={{ xs: "100%", sm: "48%", md: "30%" }}
       border="2px solid #e0e0e0"
       overflow="hidden"
-      bg="primaryLight"
+      bg="white"
       borderRadius={"lg"}
     >
       <Box width={"100%"} height={"190px"}>
