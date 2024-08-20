@@ -1,7 +1,8 @@
 "use client";
-import { Box, Column, Text } from "@/components";
+import { Box, Button, Column, Text } from "@/components";
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/navigation";
 import { Post } from "../../BlogSection";
 import { LoadingCard } from "../LoadingCard";
 
@@ -10,21 +11,34 @@ type PostCardProps = {
   loading?: boolean;
 };
 
+const truncateText = (text: string, wordLimit: number) => {
+  const words = text.split(' ');
+  if (words.length <= wordLimit) return text;
+  return words.slice(0, wordLimit).join(' ') + '...';
+};
+
 export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
+  const router = useRouter();
+
+  const handleViewMore = () => {
+    if (post.slug) {
+      router.push(`/blogs/${post.slug}`);
+    }
+  };
+
   if (loading) {
     return <LoadingCard />;
   }
+  console.log('Original Description Text:', post.description);
 
   return (
     <Column
-    width={{ xs: "100%", sm: "48%", md: "30%" }}
+      width={{ xs: "100%", sm: "48%", md: "30%" }}
       border="2px solid red"
       borderRadius="xl"
       overflow="hidden"
       bg={"white"}
-
     >
-   
       {post.file ? (
         <Image
           src={post.file}
@@ -47,29 +61,39 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
           {post.title || "Untitled Post"}
         </Text>
         <Text variant="body" color="secondary">
-          {post.description || "No description available."}
+          {truncateText(post.description || "No description available.", 30)}
         </Text>
+        <Button
+          variant="primary"
+          width={"200px"}
+          style={{ background: "black" }}
+          onClick={handleViewMore}
+        >
+          View More
+        </Button>
         <Text variant="body" color="secondary">
           {post.createdDate
             ? `Created on: ${new Date(post.createdDate).toLocaleDateString()}`
             : "Date not available"}
         </Text>
         <Box
-        width={"90%"}
-        alignItems={"center"}
-        flexDirection={"row"}
-        justifyContent={"space-between"}
+          width={"90%"}
+          alignItems={"center"}
+          flexDirection={"row"}
+          justifyContent={"space-between"}
         >
-        <Text variant="body" color="secondary">
-          {post.createdBy
-            ? `Created by: ${post.createdBy}`
-            : "Author not available"}
-        </Text>
-        <Text variant="body" color="secondary">
-          {post.status ? `Status: ${post.status}` : "Status not available"}
-        </Text>
+          <Text variant="body" color="secondary">
+            {post.createdBy
+              ? `Created by: ${post.createdBy}`
+              : "Author not available"}
+          </Text>
+          <Text variant="body" color="secondary">
+            {post.status ? `Status: ${post.status}` : "Status not available"}
+          </Text>
         </Box>
       </Column>
     </Column>
   );
 };
+
+

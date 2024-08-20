@@ -3,92 +3,103 @@ import { Client } from "@notionhq/client";
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 export async function getBlogPosts() {
-  // Query the Notion database for blog posts
-  const response = await notion.databases.query({
-    database_id: process.env.NOTION_DATABASE_ID!,
-  });
+  try {
+    const response = await notion.databases.query({
+      database_id: process.env.NOTION_DATABASE_ID!,
+    });
 
-  // Process each page (blog post) from the response
-  const blogPosts = await Promise.all(
-    response.results.map(async (page: any) => {
-      // Extract the slug, file URL, title, created date, and created by information
-      const slug = page.properties["slug"]?.rich_text?.[0]?.plain_text || "";
-      const file =
-        page.properties["Files & media"]?.files?.[0]?.type === "external"
-          ? page.properties["Files & media"].files[0].external.url
-          : page.properties["Files & media"]?.files?.[0]?.file?.url || "";
+    const blogPosts = await Promise.all(
+      response.results.map(async (page: any) => {
+        const slug = page.properties["slug"]?.rich_text?.[0]?.plain_text || "";
+        const file =
+          page.properties["Files & media"]?.files?.[0]?.type === "external"
+            ? page.properties["Files & media"].files[0].external.url
+            : page.properties["Files & media"]?.files?.[0]?.file?.url || "";
 
-      const title =
-        page.properties["Title"]?.title?.[0]?.plain_text ||
-        page.properties["Name"]?.title?.[0]?.plain_text ||
-        "";
+        const title =
+          page.properties["Title"]?.title?.[0]?.plain_text ||
+          page.properties["Name"]?.title?.[0]?.plain_text ||
+          "";
 
-      const createdDate = page.properties["Created"]?.created_time || "";
-      
-      // Fetch and process the content blocks for the description
-      const descriptionBlocks = await getPageContent(page.id);
-      const richTextData = extractRichText(descriptionBlocks);
+        const createdDate = page.properties["Created"]?.created_time || "";
 
-      // Handle the case where descriptionBlocks might be empty or invalid
-      const description = richTextData.join(' ') || ""; // Ensure it's a string or empty
+        // Fetch and process the content blocks for the rich text description
+        const descriptionBlocks = await getPageContent(page.id);
+        const richTextData = extractRichText(descriptionBlocks);
 
-      const createdBy =
-        page.properties["Created by"]?.people?.map((person: any) => person.name).join(", ") || "";
+        const description = richTextData.join(" ") || "";
 
-      const status = page.properties["Status"]?.status?.name || "";
+        const createdBy =
+          page.properties["Created by"]?.people?.map((person: any) => person.name).join(", ") || "";
 
-      // Console log the extracted rich text content
-      console.log(`Rich Text for post "${title}" (${slug}):`, richTextData);
+        const status = page.properties["Status"]?.status?.name || "";
 
-      // Return the processed blog post data
-      return {
-        id: page.id,
-        title,
-        file,
-        description,
-        createdDate,
-        createdBy,
-        status,
-        slug,
-      };
-    })
-  );
+        console.log(`Rich Text for post "${description}" (${slug}):`, richTextData);
 
-  return blogPosts;
+        return {
+          id: page.id,
+          title,
+          file,
+          description,
+          createdDate,
+          createdBy,
+          status,
+          slug,
+        };
+      })
+    );
+
+    return blogPosts;
+  } catch (error) {
+    console.error("Failed to fetch blog posts:", error);
+    throw new Error("Failed to fetch blog posts.");
+  }
 }
 
-// Function to fetch the blocks (content) of a page
 async function getPageContent(pageId: string) {
-  const blocks = [];
+  const blocks: any[] = [];
   let cursor: string | undefined = undefined;
 
   do {
-    // Fetch child blocks of the page
     const { results, next_cursor } = await notion.blocks.children.list({
       block_id: pageId,
       start_cursor: cursor,
     });
     blocks.push(...results);
-    cursor = next_cursor;
+    cursor = next_cursor ?? undefined;
   } while (cursor);
 
   return blocks;
 }
 
-// Function to extract rich text data from blocks
 function extractRichText(blocks: any[]): string[] {
-  return blocks.map(block => {
-    switch (block.type) {
-      case 'heading_1':
-      case 'heading_2':
-      case 'paragraph':
-        return block[block.type].rich_text.map((text: any) => text.plain_text).join(' ');
-      case 'image':
-        // For images, you might want to handle them differently, e.g., return an empty string or a specific placeholder
-        return '';
-      default:
-        // Handle unsupported block types
-        return 'Unsupported block type';
+  return blocks.map((block) => {
+    try {
+      switch (block.type) {
+        case "heading_1":
+        case "heading_2":
+        case "heading_3":
+        case "paragraph":
+          return block[block.type]?.rich_text?.map((text: any) => {
+            if (text.type === "text") {
+              return text.text.content;
+            }
+            return "";
+          }).join(" ") || "";
+        case "image":
+          const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
+          return imageUrl ? `<img src="${imageUrl}" alt="Image" style="max-width: 100%; height: auto;" />` : "";
+        case "embed":
+          const embedUrl = block.embed?.url || "";
+          return embedUrl ? `<a href="${embedUrl}" target="_blank" rel="noopener noreferrer">${embedUrl}</a>` : "";
+        case "url":
+          return `<a href="${block.url.url}" target="_blank" rel="noopener noreferrer">${block.url.url}</a>`;
+        default:
+          return "Unsupported block type";
+      }
+    } catch (error) {
+      console.error("Error processing block:", block, error);
+      return "Error processing block";
     }
   });
 }
@@ -96,42 +107,34 @@ function extractRichText(blocks: any[]): string[] {
 
 
 
-
-
-// export async function getProducts(categoryFilter: string) {
-//   const response = await notion.databases.query({
-//     database_id: process.env.NOTION_PRODUCTS_DATABASE_ID!,
+// function extractRichText(blocks: any[]): string[] {
+//   return blocks.map((block) => {
+//     try {
+//       switch (block.type) {
+//         case "heading_1":
+//         case "heading_2":
+//         case "heading_3":
+//         case "paragraph":
+//           return block[block.type].rich_text?.map((text: any) => text.plain_text).join(" ") || "";
+//         case "image":
+//           const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
+//           return imageUrl ? `Image: ${imageUrl}` : "Image block without URL";
+//         case "url":
+//           return block[block.type].rich_text?.map((text: any) => text.plain_text).join(" ") || "";
+//         default:
+//           return "Unsupported block type";
+//       }
+//     } catch (error) {
+//       console.error("Error processing block:", block, error);
+//       return "Error processing block";
+//     }
 //   });
-
-//   return response.results
-//     .map((page: any) => {
-//       const imageUrl =
-//         page.properties["Files & media"]?.files?.[0]?.type === "external"
-//           ? page.properties["Files & media"].files[0].external.url
-//           : page.properties["Files & media"]?.files?.[0]?.file?.url || "";
-
-//       const productName =
-//         page.properties["Title"]?.rich_text?.[0]?.plain_text ||
-//         page.properties["Name"]?.title?.[0]?.plain_text ||
-//         "";
-
-//       const productDes =
-//         page.properties["Service"]?.rich_text?.[0].plain_text || "";
-
-//       const price = page.properties["Price"]?.number || 0;
-
-//       const category = page.properties["Category"]?.select?.name || "";
-
-//       return {
-//         imageUrl,
-//         productName,
-//         productDes,
-//         price, 
-//         category,
-//       };
-//     })
-//     .filter(
-//       (product) =>
-//         product.category.toLowerCase() === categoryFilter.toLowerCase()
-//     );
 // }
+
+
+
+
+
+
+
+

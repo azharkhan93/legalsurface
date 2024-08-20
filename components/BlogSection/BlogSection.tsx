@@ -15,6 +15,7 @@ export type Post = {
   status: string;
   url: string;
   publicUrl: string;
+  slug: string; 
 };
 
 export const BlogSection = () => {
@@ -61,7 +62,6 @@ export const BlogSection = () => {
 
         return <PostCards key={(item as Post).id} post={item as Post} loading={false} />;
       })}
-      
     </Box>
   );
 };
