@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-import { Box, Text } from "@/components";
+import { Box, Column, Text, TopBar } from "@/components";
 import Image from "next/image";
 import axios from "axios";
 
@@ -28,11 +28,8 @@ export default function Page({ params }: PageProps) {
   useEffect(() => {
     async function fetchPost() {
       try {
-      //   const response = await axios.get("/api/blogpost");
-      
-      // setPost(response.data);
          const response = await axios.get(`/api/blogpost?slug=${slug}`);
-         console.log("Fetched posts:", response.data);
+        //  console.log("Fetched posts:", response.data);
          setPost(response.data);
       } catch (error) {
         console.error("Failed to fetch post:", error);
@@ -48,42 +45,61 @@ export default function Page({ params }: PageProps) {
   if (!post) return <p>Post not found</p>;
 
   return (
+
+    <>
+    <TopBar backgroundImage={"/images/hero.jpg"} aboutText={"Blogs Page"} whoWeAreText={"Explore Now"} />
     <Box
+    bg={"secondary"}
       width={"100%"}
-      mt={"xlg"}
+      // mt={"xl"}
       alignItems="center"
-      justifyContent="space-between"
-      px="s"
-      py="xxl"
+      // justifyContent="space-between"
+      // px="s"
+      // py="xxl"
+      gap={"header"}
     >
       <Box
-        py={["xl", "xxxl"]}
-        gap={"xl"}
+      
+        py={["xl", "header"]}
+        gap={"header"}
         alignItems={"center"}
-        flexDirection={["column", "row"]}
       >
         <Box
           alignItems={"center"}
-          width={"45%"}
+          // width={"45%"}
           gap={"l"}
+          flexDirection={"row"}
         >
           <Image
             src={post.file || "/default-image.png"}
             alt={post.title || "Post Image"}
-            width={400}
-            height={200}
-            style={{ borderRadius: "8px" }}
-          />
-          <Text variant="heading" color="primary">
-            {post.title}
-          </Text>
-          <Text variant="subHeading" color="white">
-            {post.status || "No status available"}
-          </Text>
+            width={450}
+            height={250}
+            style={{ borderRadius: "8px" }} />
+          <Column
+            alignItems={"center"}
+            border={"2px solid red"}
+            width={"400px"}
+            px={"xl"}
+          >
+            <Text variant="subHeading" color="white">
+              {post.title}
+            </Text>
+            <Text variant="body" color="white">
+              {post.status || "No status available"}
+            </Text>
+          </Column>
         </Box>
-        <Text variant="body" dangerouslySetInnerHTML={{ __html: post.description }} />
+        <Box
+        bg={"secondary"}
+          width={"850px"}
+          color="white"
+          gap={"xl"}
+        >
+          <Text variant="body" dangerouslySetInnerHTML={{ __html: post.description }} />
+        </Box>
       </Box>
-    </Box>
+    </Box></>
   );
 }
 

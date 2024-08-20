@@ -55,6 +55,7 @@ export const BlogSection = () => {
       width="100%"
       px="xxxl"
       py="header"
+      bg={"secondary"}
     >
       {itemsToRender.map((item, index) => {
         if (loading && item === null) {

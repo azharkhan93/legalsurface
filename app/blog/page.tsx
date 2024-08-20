@@ -1,6 +1,4 @@
-
 "use client";
-
 import {  TopBar } from "@/components";
 import { BlogSection } from "@/components/BlogSection";
 
