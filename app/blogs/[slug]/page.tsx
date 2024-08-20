@@ -74,7 +74,7 @@ export default function Page({ params }: PageProps) {
                     width={"400px"}
                     px={"xl"}
                     gap={"s"}
-                    border={"3px solid red"}
+                    // border={"3px solid red"}
                   >
                     <Text variant="subHeading" color="white">
                       {post.title}

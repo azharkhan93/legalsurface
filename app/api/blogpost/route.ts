@@ -1,4 +1,3 @@
-// src/app/api/blogpost/route.ts (or adjust the path as needed)
 import { getBlogPosts } from '@/utils/notion';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -10,7 +9,6 @@ export async function GET(request: NextRequest) {
     const posts = await getBlogPosts();
 
     if (slug) {
-      // Filter posts by slug if provided
       const post = posts.find((p) => p.slug === slug);
       if (post) {
         return NextResponse.json(post);
@@ -19,7 +17,6 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    // Return all posts if no slug is provided
     return NextResponse.json(posts);
   } catch (error) {
     console.error('Failed to fetch blog posts:', error);
