@@ -37,7 +37,7 @@ export const TopBar: React.FC<TopNavBarProps> = ({
             borderRadius={"circle"}
           ></Box>
         </Row>
-        <Row alignItems={"center"} gap={"m"} justifyContent={"center"}>
+        <Row alignItems={["flex-start","center"]} gap={"m"} justifyContent={"center"}>
           <Text variant={"heading"} color="primary" fontWeight={"bold"}>
             {whoWeAreText}
           </Text>
