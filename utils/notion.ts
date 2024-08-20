@@ -28,7 +28,7 @@ export async function getBlogPosts() {
         const descriptionBlocks = await getPageContent(page.id);
         const richTextData = extractRichText(descriptionBlocks);
 
-        console.log("here is the data", richTextData);
+        // console.log("here is the data", richTextData);
 
         const description = richTextData.join(" ") || "";
 
@@ -73,7 +73,7 @@ async function getPageContent(pageId: string) {
     cursor = next_cursor ?? undefined;
   } while (cursor);
 
-  console.log("Fetched blocks:", blocks);
+  // console.log("Fetched blocks:", blocks);
   return blocks;
 }
 
@@ -121,7 +121,7 @@ function processRichText(richTextArray: any[]): string {
           (url: string) => `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`
         );
 
-        console.log("Processed rich text:", { original: content, processed: processedContent });
+        // console.log("Processed rich text:", { original: content, processed: processedContent });
 
         return processedContent;
       }
@@ -131,57 +131,3 @@ function processRichText(richTextArray: any[]): string {
 }
 
 
-// function extractRichText(blocks: any[]): string[] {
-//   return blocks.map((block) => {
-//     try {
-//       switch (block.type) {
-//         case "heading_1":
-//         case "heading_2":
-//         case "heading_3":
-//         case "paragraph":
-//           return block[block.type]?.rich_text?.map((text: any) => {
-//             if (text.type === "text") {
-//               return text.text.content;
-//             }
-//             return "";
-//           }).join(" ") || "";
-//         case "image":
-//           const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
-//           return imageUrl ? `<img src="${imageUrl}" alt="Image" style="max-width: 40%; height: auto;" />` : "";
-//         case "embed":
-//         case "url":
-//           const embedUrl = block[block.type]?.url || "";
-//           return embedUrl ? `<a href="${embedUrl}" target="_blank" rel="noopener noreferrer">${embedUrl}</a>` : "";
-//         default:
-//           return "Unsupported block type";
-//       }
-//     } catch (error) {
-//       console.error("Error processing block:", block, error);
-//       return "Error processing block";
-//     }
-//   });
-// }
-
-// function extractRichText(blocks: any[]): string[] {
-//   return blocks.map((block) => {
-//     try {
-//       switch (block.type) {
-//         case "heading_1":
-//         case "heading_2":
-//         case "heading_3":
-//         case "paragraph":
-//           return block[block.type].rich_text?.map((text: any) => text.plain_text).join(" ") || "";
-//         case "image":
-//           const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
-//           return imageUrl ? `Image: ${imageUrl}` : "Image block without URL";
-//         case "url":
-//           return block[block.type].rich_text?.map((text: any) => text.plain_text).join(" ") || "";
-//         default:
-//           return "Unsupported block type";
-//       }
-//     } catch (error) {
-//       console.error("Error processing block:", block, error);
-//       return "Error processing block";
-//     }
-//   });
-// }
