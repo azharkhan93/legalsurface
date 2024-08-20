@@ -20,6 +20,8 @@ export async function getBlogPosts() {
           page.properties["Title"]?.title?.[0]?.plain_text ||
           page.properties["Name"]?.title?.[0]?.plain_text ||
           "";
+          const description1 =
+          page.properties["Description"].rich_text[0]?.plain_text || "";
 
         const createdDate = page.properties["Created"]?.created_time || "";
 
@@ -42,6 +44,7 @@ export async function getBlogPosts() {
           title,
           file,
           description,
+          description1,
           createdDate,
           createdBy,
           status,

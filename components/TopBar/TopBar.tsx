@@ -1,6 +1,6 @@
 import { Box, CenterBox, Column, Row, Text } from "../styled";
 
-interface TopNavBarProps {
+type TopNavBarProps = {
   backgroundImage: string;
   aboutText: string;
   whoWeAreText: string;
@@ -33,7 +33,7 @@ export const TopBar: React.FC<TopNavBarProps> = ({
           <Box
             height={"3px"}
             bg={"primary"}
-            width={["23%", "5%"]}
+            width={["23%", "8%"]}
             borderRadius={"circle"}
           ></Box>
         </Row>

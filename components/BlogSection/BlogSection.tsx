@@ -53,7 +53,7 @@ export const BlogSection = () => {
       flexDirection="row"
       gap="xxxl"
       width="100%"
-      px="xxxl"
+      px={["l","xxxl"]}
       py="header"
       bg={"secondary"}
     >

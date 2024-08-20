@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button, Column, Text } from "@/components";
+import { Box, Button, CenterBox, Column, Text } from "@/components";
 import Image from "next/image";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -36,9 +36,9 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
   return (
     <Column
       width={{ xs: "100%", sm: "48%", md: "30%" }}
-      border="2px solid red"
+      border="2px solid white"
       borderRadius="xl"
-      overflow="hidden"
+      overflow={"hidden"}
       bg={"white"}
     >
       {post.file ? (
@@ -65,23 +65,22 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
         <Text variant="body" color="secondary">
           {showFullText
             ? post.description || "No description available."
-            : truncateText(post.description1 || "No description available.", 90)}
+            : truncateText(post.description1 || "No description available.", 30)}
         </Text>
+       
         <Button
-          variant="primary"
-          width={"200px"}
+        variant="primary"
+          py={"s"}
+          px={"xl"}
+          // width={"50px"}
           style={{ background: "black" }}
           onClick={handleViewMore}
         >
-          {showFullText ? "View Full Post" : "View More"}
+          {showFullText ? "View Full Post" : "Read Blog"}
         </Button>
-        <Text variant="body" color="secondary">
-          {post.createdDate
-            ? `Created on: ${new Date(post.createdDate).toLocaleDateString()}`
-            : "Date not available"}
-        </Text>
+        
         <Box
-          width={"90%"}
+          width={["100%","90%"]}
           alignItems={"center"}
           flexDirection={"row"}
           justifyContent={"space-between"}
@@ -94,7 +93,13 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
           <Text variant="body" color="secondary">
             {post.status ? `Status: ${post.status}` : "Status not available"}
           </Text>
+          
         </Box>
+        <Text variant="body" color="secondary">
+          {post.createdDate
+            ? `Created on: ${new Date(post.createdDate).toLocaleDateString()}`
+            : "Date not available"}
+        </Text>
       </Column>
     </Column>
   );

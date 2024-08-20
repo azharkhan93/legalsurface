@@ -7,7 +7,7 @@ import { client } from "@/utils/apolloClient";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/Navbar/Navbar";
-import { Footer } from "@/components/Footer/Footer";
+// import { Footer } from "@/components/Footer/Footer";
 import { CartProvider } from "@/contexts";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -41,7 +41,7 @@ export default function RootLayout({
                 <ToastContainer />
                 <Navbar />
                 {children}
-                <Footer />
+                {/* <Footer /> */}
                 </CartProvider>
             </AuthProvider>
             </LoaderProvider>
