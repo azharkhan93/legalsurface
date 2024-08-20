@@ -1,7 +1,7 @@
 "use client";
 import { Box, Button, Column, Text } from "@/components";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Post } from "../../BlogSection";
 import { LoadingCard } from "../LoadingCard";
@@ -19,17 +19,19 @@ const truncateText = (text: string, wordLimit: number) => {
 
 export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
   const router = useRouter();
+  const [showFullText, setShowFullText] = useState(false);
 
   const handleViewMore = () => {
     if (post.slug) {
       router.push(`/blogs/${post.slug}`);
+    } else {
+      setShowFullText(true);
     }
   };
 
   if (loading) {
     return <LoadingCard />;
   }
-  console.log('Original Description Text:', post.description);
 
   return (
     <Column
@@ -57,11 +59,13 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
         />
       )}
       <Column alignItems="flex-start" gap="l" px="m" py="xxxl">
-        <Text variant="subHeading" fontWeight="bold">
+        <Text variant="subHeading" >
           {post.title || "Untitled Post"}
         </Text>
         <Text variant="body" color="secondary">
-          {truncateText(post.description || "No description available.", 30)}
+          {showFullText
+            ? post.description || "No description available."
+            : truncateText(post.description1 || "No description available.", 90)}
         </Text>
         <Button
           variant="primary"
@@ -69,7 +73,7 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
           style={{ background: "black" }}
           onClick={handleViewMore}
         >
-          View More
+          {showFullText ? "View Full Post" : "View More"}
         </Button>
         <Text variant="body" color="secondary">
           {post.createdDate

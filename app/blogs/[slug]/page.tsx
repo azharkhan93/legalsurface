@@ -14,7 +14,6 @@ type Post = {
   slug: string;
   file?: string;
   title: string;
-  // description: RichTextItem[];
    description: string; 
   createdDate?: string;
   createdBy?: string;

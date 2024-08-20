@@ -10,6 +10,7 @@ export type Post = {
   title: string;
   file: string;
   description: string;
+  description1: string;
   createdDate: string;
   createdBy: string;
   status: string;
