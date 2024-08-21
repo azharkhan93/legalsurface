@@ -56,7 +56,7 @@ export const slidesData = [
 
 export const reviews = [
   {
-    image: "/images/home3.jpg",
+    image: "/images/banner.jpg",
     alt: "John Doe",
     name: "Mr Waqar",
     position: "Regular Client",
@@ -65,7 +65,7 @@ export const reviews = [
       "Thoroughly enjoyed the services provided by our team. They particularly appreciated the efficient and professional manner in which our team worked.",
   },
   {
-    image: "/images/home3.jpg",
+    image: "/images/banner.jpg",
     alt: "Jane Smith",
     name: "Mr Hero",
     position: "Regular Client",
@@ -74,7 +74,7 @@ export const reviews = [
       "Its the best salon I Have ever been to. The staff is incredibly talented and always makes me feel welcome. The services are top-notch.",
   },
   {
-    image: "/images/home3.jpg",
+    image: "/images/banner.jpg",
     alt: "Alice Johnson",
     name: "Mr Chicken",
     position: "Regular Client",
@@ -83,7 +83,7 @@ export const reviews = [
       "I can confidently say that its the premier salon in town. The exceptional service and attention to detail always exceed my expectations.",
   },
   {
-    image: "/images/home3.jpg",
+    image: "/images/banner.jpg",
     alt: "Aman",
     name: "Mr Amaan",
     position: "Regular Client",
@@ -95,22 +95,22 @@ export const reviews = [
 
 export const services = [
   {
-    image: "/images/home3.jpg",
+    image: "/images/banner.jpg",
     text: "Waxing",
     text2: "At Home",
   },
   {
-    image: "/images/home3.jpg",
+    image: "/images/banner.jpg",
     text: "Facial",
     text2: "At Home",
   },
   {
-    image: "/images/home3.jpg",
+    image: "/images/banner.jpg",
     text: "Lashes",
     text2: "At Home",
   },
   {
-    image: "/images/home3.jpg",
+    image: "/images/banner.jpg",
     text: "Threading",
     text2: "At Home",
   },

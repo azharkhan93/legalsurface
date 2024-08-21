@@ -76,6 +76,7 @@ export const Navbar: React.FC = () => {
           borderRadius={"circle"}
           px={"xl"}
           bg={"black"}
+          style={{background: "black", borderBottom: "3px solid White"}}
         >
           Book A Consulation
         </Button>
