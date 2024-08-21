@@ -1,9 +1,10 @@
 "use client";
 import {
   About,
-  BookingSteps,
+
   ClientReviews,
   HeroSection,
+  LatestBlogs,
   NewsLetter,
   ServiceSection,
   Services,
@@ -16,6 +17,8 @@ export default function Page() {
        {/* <Services /> */}
 
       <About />
+
+      <LatestBlogs />
       
 
       {/* <ServiceSection /> */}

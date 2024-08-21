@@ -19,7 +19,7 @@ export type Post = {
   slug: string; 
 };
 
-export const BlogSection = () => {
+export const BlogSection = ({ limit }: { limit?: number }) => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -44,7 +44,7 @@ export const BlogSection = () => {
 
   const skeletons = Array(maxSkeletons).fill(null);
 
-  const itemsToRender = loading ? skeletons : posts;
+  const itemsToRender = loading ? skeletons : posts.slice(0, limit);
 
   return (
     <Box
@@ -53,7 +53,7 @@ export const BlogSection = () => {
       flexDirection="row"
       gap="xxxl"
       width="100%"
-      px={["l","xxxl"]}
+       px={["l","xxxl"]}
       py="header"
       bg={"secondary"}
     >

@@ -1,11 +1,12 @@
 import { Box, Button, CenterBox, Row, Text } from "@/components";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
+import { borderBottom } from "styled-system";
 
 export const NewsLetter = () => {
   return (
     <Box
-      bg={"secondary"}
+      bg={"grey"}
       borderBottom={"1px solid #D4BDE8"}
       alignItems={"center"}
       flexDirection={["column-reverse", "row"]}
@@ -26,6 +27,7 @@ export const NewsLetter = () => {
         py={"m"}
         px={"xl"}
         borderBottom={"3px solid white"}
+        style={{background: "black", borderBottom: "3px solid White"}}
         >
           Book A Consulation
 
