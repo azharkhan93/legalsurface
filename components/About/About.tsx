@@ -8,84 +8,69 @@ import {
   Text,
 } from "@/components";
 import Image from "next/image";
-import { columnCardData } from "@/constants";
 
 export const About: React.FC = () => {
   return (
     <>
-      <Column
-        bg={"primary"}
-        flexDirection={["column", "row"]}
-        
-        py={["xxl", "header"]}
+      <Box
+        width={"100%"}
+        height={"100vh"}
+        alignItems={"flex-start"}
+        style={{
+          backgroundImage: `url('/images/banner.jpg')`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
       >
-        <Box
-          flexDirection={["column", "row"]}
-          justifyContent={"space-between"}
-          gap={"l"}
-          px={"xl"}
+        <Box bg={"whiteOverlay"} height={["63vh","100vh"]} 
+        py={"xl"}
+        width={["100%","43%"]}
+        px={["m","xl"]}
+        gap={["xl","xxxl"]}
+        justifyContent={["start", "center"]}
         >
-          <Column gap={["xl", "m"]}>
-            <Text variant={"heading"} fontWeight={"bold"} color={"secondary"}>
-              About Us
-            </Text>
-            <Box
-              height={"3px"}
-              bg={"secondary"}
-              width={"70%"}
-              ml={"header"}
-              borderRadius={"circle"}
-            ></Box>
-            <Text
-              variant={"subHeading"}
-              fontWeight={"bold"}
-              color={"secondary"}
-            >
-              Why Choose Us
-            </Text>
-          </Column>
-
-          <CenterBox width={["100%", "450px"]}>
-            <Text color={"secondary"} variant={"body"}>
-              We are here to provide you with best makeup services at home. Dont
-              hesitate to reach out, and we will get back to you promptly.
-            </Text>
-          </CenterBox>
-        </Box>
-        <Box
-      
-          flexDirection={["column-reverse", "row"]}
-          alignItems={"center"}
-          justifyContent={"space-between"}
+          <Text variant={"heading"} textAlign={"start"}>Expertise</Text>
+          <Text variant={["subHeading","heading"]}>
+            Facilitating commercial legal solutions
+          </Text>
+          <Text variant={"body"}>
+            Our expertise across diverse practice areas and sectors covers
+            varied and nuanced needs. Backed by over 100 years of legal
+            heritage, delighted clients from across the globe, and topical,
+            commercial and specialised services, we deliver the best legal
+            solutions for our clients
+          </Text>
+          <Row
           width={"100%"}
-          px={["none", "header"]}
-        >
-          <CenterBox borderRadius={"m"} height={["170px", "500px"]}  mt={['xlg', "none"]} mb={['xxxl', "none"]} >
-            <Image
-              src={"/images/img3.jpg"}
-              alt="image error"
-              width={400}
-              height={500}
-              style={{ borderRadius: "20px" }}
-            ></Image>
-          </CenterBox>
-          <CenterBox
-            flexWrap={"wrap"}
-            flexDirection={"row"}
-            gap={"xl"}
-            py={["m", "header"]}
+          gap={["l","header"]}
+          justifyContent={"space-between"}
           >
-            {columnCardData.map((card) => (
-              <AboutCards
-                key={card.id}
-                icon={card.icon}
-                title={card.title}
-                description={card.description}
-              />
-            ))}
-          </CenterBox>
+            <Button
+            variant="primary"
+             py={["m","m"]}
+          px={["m","xxl"]}
+            borderTopLeftRadius={["noe","xl"]}
+            
+
+            >
+              View Practice Areas
+              </Button>
+            <Button
+            variant="primary"
+            py={["s","m"]}
+            px={["m","xxl"]}
+            borderTopLeftRadius={["none","xl"]}
+
+
+            >
+
+              Explore Practice Areas
+
+            </Button>
+          </Row>
         </Box>
-      </Column>
+      </Box>
     </>
   );
 };

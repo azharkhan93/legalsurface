@@ -7,7 +7,7 @@ import {
 
 export const BASE_BUTTON_VARIANTS = {
   primary: {
-    backgroundColor: BASE_COLORS.primary || BASE_COLORS.secondary ,
+    backgroundColor: BASE_COLORS.grey|| BASE_COLORS.secondary ,
     color: "white",
     border: "none",
     borderRadius: BASE_BORDER_RADII.circle,

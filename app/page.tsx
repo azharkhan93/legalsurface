@@ -12,14 +12,14 @@ export default function Page() {
   return (
     <>
       <HeroSection />
-      {/* <Services />
+       {/* <Services /> */}
 
       <About />
 
-      <ServiceSection />
-      <BookingSteps />
+      {/* <ServiceSection /> */}
+      {/* <BookingSteps /> */}
 
-      <ClientReviews /> */}
+      <ClientReviews /> 
       
     </>
   );

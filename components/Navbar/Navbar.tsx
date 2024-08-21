@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
         width={["100%", "100%"]}
         justifyContent="space-between"
         alignItems="center"
-        bg={"secondary"}
+        bg={"grey"}
         // borderRadius={["none", "circle"]}
         // mx={["none", "header"]}
          px={["s", "xxl"]}
