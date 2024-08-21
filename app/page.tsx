@@ -4,6 +4,7 @@ import {
   BookingSteps,
   ClientReviews,
   HeroSection,
+  NewsLetter,
   ServiceSection,
   Services,
 } from "@/components";
@@ -15,11 +16,13 @@ export default function Page() {
        {/* <Services /> */}
 
       <About />
+      
 
       {/* <ServiceSection /> */}
       {/* <BookingSteps /> */}
 
       <ClientReviews /> 
+      <NewsLetter />
       
     </>
   );

@@ -1,49 +1,45 @@
-import { Box, CenterBox, Row, Text } from "@/components";
+import { Box, Button, CenterBox, Row, Text } from "@/components";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 
 export const NewsLetter = () => {
   return (
     <Box
+      bg={"secondary"}
       borderBottom={"1px solid #D4BDE8"}
-      width={"100%"}
-      p={"xl"}
       alignItems={"center"}
       flexDirection={["column-reverse", "row"]}
       justifyContent={"space-between"}
-    
-      py={["xxl", "xl"]}
+      py={["xxl", "xxxxl"]}
+      mx={["none","xxxxl"]}
+      borderRadius={"lg"}
     >
-      <Row
-        gap={20}
-        width={"100%"}
-        alignItems={"center"}
-        justifyContent={"center"}
-       
-        height={"10vh"}
-      >
-        <FaFacebook size={30} fill="#D4BDE8" />
+      <CenterBox gap={"xl"} width={"99%"} py={"m"}  >
+        <Text variant={["subHeading","heading"]} color={"primary"}  textAlign={ "center"}>
+        You dont have to fight alone.
+        </Text>
+        <Text variant={["body","subHeading"]} color={"primary"} px={["s","xl"]} textAlign={["start","center"]}>
+        Book a consultation with one of our LegalSurface employment lawyers today.
+        </Text>
+        <Button
+        variant="primary"
+        py={"m"}
+        px={"xl"}
+        borderBottom={"3px solid white"}
+        >
+          Book A Consulation
 
-        <FaInstagram size={30} fill="#D4BDE8" />
-        <FaYoutube size={30} fill="#D4BDE8" />
-        <FaLinkedin size={30} fill="#D4BDE8" />
-      </Row>
-
-      <CenterBox gap={10} width={"100%"}>
-        <Image
-          src="/images/logo.png"
-          alt="logo image"
-          width={130}
-          height={130}
-        />
+        </Button>
       </CenterBox>
-      <CenterBox gap={10} width={"100%"}>
-        <Text variant={"subHeading"} color={"primary"}>
-          Opening Hours:
-        </Text>
-        <Text variant={"subHeading"} color={"primary"}>
-          9am - 10pm
-        </Text>
+
+      <CenterBox  width={"100%"}>
+        <Image
+          src="/images/bing.jpeg"
+          alt="logo image"
+          width={400}
+          height={300}
+          style={{borderRadius: "10px"}}
+        />
       </CenterBox>
     </Box>
   );

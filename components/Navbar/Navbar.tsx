@@ -75,9 +75,9 @@ export const Navbar: React.FC = () => {
           py={"m"}
           borderRadius={"circle"}
           px={"xl"}
-          bg={"primary"}
+          bg={"black"}
         >
-          Book An Appointment
+          Book A Consulation
         </Button>
 
         {isOpen ? (

@@ -19,11 +19,12 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
   return (
     <Box
       borderRadius={"lg"}
-      boxShadow={"xl"}
-      flexDirection={"column"}
+      boxShadow={"blackShadow"}
+      flexDirection={"column-reverse"}
       alignItems={"start"}
       bg={"secondary"}
-      // border="1px solid #e5e7eb"
+      borderTop="4px solid #454545"
+      borderBottom="4px solid #454545"
       position={"relative"}
       width={"350px"}
       py={"xl"}

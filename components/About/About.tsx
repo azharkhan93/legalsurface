@@ -22,12 +22,14 @@ export const About: React.FC = () => {
           backgroundPosition: "center",
         }}
       >
-        <Box bg={"whiteOverlay"} height={["63vh","100vh"]} 
-        py={"xl"}
+        <Box bg={"whiteOverlay"} height={["","100vh"]} 
+        py={["xxxl","xl"]}
         width={["100%","43%"]}
         px={["m","xl"]}
         gap={["xl","xxxl"]}
         justifyContent={["start", "center"]}
+        borderBottomRightRadius= {["xl","none"]}
+        borderBottomLeftRadius= {["xl","none"]}
         >
           <Text variant={"heading"} textAlign={"start"}>Expertise</Text>
           <Text variant={["subHeading","heading"]}>
