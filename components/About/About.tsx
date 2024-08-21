@@ -1,9 +1,8 @@
 import {
-  AboutCards,
+  
   Box,
   Button,
-  CenterBox,
-  Column,
+  
   Row,
   Text,
 } from "@/components";

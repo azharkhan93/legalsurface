@@ -58,7 +58,7 @@ export const reviews = [
   {
     image: "/images/home3.jpg",
     alt: "John Doe",
-    name: "Sheikh Shahi",
+    name: "Mr Waqar",
     position: "Regular Client",
     rating: 5,
     content:
@@ -67,7 +67,7 @@ export const reviews = [
   {
     image: "/images/home3.jpg",
     alt: "Jane Smith",
-    name: "Hajra Watali",
+    name: "Mr Hero",
     position: "Regular Client",
     rating: 5,
     content:
@@ -76,7 +76,7 @@ export const reviews = [
   {
     image: "/images/home3.jpg",
     alt: "Alice Johnson",
-    name: "Aayat Hussain",
+    name: "Mr Chicken",
     position: "Regular Client",
     rating: 5,
     content:
@@ -84,8 +84,8 @@ export const reviews = [
   },
   {
     image: "/images/home3.jpg",
-    alt: "Heena Zargar",
-    name: "Heena Zargar",
+    alt: "Aman",
+    name: "Mr Amaan",
     position: "Regular Client",
     rating: 5,
     content:
