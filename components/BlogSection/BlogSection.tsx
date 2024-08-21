@@ -54,7 +54,7 @@ export const BlogSection = ({ limit }: { limit?: number }) => {
       gap="xxxl"
       width="100%"
        px={["l","xxxl"]}
-      py="header"
+      py={["xl","header"]}
       bg={"secondary"}
     >
       {itemsToRender.map((item, index) => {
