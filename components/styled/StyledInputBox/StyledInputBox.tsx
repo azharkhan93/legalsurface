@@ -47,7 +47,7 @@ export const StyledInputBox = styled.input.withConfig(
     font-size: 15px;
   }
   &::-webkit-file-upload-button {
-    background-color: ${BASE_COLORS.primary};
+    background-color: ${BASE_COLORS.secondary};
     color: ${BASE_COLORS.white};
     cursor: pointer;
     height: 100%;

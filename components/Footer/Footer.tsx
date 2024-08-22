@@ -6,8 +6,10 @@ import {
   NewsLetter,
   Row,
   StyledHr,
+  StyledInputBox,
   StyledLink,
   Text,
+  UpdateForm,
 } from "@/components";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -162,7 +164,7 @@ export const Footer = () => {
               </StyledLink>
             ))}
           </Box>
-          <Box gap={"xl"}>
+          <Box gap={"xxxl"}>
             <Box alignItems={["flex-start", "flex-start"]}>
               <Text variant={"subHeading"} color={"white"}>
                 Contact Us
@@ -191,17 +193,50 @@ export const Footer = () => {
               </Text>
             </Column>
           </Box>
-          <Box gap="xxxl" alignItems={["flex-start", "center"]}>
+          <Box
+            gap="xxxxl"
+            alignItems={["flex-start", "center"]}
+            // border={"2px solid red"}
+            // justifyContent={"center"}
+             width={"340px"}
+            px={"xl"}
+          >
             <Text variant="subHeading" color="white">
               Subscribe To
             </Text>
-            <Box
+            {/* <Box
               height={"2px"}
               bg={"white"}
-              width={["40%", "70%"]}
+              width={["20%", "70%"]}
               ml={"header"}
               borderRadius={"circle"}
-            ></Box>
+            ></Box> */}
+            <CenterBox
+              position="relative"
+              // flexDirection={"row"}
+              // gap={"header"}
+              // justifyContent={"space-between"}
+
+            >
+              <Box
+                flexDirection={"row"}
+                position="absolute"
+                alignItems={["flex-start", "center"]}
+                justifyContent={"center"}
+                top="50%"
+                gap={"xl"}
+               
+                // left="10px"
+                // right={100}
+
+                // transform="translateY(-50%)"
+              >
+                <StyledInputBox
+                width={"260px"}
+                ></StyledInputBox>
+                <FaArrowRight size={37} fill="white" style={{marginLeft: '-45px', zIndex: "100", background: "black", padding: "4px", cursor: "pointer", borderRadius: "4px"}} />
+              </Box>
+            </CenterBox>
           </Box>
         </Box>
       </Box>
