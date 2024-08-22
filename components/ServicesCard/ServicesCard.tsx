@@ -2,10 +2,6 @@
 import { Column, Text } from "../styled";
 import { IconType } from "react-icons";
 import { AnimationBox } from "../styled/AnimationBox";
-
-
-
-
 type CardProps = {
   Icon: IconType;
   heading: string;

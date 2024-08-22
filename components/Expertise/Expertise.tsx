@@ -16,7 +16,7 @@ export const Expertise = () => {
         What Makes Us Unique
       </Text>
       <Box
-        flexDirection={"row"}
+        flexDirection={["column","row"]}
         width={"100%"}
         justifyContent={"center"}
         gap={"header"}
