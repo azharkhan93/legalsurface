@@ -5,7 +5,7 @@ import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "@/utils/apolloClient";
 import { Navbar } from "@/components/Navbar/Navbar";
-// import { Footer } from "@/components/Footer/Footer";
+import { Footer } from "@/components/Footer/Footer";
 import 'react-toastify/dist/ReactToastify.css';
 import { LoaderProvider } from "@/contexts/LoadingContex/LoadingContext";
 import 'aos/dist/aos.css';  
@@ -47,7 +47,7 @@ export default function RootLayout({
            
                 <Navbar />
                 {children}
-                {/* <Footer /> */}
+                <Footer />
                 
             </LoaderProvider>
             </ApolloProvider>

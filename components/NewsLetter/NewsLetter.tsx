@@ -26,8 +26,7 @@ export const NewsLetter = () => {
         variant="primary"
         py={"m"}
         px={"xl"}
-       
-        style={{background: "black", borderBottom: "3px solid White"}}
+       style={{background: "black", borderBottom: "3px solid White"}}
         >
           Book A Consulation
 

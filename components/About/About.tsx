@@ -48,7 +48,7 @@ export const About: React.FC = () => {
               variant="primary"
               py={["m", "m"]}
               px={["m", "xxl"]}
-              borderTopLeftRadius={["noe", "xl"]}
+              borderTopLeftRadius={["none", "xl"]}
             >
               View Practice Areas
             </Button>

@@ -1,117 +1,218 @@
 import {
   Box,
+  Button,
   CenterBox,
   Column,
   NewsLetter,
   Row,
   StyledHr,
+  StyledLink,
   Text,
 } from "@/components";
-import React from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import React, { useState } from "react";
+import Image from "next/image";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowRight, FaFacebook, FaGlobeAfrica, FaInstagram, FaLinkedin, FaPhoneAlt, FaPinterest, FaYoutube } from "react-icons/fa";
+import { NavbarData } from "@/constants";
+import router from "next/router";
+import { useRouter } from "next/navigation";
+
+// const navigateTo = (link: string) => {
+//   router.push(link);
+//   setIsOpen(false);
+// };
 
 export const Footer = () => {
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navigateTo = (link: string) => {
+    router.push(link);
+    setIsOpen(false);
+  };
   return (
     <>
       <Box
-        padding={"m"}
-        alignItems={["flex-start","center"]}
+        
+        width={"100%"}
         bg={"secondary"}
-       
-       
       >
-        <NewsLetter />
-        <Box
-        py={"xxxxl"}
-       
-          justifyContent={"space-between"}
-          // height={"40vh"}
+        <CenterBox
+          borderBottom={"2px solid white"}
+          py={"xxl"}
           flexDirection={["column","row"]}
-          
-          width={"100%"}
-          // p={["none","xl"]}
+          // border={"4px solid green"}
+          px={["s", "xxxl"]}
+          mx={["none", "xxxxl"]}
+          justifyContent={"space-between"}
           gap={"xxxl"}
-         
-           alignItems={["flex-start", "center"]}
-          
-          
-
-          
         >
-      
-            <Column
-            color={"primary"}
-            alignItems={["flex-start","center"]}
-            gap = {"xl"}
+          <Column gap={"xl"}>
+            <Text
+              textAlign={"center"}
+              variant={"heading"}
+              color={"white"}
+              width={"500px"}
             >
-            <Text variant={"subHeading"}>About Company</Text>
+              Lets{" "}
+              <span style={{ color: "greenyellow", fontSize: "40px" }}>
+                Connect
+              </span>{" "}
+              There
+            </Text>
+          </Column>
+          <Box
+            alignItems={"flex-start"}
+            justifyContent={"start"}
+            position={"relative"}
+            bg={"white"}
+            py={"s"}
+            width={"155px"}
+            px={"s"}
+            borderRadius={"circle"}
+            // px={"xl"}
+          >
+            <FaArrowRight
+              style={{
+                position: "absolute",
+                right: "10px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                fontSize: "20px",
+              }}
+            />
+            <Button borderRadius={"circle"} py={"s"} px={"xl"}>
+              Book know
+            </Button>
+          </Box>
+        </CenterBox>
 
-           
-              <Text variant="body" width={["100%","420px"]} textAlign={["start" ,"center"]}>
-                We invite you to embark on a journey of self-discovery,
-                self-love, and self-confidence with us. Come indulge your
-                senses, pamper your soul, and let your inner radiance shine
-                bright. Your beauty journey begins here. We believe in nurturing
-                not only our clients but also the planet we call home
+        <Box flexDirection={["column","row"]}
+        justifyContent={"space-between"}
+        width={"100%"}
+        py={"xxxxl"}
+        gap={"xxl"}
+        px={"m"}
+        >
+          <Column
+          alignItems={"center"}
+          justifyContent={"center"}
+          gap={"xl"}
+          >
+          <Box
+          >
+            {/* <Image
+              src="/images/logo.png"
+              alt="Logo Missing"
+              width={100}
+              height={100}
+            /> */}
+          </Box>
+          <Text
+          variant={"subHeading"}
+          color="white"
+          >
+            About Company
+          </Text>
+          <Box
+              height={"2px"}
+              bg={"white"}
+              width={"70%"}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
+
+          <Text color={"white"} width={"380px"} textAlign={["start","center"]} px={"l"}>
+            Welcome to where passion meets purpose. We are a dedicated team of
+            professionals committed to striving to deliver excellence through
+            our. With a strong foundation in,
+          </Text>
+          <CenterBox gap={"xl"} flexDirection={"row"}>
+              <FaInstagram size={25} fill="green" />
+              <FaFacebook size={25} fill="green" />
+              <FaLinkedin size={25} fill="green" />
+            </CenterBox>
+          </Column>
+          <Box
+            gap={"xl"}
+            alignItems={["flex-start", "flex-start"]}
+            // width={"390px"}
+          >
+            <CenterBox>
+              <Text variant={"subHeading"} color="white">
+                Useful Links
               </Text>
-              </Column>
-            
-          <Column
-            textAlign={["start","center"]}
-            overflow={"hidden"}
-            justifyContent={"center"}
-            flex={"1"}
-            gap={"l"}
-            color={"primary"}
-            py={["l","xl"]}
-          >
-            <Text variant="subHeading">Useful Links</Text>
+              <Box
+              height={"2px"}
+              bg={"white"}
+              width={["60%","70%"]}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
+            </CenterBox>
+
+            {NavbarData.map((item, index) => (
+                <StyledLink key={index} onClick={() => navigateTo(item.link)}>
+                  {item.title}
+                </StyledLink>
+              ))}
+          </Box>
+          <Box gap={"xl"}>
+            <Box alignItems={["flex-start", "flex-start"]}>
+              <Text variant={"subHeading"} color={"white"}>
+                Contact Us
+              </Text>
+              <Box
+              height={"2px"}
+              bg={"white"}
+              width={["40%","70%"]}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
+            </Box>
 
             <Column
-              alignItems={["flex-start","center"]}
-             
-              gap={"m"}
-              color={"primary"}
+              justifyContent={"center"}
+              gap={"xxxl"}
             >
-              <Text variant="body">Home</Text>
-              <Text variant="body"> About Us</Text>
-              <Text variant="body">Contact Us</Text>
-              <Text variant="body">Services</Text>
+              
+                
+              <Text variant="body" color="white">+91 87987978789</Text>
+              <Text variant="body" color="white">
+                skuastlansoil@gmail.com
+              </Text>
+              <Text variant="body" color="white">
+                skuastlansoil@gmail.com
+              </Text>
+              <Text variant="body" color="white">
+                Lal Chowk, Srinagar, J&K
+              </Text>
             </Column>
-          </Column>
-
-          <Column
-             textAlign={["start","center"]}
-            overflow={"hidden"}
-            gap={"l"}
-            color={"primary"}
-            py={["l","xl"]}
-          >
-            <Text variant="subHeading">Our Location</Text>
-
-            <Row alignItems={"center"}  gap={"l"} >
-              <FaMapMarkerAlt size={23} fill="#D4BDE8" />
-
-              <Text variant="body">Address: Rajbagh Srinagar, India</Text>
-            </Row>
-            <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
-              <FaPhone size={23} fill="#D4BDE8" />
-
-              <Text variant={"body"}>Contact Detail: +91 8899355648</Text>
-            </Row>
-
-            <Row alignItems={"center"} justifyContent={"center"} gap={"l"}>
-              <FaEnvelope size={23} fill="#D4BDE8" />
-              <Text variant={"body"}>Email: glam90239@gmail.com</Text>
-            </Row>
-          </Column>
+            
+           
+              
+           
+          </Box>
+          <Box gap="xxxl" alignItems={["flex-start", "center"]}>
+            <Text variant="subHeading" color="white">
+              Subscribe To
+            </Text>
+            <Box
+              height={"2px"}
+              bg={"white"}
+              width={["40%","70%"]}
+              ml={"header"}
+              borderRadius={"circle"}
+            ></Box>
+            
+          </Box>
+          
         </Box>
+        
       </Box>
-      <Box height={"1px"} bg={"primary"} width={"100%"}></Box>
 
-      <CenterBox py={"m"}>
-        <Text variant={"body"} color={"secondary"}>
-          © 2024 Glam Squad. All Rights Reserved
+      <CenterBox py={"m"} bg={"secondary"}>
+        <Text variant={"body"} color={"white"}>
+          © 2024 Legal Surface. All Rights Reserved
         </Text>
       </CenterBox>
     </>
