@@ -3,11 +3,10 @@ import {
   About,
 
   ClientReviews,
+  Expertise,
   HeroSection,
   LatestBlogs,
   NewsLetter,
-  ServiceSection,
-  Services,
 } from "@/components";
 
 export default function Page() {
@@ -15,10 +14,13 @@ export default function Page() {
     <>
       <HeroSection />
        {/* <Services /> */}
+       
 
       <About />
+      <Expertise />
 
       <LatestBlogs />
+      
       
 
       {/* <ServiceSection /> */}

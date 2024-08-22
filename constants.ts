@@ -12,6 +12,7 @@ import step1Animation from "@/animations/bookings.json";
 import step2Animation from "@/animations/order.json";
 import step3Animation from "@/animations/details.json";
 import step4Animation from "@/animations/service.json";
+import { MdCheckCircle, MdPeople, MdTrendingUp } from "react-icons/md";
 
 export const NavbarData = [
   {
@@ -264,6 +265,27 @@ export const products = [
     productName: "hands",
     productDes: "Service Time: 40 Mins",
     price: 10,
+  },
+];
+
+export const expertiseData = [
+  {
+    Icon: MdPeople,
+    heading: "Client Focused",
+    description:
+      "Many firms will say that the client comes first, but at WhiteBird, PLLC, it's the foundation of our firm. Everything we have built has been to find a way to better serve those who place their trust in us.",
+  },
+  {
+    Icon: MdCheckCircle,
+    heading: "Details Matter",
+    description:
+      "Details often make the difference between success and failure. Our clients rely on us to pay attention to the details, spot the ones others miss, and understand the role those details play in their overall goals.",
+  },
+  {
+    Icon: MdTrendingUp,
+    heading: "Results-Driven",
+    description:
+      "We best serve our clients by first understanding the results our clients need and then formulating a legal strategy focused on achieving those results.",
   },
 ];
 

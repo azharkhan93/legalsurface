@@ -10,3 +10,4 @@ export * from "./StyledLink";
 export * from "./StyledModal";
 export * from './StyledScrollBox'
 export * from "./StyledHr"
+export * from "./StyledAnimations"

@@ -27,5 +27,6 @@ export * from "./ProductCards"
 export * from "./Modal"
 export * from "./BlogSection"
 export * from "./LatestBlogs"
+export * from "./Expertise"
 
 

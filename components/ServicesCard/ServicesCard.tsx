@@ -1,49 +1,31 @@
-import { Box, Text } from "@/components";
-import Image from "next/image";
-import React from "react";
+"use client"
+import { Column, Text } from "../styled";
+import { IconType } from "react-icons";
+import styled, { keyframes } from "styled-components";
+import { AnimationBox } from "../styled/AnimationBox";
 
-type ServicesCardProps = {
-  image: string;
-  text: string;
-  text2: string;
+
+
+
+type CardProps = {
+  Icon: IconType;
+  heading: string;
+  description: string;
 };
 
-export const ServicesCard: React.FC<ServicesCardProps> = ({ image, text, text2 }) => {
+export const ServicesCard = ({ Icon, heading, description }: CardProps) => {
   return (
-    <Box
-      borderRadius="lg"
-      boxShadow="xl"
-      flexDirection={"column"}
-      alignItems={"center"}
-      bg={"primary"}
-      border="1px solid #e5e7eb"
-      position={"relative"}
-      width={["170px","200px"]}
-      py={"l"}
-      gap={"l"}
-      
-    >
-      <Box
-        width="100px"
-        height="100px"
-        borderRadius="circle"
-        overflow={"hidden"}
-        bg={"primary"}
-        style={{ border: "2px solid black" }}
-      >
-        <Image
-          src={image}
-          alt="Service Image"
-          width={100}
-          height={100}
-        />
-      </Box>
-      <Text fontSize={"l"} fontWeight={"bold"} textAlign={"center"} color={"secondary"}>
-        {text}
+    <AnimationBox alignItems={"center"} gap={"m"} px={"s"}>
+      <Icon size={50} color={"secondary"} />
+      <Text variant={"subHeading"} color="white">
+        {heading}
       </Text>
-      <Text fontSize={"l"} fontWeight={"bold"} textAlign={"center"} color={"secondary"}>
-        {text2}
+      <Text variant={"body"} color="white" width={"355px"} px={"s"}>
+        {description}
       </Text>
-    </Box>
+    </AnimationBox>
   );
 };
+
+
+

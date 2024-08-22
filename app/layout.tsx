@@ -8,10 +8,10 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/Navbar/Navbar";
 // import { Footer } from "@/components/Footer/Footer";
-import { CartProvider } from "@/contexts";
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { AuthProvider } from "@/contexts/AuthContext/AuthContext";
+
 import { LoaderProvider } from "@/contexts/LoadingContex/LoadingContext";
 
 
@@ -36,14 +36,12 @@ export default function RootLayout({
           <AppThemeProvider>
             <ApolloProvider client={client}>
             <LoaderProvider>
-            <AuthProvider>
-              <CartProvider>
+           
                 <ToastContainer />
                 <Navbar />
                 {children}
                 {/* <Footer /> */}
-                </CartProvider>
-            </AuthProvider>
+                
             </LoaderProvider>
             </ApolloProvider>
           </AppThemeProvider>

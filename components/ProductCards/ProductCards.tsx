@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Box, Text, Column, Button, Row, CenterBox } from "@/components";
 import { FaClock, FaShoppingCart } from "react-icons/fa";
-import { useCart } from "@/contexts";
+// import { useCart } from "@/contexts";
 import { toast } from "react-toastify";
 import { LoadingCard } from "../BlogSection/components/LoadingCard";
 
@@ -22,7 +22,7 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
   loading = false, 
 }) => {
   
-  const { addToCart } = useCart();
+  // const { addToCart } = useCart();
 
   if (loading) {
     return <LoadingCard />; 
@@ -35,7 +35,7 @@ export const ProductCards: React.FC<ProductCardsProps> = ({
       price,
       quantity: 1,
     };
-    addToCart(product);
+    // addToCart(product);
     toast.success(`${productName} has been added to the cart!`, {
       position: "top-right",
       theme: "dark",
