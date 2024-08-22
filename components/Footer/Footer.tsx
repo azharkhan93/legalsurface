@@ -11,7 +11,19 @@ import {
 } from "@/components";
 import React, { useState } from "react";
 import Image from "next/image";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowRight, FaFacebook, FaGlobeAfrica, FaInstagram, FaLinkedin, FaPhoneAlt, FaPinterest, FaYoutube } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaArrowRight,
+  FaFacebook,
+  FaGlobeAfrica,
+  FaInstagram,
+  FaLinkedin,
+  FaPhoneAlt,
+  FaPinterest,
+  FaYoutube,
+} from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import router from "next/router";
 import { useRouter } from "next/navigation";
@@ -31,15 +43,11 @@ export const Footer = () => {
   };
   return (
     <>
-      <Box
-        
-        width={"100%"}
-        bg={"secondary"}
-      >
+      <Box width={"100%"} bg={"secondary"}>
         <CenterBox
           borderBottom={"2px solid white"}
           py={"xxl"}
-          flexDirection={["column","row"]}
+          flexDirection={["column", "row"]}
           // border={"4px solid green"}
           px={["s", "xxxl"]}
           mx={["none", "xxxxl"]}
@@ -86,34 +94,27 @@ export const Footer = () => {
           </Box>
         </CenterBox>
 
-        <Box flexDirection={["column","row"]}
-        justifyContent={"space-between"}
-        width={"100%"}
-        py={"xxxxl"}
-        gap={"xxl"}
-        px={"m"}
+        <Box
+          flexDirection={["column", "row"]}
+          justifyContent={"space-between"}
+          width={"100%"}
+          py={"xxxxl"}
+          gap={"xxl"}
+          px={"m"}
         >
-          <Column
-          alignItems={"center"}
-          justifyContent={"center"}
-          gap={"xl"}
-          >
-          <Box
-          >
-            {/* <Image
+          <Column alignItems={"center"} justifyContent={"center"} gap={"xl"}>
+            <Box>
+              {/* <Image
               src="/images/logo.png"
               alt="Logo Missing"
               width={100}
               height={100}
             /> */}
-          </Box>
-          <Text
-          variant={"subHeading"}
-          color="white"
-          >
-            About Company
-          </Text>
-          <Box
+            </Box>
+            <Text variant={"subHeading"} color="white">
+              About Company
+            </Text>
+            <Box
               height={"2px"}
               bg={"white"}
               width={"70%"}
@@ -121,15 +122,20 @@ export const Footer = () => {
               borderRadius={"circle"}
             ></Box>
 
-          <Text color={"white"} width={"380px"} textAlign={["start","center"]} px={"l"}>
-            Welcome to where passion meets purpose. We are a dedicated team of
-            professionals committed to striving to deliver excellence through
-            our. With a strong foundation in,
-          </Text>
-          <CenterBox gap={"xl"} flexDirection={"row"}>
-              <FaInstagram size={25} fill="green" />
-              <FaFacebook size={25} fill="green" />
-              <FaLinkedin size={25} fill="green" />
+            <Text
+              color={"white"}
+              width={"380px"}
+              textAlign={["start", "center"]}
+              px={"l"}
+            >
+              Welcome to where passion meets purpose. We are a dedicated team of
+              professionals committed to striving to deliver excellence through
+              our. With a strong foundation in,
+            </Text>
+            <CenterBox gap={"xl"} flexDirection={"row"}>
+              <FaInstagram size={25} fill="white" />
+              <FaFacebook size={25} fill="white" />
+              <FaLinkedin size={25} fill="white" />
             </CenterBox>
           </Column>
           <Box
@@ -142,19 +148,19 @@ export const Footer = () => {
                 Useful Links
               </Text>
               <Box
-              height={"2px"}
-              bg={"white"}
-              width={["60%","70%"]}
-              ml={"header"}
-              borderRadius={"circle"}
-            ></Box>
+                height={"2px"}
+                bg={"white"}
+                width={["60%", "70%"]}
+                ml={"header"}
+                borderRadius={"circle"}
+              ></Box>
             </CenterBox>
 
             {NavbarData.map((item, index) => (
-                <StyledLink key={index} onClick={() => navigateTo(item.link)}>
-                  {item.title}
-                </StyledLink>
-              ))}
+              <StyledLink key={index} onClick={() => navigateTo(item.link)}>
+                {item.title}
+              </StyledLink>
+            ))}
           </Box>
           <Box gap={"xl"}>
             <Box alignItems={["flex-start", "flex-start"]}>
@@ -162,21 +168,18 @@ export const Footer = () => {
                 Contact Us
               </Text>
               <Box
-              height={"2px"}
-              bg={"white"}
-              width={["40%","70%"]}
-              ml={"header"}
-              borderRadius={"circle"}
-            ></Box>
+                height={"2px"}
+                bg={"white"}
+                width={["40%", "70%"]}
+                ml={"header"}
+                borderRadius={"circle"}
+              ></Box>
             </Box>
 
-            <Column
-              justifyContent={"center"}
-              gap={"xxxl"}
-            >
-              
-                
-              <Text variant="body" color="white">+91 87987978789</Text>
+            <Column justifyContent={"center"} gap={"xxxl"}>
+              <Text variant="body" color="white">
+                +91 87987978789
+              </Text>
               <Text variant="body" color="white">
                 skuastlansoil@gmail.com
               </Text>
@@ -187,10 +190,6 @@ export const Footer = () => {
                 Lal Chowk, Srinagar, J&K
               </Text>
             </Column>
-            
-           
-              
-           
           </Box>
           <Box gap="xxxl" alignItems={["flex-start", "center"]}>
             <Text variant="subHeading" color="white">
@@ -199,15 +198,12 @@ export const Footer = () => {
             <Box
               height={"2px"}
               bg={"white"}
-              width={["40%","70%"]}
+              width={["40%", "70%"]}
               ml={"header"}
               borderRadius={"circle"}
             ></Box>
-            
           </Box>
-          
         </Box>
-        
       </Box>
 
       <CenterBox py={"m"} bg={"secondary"}>
