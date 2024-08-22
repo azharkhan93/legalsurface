@@ -61,14 +61,14 @@ export const Services: React.FC = () => {
           width={"100%"}
           mt={["xxxl", "none"]}
         >
-          {services.map((service, index) => (
+          {/* {services.map((service, index) => (
             <ServicesCard
               key={index}
               image={service.image}
               text={service.text}
               text2={service.text2}
             />
-          ))}
+          ))} */}
           <CenterBox width={"100%"} mt={"xxl"}>
             <Button
               variant="outline"

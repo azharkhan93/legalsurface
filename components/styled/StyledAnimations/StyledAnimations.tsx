@@ -1,30 +1,19 @@
 import { Box, Column } from "@/components";
 import styled, { keyframes } from "styled-components";
 
-export const topBorderWave = keyframes`
+export const shimmerAnimation = keyframes`
   0% {
-    border-top-color: white;
+    border-color: white;
   }
   50% {
-    border-top-color: black;
+    border-color: black;
   }
   100% {
-    border-top-color: white;
+    border-color: white;
   }
 `;
 
-// Define the shimmer wave animation keyframes for the bottom border
-export const bottomBorderWave = keyframes`
-  0% {
-    border-bottom-color: black;
-  }
-  50% {
-    border-bottom-color: white;
-  }
-  100% {
-    border-bottom-color: black;
-  }
-`;
+
 
 // export const shimmerWave = keyframes`
 //   0% {

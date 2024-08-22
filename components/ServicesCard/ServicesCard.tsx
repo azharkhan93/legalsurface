@@ -1,7 +1,6 @@
 "use client"
 import { Column, Text } from "../styled";
 import { IconType } from "react-icons";
-import styled, { keyframes } from "styled-components";
 import { AnimationBox } from "../styled/AnimationBox";
 
 
