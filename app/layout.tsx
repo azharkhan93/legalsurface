@@ -4,15 +4,12 @@ import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "@/utils/apolloClient";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/Navbar/Navbar";
 // import { Footer } from "@/components/Footer/Footer";
-
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import { LoaderProvider } from "@/contexts/LoadingContex/LoadingContext";
+import 'aos/dist/aos.css';  
+import AOS from 'aos';
 
 
 
@@ -21,12 +18,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000, 
+  //     easing: 'ease-in-out', 
+  //     once: true, 
+  //   });
+  // }, []);
+
   // const router = useRouter();
   // useEffect(() => {
   //   if (localStorage.getItem("token") === null) {
   //     router.push("/");
   //   }
   // }, [router]);
+
 
   return (
     <html lang="en">
@@ -37,7 +45,6 @@ export default function RootLayout({
             <ApolloProvider client={client}>
             <LoaderProvider>
            
-                <ToastContainer />
                 <Navbar />
                 {children}
                 {/* <Footer /> */}

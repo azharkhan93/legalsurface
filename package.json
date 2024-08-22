@@ -18,6 +18,7 @@
     "@notion-render/client": "^0.0.2",
     "@notion-render/hljs-plugin": "^0.0.2",
     "@notionhq/client": "^2.2.15",
+    "aos": "^2.3.4",
     "axios": "^1.7.3",
     "bcryptjs": "^2.4.3",
     "formik": "^2.4.6",
@@ -41,6 +42,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/axios": "^0.14.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.6",

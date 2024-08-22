@@ -11,15 +11,20 @@ export const Expertise = () => {
       flexDirection={"column"}
       gap={"xxxxl"}
       py={"header"}
+      px={["m", "none"]}
     >
-      <Text variant={"heading"} textAlign={"center"} color="white">
+      <Text variant={"heading"} textAlign={"center"} color="white"
+     
+      >
         What Makes Us Unique
       </Text>
       <Box
+     
         flexDirection={["column","row"]}
         width={"100%"}
         justifyContent={"center"}
-        gap={"header"}
+        gap={["xl","header"]}
+        // data-aos="fade-up"
       >
         {expertiseData.map(({ Icon, heading, description }) => (
           <ServicesCard

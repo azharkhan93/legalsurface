@@ -36,21 +36,19 @@ export const Navbar: React.FC = () => {
         width={["100%", "100%"]}
         justifyContent="space-between"
         alignItems="center"
-        bg={"grey"}
-        // borderRadius={["none", "circle"]}
-        // mx={["none", "header"]}
-         px={["s", "xxl"]}
+        bg="grey"
+        px={["s", "xxl"]}
         style={{
-          zIndex: "50",
+          zIndex: 50, // Make sure this is applied correctly
         }}
       >
         <CenterBox>
           <Image src="" alt="Logo" width={100} height={100} />
         </CenterBox>
 
-        <Box display={["flex", "none"]} flexDirection={"row"} gap={"xl"}>
+        <Box display={["flex", "none"]} flexDirection="row" gap="xl">
           <Box onClick={handleToggle}>
-            < RxHamburgerMenu size={30} color="white" />
+            <RxHamburgerMenu size={30} color="white" />
           </Box>
         </Box>
 
@@ -70,50 +68,44 @@ export const Navbar: React.FC = () => {
         </Box>
 
         <Button
-          variant={"primary"}
+          variant="primary"
           display={["none", "block"]}
-          py={"m"}
-          borderRadius={"circle"}
-          px={"xl"}
-          bg={"black"}
-          style={{background: "black", borderBottom: "3px solid White"}}
+          py="m"
+          borderRadius="circle"
+          px="xl"
+          bg="black"
+          style={{ background: "black", borderBottom: "3px solid White" }}
         >
-          Book A Consulation
+          Book A Consultation
         </Button>
 
-        {isOpen ? (
+        {isOpen && (
           <Box
-          alignItems={"flex-start"}
-          justifyContent={"center"}
-            width={"100vw"}
-            height={"100vh"}
-            
-            bg={"secondary"}
+            alignItems="flex-start"
+            justifyContent="center"
+            width="100vw"
+            height="100vh"
+            bg="secondary"
             zIndex={9999}
             display={["flex", "none"]}
-            position={"fixed"}
+            position="fixed"
             top={0}
             left={0}
-            gap={"header"}
-            px={"l"}
+            gap="header"
+            px="l"
           >
-            <CenterBox position={"absolute"} top={"none"} left={0}>
-              <Image
-                src=""
-                alt="Logo"
-                width={100}
-                height={100}
-              />
+            <CenterBox position="absolute" top={0} left={0}>
+              <Image src="" alt="Logo" width={100} height={100} />
             </CenterBox>
             <Box
-              position={"absolute"}
-              top={"xxl"}
-              right={"xl"}
+              position="absolute"
+              top="xxl"
+              right="xl"
               onClick={handleToggle}
-              bg={"secondary"}
-              py={"s"}
-              px={"s"}
-              borderRadius={"circle"}
+              bg="secondary"
+              py="s"
+              px="s"
+              borderRadius="circle"
             >
               <FaTimes
                 size={33}
@@ -123,27 +115,22 @@ export const Navbar: React.FC = () => {
             </Box>
 
             <Column
-              
-              gap={"xxxl"}
-              // justifyContent={"center"}
-               width={"100%"}
-             
+              gap="xxxl"
+              width="100%"
             >
               {NavbarData.map((item, index) => (
-                <StyledLink
-                  key={index}
-                  onClick={() => navigateTo(item.link)}
-                >
+                <StyledLink key={index} onClick={() => navigateTo(item.link)}>
                   {item.title}
                 </StyledLink>
               ))}
             </Column>
           </Box>
-        ) : null}
+        )}
       </Row>
     </>
   );
 };
+
 
 
 

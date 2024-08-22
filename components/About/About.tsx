@@ -1,11 +1,4 @@
-import {
-  
-  Box,
-  Button,
-  
-  Row,
-  Text,
-} from "@/components";
+import { Box, Button, Row, Text } from "@/components";
 import Image from "next/image";
 
 export const About: React.FC = () => {
@@ -22,17 +15,21 @@ export const About: React.FC = () => {
           backgroundPosition: "center",
         }}
       >
-        <Box bg={"whiteOverlay"} height={["","100vh"]} 
-        py={["xxxl","xl"]}
-        width={["100%","43%"]}
-        px={["m","xl"]}
-        gap={["xl","xxxl"]}
-        justifyContent={["start", "center"]}
-        borderBottomRightRadius= {["xl","none"]}
-        borderBottomLeftRadius= {["xl","none"]}
+        <Box
+          bg={"whiteOverlay"}
+          height={["", "100vh"]}
+          py={["xxxl", "xl"]}
+          width={["100%", "43%"]}
+          px={["m", "xl"]}
+          gap={["xl", "xxxl"]}
+          justifyContent={["start", "center"]}
+          borderBottomRightRadius={["xl", "none"]}
+          borderBottomLeftRadius={["xl", "none"]}
         >
-          <Text variant={"heading"} textAlign={"start"}>Expertise</Text>
-          <Text variant={["subHeading","heading"]}>
+          <Text variant={"heading"} textAlign={"start"}>
+            Expertise
+          </Text>
+          <Text variant={["subHeading", "heading"]}>
             Facilitating commercial legal solutions
           </Text>
           <Text variant={"body"}>
@@ -43,31 +40,25 @@ export const About: React.FC = () => {
             solutions for our clients
           </Text>
           <Row
-          width={"100%"}
-          gap={["l","header"]}
-          justifyContent={"space-between"}
+            width={"100%"}
+            gap={["l", "header"]}
+            justifyContent={"space-between"}
           >
             <Button
-            variant="primary"
-             py={["m","m"]}
-          px={["m","xxl"]}
-            borderTopLeftRadius={["noe","xl"]}
-            
-
+              variant="primary"
+              py={["m", "m"]}
+              px={["m", "xxl"]}
+              borderTopLeftRadius={["noe", "xl"]}
             >
               View Practice Areas
-              </Button>
+            </Button>
             <Button
-            variant="primary"
-            py={["s","m"]}
-            px={["m","xxl"]}
-            borderTopLeftRadius={["none","xl"]}
-
-
+              variant="primary"
+              py={["s", "m"]}
+              px={["m", "xxl"]}
+              borderTopLeftRadius={["none", "xl"]}
             >
-
               Explore Practice Areas
-
             </Button>
           </Row>
         </Box>

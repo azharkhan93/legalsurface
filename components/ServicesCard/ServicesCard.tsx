@@ -15,7 +15,7 @@ export const ServicesCard = ({ Icon, heading, description }: CardProps) => {
       <Text variant={"subHeading"} color="white">
         {heading}
       </Text>
-      <Text variant={"body"} color="white" width={"355px"} px={"s"}>
+      <Text variant={"body"} color="white" width={["100%","355px"]} px={["none","s"]}>
         {description}
       </Text>
     </AnimationBox>

@@ -273,7 +273,7 @@ export const expertiseData = [
     Icon: MdPeople,
     heading: "Client Focused",
     description:
-      "Many firms will say that the client comes first, but at WhiteBird, PLLC, it's the foundation of our firm. Everything we have built has been to find a way to better serve those who place their trust in us.",
+      "Many firms will say that the client comes first, but at Legal Surface, it's the foundation of our firm. Everything we have built has been to find a way to better serve those who place their trust in us.",
   },
   {
     Icon: MdCheckCircle,
