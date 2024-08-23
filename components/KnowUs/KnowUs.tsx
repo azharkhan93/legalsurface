@@ -6,48 +6,41 @@ export const KnowUs = () => {
   return (
     <>
       <CenterBox
-      bg={"secondary"}
-        // mt={"header"}
+        bg={"secondary"}
         justifyContent={"space-between"}
         flexDirection={["column", "row"]}
         px={["none", "xl"]}
         py={"xxxl"}
+        // width={"400px"}
       >
-        <Column textAlign={"center"} maxWidth={"600px"} gap={"l"} py={"xl"}>
+        <Column  gap={"l"} py={"xl"}
+        px={"l"}
+        // px={"header"}
+         >
           <Text
             variant={"heading"}
-            fontFamily={["Arial, sans-serif", "Arial, sans-serif"]}
-            textShadow={"-moz-initial"}
             fontWeight={"bold"}
             color={"primary"}
-            px={["xl", "xxxl"]}
             
           >
-            Why Glam Squad?
+            About Us - Legal Surface?
           </Text>
-          <Text
-            variant={"subHeading"}
-            color={"primary"}
-            px={["l", "header"]}
-          >
-            Every Treatment Tells A Story
+          <Text variant={"subHeading"} color={"primary"} textAlign={"center"}>
+            We Believe In Transperency
           </Text>
           <Text
             textAlign={["start", "center"]}
             variant={"body"}
-            
             color={"primary"}
-            px={["l", "xl"]}
+            width={["350px","670px"]}
           >
-            Beauty is not just a service its an experience. We invite you to
-            embark on a journey of self discovery, self love and
-            self confidence with us. Come indulge your senses, pamper your soul,
-            and let your inner radiance shine bright. Your beauty journey begins
-            here. We believe in nurturing not only our clients but also the
-            planet we call home self confidence with us. Come indulge your
-            senses pamper your soul, and let your inner radiance shine bright.
-            Your beauty journey begins here. We believe in nurturing not only
-            our clients but also the planet we call home.
+            Welcome to Legal Surface Law Group, a family-owned law firm deeply
+            rooted in the heart of Norman, OK, and extending its services to the
+            wider Oklahoma area including Woodward and Oklahoma City. Since our
+            inception, we have been dedicated to providing exceptional legal
+            services, with a particular focus on family law. Our journey is one
+            of commitment, expertise, and a deep understanding of the law, all
+            driven by our passion for justice and client support.
           </Text>
           <CenterBox mt={"l"}>
             <Button
@@ -56,64 +49,32 @@ export const KnowUs = () => {
               py={"m"}
               background={"secondary"}
               px={"xxxl"}
-             
             >
               Explore More
             </Button>
           </CenterBox>
         </Column>
         <Row
-        px={"l"}
-         
-          width={["100%", "40%"]}
-          borderRadius={"xl"}
+          py={"xl"}
+          px={"l"}
+          border={"4px solid grey"}
+          width={["100%", "35%"]}
+          // borderRadius={"xl"}
           alignItems={"center"}
           justifyContent={"space-between"}
           // pr={["none","header"]}
           gap={"l"}
+          bg={"white"}
         >
-          <Column gap={"xxl"} width={["", "300px"]}>
+          <CenterBox gap={"xxl"} width={["", "300px"]}>
             <Image
-              src="/images/home3.jpg"
+              src="/images/banner.jpg"
               alt="slider image"
-              width={170}
-              height={250}
-              style={{ borderRadius: "80px" }}
+              width={500}
+              height={390}
+              style={{ borderRadius: "10px" }}
             />
-            <Image
-              src="/images/home3.jpg"
-              alt="slider image"
-              width={170}
-              height={250}
-              style={{ borderRadius: "80px" }}
-            />
-          </Column>
-
-          <Column
-            width={["", "300px"]}
-            gap={"xxl"}
-            // mb={"header"}
-            display={["none", "block"]}
-            // px={"xxl"}
-
-            borderRadius={"circle"}
-            // border={"2px solid red"}
-          >
-            <Image
-              src="/images/hom.jpg"
-              alt="no image"
-              width={170}
-              height={250}
-              style={{ borderRadius: "20px" }}
-            />
-            <Image
-              src="/images/home1.jpg"
-              alt="slider image"
-              width={170}
-              height={250}
-              style={{ borderRadius: "20px" }}
-            />
-          </Column>
+          </CenterBox>
         </Row>
       </CenterBox>
     </>

@@ -5,12 +5,13 @@ export default function Page() {
   return (
     <>
       <TopBar
-        backgroundImage={"/images/home1.jpg"}
+        backgroundImage={"/images/nik.png"}
         aboutText={"Contact Us"}
         whoWeAreText={"Reach Out Us"}
       />
       <ContactSection />
       <Mapsection />
+     
     </>
   );
 }
