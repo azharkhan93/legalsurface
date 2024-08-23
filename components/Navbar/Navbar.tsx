@@ -31,6 +31,7 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <Row
+      flexDirection={["row","row"]}
         position="fixed"
         top={0}
         width={["100%", "100%"]}
@@ -39,7 +40,7 @@ export const Navbar: React.FC = () => {
         bg="grey"
         px={["s", "xxl"]}
         style={{
-          zIndex: 50, // Make sure this is applied correctly
+          zIndex: 50, 
         }}
       >
         <CenterBox>

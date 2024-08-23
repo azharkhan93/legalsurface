@@ -8,9 +8,12 @@ type StatsCardsProps = {
 
 export const StatsCards: React.FC<StatsCardsProps> = ({ heading, subHeading }) => (
   <Column alignItems={"center"}
-  borderRight={"3px solid black"}
-  p={"l"}
-  gap={"l"}
+//   justifyContent={"center"}
+  borderTop={["none","3px solid black"]}
+  borderBottom={"3px solid black"}
+
+//   p={"l"}
+  gap={["xl","l"]}
   color="white"
   
   >

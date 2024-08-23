@@ -1,7 +1,8 @@
 "use client";
 import styled from "styled-components";
-import { Box } from "../Box";
+import { Box, CenterBox } from "../Box";
+
 export const Row = styled(Box)`
-  display: flex;
-  flex-direction: row;
+  display: flex ;
+  flex-direction: row important;
 `;

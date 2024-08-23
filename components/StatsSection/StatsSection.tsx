@@ -8,6 +8,7 @@ export const StatsSection = () =>{
     return(
         <>
         <Column
+        // flexDirection={["column", "row"]}
         py={"xl"}
      
         width={"100%"}
@@ -16,7 +17,7 @@ export const StatsSection = () =>{
         >
         <Text variant={"heading"} color="white" textAlign={"start"} p={"m"}> Since 20007</Text>
         <Row
-        // bg={"grey"}
+          flexDirection={["column", "row"]}
             py={"xl"}
             px={"xl"}
             width={"100%"}

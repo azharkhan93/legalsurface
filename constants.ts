@@ -346,7 +346,7 @@ export const expertiseData = [
 
 
   export const stats = [
-    { heading: "200+", subHeading: "Trust Administrations" },
+    { heading: "200+", subHeading: "Trust Administion" },
     { heading: "400+", subHeading: "Estate Plans" },
     { heading: "400+", subHeading: "Litigation Clients" },
     { heading: "100+", subHeading: "Secured Cases" },
