@@ -22,9 +22,32 @@ export const HeroSection = () => {
               justifyContent={"center"}
               flexDirection={["column", "row"]}
               height={["100vh", "100vh"]}
+              position={"relative"}
               bg={"secondary"}
+              
+              style={{
+                backgroundImage: `url('/images/n1.jpg')`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
             >
+              <Box
+              position={"absolute"}
+              top={0}
+              left={0}
+              bottom={0}
+              right={0}
+              bg={"backgroundOverlay"}
+              zIndex={50}
+              height={"100vh"}
+              width={"100%"}
+              >
+
+              </Box>
               <Column
+              zIndex={999}
+              
                 px={"m"}
                 alignItems={"center"}
                 justifyContent={"center"}
