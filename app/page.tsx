@@ -7,6 +7,7 @@ import {
   HeroSection,
   LatestBlogs,
   NewsLetter,
+  StatsSection,
 } from "@/components";
 
 export default function Page() {
@@ -21,6 +22,7 @@ export default function Page() {
       
 
       <LatestBlogs />
+      <StatsSection />
       
       
 

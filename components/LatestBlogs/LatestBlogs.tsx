@@ -3,8 +3,8 @@ import { Column, Box, Text, CenterBox } from "../styled";
 
 export const LatestBlogs = () => {
   return (
-    <Column bg={"white"} py={["xxl", "header"]} px={["m", "none"]} gap={"xxl"} >
-      <Column alignItems={"flex-start"} gap={"m"}>
+    <Column bg={"white"} py={["xxl", "xxxl"]} px={["m", "none"]} gap={"xxl"} >
+      <Column alignItems={"flex-start"} gap={"m"} px={"m"} >
         <Text variant={"heading"} fontWeight={"bold"} color={"secondary"}>
           Latest Blogs
         </Text>

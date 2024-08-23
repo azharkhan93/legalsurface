@@ -1,5 +1,5 @@
 "use client";
-import { Box, Row, Text, Column, CenterBox, ContactCards } from "@/components";
+import { Box, Row, Text, Column, CenterBox} from "@/components";
 
 import { Test } from "../Test";
 

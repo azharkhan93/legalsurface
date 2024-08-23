@@ -344,6 +344,14 @@ export const expertiseData = [
   },
 ];
 
+
+  export const stats = [
+    { heading: "200+", subHeading: "Trust Administrations" },
+    { heading: "400+", subHeading: "Estate Plans" },
+    { heading: "400+", subHeading: "Litigation Clients" },
+    { heading: "100+", subHeading: "Secured Cases" },
+  ];
+
 // export const testimonialsData = [
 //   {
 //     text: "Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... Hobbes: Probably so we can think twice.",
