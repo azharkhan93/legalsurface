@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Head from "next/head"; 
 import { Box, CenterBox, Column, Row, Text, TopBar } from "@/components";
 import Image from "next/image";
 import axios from "axios";
@@ -41,8 +42,22 @@ export default function Page({ params }: PageProps) {
     fetchPost();
   }, [slug]);
 
+  const metaDescription = post?.description.slice(0, 160) || "Blog post about legal services and advice.";
+  const metaKeywords = `law firm, legal services, ${post?.title}, ${post?.createdBy}, legal advice`;
+
   return (
     <>
+      <Head>
+        <title>{post?.title || "Blog Post"} | LegalSurface</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={metaKeywords} />
+        <meta property="og:title" content={post?.title || "Blog Post"} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={post?.file || "/default-image.png"} />
+        <meta property="og:url" content={`https://legalsurface.com/blog/${slug}`} />
+        <link rel="canonical" href={`https://legalsurface.com/blog/${slug}`} />
+      </Head>
+
       <TopBar
         backgroundImage={"/images/hero.jpg"}
         aboutText={"Blogs Page"}
@@ -74,7 +89,6 @@ export default function Page({ params }: PageProps) {
                     width={"400px"}
                     px={"xl"}
                     gap={"s"}
-                    // border={"3px solid red"}
                   >
                     <Text variant="subHeading" color="white">
                       {post.title}
@@ -118,3 +132,10 @@ export default function Page({ params }: PageProps) {
     </>
   );
 }
+
+// or a law firm blog post titled "Understanding Legal Contracts for Small Businesses," you might optimize as follows:
+
+// Title: "Understanding Legal Contracts for Small Businesses | LegalSurface"
+// Slug: legal-contracts-small-businesses
+// Here, both the title and the slug include relevant keywords ("legal contracts" and "small businesses"), which will help in ranking for those search terms.
+

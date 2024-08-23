@@ -14,10 +14,11 @@ export default function Page() {
     <>
       <HeroSection />
        {/* <Services /> */}
+       <Expertise />
        
 
       <About />
-      <Expertise />
+      
 
       <LatestBlogs />
       
