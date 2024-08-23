@@ -54,45 +54,100 @@ export const slidesData = [
   },
   
 ];
-
 export const reviews = [
   {
-    image: "/images/banner.jpg",
-    alt: "John Doe",
-    name: "Mr Waqar",
-    position: "Regular Client",
-    rating: 5,
-    content:
-      "Thoroughly enjoyed the services provided by our team. They particularly appreciated the efficient and professional manner in which our team worked.",
+    text: "Thank you, before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...",
+    name: "Max Conversion",
+    title: "LittleSnippets.net",
+    image: "/images/nik.png",
+    alt: "Max Conversion picture",
   },
   {
-    image: "/images/banner.jpg",
-    alt: "Jane Smith",
-    name: "Mr Hero",
-    position: "Regular Client",
-    rating: 5,
-    content:
-      "Its the best salon I Have ever been to. The staff is incredibly talented and always makes me feel welcome. The services are top-notch.",
+    text: "You know sometimes when I'm talking, my words can't keep up with my thoughts...",
+    name: "Pelican Steve",
+    title: " LittleSnippets.net",
+    image: "/images/nik.png",
+    alt: "Pelican Steve picture",
   },
   {
-    image: "/images/banner.jpg",
-    alt: "Alice Johnson",
-    name: "Mr Chicken",
-    position: "Regular Client",
-    rating: 5,
-    content:
-      "I can confidently say that its the premier salon in town. The exceptional service and attention to detail always exceed my expectations.",
+    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+    name: "#1157",
+    title: " LittleSnippets.net",
+    image: "/images/nik.png",
+    alt: "#1157 picture",
   },
   {
-    image: "/images/banner.jpg",
-    alt: "Aman",
-    name: "Mr Amaan",
-    position: "Regular Client",
-    rating: 5,
-    content:
-      "I can confidently say that its the premier salon in town. The exceptional service and attention to detail always exceed my expectations.",
+    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+    name: "#1157",
+    title: " LittleSnippets.net",
+    image: "/images/nik.png",
+    alt: "#1157 picture",
+  },
+  {
+    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+    name: "#1157",
+    title: " LittleSnippets.net",
+    image: "/images/nik.png",
+    alt: "#1157 picture",
   },
 ];
+
+// export const reviews = [
+//   {
+//     text: "Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... Hobbes: Probably so we can think twice.",
+//     name: "Pelican Steve",
+//     title: "LittleSnippets.net",
+//     image: "/images/nik.png", 
+//   },
+//   {
+//     text: "Thank you, before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...",
+//     name: "Max Conversion",
+//     title: "LittleSnippets.net",
+//     image: "/images/nik.png", 
+//   },
+//   {
+//     text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+//     name: "#1157",
+//     title: "LittleSnippets.net",
+//     image: "/images/nik.png", 
+//   },
+//   // {
+//   //   image: "/images/banner.jpg",
+//   //   alt: "John Doe",
+//   //   name: "Mr Waqar",
+//   //   position: "Regular Client",
+//   //   rating: 5,
+//   //   content:
+//   //     "Thoroughly enjoyed the services provided by our team. They particularly appreciated the efficient and professional manner in which our team worked.",
+//   // },
+//   // {
+//   //   image: "/images/banner.jpg",
+//   //   alt: "Jane Smith",
+//   //   name: "Mr Hero",
+//   //   position: "Regular Client",
+//   //   rating: 5,
+//   //   content:
+//   //     "Its the best salon I Have ever been to. The staff is incredibly talented and always makes me feel welcome. The services are top-notch.",
+//   // },
+//   // {
+//   //   image: "/images/banner.jpg",
+//   //   alt: "Alice Johnson",
+//   //   name: "Mr Chicken",
+//   //   position: "Regular Client",
+//   //   rating: 5,
+//   //   content:
+//   //     "I can confidently say that its the premier salon in town. The exceptional service and attention to detail always exceed my expectations.",
+//   // },
+//   // {
+//   //   image: "/images/banner.jpg",
+//   //   alt: "Aman",
+//   //   name: "Mr Amaan",
+//   //   position: "Regular Client",
+//   //   rating: 5,
+//   //   content:
+//   //     "I can confidently say that its the premier salon in town. The exceptional service and attention to detail always exceed my expectations.",
+//   // },
+// ];
 
 export const services = [
   {
@@ -288,5 +343,26 @@ export const expertiseData = [
       "We best serve our clients by first understanding the results our clients need and then formulating a legal strategy focused on achieving those results.",
   },
 ];
+
+// export const testimonialsData = [
+//   {
+//     text: "Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... Hobbes: Probably so we can think twice.",
+//     name: "Pelican Steve",
+//     title: "LittleSnippets.net",
+//     image: "/images/nik.png", 
+//   },
+//   {
+//     text: "Thank you, before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...",
+//     name: "Max Conversion",
+//     title: "LittleSnippets.net",
+//     image: "/images/nik.png", 
+//   },
+//   {
+//     text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+//     name: "#1157",
+//     title: "LittleSnippets.net",
+//     image: "/images/nik.png", 
+//   },
+// ];
 
 export const API_HOST = "http://localhost:4000/";

@@ -36,7 +36,7 @@ type TextProps = WidthProps &
     font?: AppThemeFonts;
     weight?: AppThemeWeights;
     size?: ResponsiveValue<number | string>;
-    variant?: ResponsiveValue<AppTextVariants>; // Updated type to handle arrays
+    variant?: ResponsiveValue<AppTextVariants>; 
   };
 
 export const Text = styled.span.withConfig(StyledWithConfig)<TextProps>`

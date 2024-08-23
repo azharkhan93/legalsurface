@@ -30,7 +30,7 @@ export const SwiperSlides = () => (
   >
     {reviews.map((review, index) => (
       <SwiperSlide key={index}>
-        <CenterBox py={"xxl"}>
+        <CenterBox py={["xxl", "xxxxl"]}>
           <ReviewCard review={review} />
         </CenterBox>
       </SwiperSlide>

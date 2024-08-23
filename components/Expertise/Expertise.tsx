@@ -1,7 +1,7 @@
-import { expertiseData } from "@/constants";
+import { expertiseData, } from "@/constants";
 import { Box, CenterBox, Column, Text } from "../styled";
-import { MdPeople } from "react-icons/md";
 import { ServicesCard } from "../ServicesCard";
+
 
 export const Expertise = () => {
   return (
@@ -24,8 +24,9 @@ export const Expertise = () => {
         width={"100%"}
         justifyContent={"center"}
         gap={["xl","header"]}
-        // data-aos="fade-up"
       >
+        
+
         {expertiseData.map(({ Icon, heading, description }) => (
           <ServicesCard
             key={heading}
