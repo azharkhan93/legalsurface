@@ -16,7 +16,7 @@ export type Post = {
   status: string;
   url: string;
   publicUrl: string;
-  slug: string; 
+  slug: string;
 };
 
 export const BlogSection = ({ limit }: { limit?: number }) => {
@@ -53,8 +53,8 @@ export const BlogSection = ({ limit }: { limit?: number }) => {
       flexDirection="row"
       gap="xxxl"
       width="100%"
-       px={["l","xxxl"]}
-      py={["xl","header"]}
+      px={["l", "xxxl"]}
+      py={["xl", "header"]}
       bg={"secondary"}
     >
       {itemsToRender.map((item, index) => {
@@ -62,7 +62,13 @@ export const BlogSection = ({ limit }: { limit?: number }) => {
           return <LoadingCard key={index} />;
         }
 
-        return <PostCards key={(item as Post).id} post={item as Post} loading={false} />;
+        return (
+          <PostCards
+            key={(item as Post).id}
+            post={item as Post}
+            loading={false}
+          />
+        );
       })}
     </Box>
   );
