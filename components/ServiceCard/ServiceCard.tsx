@@ -1,48 +1,45 @@
-import { Box, CenterBox, Text } from "@/components";
-import Image from "next/image";
-import React from "react";
+import { Box, Text, Button } from "@/components";
+import { IconType } from "react-icons";
 
 type ServiceCardProps = {
-  imageUrl: string;
+  icon: IconType;
   title: string;
   description: string;
+  link: string;
 };
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({
-  imageUrl,
+  icon: Icon,
   title,
   description,
-}) => {
-  return (
-    <Box
-      border={"1px solid white"}
-      // width={"60%"}
-      textAlign={"center"}
-      // padding={"l"}
-      py={"l"}
-      px={"xl"}
-      borderTopLeftRadius={"xl"}
-      borderTopRightRadius={"xl"}
-      borderBottomRightRadius={"xl"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      bg={"secondary"}
-    >
-      <CenterBox
-        gap={15}
-        // border={"2px solid green"}
-        width={"100%"}
-      >
-        <Image
-          src={imageUrl}
-          alt="image"
-          width={95}
-          height={95}
-          style={{ borderRadius: "50%", border: "2px solid #D4BDE8 " }}
-        />
-        <Text color="primary">{title}</Text>
-        <Text color="primary">{description}</Text>
-      </CenterBox>
+  link,
+}) => (
+  <Box
+    bg="secondary"
+    borderRadius="m"
+    gap={"xl"}
+    alignItems={"flex-start"}
+    justifyContent={"center"}
+    px={"m"}
+    py={"m"}
+    style={{
+      backgroundImage: `url('/images/banner.jpg')`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+    }}
+  >
+    <Box fontSize="40px" color="white" mt={"s"}>
+      <Icon />
     </Box>
-  );
-};
+    <Text variant="heading" color="white">
+      {title}
+    </Text>
+    <Text variant="body" color="white">
+      {description}
+    </Text>
+    <Button variant="primary" px={"xl"} py={"s"}>
+      Learn More
+    </Button>
+  </Box>
+);

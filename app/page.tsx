@@ -7,6 +7,7 @@ import {
   HeroSection,
   LatestBlogs,
   NewsLetter,
+  ServiceSection,
   StatsSection,
 } from "@/components";
 
@@ -23,6 +24,7 @@ export default function Page() {
 
       <LatestBlogs />
       <StatsSection />
+      <ServiceSection />
       
       
 
