@@ -1,9 +1,13 @@
 import { Box, Button, CenterBox, Row, Text } from "@/components";
-import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+
 import Image from "next/image";
-import { borderBottom } from "styled-system";
+import { AnimatedColumn, AnimatedRow } from "../styled/AnimationBox";
+import { useInView } from "@/hooks/useInView";
 
 export const NewsLetter = () => {
+  const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
+  const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
+  
   return (
     <Box
       bg={"grey"}
@@ -15,13 +19,19 @@ export const NewsLetter = () => {
       mx={["none","xxxxl"]}
       borderRadius={"lg"}
     >
-      <CenterBox gap={"xl"} width={"99%"} py={"m"}  >
+      <AnimatedColumn 
+      
+      ref={refColumn}
+      isInView={isInViewColumn}
+      gap={"xl"} width={["100%","70%"]} py={"m"}  >
         <Text variant={["subHeading","heading"]} color={"primary"}  textAlign={ "center"}>
         You dont have to fight alone.
         </Text>
-        <Text variant={["body","subHeading"]} color={"primary"} px={["s","xl"]} textAlign={["start","center"]}>
+        <Text variant={["body","subHeading"]} color={"primary"} px={["s","xl"]} textAlign={["center","center"]}>
         Book a consultation with one of our LegalSurface employment lawyers today.
         </Text>
+        <CenterBox
+        >
         <Button
         variant="primary"
         py={"m"}
@@ -31,9 +41,13 @@ export const NewsLetter = () => {
           Book A Consulation
 
         </Button>
-      </CenterBox>
+        </CenterBox>
+      </AnimatedColumn>
 
-      <CenterBox  width={"100%"}>
+      <AnimatedRow 
+      ref={refRow}
+      isInView={isInViewRow}
+       width={["100%","50%"]}>
         <Image
           src="/images/bing.jpeg"
           alt="logo image"
@@ -41,7 +55,7 @@ export const NewsLetter = () => {
           height={300}
           style={{borderRadius: "10px"}}
         />
-      </CenterBox>
+      </AnimatedRow>
     </Box>
   );
 };
