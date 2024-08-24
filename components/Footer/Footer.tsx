@@ -50,7 +50,6 @@ export const Footer = () => {
           borderBottom={"2px solid white"}
           py={"xxl"}
           flexDirection={["column", "row"]}
-          // border={"4px solid green"}
           px={["s", "xxxl"]}
           mx={["none", "xxxxl"]}
           justifyContent={"space-between"}
@@ -195,8 +194,6 @@ export const Footer = () => {
           <Box
             gap="xxxxl"
             alignItems={["flex-start", "center"]}
-            // border={"2px solid red"}
-            // justifyContent={"center"}
             width={"340px"}
             px={"xl"}
           >

@@ -1,7 +1,6 @@
 "use client";
 import {
   About,
-
   ClientReviews,
   Expertise,
   HeroSection,
@@ -15,25 +14,16 @@ export default function Page() {
   return (
     <>
       <HeroSection />
-       {/* <Services /> */}
-       <Expertise />
-       
+      <Expertise />
 
       <About />
-      
 
       <LatestBlogs />
       <StatsSection />
       <ServiceSection />
-      
-      
 
-      {/* <ServiceSection /> */}
-      {/* <BookingSteps /> */}
-
-      <ClientReviews /> 
+      <ClientReviews />
       <NewsLetter />
-      
     </>
   );
 }
