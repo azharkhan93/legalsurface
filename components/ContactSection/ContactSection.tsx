@@ -2,10 +2,14 @@
 import { Box, Row, Text, Column, CenterBox} from "@/components";
 
 import { Test } from "../Test";
+import { AnimatedColumn, AnimatedRow } from "../styled/AnimationBox";
+import { useInView } from "@/hooks/useInView";
 
 export const ContactSection = () => {
+  const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
+  const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
   return (
-    <Box
+    <AnimatedRow
     py={"xxxxl"}
     flexDirection={["column","row"]}
       // flexDirection={"column"}
@@ -33,7 +37,10 @@ export const ContactSection = () => {
           px={"xl"}
           width={["100%","50%"]}
         >
-          <Column gap={["xl", "m"]}>
+          <AnimatedColumn 
+           ref={refColumn}
+           isInView={isInViewColumn}
+          gap={["xl", "m"]}>
             <Text color={"white"} variant={"heading"}>
               Contact Us
             </Text>
@@ -55,12 +62,14 @@ export const ContactSection = () => {
               provide you with the ultimate beauty experience
             </Text>
           </CenterBox>
-          </Column>
+          </AnimatedColumn>
 
         </Box>
       </Column>
     
-      <CenterBox
+      <AnimatedRow
+      ref={refRow}
+      isInView={isInViewRow}
         py={["xxxl","header"]}
         
         width={["100%","50%",]}
@@ -75,7 +84,7 @@ export const ContactSection = () => {
             throw new Error("Function not implemented.");
           }}
         />
-      </CenterBox>
-    </Box>
+      </AnimatedRow>
+    </AnimatedRow>
   );
 };

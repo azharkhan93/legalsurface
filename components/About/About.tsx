@@ -1,5 +1,6 @@
 import { Box, Button, Row, Text } from "@/components";
 import Image from "next/image";
+import { AnimatedRow } from "../styled/AnimationBox";
 
 export const About: React.FC = () => {
   return (
@@ -39,7 +40,7 @@ export const About: React.FC = () => {
             commercial and specialised services, we deliver the best legal
             solutions for our clients
           </Text>
-          <Row
+          <AnimatedRow
           flexDirection={["row", "row"]}
             width={"100%"}
             gap={["l", "header"]}
@@ -61,7 +62,7 @@ export const About: React.FC = () => {
             >
               Explore Practice Areas
             </Button>
-          </Row>
+          </AnimatedRow>
         </Box>
       </Box>
     </>
