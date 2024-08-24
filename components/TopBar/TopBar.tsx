@@ -24,19 +24,14 @@ export const TopBar: React.FC<TopNavBarProps> = ({
         backgroundPosition: "center",
       }}
     >
-      <Column px={"xl"} mt={"header"} py={"xxlg"} width={"100%"} gap={"xxxl"}>
-        <Row alignItems={"center"} gap={"m"} justifyContent={"center"}>
+      <Column px={["s","xl"]} mt={"header"} py={"xxlg"} width={"100%"} gap={"xxxl"} >
+        
           
-          <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"}>
+          <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"} >
             {aboutText}
           </Text>
-          <Box
-            height={"3px"}
-            bg={"primary"}
-            width={["23%", "8%"]}
-            borderRadius={"circle"}
-          ></Box>
-        </Row>
+         
+       
         <Row alignItems={["flex-start","center"]} gap={"m"} justifyContent={"center"}>
           <Text variant={"heading"} color="primary" fontWeight={"bold"}>
             {whoWeAreText}
@@ -44,8 +39,9 @@ export const TopBar: React.FC<TopNavBarProps> = ({
           <Box
             height={"3px"}
             bg={"primary"}
-            width={["30%", "8%"]}
+            width={["60%", "12%"]}
             borderRadius={"circle"}
+            ml={"header"}
           ></Box>
         </Row>
       </Column>
