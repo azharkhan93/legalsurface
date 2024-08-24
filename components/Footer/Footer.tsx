@@ -3,28 +3,19 @@ import {
   Button,
   CenterBox,
   Column,
-  NewsLetter,
-  Row,
-  StyledHr,
+ 
   StyledInputBox,
   StyledLink,
   Text,
   UpdateForm,
 } from "@/components";
 import React, { useState } from "react";
-import Image from "next/image";
+
 import {
-  FaPhone,
-  FaEnvelope,
-  FaMapMarkerAlt,
   FaArrowRight,
   FaFacebook,
-  FaGlobeAfrica,
   FaInstagram,
   FaLinkedin,
-  FaPhoneAlt,
-  FaPinterest,
-  FaYoutube,
 } from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import router from "next/router";
@@ -192,10 +183,11 @@ export const Footer = () => {
             </Column>
           </Box>
           <Box
-            gap="xxxxl"
+
+            gap={["l","xxxxl"]}
             alignItems={["flex-start", "center"]}
             width={"340px"}
-            px={"xl"}
+            //  px={"xl"}
           >
             <Text variant="subHeading" color="white">
               Subscribe To
