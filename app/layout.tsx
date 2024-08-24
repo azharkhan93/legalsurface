@@ -3,7 +3,6 @@ import { Box, GlobalStyle } from "@/components";
 import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { ApolloProvider } from "@apollo/client";
-import { client } from "@/utils/apolloClient";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/Footer/Footer";
 import 'react-toastify/dist/ReactToastify.css';
@@ -42,7 +41,7 @@ export default function RootLayout({
         <GlobalStyle />
         
           <AppThemeProvider>
-            <ApolloProvider client={client}>
+            {/* <ApolloProvider client={client}> */}
             <LoaderProvider>
            
                 <Navbar />
@@ -50,7 +49,7 @@ export default function RootLayout({
                 <Footer />
                 
             </LoaderProvider>
-            </ApolloProvider>
+            {/* </ApolloProvider> */}
           </AppThemeProvider>
         
       </body>

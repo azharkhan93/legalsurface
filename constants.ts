@@ -1,17 +1,4 @@
-import {
-  FaHome,
-  FaDollarSign,
-  FaUsers,
-  FaBroom,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaClock,
-  FaEnvelope,
-} from "react-icons/fa";
-import step1Animation from "@/animations/bookings.json";
-import step2Animation from "@/animations/order.json";
-import step3Animation from "@/animations/details.json";
-import step4Animation from "@/animations/service.json";
+import { FaHome, FaDollarSign, FaUsers, FaBroom } from "react-icons/fa";
 import { MdCheckCircle, MdPeople, MdTrendingUp } from "react-icons/md";
 
 export const NavbarData = [
@@ -35,7 +22,6 @@ export const NavbarData = [
     title: "Blogs",
     link: "/blog",
   },
-
 ];
 
 export const slidesData = [
@@ -43,16 +29,13 @@ export const slidesData = [
     title: "Expert Legal Representation for All Your Needs",
     subtitle:
       "Trust our seasoned attorneys to provide unparalleled legal expertise. Whether you're facing a complex legal battle or seeking guidance on important matters, our dedicated team is here to protect your rights and advocate for your best interests with precision and car",
-    
   },
 
   {
     title: "Your Trusted Legal Advisors for Lifelong Support",
     subtitle:
       "Navigate complex legal challenges with unwavering confidence. Our experienced team is committed to offering clear, strategic, and effective guidance tailored to your unique situation. Whether you're dealing with personal or business matters, we stand by you every step of the way, ensuring your legal journey is as smooth and successful as possible",
-   
   },
-  
 ];
 export const reviews = [
   {
@@ -91,63 +74,6 @@ export const reviews = [
     alt: "#1157 picture",
   },
 ];
-
-// export const reviews = [
-//   {
-//     text: "Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... Hobbes: Probably so we can think twice.",
-//     name: "Pelican Steve",
-//     title: "LittleSnippets.net",
-//     image: "/images/nik.png", 
-//   },
-//   {
-//     text: "Thank you, before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...",
-//     name: "Max Conversion",
-//     title: "LittleSnippets.net",
-//     image: "/images/nik.png", 
-//   },
-//   {
-//     text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
-//     name: "#1157",
-//     title: "LittleSnippets.net",
-//     image: "/images/nik.png", 
-//   },
-//   // {
-//   //   image: "/images/banner.jpg",
-//   //   alt: "John Doe",
-//   //   name: "Mr Waqar",
-//   //   position: "Regular Client",
-//   //   rating: 5,
-//   //   content:
-//   //     "Thoroughly enjoyed the services provided by our team. They particularly appreciated the efficient and professional manner in which our team worked.",
-//   // },
-//   // {
-//   //   image: "/images/banner.jpg",
-//   //   alt: "Jane Smith",
-//   //   name: "Mr Hero",
-//   //   position: "Regular Client",
-//   //   rating: 5,
-//   //   content:
-//   //     "Its the best salon I Have ever been to. The staff is incredibly talented and always makes me feel welcome. The services are top-notch.",
-//   // },
-//   // {
-//   //   image: "/images/banner.jpg",
-//   //   alt: "Alice Johnson",
-//   //   name: "Mr Chicken",
-//   //   position: "Regular Client",
-//   //   rating: 5,
-//   //   content:
-//   //     "I can confidently say that its the premier salon in town. The exceptional service and attention to detail always exceed my expectations.",
-//   // },
-//   // {
-//   //   image: "/images/banner.jpg",
-//   //   alt: "Aman",
-//   //   name: "Mr Amaan",
-//   //   position: "Regular Client",
-//   //   rating: 5,
-//   //   content:
-//   //     "I can confidently say that its the premier salon in town. The exceptional service and attention to detail always exceed my expectations.",
-//   // },
-// ];
 
 export const services = [
   {
@@ -213,113 +139,26 @@ export const columnCardData = [
   },
 ];
 
-export const stepsData = [
-  {
-    text: "Choose your desired makeup service from our extensive range of professional options.",
-    animation: step4Animation,
-  },
-  {
-    text: "Select a convenient date and time for your booking to ensure you get the perfect...",
-    animation: step1Animation,
-  },
-  {
-    text: "Enter your contact details and address to help us provide you with the best service possible.",
-    animation: step3Animation,
-  },
-  {
-    text: "Review your booking and confirm your order to finalize your appointment.",
-    animation: step2Animation,
-  },
-];
-
 export const faqItems = [
   {
-    question: "How Can I Book A Services On Glam Squad?",
+    question: "How Can I Schedule a Consultation with Your Law Firm?",
     answer:
-      "Yes, you can book our services from our website and browse through the categories of services provided by us. Click the service you need, choose your date and time. You will be asked to make payment for the service. You will get the service at home.",
+      "You can easily schedule a consultation with us by visiting our website and selecting the 'Book a Consultation' option. Choose your preferred date and time, and fill in the required details. Our team will confirm your appointment via email or phone.",
   },
   {
-    question: "Does Glam Squad Offers All Kinds Of Services At Home?",
+    question: "What Types of Legal Services Does Your Firm Provide?",
     answer:
-      "Yes, we provide all available beauty services like waxing, threading, skin cleanup, manicure/pedicure. If you have any questions, you can discuss with our beautification. The makeup artist will do those during your session.",
+      "Our law firm provides a wide range of legal services, including family law, corporate law, real estate law, estate planning, and criminal defense. We also offer specialized services for businesses and individuals. Contact us to discuss your specific legal needs.",
   },
   {
-    question: "Does Galam Up beauticans bring their own beauty kit?",
+    question: "Do You Offer Free Initial Consultations?",
     answer:
-      "Yes, our home salon beauticians will get their own beauty products and facials. You don't have to worry about arranging them before the service.",
+      "Yes, we offer a free initial consultation to discuss your case and determine how we can assist you. This allows us to understand your needs and provide you with an overview of the legal options available to you.",
   },
   {
-    question: "Do Glam Squad accepts online payments?",
+    question: "How Can I Make Payments for Legal Services?",
     answer:
-      "Yes, we provide multiple online payment options including online payment like Paytm, GPay, PhonePe, and we accept cash also.",
-  },
-];
-export const contactCardData = [
-  {
-    icon: FaPhone,
-    text1: "Phone Number:",
-    text2: "+91 8899355648",
-  },
-  {
-    icon: FaMapMarkerAlt,
-    text1: "Address:",
-    text2: "Rajbagh, Srinagar J & K",
-  },
-
-  {
-    icon: FaClock,
-    text1: "Opening Hours:",
-    text2: "Mon - Sat 9:00 AM - 10:00 PM ",
-  },
-  {
-    icon: FaEnvelope,
-    text1: "Email Address:",
-    text2: "glam90239@gmail.com",
-  },
-];
-
-export const products = [
-  {
-    imageUrl: "/images/home3.jpg",
-    productName: "Luxury Leo Repechage facial",
-    productDes: "Service Time: 40 Mins",
-    price: 200,
-  },
-  {
-    imageUrl: "/images/home3.jpg",
-    productName: "full body",
-    productDes: "Service Time: 40 Mins",
-    price: 550,
-  },
-  {
-    imageUrl: "/images/home3.jpg",
-    productName: "Hair",
-    productDes: "Service Time: 40 Mins",
-    price: 700,
-  },
-  {
-    imageUrl: "/images/home3.jpg",
-    productName: "Nails",
-    productDes: "Service Time: 40 Mins",
-    price: 50,
-  },
-  {
-    imageUrl: "/images/home3.jpg",
-    productName: "Wax body",
-    productDes: "Service Time: 40 Mins",
-    price: 10,
-  },
-  {
-    imageUrl: "/images/home3.jpg",
-    productName: "ody",
-    productDes: "Service Time: 40 Mins",
-    price: 10,
-  },
-  {
-    imageUrl: "/images/home3.jpg",
-    productName: "hands",
-    productDes: "Service Time: 40 Mins",
-    price: 10,
+      "We offer multiple payment options, including credit/debit cards, bank transfers, and online payment methods such as PayPal. We also provide flexible payment plans for our clients. Please contact our billing department for more details.",
   },
 ];
 
@@ -344,33 +183,11 @@ export const expertiseData = [
   },
 ];
 
-
-  export const stats = [
-    { heading: "200+", subHeading: "Trust Administion" },
-    { heading: "400+", subHeading: "Estate Plans" },
-    { heading: "400+", subHeading: "Litigation Clients" },
-    { heading: "100+", subHeading: "Secured Cases" },
-  ];
-
-// export const testimonialsData = [
-//   {
-//     text: "Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... Hobbes: Probably so we can think twice.",
-//     name: "Pelican Steve",
-//     title: "LittleSnippets.net",
-//     image: "/images/nik.png", 
-//   },
-//   {
-//     text: "Thank you, before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...",
-//     name: "Max Conversion",
-//     title: "LittleSnippets.net",
-//     image: "/images/nik.png", 
-//   },
-//   {
-//     text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
-//     name: "#1157",
-//     title: "LittleSnippets.net",
-//     image: "/images/nik.png", 
-//   },
-// ];
+export const stats = [
+  { heading: "200+", subHeading: "Trust Administion" },
+  { heading: "400+", subHeading: "Estate Plans" },
+  { heading: "400+", subHeading: "Litigation Clients" },
+  { heading: "100+", subHeading: "Secured Cases" },
+];
 
 export const API_HOST = "http://localhost:4000/";

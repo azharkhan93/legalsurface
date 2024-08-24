@@ -9,7 +9,7 @@ export const NewsLetter = () => {
       bg={"grey"}
       borderBottom={"1px solid #D4BDE8"}
       alignItems={"center"}
-      flexDirection={["column-reverse", "row"]}
+      flexDirection={["column", "row"]}
       justifyContent={"space-between"}
       py={["xxl", "xxxxl"]}
       mx={["none","xxxxl"]}

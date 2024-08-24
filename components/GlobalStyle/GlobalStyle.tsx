@@ -29,14 +29,14 @@ export const GlobalStyle = createGlobalStyle`
 
     @font-face {
         font-family: "BaskervvilleSCRegular";
-        src: url('/assets/font/BaskervvilleSC-Regular.ttf') format("truetype");
+        src: url('/fonts/BaskervvilleSC-Regular.ttf') format("truetype");
         font-weight: 400;
         font-style: normal;
         font-display: swap;
     }
 
     * {
-        // font-family: "DMSansRegular"; 
+        font-family: "DMSansRegular"; 
         box-sizing: border-box;
     }
 

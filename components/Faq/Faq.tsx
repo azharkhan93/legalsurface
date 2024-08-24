@@ -1,10 +1,10 @@
-"use client"
-import dynamic from 'next/dynamic';
+"use client";
+import dynamic from "next/dynamic";
 
-const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import { Box, CenterBox, Column, Row, Text } from "../styled";
 import { FaqItem } from "../FaqItem";
-import AboutAnimation from "@/animations/about.json";
+import FaqAnimation from "@/animations/faq.json";
 
 interface FAQItemProps {
   question: string;
@@ -26,7 +26,7 @@ export const Faq: React.FC<FAQProps> = ({ items }) => {
       >
         <Column gap={["xl", "m"]}>
           <Text color={"secondary"} variant={"heading"} fontWeight={"bold"}>
-            Frequently Asked Questions
+            Commonly Asked Questions
           </Text>
           <Box
             height={"3px"}
@@ -36,14 +36,14 @@ export const Faq: React.FC<FAQProps> = ({ items }) => {
             borderRadius={"circle"}
           ></Box>
           <Text color={"secondary"} variant={"subHeading"}>
-            Answers to Common Queries
+            Responses to Popular Questions
           </Text>
         </Column>
 
         <CenterBox width={["100%", "450px"]}>
           <Text color={"secondary"} variant={"body"}>
-            Find answers to the most frequently asked questions about our
-            services. If you have any other queries, feel free to contact us.
+            {`Discover responses to our most common service inquiries. For any
+            additional questions, don't hesitate to reach out to us.`}
           </Text>
         </CenterBox>
       </Box>
@@ -54,7 +54,7 @@ export const Faq: React.FC<FAQProps> = ({ items }) => {
       >
         <Box>
           <Lottie
-            animationData={AboutAnimation}
+            animationData={FaqAnimation}
             loop={true}
             style={{
               height: "420px",

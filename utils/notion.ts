@@ -28,7 +28,6 @@ export async function getBlogPosts() {
         const descriptionBlocks = await getPageContent(page.id);
         const richTextData = extractRichText(descriptionBlocks);
 
-        // console.log("here is the data", richTextData);
 
         const description = richTextData.join(" ") || "";
 
@@ -121,7 +120,6 @@ function processRichText(richTextArray: any[]): string {
           (url: string) => `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`
         );
 
-        // console.log("Processed rich text:", { original: content, processed: processedContent });
 
         return processedContent;
       }

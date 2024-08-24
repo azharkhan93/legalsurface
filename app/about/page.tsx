@@ -12,8 +12,9 @@ export default function Page() {
         whoWeAreText={"Who We Are"}
       />
       <KnowUs />
+      <Faq items={faqItems} />
       <NewsLetter />
-      {/* <Faq items={faqItems} /> */}
+      
     </>
   );
 }
