@@ -8,7 +8,7 @@ type CardProps = {
   description: string;
 };
 
-export const ServicesCard = ({ Icon, heading, description }: CardProps) => {
+export const ServicesCard: React.FC<CardProps> = ({ Icon, heading, description }) => {
   return (
     <AnimationBox alignItems={"center"} gap={"m"} px={"s"}>
       <Icon size={50} color={"secondary"} />

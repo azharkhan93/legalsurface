@@ -13,7 +13,7 @@ export const StatsCards: React.FC<StatsCardsProps> = ({
     alignItems={"center"}
     borderTop={["none", "3px solid black"]}
     borderBottom={"2px solid black"}
-    //   p={"l"}
+       p={"l"}
     gap={["xl", "l"]}
     color="secondary"
   >

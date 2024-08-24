@@ -15,7 +15,7 @@ export const BASE_TEXT_VARIANTS = {
     fontFamily: BASE_FONTS.subHeading,
   },
   body: {
-    fontSize: 16,
+    fontSize: 18,
     fontFamily: BASE_FONTS.body,
   },
 };
