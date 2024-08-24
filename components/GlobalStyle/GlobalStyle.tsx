@@ -27,15 +27,21 @@ export const GlobalStyle = createGlobalStyle`
         font-display: swap;
     }
 
-    * {
-    font-family: "DMSansRegular"; 
+    @font-face {
+        font-family: "BaskervvilleSCRegular";
+        src: url('/assets/font/BaskervvilleSC-Regular.ttf') format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
     }
 
+    * {
+        // font-family: "DMSansRegular"; 
+        box-sizing: border-box;
+    }
 
-* {
-    box-sizing: border-box;
-    
-}
-
-
+    .baskervville-font {
+        font-family: "BaskervvilleSCRegular";
+    }
 `;
+
