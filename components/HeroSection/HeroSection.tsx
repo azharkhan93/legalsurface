@@ -11,7 +11,7 @@ export const HeroSection = () => {
     <>
       <Swiper
         navigation
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 3000 }}
         loop={true}
         modules={[Autoplay, Pagination]}
       >
