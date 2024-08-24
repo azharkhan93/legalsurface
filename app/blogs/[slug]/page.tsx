@@ -54,8 +54,8 @@ export default function Page({ params }: PageProps) {
         <meta property="og:title" content={post?.title || "Blog Post"} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={post?.file || "/default-image.png"} />
-        <meta property="og:url" content={`https://legalsurface.com/blog/${slug}`} />
-        <link rel="canonical" href={`https://legalsurface.com/blog/${slug}`} />
+        {/* <meta property="og:url" content={`https://legalsurface.com/blog/${slug}`} /> */}
+        {/* <link rel="canonical" href={`https://legalsurface.com/blog/${slug}`} /> */}
       </Head>
 
       <TopBar
