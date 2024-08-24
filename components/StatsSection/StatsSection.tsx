@@ -13,10 +13,32 @@ export const StatsSection = () =>{
      
         width={"100%"}
         gap={"xxxl"}
-        bg={"grey"}
+        px={"s"}
+        // bg={"grey"}
         >
-        <Text variant={"heading"} color="white" textAlign={"start"} p={"m"}> Since 20007</Text>
+             <Column alignItems={"flex-start"} gap={"m"} px={"m"} >
+        <Text variant={"heading"} fontWeight={"bold"} color={"secondary"}>
+          Our Stats
+        </Text>
+        <Box
+          height={"3px"}
+          bg={"secondary"}
+          width={["40%","20%"]}
+          borderRadius={"circle"}
+          ml={"header"}
+        />
+        <Text variant={"subHeading"} fontWeight={"bold"} color={"secondary"}>
+          Explore Now
+        </Text>
+      </Column>
+      <Text color={"secondary"} variant={"body"} width={["100%","800px"]} px={["none","xl"]}>
+        Here is an overview of the various departments at our university. Each
+        department offers unique programs and services designed to help you
+        achieve your academic and career goals. Explore our departments to learn
+        more about the opportunities available.
+      </Text>
         <Row
+        gap={"l"}
           flexDirection={["column", "row"]}
             py={"xl"}
             px={"xl"}

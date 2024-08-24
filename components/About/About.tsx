@@ -40,6 +40,7 @@ export const About: React.FC = () => {
             solutions for our clients
           </Text>
           <Row
+          flexDirection={["row", "row"]}
             width={"100%"}
             gap={["l", "header"]}
             justifyContent={"space-between"}
