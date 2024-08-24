@@ -15,7 +15,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   link,
 }) => (
   <Box
-    bg="secondary"
+  borderRight={"5px solid grey"}
+  borderLeft={"5px solid darkgrey"}
     borderRadius="m"
     gap={"xl"}
     alignItems={"flex-start"}

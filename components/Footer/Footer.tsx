@@ -79,7 +79,6 @@ export const Footer = () => {
             width={"155px"}
             px={"s"}
             borderRadius={"circle"}
-            // px={"xl"}
           >
             <FaArrowRight
               style={{
@@ -198,43 +197,38 @@ export const Footer = () => {
             alignItems={["flex-start", "center"]}
             // border={"2px solid red"}
             // justifyContent={"center"}
-             width={"340px"}
+            width={"340px"}
             px={"xl"}
           >
             <Text variant="subHeading" color="white">
               Subscribe To
             </Text>
-            {/* <Box
-              height={"2px"}
-              bg={"white"}
-              width={["20%", "70%"]}
-              ml={"header"}
-              borderRadius={"circle"}
-            ></Box> */}
             <CenterBox
               position="relative"
-              // flexDirection={"row"}
-              // gap={"header"}
-              // justifyContent={"space-between"}
 
             >
               <Box
                 flexDirection={"row"}
-                position="absolute"
+                position={["relative","absolute"]}
                 alignItems={["flex-start", "center"]}
                 justifyContent={"center"}
                 top="50%"
                 gap={"xl"}
-               
-                // left="10px"
-                // right={100}
-
-                // transform="translateY(-50%)"
+                
               >
-                <StyledInputBox
-                width={"260px"}
-                ></StyledInputBox>
-                <FaArrowRight size={37} fill="white" style={{marginLeft: '-45px', zIndex: "100", background: "black", padding: "4px", cursor: "pointer", borderRadius: "4px"}} />
+                <StyledInputBox width={"260px"}></StyledInputBox>
+                <FaArrowRight
+                  size={37}
+                  fill="white"
+                  style={{
+                    marginLeft: "-45px",
+                    zIndex: "100",
+                    background: "black",
+                    padding: "4px",
+                    cursor: "pointer",
+                    borderRadius: "4px",
+                  }}
+                />
               </Box>
             </CenterBox>
           </Box>
