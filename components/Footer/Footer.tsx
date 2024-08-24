@@ -45,7 +45,7 @@ export const Footer = () => {
   };
   return (
     <>
-      <Box width={"100%"} bg={"secondary"}>
+      <Box width={"100%"} bg={"secondary"} mt={"m"}>
         <CenterBox
           borderBottom={"2px solid white"}
           py={"xxl"}
@@ -214,7 +214,7 @@ export const Footer = () => {
                 justifyContent={"center"}
                 top="50%"
                 gap={"xl"}
-                
+
               >
                 <StyledInputBox width={"260px"}></StyledInputBox>
                 <FaArrowRight
