@@ -7,7 +7,7 @@ import { useInView } from "@/hooks/useInView";
 export const NewsLetter = () => {
   const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
   const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
-  
+
   return (
     <Box
       bg={"grey"}
@@ -16,44 +16,51 @@ export const NewsLetter = () => {
       flexDirection={["column", "row"]}
       justifyContent={"space-between"}
       py={["xxl", "xxxxl"]}
-      mx={["none","xxxxl"]}
+      mx={["none", "xxxxl"]}
       borderRadius={"lg"}
     >
-      <AnimatedColumn 
-      
-      ref={refColumn}
-      isInView={isInViewColumn}
-      gap={"xl"} width={["100%","70%"]} py={"m"}  >
-        <Text variant={["subHeading","heading"]} color={"primary"}  textAlign={ "center"}>
-        You dont have to fight alone.
-        </Text>
-        <Text variant={["body","subHeading"]} color={"primary"} px={["s","xl"]} textAlign={["center","center"]}>
-        Book a consultation with one of our LegalSurface employment lawyers today.
-        </Text>
-        <CenterBox
-        >
-        <Button
-        variant="primary"
+      <AnimatedColumn
+        ref={refColumn}
+        isInView={isInViewColumn}
+        gap={"xl"}
+        width={["100%", "70%"]}
         py={"m"}
-        px={"xl"}
-       style={{background: "black", borderBottom: "3px solid White"}}
+      >
+        <Text
+          variant={["subHeading", "heading"]}
+          color={"primary"}
+          textAlign={"center"}
         >
-          Book A Consulation
-
-        </Button>
+          You dont have to fight alone.
+        </Text>
+        <Text
+          variant={["body", "subHeading"]}
+          color={"primary"}
+          px={["s", "xl"]}
+          textAlign={["center", "center"]}
+        >
+          Book a consultation with one of our LegalSurface employment lawyers
+          today.
+        </Text>
+        <CenterBox>
+          <Button
+            variant="primary"
+            py={"m"}
+            px={"xl"}
+            style={{ background: "black", borderBottom: "3px solid White" }}
+          >
+            Book A Consulation
+          </Button>
         </CenterBox>
       </AnimatedColumn>
 
-      <AnimatedRow 
-      ref={refRow}
-      isInView={isInViewRow}
-       width={["100%","50%"]}>
+      <AnimatedRow ref={refRow} isInView={isInViewRow} width={["100%", "50%"]}>
         <Image
           src="/images/bing.jpeg"
           alt="logo image"
           width={400}
           height={300}
-          style={{borderRadius: "10px"}}
+          style={{ borderRadius: "10px" }}
         />
       </AnimatedRow>
     </Box>

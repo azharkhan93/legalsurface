@@ -52,12 +52,14 @@ export const Faq: React.FC<FAQProps> = ({ items }) => {
         flexDirection={["column-reverse", "row"]}
         gap={["none", "header"]}
       >
-        <Box>
+        <Box
+        border={"2px solid red"}
+        >
           <Lottie
             animationData={FaqAnimation}
             loop={true}
             style={{
-              height: "420px",
+              height: "430px",
               width: "500px",
               paddingLeft: "76px",
               paddingRight: "76px",
