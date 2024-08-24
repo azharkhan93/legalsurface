@@ -1,5 +1,6 @@
-"use client";
+"use client"
 import { useState, useEffect, useRef, RefObject } from "react";
+
 type UseInViewOptions = IntersectionObserverInit;
 type UseInViewReturn = [RefObject<HTMLDivElement>, boolean];
 
@@ -8,11 +9,11 @@ export const useInView = (options: UseInViewOptions): UseInViewReturn => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const currentRef = ref.current;
-
     const observer = new IntersectionObserver(([entry]) => {
       setIsInView(entry.isIntersecting);
     }, options);
+
+    const currentRef = ref.current;
 
     if (currentRef) {
       observer.observe(currentRef);

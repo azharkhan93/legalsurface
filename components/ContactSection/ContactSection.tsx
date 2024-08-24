@@ -12,7 +12,6 @@ export const ContactSection = () => {
     <AnimatedRow
     py={"xxxxl"}
     flexDirection={["column","row"]}
-      // flexDirection={"column"}
       alignItems={"center"}
       justifyContent={"space-between"}
       bg={"primary"}

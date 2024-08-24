@@ -1,11 +1,17 @@
 import { Box, Button, Row, Text } from "@/components";
 import Image from "next/image";
-import { AnimatedRow } from "../styled/AnimationBox";
+import { AnimatedColumn, AnimatedRow } from "../styled/AnimationBox";
+import { useInView } from "@/hooks/useInView";
 
 export const About: React.FC = () => {
+  const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
+  const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
   return (
     <>
-      <Box
+      <AnimatedColumn
+      ref={refColumn}
+      isInView={isInViewColumn}
+
         width={"100%"}
         height={"100vh"}
         alignItems={"flex-start"}
@@ -41,6 +47,8 @@ export const About: React.FC = () => {
             solutions for our clients
           </Text>
           <AnimatedRow
+          ref={refRow}
+          isInView={isInViewRow}
           flexDirection={["row", "row"]}
             width={"100%"}
             gap={["l", "header"]}
@@ -64,7 +72,7 @@ export const About: React.FC = () => {
             </Button>
           </AnimatedRow>
         </Box>
-      </Box>
+      </AnimatedColumn>
     </>
   );
 };
