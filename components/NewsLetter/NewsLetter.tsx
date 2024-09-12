@@ -56,7 +56,7 @@ export const NewsLetter = () => {
 
       <AnimatedRow ref={refRow} isInView={isInViewRow} width={["100%", "50%"]}>
         <Image
-          src="/images/bing.jpeg"
+          src="/images/lg2.jpeg"
           alt="logo image"
           width={400}
           height={300}

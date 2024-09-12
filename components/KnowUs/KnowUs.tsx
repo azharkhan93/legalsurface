@@ -67,7 +67,7 @@ export const KnowUs = () => {
       >
         <CenterBox gap={"xxl"} width={["", "300px"]}>
           <Image
-            src="/images/banner.jpg"
+            src="/images/hind.png"
             alt="slider image"
             width={500}
             height={390}

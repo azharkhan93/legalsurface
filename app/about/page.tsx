@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <>
       <TopBar
-        backgroundImage={"/images/banner.jpg"}
+        backgroundImage={"/images/pd.jpg"}
         aboutText={"About Us"}
         whoWeAreText={"Who We Are"}
       />

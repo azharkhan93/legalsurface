@@ -53,7 +53,7 @@ export const Faq: React.FC<FAQProps> = ({ items }) => {
         gap={["none", "header"]}
       >
         <Box
-        border={"2px solid red"}
+      
         >
           <Lottie
             animationData={FaqAnimation}

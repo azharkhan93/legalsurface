@@ -26,7 +26,7 @@ export const ClientReviews = () => {
             ml={"header"}
             borderRadius={"circle"}
           ></Box>
-          <Text color={"secondary"} variant={"subHeading"} >
+          <Text color={"secondary"} variant={"subHeading"}>
             What Our Clients Say
           </Text>
         </Column>

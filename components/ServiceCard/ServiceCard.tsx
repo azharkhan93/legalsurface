@@ -24,7 +24,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
     px={"m"}
     py={"m"}
     style={{
-      backgroundImage: `url('/images/banner.jpg')`,
+      backgroundImage: `url('/images/legal.jpg')`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
