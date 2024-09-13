@@ -185,7 +185,9 @@ export const Footer = () => {
                 gap={"xl"}
 
               >
-                <StyledInputBox width={"260px"}></StyledInputBox>
+                <StyledInputBox width={"260px"}>
+                  
+                </StyledInputBox>
                 <FaArrowRight
                   size={37}
                   fill="white"

@@ -28,13 +28,14 @@ export const NewsLetter = () => {
       >
       
         <Text
+        width={["100%","730px"]}
           variant={["body", "subHeading"]}
           color={"primary"}
           px={["s", "xl"]}
           textAlign={["center", "start"]}
         >
-          {`For reliable and dedicated legal representation, trust Legal Surface – Advocates & Solicitors to
-guide you through your legal challenges with expertise and unwavering support.`}
+          {`For expert and dedicated legal representation, trust Legal Surface – Advocates & Solicitors to guide you through your challenges with unwavering support.`}
+
         </Text>
         <CenterBox>
           <Button
