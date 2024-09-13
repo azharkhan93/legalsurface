@@ -26,13 +26,7 @@ export const NewsLetter = () => {
         width={["100%", "70%"]}
         py={"m"}
       >
-        {/* <Text
-          variant={["subHeading", "heading"]}
-          color={"primary"}
-          textAlign={"center"}
-        >
-          You dont have to fight alone.
-        </Text> */}
+      
         <Text
           variant={["body", "subHeading"]}
           color={"primary"}
@@ -57,10 +51,10 @@ guide you through your legal challenges with expertise and unwavering support.`}
       <AnimatedRow ref={refRow} isInView={isInViewRow} width={["100%", "40%"]} position={"relative"}
       >
         <Image
-          src="/images/lg2.jpeg"
+          src="/images/pd.jpg"
           alt="logo image"
           width={400}
-          height={300}
+          height={320}
           style={{ borderRadius: "10px" }}
         />
       </AnimatedRow>

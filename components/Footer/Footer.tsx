@@ -7,7 +7,6 @@ import {
   StyledInputBox,
   StyledLink,
   Text,
-  UpdateForm,
 } from "@/components";
 import React, { useState } from "react";
 
@@ -18,7 +17,6 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import { NavbarData } from "@/constants";
-import router from "next/router";
 import { useRouter } from "next/navigation";
 
 // const navigateTo = (link: string) => {
@@ -93,7 +91,7 @@ export const Footer = () => {
           gap={"xxl"}
           px={"m"}
         >
-          <Column alignItems={"center"} justifyContent={"center"} gap={"xl"}>
+          <Column alignItems={"flex-start"} justifyContent={"center"} gap={"xl"}>
             <Box>
               {/* <Image
               src="/images/logo.png"
@@ -105,19 +103,13 @@ export const Footer = () => {
             <Text variant={"subHeading"} color="white">
               About Company
             </Text>
-            <Box
-              height={"2px"}
-              bg={"white"}
-              width={"70%"}
-              ml={"header"}
-              borderRadius={"circle"}
-            ></Box>
+            
 
             <Text
               color={"white"}
-              width={"380px"}
+              width={["100%","380px"]}
               textAlign={["start", "center"]}
-              px={"l"}
+              // px={"l"}
             >
               Welcome to where passion meets purpose. We are a dedicated team of
               professionals committed to striving to deliver excellence through
@@ -138,13 +130,7 @@ export const Footer = () => {
               <Text variant={"subHeading"} color="white">
                 Useful Links
               </Text>
-              <Box
-                height={"2px"}
-                bg={"white"}
-                width={["60%", "70%"]}
-                ml={"header"}
-                borderRadius={"circle"}
-              ></Box>
+              
             </CenterBox>
 
             {NavbarData.map((item, index) => (
@@ -158,13 +144,7 @@ export const Footer = () => {
               <Text variant={"subHeading"} color={"white"}>
                 Contact Us
               </Text>
-              <Box
-                height={"2px"}
-                bg={"white"}
-                width={["40%", "70%"]}
-                ml={"header"}
-                borderRadius={"circle"}
-              ></Box>
+           
             </Box>
 
             <Column justifyContent={"center"} gap={"xxxl"}>
