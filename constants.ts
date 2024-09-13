@@ -33,7 +33,7 @@ export const slidesData = [
   },
 
   {
-    title: "For reliable and dedicated legal representation, trust Legal Surface.",
+    title: "Trust Legal Surface for reliable and dedicated legal representation.",
     
     subtitle:
       "Navigate complex legal challenges with unwavering confidence. Our experienced team is committed to offering clear, strategic, and effective guidance tailored to your unique situation. Whether you're dealing with personal or business matters, we stand by you every step of the way, ensuring your legal journey is as smooth and successful as possible",

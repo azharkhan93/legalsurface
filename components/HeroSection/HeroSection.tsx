@@ -58,7 +58,7 @@ export const HeroSection = () => {
                 <Text
                   textAlign={["start", "center"]}
                   variant={["subHeading", "heading"]}
-                  fontWeight={"bold"}
+                  // fontWeight={"bold"}
                   color={"primary"}
                 >
                   {slide.title}

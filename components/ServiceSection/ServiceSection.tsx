@@ -8,7 +8,12 @@ import {
   Button,
   ServiceCard,
 } from "@/components";
-import { FaGavel, FaBriefcase, FaShieldAlt, FaArrowRight } from "react-icons/fa";
+import {
+  FaGavel,
+  FaBriefcase,
+  FaShieldAlt,
+  FaArrowRight,
+} from "react-icons/fa";
 
 export const ServiceSection = () => {
   return (
@@ -54,10 +59,11 @@ export const ServiceSection = () => {
 
           <CenterBox width={["100%", "450px"]} textAlign={["start", "start"]}>
             <Text color={"secondary"} variant={"body"}>
-            As noted by one of our senior lawyers, At Legal Surface we dont just represent clients  we
-champion their causes with integrity and dedication. Our approach is grounded in meticulous
-preparation and a relentless commitment to achieving justice.”
-</Text>
+              As noted by one of our senior lawyers, At Legal Surface we dont
+              just represent clients we champion their causes with integrity and
+              dedication. Our approach is grounded in meticulous preparation and
+              a relentless commitment to achieving justice.
+            </Text>
           </CenterBox>
         </Box>
 
@@ -87,20 +93,20 @@ preparation and a relentless commitment to achieving justice.”
           />
         </Box>
       </Column>
-      <CenterBox position="relative" mt={["l", "none"]} >
-      <Button
-        borderTopLeftRadius={"xl"}
-        py={"m"}
-        px={"header"}
-        variant="primary"
-        // pr={"xxl"} 
-      >
-       Explore More
-        <Box position={"absolute"} right="20px">
-          <FaArrowRight  size={20} />
-        </Box>
-      </Button>
-    </CenterBox>
+      <CenterBox position="relative" mt={["l", "none"]}>
+        <Button
+          borderTopLeftRadius={"xl"}
+          py={"m"}
+          px={"header"}
+          variant="primary"
+          // pr={"xxl"}
+        >
+          Explore More
+          <Box position={"absolute"} right="20px">
+            <FaArrowRight size={20} />
+          </Box>
+        </Button>
+      </CenterBox>
     </Box>
   );
 };
