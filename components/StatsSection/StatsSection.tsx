@@ -27,10 +27,10 @@ export const StatsSection = () => {
           width={["100%", "800px"]}
           px={["none", "xl"]}
         >
-          Here is an overview of the various departments at our university. Each
-          department offers unique programs and services designed to help you
-          achieve your academic and career goals. Explore our departments to
-          learn more about the opportunities available.
+          {`Legal Surface – Advocates & Solicitors is more than just a law firm; it is a testament to the
+power of dedication, expertise, and an unwavering commitment to client advocacy. Our mission
+is to uphold the principles of justice and provide our clients with the best possible legal solutions
+in challenging times.`}
         </Text>
         <Row
           gap={"l"}

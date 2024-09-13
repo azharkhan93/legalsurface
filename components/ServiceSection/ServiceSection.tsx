@@ -52,12 +52,12 @@ export const ServiceSection = () => {
             </Text>
           </Column>
 
-          <CenterBox width={["100%", "450px"]} textAlign={"center"}>
+          <CenterBox width={["100%", "450px"]} textAlign={["start", "start"]}>
             <Text color={"secondary"} variant={"body"}>
-              Our operational approach is designed to pamper you from head to
-              toe. We understand the importance of self-care and strive to
-              provide you with the ultimate beauty experience
-            </Text>
+            As noted by one of our senior lawyers, At Legal Surface we dont just represent clients  we
+champion their causes with integrity and dedication. Our approach is grounded in meticulous
+preparation and a relentless commitment to achieving justice.”
+</Text>
           </CenterBox>
         </Box>
 

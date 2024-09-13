@@ -26,21 +26,21 @@ export const NewsLetter = () => {
         width={["100%", "70%"]}
         py={"m"}
       >
-        <Text
+        {/* <Text
           variant={["subHeading", "heading"]}
           color={"primary"}
           textAlign={"center"}
         >
           You dont have to fight alone.
-        </Text>
+        </Text> */}
         <Text
           variant={["body", "subHeading"]}
           color={"primary"}
           px={["s", "xl"]}
-          textAlign={["center", "center"]}
+          textAlign={["center", "start"]}
         >
-          Book a consultation with one of our LegalSurface employment lawyers
-          today.
+          {`For reliable and dedicated legal representation, trust Legal Surface – Advocates & Solicitors to
+guide you through your legal challenges with expertise and unwavering support.`}
         </Text>
         <CenterBox>
           <Button
@@ -54,7 +54,8 @@ export const NewsLetter = () => {
         </CenterBox>
       </AnimatedColumn>
 
-      <AnimatedRow ref={refRow} isInView={isInViewRow} width={["100%", "50%"]}>
+      <AnimatedRow ref={refRow} isInView={isInViewRow} width={["100%", "40%"]} position={"relative"}
+      >
         <Image
           src="/images/lg2.jpeg"
           alt="logo image"

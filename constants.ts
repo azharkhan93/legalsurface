@@ -12,7 +12,7 @@ export const NavbarData = [
   },
   {
     title: "Services",
-    link: "/servicess",
+    link: "/services",
   },
   {
     title: "Contact",
@@ -26,13 +26,15 @@ export const NavbarData = [
 
 export const slidesData = [
   {
-    title: "Expert Legal Representation for All Your Needs",
+    title: "Legal Surface prides itself on a collaborative approach to legal practice.",
     subtitle:
-      "Trust our seasoned attorneys to provide unparalleled legal expertise. Whether you're facing a complex legal battle or seeking guidance on important matters, our dedicated team is here to protect your rights and advocate for your best interests with precision and car",
+    "As noted by one of our senior lawyers, at Legal Surface, we don't just represent clients — we champion their causes with integrity and dedication. Our approach is grounded in meticulous preparation and a relentless commitment to achieving justice."
+
   },
 
   {
-    title: "Your Trusted Legal Advisors for Lifelong Support",
+    title: "For reliable and dedicated legal representation, trust Legal Surface.",
+    
     subtitle:
       "Navigate complex legal challenges with unwavering confidence. Our experienced team is committed to offering clear, strategic, and effective guidance tailored to your unique situation. Whether you're dealing with personal or business matters, we stand by you every step of the way, ensuring your legal journey is as smooth and successful as possible",
   },

@@ -40,11 +40,9 @@ export const About: React.FC = () => {
             Facilitating commercial legal solutions
           </Text>
           <Text variant={"body"}>
-            Our expertise across diverse practice areas and sectors covers
-            varied and nuanced needs. Backed by over 100 years of legal
-            heritage, delighted clients from across the globe, and topical,
-            commercial and specialised services, we deliver the best legal
-            solutions for our clients
+          Our journey from a single legal professional to a team of over fifty is a
+reflection of our dedication to improving legal aid. Each case we handle is a testament to our
+commitment to excellence and our relentless pursuit of justice for those we serve.
           </Text>
           <AnimatedRow
           ref={refRow}

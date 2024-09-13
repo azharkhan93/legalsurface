@@ -33,13 +33,13 @@ export const KnowUs = () => {
           color={"primary"}
           width={["", "670px"]}
         >
-          Welcome to Legal Surface Law Group, a family-owned law firm deeply
-          rooted in the heart of Norman and extending its services to the
-          wider area including Woodward and Oklahoma City. Since our inception,
-          we have been dedicated to providing exceptional legal services with
-          a particular focus on family law. Our journey is one of commitment,
-          expertise, and a deep understanding of the law, all driven by our passion
-          for justice and client support.
+          {`Founded in 2003, Legal Surface – Advocates &amp; Solicitors emerged from a vision to address the
+pressing need for high-quality legal aid amid a crisis of inadequate representation. Recognizing
+the gap in accessible and effective legal support for the public, our founder embarked on a
+mission to create a law firm dedicated to providing exceptional legal services. What began as a
+modest venture with a single legal professional has now grown into a dynamic team of over 50
+experienced lawyers, each specializing in a diverse range of legal fields.`}
+
         </Text>
         <CenterBox mt={"l"}>
           <Button

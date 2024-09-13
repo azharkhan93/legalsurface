@@ -44,12 +44,16 @@ export const Services: React.FC = () => {
             </Text>
           </Column>
 
-          <CenterBox width={["100%", "450px"]}>
-            <Text color="primary" variant="body">
-              Discover how our services have positively impacted our clients
-              experiences. Read their testimonials below to learn more.
+          <Box width={["100%", "450px"]} alignItems={"flex-start"}
+          justifyContent={"center"}
+          border={"4px solid black"}
+          >
+            <Text color="primary" variant="body" >
+            As noted by one of our senior lawyers, At Legal Surface, we dont just represent clients we
+champion their causes with integrity and dedication. Our approach is grounded in meticulous
+preparation and a relentless commitment to achieving justice.”
             </Text>
-          </CenterBox>
+          </Box>
         </Box>
         <CenterBox
           gap={"l"}
