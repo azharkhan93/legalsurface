@@ -52,7 +52,7 @@ export const Footer = () => {
               width={"500px"}
             >
               Lets{" "}
-              <span style={{ color: "greenyellow", fontSize: "40px" }}>
+              <span style={{ color: "darkgrey", fontSize: "40px" }}>
                 Connect
               </span>{" "}
               There
