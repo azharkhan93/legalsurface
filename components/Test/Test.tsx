@@ -69,8 +69,8 @@ export const Test: React.FC<UpdateComponentProps> = ({
                 border={"1px solid white"}
                 py={"l"}
                 px={"xl"}
-                borderTopLeftRadius={"xl"}
-                borderBottomLeftRadius={"xl"}
+                borderTopLeftRadius={"m"}
+                borderBottomLeftRadius={"m"}
                 
                 bg={"secondary"}
               >
