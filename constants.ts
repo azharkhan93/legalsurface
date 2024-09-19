@@ -213,6 +213,22 @@ export const SERVICES_DATA = [
     imageSrc: "/images/pd.jpg",
     altText: "Bail Applications",
   },
-  // Add more cards as needed
+  {
+    id: 1,
+    title: "Anti-Corruption Cases Representation",
+    description:
+      "We offer specialized legal defense in anti-corruption cases, representing clients accused under various anti-corruption laws. Our firm handles cases involving public servants, corporate entities, and private individuals, providing robust representation during investigations, trials, and appeals to ensure a fair legal process.",
+    imageSrc: "/images/pd.jpg",
+    altText: "Anti-Corruption Cases",
+  },
+  {
+    id: 2,
+    title: "Bail Applications",
+    description:
+      "We assist clients with bail applications in both criminal and civil matters, providing timely and effective legal representation to ensure that they are released from custody as soon as possible.",
+    imageSrc: "/images/pd.jpg",
+    altText: "Bail Applications",
+  },
+  
 ];
 
