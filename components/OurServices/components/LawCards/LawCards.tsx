@@ -9,14 +9,22 @@ interface ServiceCardProps {
 
 export const LawCards: React.FC<ServiceCardProps> = ({ title, description, imageSrc }) => {
   return (
-    <Box width={["100%", "470px"]} position={["static", "relative"]} py={["xl", "xxxxl"]}>
+    <Box
+      width={["100%", "470px"]}
+      position={["static", "relative"]}
+      py={["xl", "xxxxl"]}
+      borderRadius={"m"} 
+      alignItems={'center'}
+    >
       <Image
         src={imageSrc}
         height={700}
         width={500}
         alt={title}
         layout="responsive"
-        style={{ borderRadius: "5px" }}
+        style={{ borderRadius: "5px",  boxShadow:
+            "0px 4px 8px rgba(0, 0, 0, 0.4), 0px 2px 10px rgba(0, 0, 0, 0.3)", 
+           }}
       />
       <Column
         bg={"modalOverlayBg"}
@@ -29,8 +37,9 @@ export const LawCards: React.FC<ServiceCardProps> = ({ title, description, image
         left={["initial", "0%"]}
         py={"l"}
         px={["s", "xl"]}
-        borderRadius={["none","s"]}
+        borderRadius={["none", "s"]}
         textAlign={["start", "center"]}
+       
       >
         <Text variant={"heading"}>{title}</Text>
         <Text variant={"body"}>{description}</Text>
