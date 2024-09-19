@@ -10,7 +10,7 @@ export const BASE_BUTTON_VARIANTS = {
     backgroundColor: BASE_COLORS.grey|| BASE_COLORS.secondary ,
     color: "white",
     border: "none",
-    borderRadius: BASE_BORDER_RADII.circle,
+    // borderRadius: BASE_BORDER_RADII.circle,
    fontSize: BASE_SPACING.l,
     font: BASE_FONTS.body,
     fontWeights: "500",
