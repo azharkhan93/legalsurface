@@ -11,9 +11,7 @@ export const StyledLink = styled.div<HyperLinkProps>`
   font-family: "panton";
   font-size: 1rem; 
   font-weight: 500;
-  color: #ffffff; 
-  // border-top: 1px solid #D4BDE8;
-   border-bottom: 2px solid #ffffff;
+  color: black; 
   
   padding: 5px;
 
@@ -34,9 +32,9 @@ export const StyledLink = styled.div<HyperLinkProps>`
     background-color: ${(props) =>
       props.$UnderlineColor === ""
         ? ""
-        : props.$UnderlineColor === "#ffffff"
+        : props.$UnderlineColor === "black"
         ? ""
-        : "#ffffff"};
+        : "black"};
     transition: width 0.3s ease;
     border-radius: 10px;
   }

@@ -13,7 +13,16 @@ export const NavbarData = [
   {
     title: "Services",
     link: "/services",
+    dropdown: [
+      { title: "Criminal Law", link: "/services" },
+      
+      
+    ],
   },
+  // {
+  //   title: "Services",
+  //   link: "/services",
+  // },
   {
     title: "Contact",
     link: "/contact",
@@ -214,7 +223,7 @@ export const SERVICES_DATA = [
     altText: "Bail Applications",
   },
   {
-    id: 1,
+    id: 3,
     title: "Anti-Corruption Cases Representation",
     description:
       "We offer specialized legal defense in anti-corruption cases, representing clients accused under various anti-corruption laws. Our firm handles cases involving public servants, corporate entities, and private individuals, providing robust representation during investigations, trials, and appeals to ensure a fair legal process.",
@@ -222,7 +231,7 @@ export const SERVICES_DATA = [
     altText: "Anti-Corruption Cases",
   },
   {
-    id: 2,
+    id: 4,
     title: "Bail Applications",
     description:
       "We assist clients with bail applications in both criminal and civil matters, providing timely and effective legal representation to ensure that they are released from custody as soon as possible.",

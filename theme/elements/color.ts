@@ -6,6 +6,7 @@ export const BASE_COLORS = {
   greyish: "#ACB5BD",
   greyLight: "#E9ECEF",
   red : "#FF0000",
+  transparent: "",
   white: "#ffffff",
   backgroundOverlay: "linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 100%)",
   modalOverlayBg: "rgba(0,0,0,0.3)",
