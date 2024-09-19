@@ -32,6 +32,7 @@ export const Navbar: React.FC = () => {
   const navigateTo = (link: string) => {
     router.push(link);
     setIsOpen(false);
+    setNavbarDropdownOpen(null);
   };
 
   useEffect(() => {

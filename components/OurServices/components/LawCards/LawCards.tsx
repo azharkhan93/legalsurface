@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 export const LawCards: React.FC<ServiceCardProps> = ({ title, description, imageSrc }) => {
   return (
-    <Box  width={["100%", "470px"]} position={"relative"} py={["header","xxxxl"]}>
+    <Box width={["100%", "470px"]} position={["static", "relative"]} py={["xl", "xxxxl"]}>
       <Image
         src={imageSrc}
         height={700}
@@ -19,24 +19,29 @@ export const LawCards: React.FC<ServiceCardProps> = ({ title, description, image
         style={{ borderRadius: "5px" }}
       />
       <Column
-      bg={"modalOverlayBg"}
+        bg={"modalOverlayBg"}
         gap={"l"}
         alignItems={"center"}
         width={["100%", "470px"]}
-
         color="white"
-        position={"absolute"}
-        top={["30%", "35%"]}
-        left={["0", "0%"]}
+        position={["static", "absolute"]}
+        top={["initial", "35%"]}
+        left={["initial", "0%"]}
         py={"l"}
         px={["s", "xl"]}
-        borderRadius={"s"}
+        borderRadius={["none","s"]}
         textAlign={["start", "center"]}
       >
         <Text variant={"heading"}>{title}</Text>
         <Text variant={"body"}>{description}</Text>
-        <CenterBox >
-          <Button textAlign={'center'} py={"s"} px={"xl"} variant={"primary"} style={{ borderRadius: "10px" }}>
+        <CenterBox>
+          <Button
+            textAlign={"center"}
+            py={"s"}
+            px={"xl"}
+            variant={"primary"}
+            style={{ borderRadius: "10px" }}
+          >
             Start Exploring
           </Button>
         </CenterBox>
@@ -44,3 +49,4 @@ export const LawCards: React.FC<ServiceCardProps> = ({ title, description, image
     </Box>
   );
 };
+

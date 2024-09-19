@@ -9,9 +9,9 @@ export const StyledLink = styled.div<HyperLinkProps>`
   cursor: pointer;
   text-decoration: none;
   font-family: "panton";
-  font-size: 1rem; 
+  font-size: 1.1rem; 
   font-weight: 500;
-  color: black; 
+  color: white; 
   
   padding: 5px;
 
