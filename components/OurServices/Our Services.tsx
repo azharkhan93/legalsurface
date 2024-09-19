@@ -20,7 +20,7 @@ export const OurServices = () => {
           ml={"header"}
         />
         <Text variant={"subHeading"} fontWeight={"bold"} color={"secondary"}>
-          Explore Now
+        Our Criminal Law Practices Include
         </Text>
         <Text
           color={"secondary"}
