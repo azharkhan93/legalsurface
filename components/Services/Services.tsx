@@ -79,7 +79,7 @@ preparation and a relentless commitment to achieving justice.”
               border={"none"}
               height={"40px"}
               width={"230px"}
-              borderRadius={"circle"}
+              borderRadius={"s"}
             >
               <Text variant={"body"}>View More</Text>
             </Button>

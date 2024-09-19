@@ -39,7 +39,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
     <Text variant="body" color="white">
       {description}
     </Text>
-    <Button variant="primary" px={"xl"} py={"s"}>
+    <Button variant="primary" px={"xl"} py={"s"} borderRadius={"s"}>
       Learn More
     </Button>
   </Box>

@@ -100,7 +100,7 @@ export const Footer = () => {
               height={100}
             /> */}
             </Box>
-            <Text variant={"subHeading"} color="white">
+            <Text variant={"subHeading"} color="white" textAlign={["start","center"]}>
               About Company
             </Text>
             
@@ -115,7 +115,7 @@ export const Footer = () => {
               professionals committed to striving to deliver excellence through
               our. With a strong foundation in,
             </Text>
-            <CenterBox gap={"xl"} flexDirection={"row"}>
+            <CenterBox gap={"xl"} flexDirection={"row"} width={"100%"}>
               <FaInstagram size={25} fill="white" />
               <FaFacebook size={25} fill="white" />
               <FaLinkedin size={25} fill="white" />

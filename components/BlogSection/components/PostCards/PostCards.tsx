@@ -72,8 +72,9 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
         variant="primary"
           py={"s"}
           px={"xl"}
+          borderRadius={"s"}
           // width={"50px"}
-          style={{ background: "black" }}
+          // style={{ background: "black" }}
           onClick={handleViewMore}
         >
           {showFullText ? "View Full Post" : "Read Blog"}
