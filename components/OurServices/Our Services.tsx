@@ -25,8 +25,9 @@ export const OurServices = () => {
         <Text
           color={"secondary"}
           variant={"body"}
-          width={["100%", "800px"]}
+          width={["100%", "700px"]}
           px={["none", "xl"]}
+          textAlign={["start","center"]}
         >
           {`At Legal Surface – Advocates & Solicitors, we offer a broad spectrum of legal services tailored to meet your needs. Our team of experienced professionals is equipped to handle a variety of cases, ensuring that every legal challenge you face is met with dedication and expertise. Our key service areas include`}
         </Text>
