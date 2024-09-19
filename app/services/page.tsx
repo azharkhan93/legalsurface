@@ -15,8 +15,4 @@ export default function Page() {
   );
 }
 
-// const handleNavbarDropdownToggle = (index: number) => {
-//   setNavbarDropdownOpen(prev => (prev === index ? null : index));
-// };
 
-// const [navbarDropdownOpen, setNavbarDropdownOpen] = useState<number | null>(null);

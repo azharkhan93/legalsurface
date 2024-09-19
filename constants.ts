@@ -254,7 +254,7 @@ export const SERVICES_DATA = [
     id: 7,
     title: "PMLA Cases Representation",
     description:
-    "We provide expert defense for cases under the Prevention of Money Laundering Act (PMLA). Our firm manages complex money laundering cases with thorough preparation and strategic representation, aiming to safeguard your interests and achieve the best possible results.",
+      "We provide expert defense for cases under the Prevention of Money Laundering Act (PMLA). Our firm manages complex money laundering cases with thorough preparation and strategic representation, aiming to safeguard your interests and achieve the best possible results.",
 
     imageSrc: "/images/pd.jpg",
     altText: "Bail Applications",
@@ -263,8 +263,7 @@ export const SERVICES_DATA = [
     id: 8,
     title: "Trial Defense",
     description:
-    "Our firm offers a robust trial defense for clients facing criminal charges. We meticulously prepare and present each case, using strategic legal arguments and compelling evidence to challenge the prosecution and secure the best possible outcome through skilled representation in court.",
-
+      "Our firm offers a robust trial defense for clients facing criminal charges. We meticulously prepare and present each case, using strategic legal arguments and compelling evidence to challenge the prosecution and secure the best possible outcome through skilled representation in court.",
 
     imageSrc: "/images/pd.jpg",
     altText: "Bail Applications",
@@ -273,8 +272,7 @@ export const SERVICES_DATA = [
     id: 9,
     title: "TADA Representation",
     description:
-    "Legal Surface provides expert defense for cases under the Terrorist and Disruptive Activities (Prevention) Act (TADA). Our experienced advocates navigate the complexities of TADA cases, offering comprehensive support during investigations, trials, and appeals. We work diligently to challenge unlawful detentions and protect your fundamental rights.",
-
+      "Legal Surface provides expert defense for cases under the Terrorist and Disruptive Activities (Prevention) Act (TADA). Our experienced advocates navigate the complexities of TADA cases, offering comprehensive support during investigations, trials, and appeals. We work diligently to challenge unlawful detentions and protect your fundamental rights.",
 
     imageSrc: "/images/pd.jpg",
     altText: "Bail Applications",
@@ -283,29 +281,18 @@ export const SERVICES_DATA = [
     id: 10,
     title: "UAPA Representation",
     description:
-    "At Legal Surface, we offer expert legal representation for cases under the Unlawful Activities (Prevention) Act (UAPA). Our skilled lawyers specialize in defending individuals accused of terrorism-related offenses, ensuring that your constitutional rights are safeguarded throughout the legal process. We handle investigations, bail applications, and trial defenses with meticulous attention to detail.",
-
-
+      "At Legal Surface, we offer expert legal representation for cases under the Unlawful Activities (Prevention) Act (UAPA). Our skilled lawyers specialize in defending individuals accused of terrorism-related offenses, ensuring that your constitutional rights are safeguarded throughout the legal process. We handle investigations, bail applications, and trial defenses with meticulous attention to detail.",
 
     imageSrc: "/images/pd.jpg",
     altText: "Bail Applications",
   },
-  // White-Collar Crimes Representation
   {
     id: 11,
     title: "White-Collar Crimes Representation",
     description:
-    "We provide expert defense for white-collar crimes, including corporate fraud, embezzlement, and financial misconduct. Our experienced team navigates complex financial cases, ensuring meticulous preparation and strategic representation to protect your interests and achieve favorable outcomes.",
-
-
-
+      "We provide expert defense for white-collar crimes, including corporate fraud, embezzlement, and financial misconduct. Our experienced team navigates complex financial cases, ensuring meticulous preparation and strategic representation to protect your interests and achieve favorable outcomes.",
 
     imageSrc: "/images/pd.jpg",
     altText: "Bail Applications",
   },
-  
 ];
-
-
-
-
