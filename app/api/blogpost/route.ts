@@ -1,7 +1,8 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getBlogPosts } from "@/utils/notion";
 
-export const dynamic = "force-dynamic";
+import { getBlogPosts } from "@/utils/notion";
+import { NextRequest, NextResponse } from "next/server";
+
+ export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {
   const url = new URL(request.url);
@@ -9,6 +10,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const posts = await getBlogPosts();
+    console.log("blog darta" , posts)
 
     if (slug) {
       const post = posts.find((p) => p.slug === slug);
