@@ -86,12 +86,13 @@ export const Footer = () => {
         <Box
           flexDirection={["column", "row"]}
           justifyContent={"space-between"}
+      
           width={"100%"}
           py={"xxxxl"}
           gap={"xxl"}
           px={"m"}
         >
-          <Column alignItems={"flex-start"} justifyContent={"center"} gap={"xl"}>
+          <Column alignItems={"center"} justifyContent={"center"} gap={"xl"}>
             <Box>
               {/* <Image
               src="/images/logo.png"
@@ -149,16 +150,16 @@ export const Footer = () => {
 
             <Column justifyContent={"center"} gap={"xxxl"}>
               <Text variant="body" color="white">
-                +91 87987978789
+                +91 9419007635
               </Text>
               <Text variant="body" color="white">
                 skuastlansoil@gmail.com
               </Text>
               <Text variant="body" color="white">
-                skuastlansoil@gmail.com
+                legalsurfaceinfo@gmail.cm
               </Text>
-              <Text variant="body" color="white">
-                Lal Chowk, Srinagar, J&K
+              <Text variant="body" color="white" width={["100%","250px"]}>
+                Stadium Road, Shergahi Hazuri Bagh, Srinagr, J&K, 190006
               </Text>
             </Column>
           </Box>
@@ -181,7 +182,7 @@ export const Footer = () => {
                 position={["relative","absolute"]}
                 alignItems={["flex-start", "center"]}
                 justifyContent={"center"}
-                top="50%"
+                top="45%"
                 gap={"xl"}
 
               >
