@@ -11,7 +11,7 @@ export const NavbarData = [
     link: "/about",
   },
   {
-    title: "Services",
+    title: "Practices",
     link: "/services",
     dropdown: [{ title: "Criminal Law", link: "/services" }],
   },
@@ -26,6 +26,10 @@ export const NavbarData = [
   {
     title: "Blogs",
     link: "/blog",
+  },
+  {
+    title: "Careers",
+    link: "/careers",
   },
 ];
 

@@ -152,9 +152,9 @@ export const Footer = () => {
               <Text variant="body" color="white">
                 +91 9419007635
               </Text>
-              <Text variant="body" color="white">
+              {/* <Text variant="body" color="white">
                 skuastlansoil@gmail.com
-              </Text>
+              </Text> */}
               <Text variant="body" color="white">
                 legalsurfaceinfo@gmail.cm
               </Text>

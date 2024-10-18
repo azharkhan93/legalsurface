@@ -29,5 +29,6 @@ export * from "./LatestBlogs"
 export * from "./Expertise"
 export * from "./StatsSection"
 export * from "./OurServices"
+export * from "./CareersSection"
 
 

@@ -39,7 +39,7 @@ type TextProps = WidthProps &
     variant?: ResponsiveValue<AppTextVariants>; 
   };
 
-export const Text = styled.span.withConfig(StyledWithConfig)<TextProps>`
+  export const Text = styled.span.withConfig(StyledWithConfig)<TextProps>`
   ${width}
   ${height}
   ${space}
@@ -53,10 +53,19 @@ export const Text = styled.span.withConfig(StyledWithConfig)<TextProps>`
   ${variant({
     scale: "textVariants",
     variants: {
-      heading: BASE_TEXT_VARIANTS.heading,
-      subHeading: BASE_TEXT_VARIANTS.subHeading,
-      body: BASE_TEXT_VARIANTS.body,
-    }
+      heading: {
+        ...BASE_TEXT_VARIANTS.heading,
+        lineHeight: BASE_TEXT_VARIANTS.heading.lineHeight,
+      },
+      subHeading: {
+        ...BASE_TEXT_VARIANTS.subHeading,
+        lineHeight: BASE_TEXT_VARIANTS.subHeading.lineHeight,
+      },
+      body: {
+        ...BASE_TEXT_VARIANTS.body,
+        lineHeight: BASE_TEXT_VARIANTS.body.lineHeight,
+      },
+    },
   })}
 `;
 
