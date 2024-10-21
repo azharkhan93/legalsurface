@@ -1,4 +1,4 @@
-// ContentSection.tsx
+
 import { Box, Column, Row, Text } from "@/components";
 import { TaskItems } from "../TasItems";
 
@@ -67,7 +67,11 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
         width={"100%"}
         justifyContent={"space-between"}
       >
-        <Column gap={"xl"}>
+        <Column gap={"xxl"} bg={"modalOverlayBg"} py={"l"}  px={["none","l"]} alignItems={"center"}
+        style={{
+          boxShadow: "0px 0px 2px 2px black", 
+        }}
+        >
           <Text variant={"subHeading"} textAlign={"start"}>
             {subHeading}
           </Text>
@@ -75,7 +79,7 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
             <TaskItems key={task.id} description={task.description} />
           ))}
         </Column>
-        <Column gap={"xl"}>
+        <Column gap={"xl"} bg={"modalOverlayBg"} borderBottom={"2px solid white"} borderRadius={"m"} py={"l"} px={["none","l"]} alignItems={"center"} >
           <Text variant={"heading"}>Qualifications:</Text>
           {qualifications.map((qualification) => (
             <Text key={qualification.id} variant={"body"} width={["100%", "600px"]}>

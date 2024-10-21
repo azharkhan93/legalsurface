@@ -305,7 +305,7 @@ export const internshipData = {
   heading: 'Internships',
   subHeading: 'As an Intern, You Will:',
   description:
-    'At LEGAL SURFACE – ADVOCATES & SOLICITORS, our internship program offers law students a unique opportunity to gain hands-on experience and learn from top legal professionals in Jammu and Kashmir. This program is designed to immerse you in the practical aspects of legal practice and provide valuable insights into the legal field.',
+    'Our internship program offers law students a unique opportunity to gain hands-on experience and learn from top legal professionals in Jammu and Kashmir. This program is designed to immerse you in the practical aspects of legal practice and provide valuable insights into the legal field.',
   tasks: [
     {
       id: 1,
