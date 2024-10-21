@@ -1,3 +1,4 @@
+// ContentSection.tsx
 import { Box, Column, Row, Text } from "@/components";
 import { TaskItems } from "../TasItems";
 
@@ -6,6 +7,7 @@ type ReusableSectionProps = {
   description: string;
   subHeading: string;
   tasks: { id: number; description: string }[];
+  qualifications: { id: number; description: string }[];
 };
 
 export const ContentSection: React.FC<ReusableSectionProps> = ({
@@ -13,9 +15,11 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
   description,
   subHeading,
   tasks,
+  qualifications,
 }) => {
   return (
     <Column
+    width={"100%"}
       border={"3px solid red"}
       py={"xl"}
       gap={"l"}
@@ -57,7 +61,7 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
       </Text>
 
       <Row
-      py={"xl"}
+        py={"xl"}
         gap={["xxxxl", "xl"]}
         flexDirection={["column", "row"]}
         width={"100%"}
@@ -73,21 +77,11 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
         </Column>
         <Column gap={"xl"}>
           <Text variant={"heading"}>Qualifications:</Text>
-
-          <Text variant={"body"} width={["100%", "600px"]}>
-            Enrolled in a Law Degree Program: Candidates must be currently
-            enrolled in a law degree program to be eligible for this internship.
-          </Text>
-          <Text variant={"body"}>
-            Strong Research and Writing Skills: A solid foundation in research
-            and writing is crucial for performing the tasks required during the
-            internship.
-          </Text>
-          <Text variant={"body"}>
-            Eagerness to Learn and Contribute: We seek motivated individuals who
-            are eager to learn, contribute, and make the most of this invaluable
-            learning experience.
-          </Text>
+          {qualifications.map((qualification) => (
+            <Text key={qualification.id} variant={"body"} width={["100%", "600px"]}>
+              {qualification.description}
+            </Text>
+          ))}
         </Column>
       </Row>
     </Column>
