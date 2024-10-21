@@ -1,12 +1,12 @@
 import { Box, Column, Row, Text } from "@/components";
 import { TaskItems } from "../TasItems";
 
-type  ReusableSectionProps = {
+type ReusableSectionProps = {
   heading: string;
   description: string;
   subHeading: string;
   tasks: { id: number; description: string }[];
-}
+};
 
 export const ContentSection: React.FC<ReusableSectionProps> = ({
   heading,
@@ -16,11 +16,11 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
 }) => {
   return (
     <Column
+      border={"3px solid red"}
       py={"xl"}
       gap={"l"}
       color="white"
       alignItems={"center"}
-      width={"800px"}
       style={{
         backgroundImage: "url('/images/pd.jpg')",
         backgroundSize: "cover",
@@ -29,13 +29,15 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
       }}
     >
       <Row
+       
         flexDirection={"row"}
-        justifyContent={"start"}
+        justifyContent={"center"}
         alignItems={"center"}
         width={"100%"}
         gap={"xl"}
       >
         <Box
+       
           justifyContent={"center"}
           alignItems={"center"}
           bg={"grey"}
@@ -43,21 +45,51 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
           py={"s"}
           px={"xl"}
         >
-          <Text variant={"heading"} color="white">
+          <Text variant={"heading"} color="white" textAlign={"center"}>
             1
           </Text>
         </Box>
-        <Text variant={"heading"}>{heading}</Text>
+        <Text variant={"heading"} textAlign={"center"}>
+          {heading}
+        </Text>
       </Row>
+      <Text variant={"body"} textAlign={"center"} width={["100%","700px"]}>
+        {description}
+      </Text>
 
-      <Column gap={"xl"}>
-        <Text variant={"body"}>{description}</Text>
+     
+      <Row
 
-        <Text variant={"subHeading"}>{subHeading}</Text>
-        {tasks.map((task) => (
-          <TaskItems key={task.id} description={task.description} />
-        ))}
-      </Column>
+      gap={["xxxxl","xl"]}
+        flexDirection={["column","row"]}
+        width={"100%"}
+        justifyContent={"space-between"}
+      >
+        <Column gap={"xl"}>
+        <Text variant={"subHeading"}  textAlign={"start"}>{subHeading}</Text>
+          {tasks.map((task) => (
+            <TaskItems key={task.id} description={task.description} />
+          ))}
+        </Column>
+        <Column gap={"xl"}>
+          <Text variant={"heading"}>Qualifications:</Text>
+
+          <Text variant={"body"} width={["100%","600px"]}>
+            Enrolled in a Law Degree Program: Candidates must be currently
+            enrolled in a law degree program to be eligible for this internship.
+          </Text>
+          <Text variant={"body"} >
+            Strong Research and Writing Skills: A solid foundation in research
+            and writing is crucial for performing the tasks required during the
+            internship.
+          </Text>
+          <Text variant={"body"}>
+            Eagerness to Learn and Contribute: We seek motivated individuals who
+            are eager to learn, contribute, and make the most of this invaluable
+            learning experience.
+          </Text>
+        </Column>
+      </Row>
     </Column>
   );
 };
