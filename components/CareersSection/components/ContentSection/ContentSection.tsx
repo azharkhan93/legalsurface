@@ -20,7 +20,6 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
   return (
     <Column
     width={"100%"}
-      border={"3px solid red"}
       py={"xl"}
       gap={"l"}
       px={"s"}
