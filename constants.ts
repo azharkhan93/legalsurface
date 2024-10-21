@@ -300,3 +300,33 @@ export const SERVICES_DATA = [
     altText: "Bail Applications",
   },
 ];
+
+export const internshipData = {
+  heading: 'Internships',
+  subHeading: 'As an Intern, You Will:',
+  description:
+    'At LEGAL SURFACE – ADVOCATES & SOLICITORS, our internship program offers law students a unique opportunity to gain hands-on experience and learn from top legal professionals in Jammu and Kashmir. This program is designed to immerse you in the practical aspects of legal practice and provide valuable insights into the legal field.',
+  tasks: [
+    {
+      id: 1,
+      description:
+        'Assist with Case Research and Legal Document Preparation: Engage in comprehensive research and support the preparation of critical legal documents, gaining practical skills that are essential for legal practice.',
+    },
+    {
+      id: 2,
+      description:
+        'Draft Legal Briefs and Other Essential Documents: Develop your drafting skills by working on legal briefs and various documents, contributing directly to ongoing cases.',
+    },
+    {
+      id: 3,
+      description:
+        'Observe and Participate in Client Meetings: Gain exposure to client interactions and meetings, learning how to navigate client relationships and understand client needs.',
+    },
+    {
+      id: 4,
+      description:
+        'Get Practical Experience in Case Management and Courtroom Proceedings: Experience the day-to-day management of legal cases and observe courtroom proceedings, providing you with a well-rounded view of legal practice.',
+    },
+    
+  ],
+};
