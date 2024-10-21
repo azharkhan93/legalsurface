@@ -19,6 +19,7 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
       border={"3px solid red"}
       py={"xl"}
       gap={"l"}
+      px={"s"}
       color="white"
       alignItems={"center"}
       style={{
@@ -29,7 +30,6 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
       }}
     >
       <Row
-       
         flexDirection={"row"}
         justifyContent={"center"}
         alignItems={"center"}
@@ -37,7 +37,6 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
         gap={"xl"}
       >
         <Box
-       
           justifyContent={"center"}
           alignItems={"center"}
           bg={"grey"}
@@ -53,20 +52,21 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
           {heading}
         </Text>
       </Row>
-      <Text variant={"body"} textAlign={"center"} width={["100%","700px"]}>
+      <Text variant={"body"} textAlign={"center"} width={["100%", "700px"]}>
         {description}
       </Text>
 
-     
       <Row
-
-      gap={["xxxxl","xl"]}
-        flexDirection={["column","row"]}
+      py={"xl"}
+        gap={["xxxxl", "xl"]}
+        flexDirection={["column", "row"]}
         width={"100%"}
         justifyContent={"space-between"}
       >
         <Column gap={"xl"}>
-        <Text variant={"subHeading"}  textAlign={"start"}>{subHeading}</Text>
+          <Text variant={"subHeading"} textAlign={"start"}>
+            {subHeading}
+          </Text>
           {tasks.map((task) => (
             <TaskItems key={task.id} description={task.description} />
           ))}
@@ -74,11 +74,11 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
         <Column gap={"xl"}>
           <Text variant={"heading"}>Qualifications:</Text>
 
-          <Text variant={"body"} width={["100%","600px"]}>
+          <Text variant={"body"} width={["100%", "600px"]}>
             Enrolled in a Law Degree Program: Candidates must be currently
             enrolled in a law degree program to be eligible for this internship.
           </Text>
-          <Text variant={"body"} >
+          <Text variant={"body"}>
             Strong Research and Writing Skills: A solid foundation in research
             and writing is crucial for performing the tasks required during the
             internship.
