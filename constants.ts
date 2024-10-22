@@ -362,3 +362,96 @@ export const internshipData2 = {
   ],
 };
 
+
+
+export const internshipData3 = {
+  heading: 'Associate Positions',
+  subHeading: 'As an Associate, You Will:',
+  description:
+    'We are seeking talented and ambitious associates to join our dynamic team. This role is ideal for individuals looking to handle complex cases and make a significant impact within a leading legal firm.',
+  tasks: [
+    {
+      id: 1,
+      description:
+        'Work on a Range of Criminal and Civil Cases: Engage with diverse and challenging cases, providing legal expertise in both criminal and civil matters.',
+    },
+    {
+      id: 2,
+      description:
+        'Provide Legal Counsel and Develop Case Strategies: Offer strategic legal advice and develop effective case strategies to support our clients\' interests.',
+    },
+    {
+      id: 3,
+      description:
+        'Represent Clients in Court and During Negotiations: Take an active role in representing clients, advocating for their rights, and negotiating favorable outcomes.',
+    },
+    {
+      id: 4,
+      description:
+        'Collaborate with Our Experienced Team of Lawyers: Work alongside a team of seasoned professionals, benefiting from their expertise and contributing to collaborative success.',
+    },
+  ],
+  qualifications: [
+    {
+      id: 1,
+      description:
+        'Law Degree and Bar Admission: Must hold a law degree and be admitted to the bar, demonstrating the required educational and professional credentials.',
+    },
+    {
+      id: 2,
+      description:
+        'Experience in Relevant Practice Areas: Previous experience in criminal or civil law is preferred, showcasing your ability to handle complex legal matters.',
+    },
+    {
+      id: 3,
+      description:
+        'Strong Analytical and Advocacy Skills: Demonstrate excellent analytical abilities and strong advocacy skills essential for effective legal practice.',
+    },
+    {
+      id: 4,
+      description:
+        'Commitment to Professional Growth: Show a dedication to continuous learning and professional development within the legal field.',
+    },
+  ],
+};
+
+export const internshipData4 = {
+  heading: "Legal Internship Program",
+  description:
+    "Our legal internship offers aspiring lawyers an opportunity to gain hands-on experience in legal research, case preparation, and client interaction under the guidance of seasoned professionals.",
+  subHeading: "Internship Responsibilities:",
+  tasks: [
+    { id: 1, description: "Conduct legal research on various case laws." },
+    { id: 2, description: "Assist in drafting legal documents and pleadings." },
+    { id: 3, description: "Attend client meetings and court proceedings." },
+    { id: 4, description: "Work closely with lawyers on case management." },
+  ],
+  qualifications: [
+    {
+      id: 1,
+      description:
+        "Enrolled in a Law Degree Program: Candidates must be currently enrolled in a law degree program to be eligible for this internship.",
+    },
+    {
+      id: 2,
+      description:
+        "Strong Research and Writing Skills: A solid foundation in research and writing is crucial for performing the tasks required during the internship.",
+    },
+    {
+      id: 3,
+      description:
+        "Eagerness to Learn and Contribute: We seek motivated individuals who are eager to learn, contribute, and make the most of this invaluable learning experience.",
+    },
+  ],
+};
+
+
+export const ApplySectionData1 = {
+  heading: 'Apply Now',
+  description:
+    'Interested candidates should submit their resume, a cover letter detailing their interest in the internship, and any relevant academic transcripts or references. For more information or to apply, please contact us at +91 9419007365 or visit our website www.legalsurface.in',
+};
+
+
+
+

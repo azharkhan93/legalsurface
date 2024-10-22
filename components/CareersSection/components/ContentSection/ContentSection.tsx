@@ -1,4 +1,3 @@
-
 import { Box, Column, Row, Text } from "@/components";
 import { TaskItems } from "../TasItems";
 
@@ -8,6 +7,8 @@ type ReusableSectionProps = {
   subHeading: string;
   tasks: { id: number; description: string }[];
   qualifications: { id: number; description: string }[];
+  label: string;
+  backgroundImage: string; 
 };
 
 export const ContentSection: React.FC<ReusableSectionProps> = ({
@@ -16,17 +17,19 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
   subHeading,
   tasks,
   qualifications,
+  label,
+  backgroundImage,
 }) => {
   return (
     <Column
-    width={"100%"}
+      width={"100%"}
       py={"xl"}
       gap={"l"}
       px={"s"}
       color="white"
       alignItems={"center"}
       style={{
-        backgroundImage: "url('/images/pd.jpg')",
+        backgroundImage: `url(${backgroundImage})`, 
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -48,7 +51,7 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
           px={"xl"}
         >
           <Text variant={"heading"} color="white" textAlign={"center"}>
-            1
+            {label}
           </Text>
         </Box>
         <Text variant={"heading"} textAlign={"center"}>
@@ -66,10 +69,13 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
         width={"100%"}
         justifyContent={"space-between"}
       >
-        <Column gap={"xxl"} bg={"modalOverlayBg"} py={"l"}  px={["none","l"]} alignItems={"center"}
-        style={{
-          boxShadow: "0px 0px 2px 2px black", 
-        }}
+        <Column
+          borderRadius={"m"}
+          gap={"xxl"}
+          bg={"modalOverlayBg"}
+          py={"l"}
+          px={["none", "l"]}
+          alignItems={"center"}
         >
           <Text variant={"subHeading"} textAlign={"start"}>
             {subHeading}
@@ -78,10 +84,22 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
             <TaskItems key={task.id} description={task.description} />
           ))}
         </Column>
-        <Column gap={"xl"} bg={"modalOverlayBg"} borderBottom={"2px solid white"} borderRadius={"m"} py={"l"} px={["none","l"]} alignItems={"center"} >
+        <Column
+          gap={"xl"}
+          bg={"modalOverlayBg"}
+          borderBottom={"2px solid white"}
+          borderRadius={"m"}
+          py={"l"}
+          px={["none", "l"]}
+          alignItems={"center"}
+        >
           <Text variant={"heading"}>Qualifications:</Text>
           {qualifications.map((qualification) => (
-            <Text key={qualification.id} variant={"body"} width={["100%", "600px"]}>
+            <Text
+              key={qualification.id}
+              variant={"body"}
+              width={["100%", "600px"]}
+            >
               {qualification.description}
             </Text>
           ))}
@@ -90,3 +108,4 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
     </Column>
   );
 };
+
