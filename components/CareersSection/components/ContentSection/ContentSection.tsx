@@ -70,6 +70,7 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
         justifyContent={"space-between"}
       >
         <Column
+        borderBottom={"2px solid white"}
           borderRadius={"m"}
           gap={"xxl"}
           bg={"modalOverlayBg"}
