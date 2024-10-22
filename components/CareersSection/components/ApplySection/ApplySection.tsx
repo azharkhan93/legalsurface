@@ -21,11 +21,17 @@ export const ApplySection: React.FC<ApplySectionProps> = ({
       flexDirection={["column", "row"]}
       width={"100%"}
     >
-      <Box
-      gap={"xl"} 
-      flexDirection={"column-reverse"}
-      >
-        <Text variant="subHeading" bg="grey" width={"200px"} borderRadius={"m"} textAlign={"center"} style={{cursor: "pointer"}}>{heading}</Text>
+      <Box gap={"xl"} flexDirection={"column-reverse"}>
+        <Text
+          variant="subHeading"
+          bg="grey"
+          width={"200px"}
+          borderRadius={"m"}
+          textAlign={"center"}
+          style={{ cursor: "pointer" }}
+        >
+          {heading}
+        </Text>
         <Text variant="body" width={["100%", "600px"]}>
           {description}
         </Text>

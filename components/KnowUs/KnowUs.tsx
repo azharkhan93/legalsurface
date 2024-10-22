@@ -1,7 +1,11 @@
 import { useInView } from "@/hooks/useInView";
 import { Box, Text, CenterBox, Button, Column, Row } from "@/components";
 import Image from "next/image";
-import { AnimationBox, AnimatedColumn, AnimatedRow } from "../styled/AnimationBox";
+import {
+  AnimationBox,
+  AnimatedColumn,
+  AnimatedRow,
+} from "../styled/AnimationBox";
 
 export const KnowUs = () => {
   const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
@@ -24,7 +28,11 @@ export const KnowUs = () => {
         <Text variant={"heading"} fontWeight={"bold"} color={"primary"}>
           About Us - Legal Surface
         </Text>
-        <Text variant={"subHeading"} color={"primary"} textAlign={["start", "center"]}>
+        <Text
+          variant={"subHeading"}
+          color={"primary"}
+          textAlign={["start", "center"]}
+        >
           We Believe In Transparency
         </Text>
         <Text
@@ -39,7 +47,6 @@ the gap in accessible and effective legal support for the public, our founder em
 mission to create a law firm dedicated to providing exceptional legal services. What began as a
 modest venture with a single legal professional has now grown into a dynamic team of over 50
 experienced lawyers, each specializing in a diverse range of legal fields.`}
-
         </Text>
         <CenterBox mt={"l"}>
           <Button
@@ -78,4 +85,3 @@ experienced lawyers, each specializing in a diverse range of legal fields.`}
     </CenterBox>
   );
 };
-
