@@ -4,7 +4,7 @@ type TopNavBarProps = {
   backgroundImage: string;
   aboutText: string;
   whoWeAreText: string;
-}
+};
 
 export const TopBar: React.FC<TopNavBarProps> = ({
   backgroundImage,
@@ -13,7 +13,6 @@ export const TopBar: React.FC<TopNavBarProps> = ({
 }) => {
   return (
     <Column
-   
       alignItems={"center"}
       justifyContent={"center"}
       height={"500px"}
@@ -25,14 +24,18 @@ export const TopBar: React.FC<TopNavBarProps> = ({
         backgroundPosition: "center",
       }}
     >
-      <Column px={["s","xl"]} mt={"header"} py={"xxlg"} width={"100%"} gap={"xxxl"} alignItems={"center"} >
-        
-          
-          <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"} >
-            {aboutText}
-          </Text>
-         
-       
+      <Column
+        px={["s", "xl"]}
+        mt={"header"}
+        py={"xxlg"}
+        width={"100%"}
+        gap={"xxxl"}
+        alignItems={"center"}
+      >
+        <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"}>
+          {aboutText}
+        </Text>
+
         <Row alignItems={"center"} gap={"m"} justifyContent={"center"}>
           <Text variant={"heading"} color="primary" fontWeight={"bold"}>
             {whoWeAreText}

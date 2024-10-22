@@ -28,8 +28,9 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
       px={"s"}
       color="white"
       alignItems={"center"}
+      
       style={{
-        backgroundImage: `url(${backgroundImage})`, 
+        background: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -77,6 +78,7 @@ export const ContentSection: React.FC<ReusableSectionProps> = ({
           py={"l"}
           px={["none", "l"]}
           alignItems={"center"}
+          style={{ boxShadow: "0 4px 10px rgba(255, 255, 255, 0.5)" }}
         >
           <Text variant={"subHeading"} textAlign={"start"}>
             {subHeading}
