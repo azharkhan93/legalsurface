@@ -10,7 +10,7 @@ interface ServiceCardProps {
 export const LawCards: React.FC<ServiceCardProps> = ({ title, description, imageSrc }) => {
   return (
     <Box
-      width={["100%", "470px"]}
+      width={["100%", "400px"]}
       position={["static", "relative"]}
       py={["xl", "xxxxl"]}
       borderRadius={"m"} 
@@ -30,10 +30,10 @@ export const LawCards: React.FC<ServiceCardProps> = ({ title, description, image
         bg={"modalOverlayBg"}
         gap={"l"}
         alignItems={"center"}
-        width={["100%", "470px"]}
+        width={["100%", "400px"]}
         color="white"
         position={["static", "absolute"]}
-        top={["initial", "23%"]}
+        top={["initial", "15%"]}
         left={["initial", "0%"]}
         py={"l"}
         px={["s", "xl"]}
@@ -43,11 +43,11 @@ export const LawCards: React.FC<ServiceCardProps> = ({ title, description, image
       >
         <Text variant={"heading"}>{title}</Text>
         <Text variant={"body"}>{description}</Text>
-        <CenterBox>
+        <CenterBox width={"100%"}>
           <Button
             textAlign={"center"}
-            py={"s"}
-            px={"xl"}
+            py={"m"}
+            px={"xxxl"}
             variant={"primary"}
             style={{ borderRadius: "10px" }}
           >
