@@ -13,7 +13,13 @@ export const NavbarData = [
   {
     title: "Practices",
     link: "/services",
-    dropdown: [{ title: "Criminal Law", link: "/services" }],
+    dropdown: [
+      { title: "Criminal Law", link: "/services" },
+      { title: "Armed Force", link: "/services/armed-forces" },
+
+
+    ],
+    
   },
   // {
   //   title: "Services",
@@ -415,35 +421,6 @@ export const internshipData3 = {
   ],
 };
 
-export const internshipData4 = {
-  heading: "Legal Internship Program",
-  description:
-    "Our legal internship offers aspiring lawyers an opportunity to gain hands-on experience in legal research, case preparation, and client interaction under the guidance of seasoned professionals.",
-  subHeading: "Internship Responsibilities:",
-  tasks: [
-    { id: 1, description: "Conduct legal research on various case laws." },
-    { id: 2, description: "Assist in drafting legal documents and pleadings." },
-    { id: 3, description: "Attend client meetings and court proceedings." },
-    { id: 4, description: "Work closely with lawyers on case management." },
-  ],
-  qualifications: [
-    {
-      id: 1,
-      description:
-        "Enrolled in a Law Degree Program: Candidates must be currently enrolled in a law degree program to be eligible for this internship.",
-    },
-    {
-      id: 2,
-      description:
-        "Strong Research and Writing Skills: A solid foundation in research and writing is crucial for performing the tasks required during the internship.",
-    },
-    {
-      id: 3,
-      description:
-        "Eagerness to Learn and Contribute: We seek motivated individuals who are eager to learn, contribute, and make the most of this invaluable learning experience.",
-    },
-  ],
-};
 
 
 export const ApplySectionData1 = {

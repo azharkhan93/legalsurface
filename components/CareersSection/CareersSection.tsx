@@ -1,7 +1,7 @@
 import { Box, CenterBox, Column, Row, Text } from "@/components";
 import { ContentSection } from "./components/ContentSection/ContentSection";
 import { ApplySection } from "./components/ApplySection";
-import { internshipData, internshipData2, internshipData3, internshipData4, ApplySectionData1 } from "@/constants";
+import { internshipData, internshipData2, internshipData3,  ApplySectionData1 } from "@/constants";
 
 const sectionsData = [
   {
@@ -18,7 +18,7 @@ const sectionsData = [
     description: internshipData3.description,
     subHeading: internshipData3.subHeading,
     tasks: internshipData3.tasks,
-    qualifications: internshipData4.qualifications,
+    qualifications: internshipData3 .qualifications,
     label: "2",
     backgroundImage: "/images/nik.png",
   },
