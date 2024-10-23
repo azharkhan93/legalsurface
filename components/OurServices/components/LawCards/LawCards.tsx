@@ -21,10 +21,12 @@ export const LawCards: React.FC<ServiceCardProps> = ({ title, description, image
         height={700}
         width={500}
         alt={title}
-        layout="responsive"
+          layout="responsive"
         style={{ borderRadius: "5px",  boxShadow:
-            "0px 4px 8px rgba(0, 0, 0, 0.4), 0px 2px 10px rgba(0, 0, 0, 0.3)", 
+            "0px 4px 8px rgba(0, 0, 0, 0.4), 0px 2px 10px rgba(0, 0, 0, 0.3)",  
+           
            }}
+          
       />
       <Column
         bg={"modalOverlayBg"}

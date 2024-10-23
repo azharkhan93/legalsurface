@@ -216,7 +216,7 @@ export const SERVICES_DATA = [
     title: "Anti-Corruption Cases Representation",
     description:
       "We offer specialized legal defense in anti-corruption cases, representing clients accused under various anti-corruption laws. Our firm handles cases involving public servants, corporate entities, and private individuals, providing robust representation during investigations, trials, and appeals to ensure a fair legal process.",
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/anti.jpg",
     altText: "Anti-Corruption Cases",
   },
   
@@ -225,7 +225,7 @@ export const SERVICES_DATA = [
     title: "Bail Applications in District Courts",
     description:
       "We handle bail applications with precision and urgency, representing clients in district courts across Jammu & Kashmir. Our expert team prepares and files applications, advocates for favorable bail terms, and works diligently to secure timely relief.",
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/bail2.jpg",
     altText: "Anti-Corruption Cases",
   },
   {
@@ -233,7 +233,7 @@ export const SERVICES_DATA = [
     title: "Bail Applications in High Court",
     description:
       "Legal Surface specializes in representing clients in bail applications at the High Court of Jammu & Kashmir. We handle urgent bail requests, anticipate prosecution arguments, and ensure prompt legal action to achieve effective outcomes. Whether it's regular bail, anticipatory bail, or interim relief, our team is dedicated to securing your release.",
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/bail3.jpg",
     altText: "Bail Applications",
   },
   {
@@ -241,7 +241,7 @@ export const SERVICES_DATA = [
     title: "NDPS Act Representation",
     description:
       "Legal Surface offers expert legal representation for cases under the Narcotic Drugs and Psychotropic Substances (NDPS) Act. Our team handles all aspects of NDPS cases, including arrests, investigations, and court proceedings, working diligently to ensure a strong defense and protect your rights.",
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/nsdp.webp",
     altText: "Bail Applications",
   },
   {
@@ -250,7 +250,7 @@ export const SERVICES_DATA = [
     description:
       "We provide expert defense for cases under the Prevention of Money Laundering Act (PMLA). Our firm manages complex money laundering cases with thorough preparation and strategic representation, aiming to safeguard your interests and achieve the best possible results.",
 
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/pmla.jpeg",
     altText: "Bail Applications",
   },
   
@@ -260,7 +260,7 @@ export const SERVICES_DATA = [
     description:
       "Legal Surface provides expert defense for cases under the Terrorist and Disruptive Activities (Prevention) Act (TADA). Our experienced advocates navigate the complexities of TADA cases, offering comprehensive support during investigations, trials, and appeals. We work diligently to challenge unlawful detentions and protect your fundamental rights.",
 
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/tr.jpg",
     altText: "Bail Applications",
   },
   {
@@ -269,7 +269,7 @@ export const SERVICES_DATA = [
     description:
       "At Legal Surface, we offer expert legal representation for cases under the Unlawful Activities (Prevention) Act (UAPA). Our skilled lawyers specialize in defending individuals accused of terrorism-related offenses, ensuring that your constitutional rights are safeguarded throughout the legal process. We handle investigations, bail applications, and trial defenses with meticulous attention to detail.",
 
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/uapa.jpg",
     altText: "Bail Applications",
   },
   {
@@ -278,7 +278,7 @@ export const SERVICES_DATA = [
     description:
       "We provide expert defense for white-collar crimes, including corporate fraud, embezzlement, and financial misconduct. Our experienced team navigates complex financial cases, ensuring meticulous preparation and strategic representation to protect your interests and achieve favorable outcomes.",
 
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/white collar.jpg",
     altText: "Bail Applications",
   },
   {
@@ -286,7 +286,7 @@ export const SERVICES_DATA = [
     title: "Cyber Crimes Representation",
     description:
       "At Legal Surface, we offer expert defense for individuals facing charges related to cyber crimes. Our team handles cases involving online fraud, hacking, identity theft, and data breaches. We provide a strategic defense, safeguarding your rights in both trial courts and appeals.",
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/cyber.png",
     altText: "Bail Applications",
   },
   {
@@ -295,7 +295,7 @@ export const SERVICES_DATA = [
     description:
       "Legal Surface specializes in appeals and revisions, focusing on challenging unfavorable court decisions to seek justice. Our team reviews trial outcomes, prepares comprehensive appeal petitions, and advocates vigorously in higher courts to overturn or modify these decisions.",
 
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/criminal.png",
     altText: "Bail Applications",
   },
   {
@@ -304,7 +304,7 @@ export const SERVICES_DATA = [
     description:
       "Our firm offers a robust trial defense for clients facing criminal charges. We meticulously prepare and present each case, using strategic legal arguments and compelling evidence to challenge the prosecution and secure the best possible outcome through skilled representation in court.",
 
-    imageSrc: "/images/pd.jpg",
+    imageSrc: "/images/court.jpg",
     altText: "Bail Applications",
   },
 ];
