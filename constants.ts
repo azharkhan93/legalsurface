@@ -211,13 +211,25 @@ export const stats = [
 export const API_HOST = "http://localhost:4000/";
 
 export const SERVICES_DATA = [
+ 
   {
     id: 1,
     title: "Anti-Corruption Cases Representation",
     description:
-      "We offer specialized legal defense in anti-corruption cases, representing clients accused under various anti-corruption laws. Our firm handles cases involving public servants, corporate entities, and private individuals, providing robust representation during investigations, trials, and appeals to ensure a fair legal process.",
+      "We offer specialized legal defense in anti-corruption cases, representing clients accused under various anti-corruption laws.",
     imageSrc: "/images/anti.jpg",
     altText: "Anti-Corruption Cases",
+    practiceArea: [
+      {
+        subHeading: "Our Anti-Corruption Practice Area Includes:",
+        details: [
+          "Comprehensive Defense: Robust representation in cases involving bribery, embezzlement, fraud, and other corruption-related offenses.",
+          "Appeals and Revisions: Effective representation in appeals to contest unfavorable decisions by our skilled advocates.",
+          "Investigation Management: Expert handling of anti-corruption investigations by our top lawyers.",
+          "Trial Advocacy: Defense during trials to challenge evidence and protect your rights."
+        ]
+      }
+    ]
   },
   
   {
@@ -227,6 +239,17 @@ export const SERVICES_DATA = [
       "We handle bail applications with precision and urgency, representing clients in district courts across Jammu & Kashmir. Our expert team prepares and files applications, advocates for favorable bail terms, and works diligently to secure timely relief.",
     imageSrc: "/images/bail2.jpg",
     altText: "Anti-Corruption Cases",
+    practiceArea: [
+      {
+        subHeading: "Our Bail Applications Area Includes:",
+        details: [
+          "High Court Bail Applications: Expert representation for securing various types of bail, including regular, anticipatory, and interim bail.",
+          "Swift Legal Action: Rapid filing and processing of bail applications by our skilled advocates.",
+          "Proactive Defense: Anticipating and countering prosecution arguments by our best lawyers.",
+          "Comprehensive Support: Detailed preparation and advocacy throughout the bail process."
+        ]
+      }
+    ]
   },
   {
     id: 3,
@@ -235,6 +258,17 @@ export const SERVICES_DATA = [
       "Legal Surface specializes in representing clients in bail applications at the High Court of Jammu & Kashmir. We handle urgent bail requests, anticipate prosecution arguments, and ensure prompt legal action to achieve effective outcomes. Whether it's regular bail, anticipatory bail, or interim relief, our team is dedicated to securing your release.",
     imageSrc: "/images/bail3.jpg",
     altText: "Bail Applications",
+    practiceArea: [
+      {
+        subHeading: "Our Bail Applications Practice Area Includes:",
+        details: [
+          "Precision Handling: Expert preparation and filing of bail applications, addressing urgent legal needs with meticulous attention.",
+          "Favorable Bail Terms: Strategic advocacy to negotiate optimal bail conditions tailored to your specific case.",
+          "Timely Relief: Diligent efforts to expedite the bail process and secure prompt relief for our clients.",
+          "Comprehensive Support: Thorough representation throughout the bail application process, ensuring your rights are protected."
+        ]
+      }
+    ]
   },
   {
     id: 4,
@@ -243,6 +277,17 @@ export const SERVICES_DATA = [
       "Legal Surface offers expert legal representation for cases under the Narcotic Drugs and Psychotropic Substances (NDPS) Act. Our team handles all aspects of NDPS cases, including arrests, investigations, and court proceedings, working diligently to ensure a strong defense and protect your rights.",
     imageSrc: "/images/nsdp.webp",
     altText: "Bail Applications",
+    practiceArea: [
+      {
+        subHeading: "Our NDPS Act Representation Includes:",
+      details: [
+        "Arrest Defense: Strategic representation during and after arrests related to NDPS offenses.",
+        "Investigation Handling: Expert management of investigations to ensure a fair and thorough legal process.",
+        "Court Proceedings: Comprehensive defense throughout NDPS court proceedings to challenge evidence and advocate for your rights.",
+        "Rights Protection: Vigilant protection of your rights throughout the legal process."
+      ]
+      }
+    ]
   },
   {
     id: 5,
@@ -252,6 +297,17 @@ export const SERVICES_DATA = [
 
     imageSrc: "/images/pmla.jpeg",
     altText: "Bail Applications",
+    practiceArea: [
+      {
+        subHeading: "Our PMLA Cases Representation Includes:",
+        details: [
+          "Investigation Support: Expert management of investigations related to money laundering charges to ensure a fair legal process.",
+          "Legal Defense: Skilled representation in court to challenge evidence and advocate effectively on your behalf.",
+          "Asset Recovery Defense: Strategic defense against asset seizure and freezing orders under PMLA.",
+          "Compliance and Advisory: Guidance on compliance with PMLA regulations and advisory services to navigate the legal landscape."
+        ]
+      }
+    ]
   },
   
   {
@@ -262,6 +318,17 @@ export const SERVICES_DATA = [
 
     imageSrc: "/images/tr.jpg",
     altText: "Bail Applications",
+    practiceArea: [
+      {
+        subHeading: "Our TADA Practice Area Includes:",
+        details: [
+          "Strategic Defense: Customized strategies by our best lawyers to address TADA charges.",
+          "Investigation Support: Thorough management of TADA-related investigations by skilled advocates.",
+          "Trial Advocacy: Skilled defense during TADA trials, focusing on challenging evidence and protecting your rights.",
+          "Appeals Process: Effective representation in appeals to contest adverse decisions by our top lawyers."
+        ]
+      }
+    ]
   },
   {
     id: 8,
@@ -271,6 +338,17 @@ export const SERVICES_DATA = [
 
     imageSrc: "/images/uapa.jpg",
     altText: "Bail Applications",
+    practiceArea: [
+      {
+        subHeading: "Our UAPA Practice Area Includes:",
+        details: [
+          "Strategic Defense Planning: Our best lawyers craft tailored strategies to effectively challenge UAPA charges.",
+          "Investigation Management: Our experienced advocates handle UAPA-related investigations to ensure accurate representation.",
+          "Bail Applications: Proficient handling of bail applications, including anticipatory and interim bail, by our skilled lawyers.",
+          "Trial Defense: Robust defense during UAPA trials by our top-rated advocates."
+        ]
+      }
+    ]
   },
   {
     id: 9,
@@ -280,6 +358,17 @@ export const SERVICES_DATA = [
 
     imageSrc: "/images/white collar.jpg",
     altText: "Bail Applications",
+    practiceArea: [
+      {
+        subHeading: "Our White-Collar Crimes Practice Includes:",
+        details: [
+          "Corporate Fraud Defense: Expert representation in cases of corporate fraud, ensuring effective legal strategies to protect your interests.",
+          "Embezzlement Cases: Skilled handling of embezzlement allegations with thorough preparation and robust defense.",
+          "Financial Misconduct Defense: Strategic legal counsel for financial misconduct charges, aiming for favorable outcomes.",
+          "Complex Case Management: Detailed analysis and management of intricate financial cases by our top advocates."
+        ]
+      }
+    ]
   },
   {
     id: 10,
@@ -288,6 +377,17 @@ export const SERVICES_DATA = [
       "At Legal Surface, we offer expert defense for individuals facing charges related to cyber crimes. Our team handles cases involving online fraud, hacking, identity theft, and data breaches. We provide a strategic defense, safeguarding your rights in both trial courts and appeals.",
     imageSrc: "/images/cyber.png",
     altText: "Bail Applications",
+    practiceArea: [
+      {
+        subHeading: "Our Anti-Corruption Practice Area Includes:",
+        details: [
+          "Strategic Counsel: Detailed legal advice to navigate the complexities of cyber crime charges from our experienced lawyers.",
+          "Trial and Appeal Advocacy: Defense during trials and appeals to protect your rights and challenge the prosecution’s case",
+          "Investigation and Analysis: Thorough management of cyber crime investigations by skilled advocates.",
+          "Expert Legal Defense: Comprehensive representation for various cyber crime charges by our top lawyers."
+        ]
+      }
+    ]
   },
   {
     id: 11,
@@ -297,6 +397,17 @@ export const SERVICES_DATA = [
 
     imageSrc: "/images/criminal.png",
     altText: "Bail Applications",
+    practiceArea: [
+      {
+        subHeading: "Our Appeals & Revisions Practice Area Includes:",
+        details: [
+          "Vigorous Advocacy: Skilled representation in higher courts to argue for the overturning or modification of adverse decisions.",
+          "Comprehensive Appeal Petitions: Expert preparation of appeal petitions to effectively present your case to higher courts.",
+          "Thorough Case Review: Detailed examination of trial outcomes to identify grounds for appeal or revision..",
+          "Strategic Legal Counsel: Tailored legal strategies to address the specific issues and nuances of your case."
+        ]
+      }
+    ]
   },
   {
     id: 6,
@@ -306,6 +417,17 @@ export const SERVICES_DATA = [
 
     imageSrc: "/images/court.jpg",
     altText: "Bail Applications",
+    practiceArea: [
+      {
+        subHeading: "Our Trial Defense Practice Area Includes:",
+        details: [
+          "Comprehensive Defense: Robust representation in cases involving bribery, embezzlement, fraud, and other corruption-related offenses.",
+          "Appeals and Revisions: Effective representation in appeals to contest unfavorable decisions by our skilled advocates.",
+          "Investigation Management: Expert handling of anti-corruption investigations by our top lawyers.",
+          "Trial Advocacy: Defense during trials to challenge evidence and protect your rights."
+        ]
+      }
+    ]
   },
 ];
 
