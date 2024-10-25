@@ -5,25 +5,21 @@ import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { ApolloProvider } from "@apollo/client";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/Footer/Footer";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { LoaderProvider } from "@/contexts/LoadingContex/LoadingContext";
-import 'aos/dist/aos.css';  
-import AOS from 'aos';
-
-
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
-
   // useEffect(() => {
   //   AOS.init({
-  //     duration: 1000, 
-  //     easing: 'ease-in-out', 
-  //     once: true, 
+  //     duration: 1000,
+  //     easing: 'ease-in-out',
+  //     once: true,
   //   });
   // }, []);
 
@@ -34,26 +30,21 @@ export default function RootLayout({
   //   }
   // }, [router]);
 
-
   return (
     <html lang="en">
       <body>
         <GlobalStyle />
-        
-          <AppThemeProvider>
-            {/* <ApolloProvider client={client}> */}
-            <LoaderProvider>
-           
-                <Navbar />
-                {children}
-                <Footer />
-                
-            </LoaderProvider>
-            {/* </ApolloProvider> */}
-          </AppThemeProvider>
-        
+
+        <AppThemeProvider>
+          {/* <ApolloProvider client={client}> */}
+          <LoaderProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </LoaderProvider>
+          {/* </ApolloProvider> */}
+        </AppThemeProvider>
       </body>
     </html>
   );
 }
-

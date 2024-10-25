@@ -16,10 +16,7 @@ export const NavbarData = [
     dropdown: [
       { title: "Criminal Law", link: "/services" },
       { title: "Armed Force", link: "/services/armed-forces" },
-
-
     ],
-    
   },
   // {
   //   title: "Services",
@@ -211,7 +208,6 @@ export const stats = [
 export const API_HOST = "http://localhost:4000/";
 
 export const SERVICES_DATA = [
- 
   {
     id: 1,
     title: "Anti-Corruption Cases Representation",
@@ -226,12 +222,12 @@ export const SERVICES_DATA = [
           "Comprehensive Defense: Robust representation in cases involving bribery, embezzlement, fraud, and other corruption-related offenses.",
           "Appeals and Revisions: Effective representation in appeals to contest unfavorable decisions by our skilled advocates.",
           "Investigation Management: Expert handling of anti-corruption investigations by our top lawyers.",
-          "Trial Advocacy: Defense during trials to challenge evidence and protect your rights."
-        ]
-      }
-    ]
+          "Trial Advocacy: Defense during trials to challenge evidence and protect your rights.",
+        ],
+      },
+    ],
   },
-  
+
   {
     id: 2,
     title: "Bail Applications in District Courts",
@@ -246,10 +242,10 @@ export const SERVICES_DATA = [
           "High Court Bail Applications: Expert representation for securing various types of bail, including regular, anticipatory, and interim bail.",
           "Swift Legal Action: Rapid filing and processing of bail applications by our skilled advocates.",
           "Proactive Defense: Anticipating and countering prosecution arguments by our best lawyers.",
-          "Comprehensive Support: Detailed preparation and advocacy throughout the bail process."
-        ]
-      }
-    ]
+          "Comprehensive Support: Detailed preparation and advocacy throughout the bail process.",
+        ],
+      },
+    ],
   },
   {
     id: 3,
@@ -265,10 +261,10 @@ export const SERVICES_DATA = [
           "Precision Handling: Expert preparation and filing of bail applications, addressing urgent legal needs with meticulous attention.",
           "Favorable Bail Terms: Strategic advocacy to negotiate optimal bail conditions tailored to your specific case.",
           "Timely Relief: Diligent efforts to expedite the bail process and secure prompt relief for our clients.",
-          "Comprehensive Support: Thorough representation throughout the bail application process, ensuring your rights are protected."
-        ]
-      }
-    ]
+          "Comprehensive Support: Thorough representation throughout the bail application process, ensuring your rights are protected.",
+        ],
+      },
+    ],
   },
   {
     id: 4,
@@ -280,14 +276,14 @@ export const SERVICES_DATA = [
     practiceArea: [
       {
         subHeading: "Our NDPS Act Representation Includes:",
-      details: [
-        "Arrest Defense: Strategic representation during and after arrests related to NDPS offenses.",
-        "Investigation Handling: Expert management of investigations to ensure a fair and thorough legal process.",
-        "Court Proceedings: Comprehensive defense throughout NDPS court proceedings to challenge evidence and advocate for your rights.",
-        "Rights Protection: Vigilant protection of your rights throughout the legal process."
-      ]
-      }
-    ]
+        details: [
+          "Arrest Defense: Strategic representation during and after arrests related to NDPS offenses.",
+          "Investigation Handling: Expert management of investigations to ensure a fair and thorough legal process.",
+          "Court Proceedings: Comprehensive defense throughout NDPS court proceedings to challenge evidence and advocate for your rights.",
+          "Rights Protection: Vigilant protection of your rights throughout the legal process.",
+        ],
+      },
+    ],
   },
   {
     id: 5,
@@ -304,12 +300,12 @@ export const SERVICES_DATA = [
           "Investigation Support: Expert management of investigations related to money laundering charges to ensure a fair legal process.",
           "Legal Defense: Skilled representation in court to challenge evidence and advocate effectively on your behalf.",
           "Asset Recovery Defense: Strategic defense against asset seizure and freezing orders under PMLA.",
-          "Compliance and Advisory: Guidance on compliance with PMLA regulations and advisory services to navigate the legal landscape."
-        ]
-      }
-    ]
+          "Compliance and Advisory: Guidance on compliance with PMLA regulations and advisory services to navigate the legal landscape.",
+        ],
+      },
+    ],
   },
-  
+
   {
     id: 7,
     title: "TADA Representation",
@@ -325,10 +321,10 @@ export const SERVICES_DATA = [
           "Strategic Defense: Customized strategies by our best lawyers to address TADA charges.",
           "Investigation Support: Thorough management of TADA-related investigations by skilled advocates.",
           "Trial Advocacy: Skilled defense during TADA trials, focusing on challenging evidence and protecting your rights.",
-          "Appeals Process: Effective representation in appeals to contest adverse decisions by our top lawyers."
-        ]
-      }
-    ]
+          "Appeals Process: Effective representation in appeals to contest adverse decisions by our top lawyers.",
+        ],
+      },
+    ],
   },
   {
     id: 8,
@@ -345,10 +341,10 @@ export const SERVICES_DATA = [
           "Strategic Defense Planning: Our best lawyers craft tailored strategies to effectively challenge UAPA charges.",
           "Investigation Management: Our experienced advocates handle UAPA-related investigations to ensure accurate representation.",
           "Bail Applications: Proficient handling of bail applications, including anticipatory and interim bail, by our skilled lawyers.",
-          "Trial Defense: Robust defense during UAPA trials by our top-rated advocates."
-        ]
-      }
-    ]
+          "Trial Defense: Robust defense during UAPA trials by our top-rated advocates.",
+        ],
+      },
+    ],
   },
   {
     id: 9,
@@ -365,10 +361,10 @@ export const SERVICES_DATA = [
           "Corporate Fraud Defense: Expert representation in cases of corporate fraud, ensuring effective legal strategies to protect your interests.",
           "Embezzlement Cases: Skilled handling of embezzlement allegations with thorough preparation and robust defense.",
           "Financial Misconduct Defense: Strategic legal counsel for financial misconduct charges, aiming for favorable outcomes.",
-          "Complex Case Management: Detailed analysis and management of intricate financial cases by our top advocates."
-        ]
-      }
-    ]
+          "Complex Case Management: Detailed analysis and management of intricate financial cases by our top advocates.",
+        ],
+      },
+    ],
   },
   {
     id: 10,
@@ -384,10 +380,10 @@ export const SERVICES_DATA = [
           "Strategic Counsel: Detailed legal advice to navigate the complexities of cyber crime charges from our experienced lawyers.",
           "Trial and Appeal Advocacy: Defense during trials and appeals to protect your rights and challenge the prosecution’s case",
           "Investigation and Analysis: Thorough management of cyber crime investigations by skilled advocates.",
-          "Expert Legal Defense: Comprehensive representation for various cyber crime charges by our top lawyers."
-        ]
-      }
-    ]
+          "Expert Legal Defense: Comprehensive representation for various cyber crime charges by our top lawyers.",
+        ],
+      },
+    ],
   },
   {
     id: 11,
@@ -404,10 +400,10 @@ export const SERVICES_DATA = [
           "Vigorous Advocacy: Skilled representation in higher courts to argue for the overturning or modification of adverse decisions.",
           "Comprehensive Appeal Petitions: Expert preparation of appeal petitions to effectively present your case to higher courts.",
           "Thorough Case Review: Detailed examination of trial outcomes to identify grounds for appeal or revision..",
-          "Strategic Legal Counsel: Tailored legal strategies to address the specific issues and nuances of your case."
-        ]
-      }
-    ]
+          "Strategic Legal Counsel: Tailored legal strategies to address the specific issues and nuances of your case.",
+        ],
+      },
+    ],
   },
   {
     id: 6,
@@ -424,43 +420,41 @@ export const SERVICES_DATA = [
           "Comprehensive Defense: Robust representation in cases involving bribery, embezzlement, fraud, and other corruption-related offenses.",
           "Appeals and Revisions: Effective representation in appeals to contest unfavorable decisions by our skilled advocates.",
           "Investigation Management: Expert handling of anti-corruption investigations by our top lawyers.",
-          "Trial Advocacy: Defense during trials to challenge evidence and protect your rights."
-        ]
-      }
-    ]
+          "Trial Advocacy: Defense during trials to challenge evidence and protect your rights.",
+        ],
+      },
+    ],
   },
 ];
 
 export const internshipData = {
-  heading: 'Internships',
-  subHeading: 'As an Intern, You Will:',
+  heading: "Internships",
+  subHeading: "As an Intern, You Will:",
   description:
-    'Our internship program offers law students a unique opportunity to gain hands-on experience and learn from top legal professionals in Jammu and Kashmir. This program is designed to immerse you in the practical aspects of legal practice and provide valuable insights into the legal field.',
+    "Our internship program offers law students a unique opportunity to gain hands-on experience and learn from top legal professionals in Jammu and Kashmir. This program is designed to immerse you in the practical aspects of legal practice and provide valuable insights into the legal field.",
   tasks: [
     {
       id: 1,
       description:
-        'Assist with Case Research and Legal Document Preparation: Engage in comprehensive research and support the preparation of critical legal documents, gaining practical skills that are essential for legal practice.',
+        "Assist with Case Research and Legal Document Preparation: Engage in comprehensive research and support the preparation of critical legal documents, gaining practical skills that are essential for legal practice.",
     },
     {
       id: 2,
       description:
-        'Draft Legal Briefs and Other Essential Documents: Develop your drafting skills by working on legal briefs and various documents, contributing directly to ongoing cases.',
+        "Draft Legal Briefs and Other Essential Documents: Develop your drafting skills by working on legal briefs and various documents, contributing directly to ongoing cases.",
     },
     {
       id: 3,
       description:
-        'Observe and Participate in Client Meetings: Gain exposure to client interactions and meetings, learning how to navigate client relationships and understand client needs.',
+        "Observe and Participate in Client Meetings: Gain exposure to client interactions and meetings, learning how to navigate client relationships and understand client needs.",
     },
     {
       id: 4,
       description:
-        'Get Practical Experience in Case Management and Courtroom Proceedings: Experience the day-to-day management of legal cases and observe courtroom proceedings, providing you with a well-rounded view of legal practice.',
+        "Get Practical Experience in Case Management and Courtroom Proceedings: Experience the day-to-day management of legal cases and observe courtroom proceedings, providing you with a well-rounded view of legal practice.",
     },
-    
   ],
 };
-
 
 export const internshipData2 = {
   heading: "Legal Internship Program",
@@ -492,67 +486,59 @@ export const internshipData2 = {
   ],
 };
 
-
-
 export const internshipData3 = {
-  heading: 'Associate Positions',
-  subHeading: 'As an Associate, You Will:',
+  heading: "Associate Positions",
+  subHeading: "As an Associate, You Will:",
   description:
-    'We are seeking talented and ambitious associates to join our dynamic team. This role is ideal for individuals looking to handle complex cases and make a significant impact within a leading legal firm.',
+    "We are seeking talented and ambitious associates to join our dynamic team. This role is ideal for individuals looking to handle complex cases and make a significant impact within a leading legal firm.",
   tasks: [
     {
       id: 1,
       description:
-        'Work on a Range of Criminal and Civil Cases: Engage with diverse and challenging cases, providing legal expertise in both criminal and civil matters.',
+        "Work on a Range of Criminal and Civil Cases: Engage with diverse and challenging cases, providing legal expertise in both criminal and civil matters.",
     },
     {
       id: 2,
       description:
-        'Provide Legal Counsel and Develop Case Strategies: Offer strategic legal advice and develop effective case strategies to support our clients\' interests.',
+        "Provide Legal Counsel and Develop Case Strategies: Offer strategic legal advice and develop effective case strategies to support our clients' interests.",
     },
     {
       id: 3,
       description:
-        'Represent Clients in Court and During Negotiations: Take an active role in representing clients, advocating for their rights, and negotiating favorable outcomes.',
+        "Represent Clients in Court and During Negotiations: Take an active role in representing clients, advocating for their rights, and negotiating favorable outcomes.",
     },
     {
       id: 4,
       description:
-        'Collaborate with Our Experienced Team of Lawyers: Work alongside a team of seasoned professionals, benefiting from their expertise and contributing to collaborative success.',
+        "Collaborate with Our Experienced Team of Lawyers: Work alongside a team of seasoned professionals, benefiting from their expertise and contributing to collaborative success.",
     },
   ],
   qualifications: [
     {
       id: 1,
       description:
-        'Law Degree and Bar Admission: Must hold a law degree and be admitted to the bar, demonstrating the required educational and professional credentials.',
+        "Law Degree and Bar Admission: Must hold a law degree and be admitted to the bar, demonstrating the required educational and professional credentials.",
     },
     {
       id: 2,
       description:
-        'Experience in Relevant Practice Areas: Previous experience in criminal or civil law is preferred, showcasing your ability to handle complex legal matters.',
+        "Experience in Relevant Practice Areas: Previous experience in criminal or civil law is preferred, showcasing your ability to handle complex legal matters.",
     },
     {
       id: 3,
       description:
-        'Strong Analytical and Advocacy Skills: Demonstrate excellent analytical abilities and strong advocacy skills essential for effective legal practice.',
+        "Strong Analytical and Advocacy Skills: Demonstrate excellent analytical abilities and strong advocacy skills essential for effective legal practice.",
     },
     {
       id: 4,
       description:
-        'Commitment to Professional Growth: Show a dedication to continuous learning and professional development within the legal field.',
+        "Commitment to Professional Growth: Show a dedication to continuous learning and professional development within the legal field.",
     },
   ],
 };
 
-
-
 export const ApplySectionData1 = {
-  heading: 'Apply Now',
+  heading: "Apply Now",
   description:
-    'Interested candidates should submit their resume, a cover letter detailing their interest in the internship, and any relevant academic transcripts or references. For more information or to apply, please contact us at +91 9419007365 or visit our website www.legalsurface.in',
+    "Interested candidates should submit their resume, a cover letter detailing their interest in the internship, and any relevant academic transcripts or references. For more information or to apply, please contact us at +91 9419007365 or visit our website www.legalsurface.in",
 };
-
-
-
-
