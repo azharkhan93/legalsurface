@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
-import { SERVICES_DATA } from "@/constants";
 import { LawCards } from "./components/LawCards";
 
 interface PracticeArea {
@@ -18,7 +17,19 @@ interface Service {
   practiceArea?: PracticeArea[];
 }
 
-export const OurServices = () => {
+interface OurServicesProps {
+  mainHeading: string;
+  subHeading: string;
+  description: string;
+  servicesData: Service[];
+}
+
+export const OurServices = ({
+  mainHeading,
+  subHeading,
+  description,
+  servicesData,
+}: OurServicesProps) => {
   return (
     <>
       <Column
@@ -34,7 +45,7 @@ export const OurServices = () => {
           width={["100%", "800px"]}
           textAlign={["start", "center"]}
         >
-          Criminal Law Practices
+          {mainHeading}
         </Text>
         <Box
           height={"3px"}
@@ -43,14 +54,14 @@ export const OurServices = () => {
           borderRadius={"circle"}
           ml={"header"}
         />
-        <Text variant={"subHeading"}>Our Criminal Law Practices Include</Text>
+        <Text variant={"subHeading"}>{subHeading}</Text>
         <Text
           variant={"body"}
           width={["100%", "800px"]}
           px={["none", "xl"]}
           textAlign={["start", "center"]}
         >
-          {`We are a leading law firm specializing in criminal law in Jammu & Kashmir. Our experienced team of advocates offers expert legal representation across a wide range of criminal cases, including those in the High Court and district courts. With over 50 specialized lawyers, we are dedicated to delivering exceptional legal support to protect your rights and achieve the best possible outcomes.`}
+          {description}
         </Text>
       </Column>
 
@@ -63,7 +74,7 @@ export const OurServices = () => {
         flexDirection={["column", "row"]}
         width={"100%"}
       >
-        {SERVICES_DATA.map((service: Service) => (
+        {servicesData.map((service) => (
           <Row
             key={service.id}
             alignItems={"center"}
@@ -114,3 +125,4 @@ export const OurServices = () => {
     </>
   );
 };
+

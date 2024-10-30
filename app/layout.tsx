@@ -36,13 +36,11 @@ export default function RootLayout({
         <GlobalStyle />
 
         <AppThemeProvider>
-          {/* <ApolloProvider client={client}> */}
           <LoaderProvider>
             <Navbar />
             {children}
             <Footer />
           </LoaderProvider>
-          {/* </ApolloProvider> */}
         </AppThemeProvider>
       </body>
     </html>

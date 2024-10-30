@@ -427,6 +427,278 @@ export const SERVICES_DATA = [
   },
 ];
 
+export const TRIBUNAL_DATA = [
+  {
+    id: 1,
+    title: "Representation in Armed Forces Tribunal Disputes",
+    description:
+      "We provide skilled legal representation for defense personnel involved in disputes at the Armed Forces Tribunal in Srinagar, Jammu and Kashmir. Our team ensures precise and vigorous advocacy in service matters and compensation claims.Representation in Armed Forces Tribunal (AFT) disputes involves legal advocacy for defense personnel—serving or retired—who are engaged in conflicts pertaining to service matters, disciplinary actions, or compensation claims. The AFT handles disputes arising from military law and service regulations, including issues related to promotions, pay disputes, wrongful termination, or grievances over disciplinary actions. These cases are heard in specialized military courts, and the tribunal's rulings are binding.",
+    imageSrc: "/images/armed.webp",
+    altText: "Armed Forces Tribunal Disputes",
+    practiceArea: [
+      {
+        subHeading: "Our Armed Forces Tribunal Practice Area Includes:",
+        details: [
+          "1. Legal Process: The process begins with filing a petition in the Armed Forces Tribunal, where specific grievances, supported by relevant military laws and service regulations, are brought before the court. The tribunal then follows procedures outlined in the Armed Forces Tribunal Act, 2007. Typically, this involves an examination of service records, evidence of any alleged misconduct, and testimonies from involved parties. The legal proceedings can also involve hearings on matters of pay, pensions, promotions, or wrongful dismissals, depending on the nature of the dispute. The tribunal has the authority to review decisions made by military authorities and offer relief, such as reinstatement or compensation.",
+          "2. Support for Clients: We provide defense personnel with comprehensive legal support throughout the tribunal process. From the initial filing of the petition to gathering supporting evidence, our legal team ensures that the client’s grievances are clearly articulated and backed by solid legal arguments. During the tribunal hearings, we provide representation to challenge wrongful actions, disciplinary measures, or denials of rightful compensation. Clients are guided through the legal intricacies of military law, ensuring that their rights and interests are fully protected. We also assist in post-judgment matters, such as the enforcement of tribunal rulings or filing appeals where necessary, helping defense personnel secure the outcomes they are entitled to under the law."
+          
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Court-Martial Defense and Legal Assistance",
+    description:
+      "Facing a court-martial? Our firm in Srinagar, Jammu and Kashmir, offers dedicated defense services, ensuring thorough preparation and robust representation to protect your rights. Court-martial defense involves providing legal representation to military personnel who are accused of offenses under military law. A court-martial is a legal proceeding conducted by the military to try members of the armed forces accused of violating the Armed Forces Act or other military regulations. The charges may range from minor infractions to serious crimes, including misconduct, insubordination, desertion, or more severe offenses such as assault or treason.",
+    imageSrc: "/images/armed2.jpeg",
+    altText: "Court-Martial Defense",
+    practiceArea: [
+      {
+        subHeading: "Our Court-Martial Defense Practice Area Includes:",
+        details: [
+          "1. Legal Process: The court-martial process begins with a formal charge and convening of the court, which is composed of military officers or a judge, depending on the type of court-martial—summary, special, or general. After charges are filed, a pre-trial investigation may be conducted under Article 22 of the Armed Forces Act, followed by arraignment where the accused service member enters a plea. Both the defense and the prosecution present their cases, which includes examining witnesses, submitting evidence, and making legal arguments. The court-martial concludes with a verdict and sentencing if the accused is found guilty.",
+          "2. Support for Clients: We assist clients throughout the entire court-martial process, from initial consultations to post-trial appeals. Our legal support begins by thoroughly analyzing the charges and assessing the evidence to identify potential weaknesses in the prosecution's case. We provide strong advocacy during hearings, ensuring that the client's rights are protected and that all legal procedures are followed correctly. If necessary, we negotiate for reduced charges or alternative penalties and challenge improper military actions or violations of due process."
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Pension and Service Benefits Disputes",
+    description:
+      "We specialize in resolving disputes over pensions and service benefits for defense personnel in Jammu and Kashmir, ensuring that your rightful benefits are secured and enforced. Pension and service benefits disputes for defense personnel involve legal challenges regarding the provision and calculation of retirement pensions, gratuities, disability benefits, and other service-related entitlements owed to military personnel or veterans. These disputes may arise from the wrongful denial of pensions, delays in benefit disbursement, miscalculation of entitlements, or disagreements over eligibility criteria.",
+    imageSrc: "/images/armed3.jpg",
+    altText: "Pension and Service Benefits Disputes",
+    practiceArea: [
+      {
+        subHeading: "Our Pension and Service Benefits Practice Area Includes:",
+        details: [
+          "1. Legal Process: The resolution of pension and service benefit disputes typically involves filing a claim with the Armed Forces Tribunal or other relevant authorities, such as the Pension Grievance Redressal System. The legal process begins by reviewing service records, pension entitlements, and the specific regulations governing military pensions and benefits. Often, disputes arise from incorrect application of pension rules or administrative errors in calculating service duration, retirement age, or disability percentages.",
+          "2. Support for Clients: We provide defense personnel with comprehensive legal support to address pension and service benefit disputes. Our services include assisting with the initial review of pension entitlements, filing petitions or claims before the Armed Forces Tribunal, and representing clients during hearings. We ensure that any errors in the calculation of benefits are rectified and that the client’s full pension rights are enforced according to the applicable military laws."
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 4,
+    title: "Military Service-Related Compensation Claims",
+    description:
+      "Our team helps defense personnel secure compensation for service-related injuries and disabilities, providing expert legal support in Srinagar, Jammu and Kashmir to maximize claim success. Military service-related compensation claims involve seeking financial compensation for injuries, disabilities, or health conditions sustained during active duty or as a result of military service.",
+    imageSrc: "/images/armed4.jpg",
+    altText: "Military Service-Related Compensation Claims",
+    practiceArea: [
+      {
+        subHeading: "Our Military Service-Related Compensation Claims Practice Area Includes:",
+        details: [
+          "1. Legal Process: The process of securing military service-related compensation begins with filing a claim through the appropriate military or government authority. This often involves the submission of medical records, service documentation, and detailed evidence of the injury or disability. In cases where the claim is denied or insufficient compensation is offered, the service member has the right to file an appeal or bring the case before the Armed Forces Tribunal.",
+          "2. Support for Clients: We provide legal representation to defense personnel seeking compensation for service-related injuries or disabilities. Our services include reviewing medical and service records, preparing and filing claims, and representing clients during tribunal hearings or appeals. We work to ensure that all aspects of the injury or disability are fully documented and that the claim is submitted in accordance with military law and compensation regulations. In the event of a denial or underestimation of the claim, we assist in challenging the decision by presenting additional evidence, expert opinions, and legal arguments to secure the compensation our clients are entitled to."
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Appeals and Reviews in Armed Forces Tribunal",
+    description:
+      "We provide expert representation for defense personnel appealing Armed Forces Tribunal decisions in Srinagar, Jammu and Kashmir, ensuring your case is thoroughly reviewed and fairly addressed. Appeals and reviews in the Armed Forces Tribunal (AFT) involve challenging a previous ruling made by the tribunal or military authorities. These legal actions seek to rectify errors in the tribunal's decision or highlight new evidence that may affect the outcome of the case.",
+      imageSrc: "/images/armed5.jpg",
+    altText: "Appeals and Reviews in Armed Forces Tribunal",
+    practiceArea: [
+      {
+        subHeading: "Our Appeals and Reviews Practice Area Includes:",
+        details: [
+          "1. Legal Process: The appeals process begins with filing a formal appeal or review petition in the Armed Forces Tribunal within a specified time frame after the original decision. This petition outlines the grounds for the appeal, which may include procedural errors, incorrect application of the law, or new evidence that was not available during the original hearing. The appellate tribunal reviews the case, examining the legal and factual basis for the original decision.",
+          "2. Support for Clients: We provide comprehensive legal support to defense personnel seeking to appeal or review decisions made by the Armed Forces Tribunal. Our services include thoroughly reviewing the original tribunal decision, identifying legal errors or procedural flaws, and gathering new evidence where applicable. We prepare detailed and well-researched appeal petitions that present a compelling case for review."
+        ],
+      },
+    ],
+  },
+  
+
+  {
+    id: 6,
+    title: "Disciplinary Proceedings in the Armed Forces",
+    description:
+      "Our firm offers comprehensive legal defense for military personnel facing disciplinary actions in Srinagar, Jammu and Kashmir, ensuring your rights are upheld throughout the process. Disciplinary proceedings in the armed forces refer to formal actions taken against defense personnel for violations of military regulations or conduct unbecoming of a service member.",
+    imageSrc:  "/images/court.jpg",
+    altText: "Disciplinary Proceedings in the Armed Forces",
+    practiceArea: [
+      {
+        subHeading: "Our Disciplinary Proceedings Practice Area Includes:",
+        details: [
+          "1. Legal Process: The process of disciplinary proceedings typically starts with an inquiry by the commanding officer or a designated military authority. A summary of evidence is gathered, which includes witness statements, incident reports, and any other relevant documentation. The accused service member may be placed under investigation, and in some cases, they may be detained while awaiting the outcome of the proceedings.",
+          "2. Support for Clients: We provide defense personnel with comprehensive legal support during disciplinary proceedings, ensuring that their rights are fully protected throughout the process. Our services include reviewing the charges and evidence, advising on defense strategies, and representing clients during military hearings and court-martials. We work to challenge any procedural errors, unfair treatment, or disproportionate penalties that may arise during the proceedings."
+        ],
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Legal Support for Defense Personnel and Veterans",
+    description:
+      "We provide broad legal support for defense personnel and veterans in Jammu and Kashmir, offering expert advice and representation on military law issues to protect your rights. Legal support for defense personnel and veterans encompasses a wide range of legal services tailored to address the unique challenges faced by individuals who serve or have served in the military.",
+    imageSrc: "/images/court.jpg",
+    altText: "Legal Support for Defense Personnel and Veterans",
+    practiceArea: [
+      {
+        subHeading: "Our Legal Support for Defense Personnel and Veterans Includes:",
+        details: [
+          "1. Legal Process: Legal support for defense personnel and veterans begins with understanding the specific military laws and regulations governing their service and rights. Depending on the nature of the issue, the legal process may involve filing claims with military or government authorities, representing clients before military tribunals or civil courts, and navigating the often complex procedures required for resolving service-related disputes.",
+          "2. Support for Clients: We provide tailored legal support to defense personnel and veterans by offering expert guidance on the full spectrum of military law. Our services include assisting with service-related disputes, such as wrongful discharge, denial of benefits, or pension miscalculations. We also provide representation in disciplinary proceedings, court-martials, and compensation claims for injuries sustained during service."
+        ],
+      },
+    ],
+  },
+  
+  
+  {
+    id: 8,
+    title: "Service Discharge and Reinstatement Disputes",
+    description:
+      "Facing service discharge or seeking reinstatement? Our team in Srinagar, Jammu and Kashmir, offers expert legal representation to protect your career and uphold your rights. Service discharge and reinstatement disputes arise when defense personnel are discharged from military service and challenge the legality or fairness of that decision.",
+    imageSrc: "/images/court.jpg",
+    altText: "Service Discharge and Reinstatement Disputes",
+    practiceArea: [
+      {
+        subHeading: "Our Services for Service Discharge and Reinstatement Disputes Include:",
+        details: [
+          "1. Legal Process: The process for handling service discharge disputes begins with reviewing the circumstances of the discharge to determine if it was lawful and in accordance with military procedures. This involves examining the relevant service records, the reasons cited for the discharge, and whether the appropriate steps were followed by military authorities. If procedural errors, unfair treatment, or violations of military regulations are identified, a legal challenge can be initiated.",
+          "2. Support for Clients: We provide defense personnel facing service discharge or reinstatement disputes with comprehensive legal support, offering expert guidance throughout the entire process. Our services include reviewing the circumstances of the discharge, identifying procedural errors or legal grounds for challenging the decision, and preparing a detailed case for reinstatement or rectification of the discharge.",
+          "3. Advocacy and Representation: Our legal team works closely with clients to gather the necessary evidence, develop a robust legal strategy, and represent them in hearings or tribunals. We ensure that clients understand their rights and the options available to them, providing clear advice and strong advocacy during all stages of the dispute."
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 9,
+    title: "Legal Support for Defense Personnel and Veterans",
+    description:
+      "We provide broad legal support for defense personnel and veterans in Jammu and Kashmir, offering expert advice and representation on military law issues to protect your rights. Legal support for defense personnel and veterans encompasses a wide range of legal services tailored to address the unique challenges faced by individuals who serve or have served in the military.",
+    imageSrc: "/images/court.jpg",
+    altText: "Legal Support for Defense Personnel and Veterans",
+    practiceArea: [
+      {
+        subHeading: "Our Services for Legal Support Include:",
+        details: [
+          "1. Legal Process: Providing legal guidance begins with a thorough understanding of the specific legal concerns or questions faced by defense personnel. This may involve reviewing military laws, service regulations, and case-specific details to offer tailored advice. Common legal issues include understanding the procedures for filing compensation claims, responding to disciplinary actions, disputing pension or service benefits, and addressing service discharge concerns.",
+          "2. Support for Clients: We offer personalized legal guidance to defense personnel, ensuring that they have a clear understanding of the legal landscape affecting their service. Our support extends beyond just providing information; we help clients navigate complex legal processes, explaining their options and the potential risks and benefits of each decision.",
+          "3. Advocacy and Representation: From understanding the intricacies of military law to providing strategic advice on specific legal challenges, we empower defense personnel with the knowledge and confidence they need to protect their rights. Our legal team provides clear advice and strong advocacy, guiding clients through all stages of their legal issues, whether they involve compensation claims, service discharge, or other military law matters."
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 10,
+    title: "Challenging Unlawful Orders and Command Decisions",
+    description:
+      "We represent defense personnel in Jammu and Kashmir challenging unlawful orders or command decisions, ensuring your rights are protected and justice is served. This service ensures that any unlawful actions are rigorously contested and that the rights of defense personnel are safeguarded.",
+    imageSrc: "/images/court.jpg",
+    altText: "Challenging Unlawful Orders and Command Decisions",
+    practiceArea: [
+      {
+        subHeading: "Handling Challenges to Unlawful Orders Includes:",
+        details: [
+          "1. Case Evaluation: Reviewing the specifics of the order or decision to determine its legality and potential impacts.",
+          "2. Evidence Collection: Gathering relevant evidence and documentation to support the challenge.",
+          "3. Legal Strategy Development: Crafting a strategic legal approach tailored to the specific situation.",
+          "4. Filing and Representation: Submitting necessary legal documents to contest the order and representing the client in military proceedings.",
+          "5. Support for Clients: We support clients by meticulously preparing their cases, ensuring their rights are protected, and providing robust representation during military proceedings. Our role is to contest any unlawful orders or decisions, uphold justice, and ensure fairness prevails in all military matters."
+        ],
+      },
+      // {
+      //   subHeading: "Support for Clients:",
+      //   details: [
+      //     "5. Support for Clients: We support clients by meticulously preparing their cases, ensuring their rights are protected, and providing robust representation during military proceedings. Our role is to contest any unlawful orders or decisions, uphold justice, and ensure fairness prevails in all military matters."
+      //   ],
+      // },
+    ],
+  },
+  {
+    id: 11,
+    title: "Legal Representation for Families of Defense Personnel",
+    description:
+      "Our team in Srinagar, Jammu and Kashmir offers legal representation for families of defense personnel, ensuring their legal matters are addressed with precision and care. This service ensures that grievances are meticulously addressed by the relevant military authorities.",
+    imageSrc: "/images/court.jpg",
+    altText: "Legal Representation for Families of Defense Personnel",
+    practiceArea: [
+      {
+        subHeading: "Handling Legal Representation for Families Includes:",
+        details: [
+          "1. Grievance Filing: Assisting in the preparation and filing of grievances related to service matters, disciplinary actions, and other disputes.",
+          "2. Case Presentation: Presenting the case effectively to ensure that grievances are taken seriously by the military authorities.",
+          "3. Ongoing Advocacy: Providing continuous support and advocacy throughout the grievance process to achieve a fair resolution.",
+          "4. Support for Clients: We support clients by meticulously addressing their grievances, ensuring their concerns are taken seriously, and advocating on their behalf. Our role is to stand up for their rights, navigate the complex processes involved in military disputes, and provide professional and dedicated legal support.",
+        ],
+      },
+      // {
+      //   subHeading: "Support for Clients:",
+      //   details: [
+      //     "4. Support for Clients: We support clients by meticulously addressing their grievances, ensuring their concerns are taken seriously, and advocating on their behalf. Our role is to stand up for their rights, navigate the complex processes involved in military disputes, and provide professional and dedicated legal support.",
+      //   ],
+      // },
+
+    ],
+  },
+  {
+    id: 12,
+    title: "Redressal of Grievances for Military Personnel",
+    description:
+      "We assist defense personnel in Srinagar, Jammu and Kashmir, with filing and pursuing grievances related to service matters, ensuring your concerns are effectively addressed. This service ensures that grievances are meticulously addressed and taken seriously by the relevant military authorities.",
+    imageSrc: "/images/court.jpg",
+    altText: "Redressal of Grievances for Military Personnel",
+    practiceArea: [
+      {
+        subHeading: "Handling the Redressal of Grievances Includes:",
+        details: [
+          "1. Grievance Filing: Assisting in the preparation and filing of grievances related to service matters, disciplinary actions, and other disputes.",
+          "2. Case Presentation: Effectively presenting the case to ensure that grievances are taken seriously and addressed by the military authorities.",
+          "3. Ongoing Advocacy: Providing continuous support and advocacy throughout the grievance process to achieve a fair resolution.",
+          "4. Support for Clients: We support clients by meticulously addressing their grievances, ensuring their concerns are taken seriously, and advocating on their behalf. Our role is to stand up for their rights, navigate the complex processes involved in military disputes, and provide professional and dedicated legal support.",
+        ],
+      },
+      // {
+      //   subHeading: "Support for Clients:",
+      //   details: [
+      //     "4. Support for Clients: We support clients by meticulously addressing their grievances, ensuring their concerns are taken seriously, and advocating on their behalf. Our role is to stand up for their rights, navigate the complex processes involved in military disputes, and provide professional and dedicated legal support.",
+      //   ],
+      // },
+    ],
+  },
+  {
+    id: 13,
+    title: "Defending Against Charges of Misconduct and Negligence",
+    description:
+      "Our firm offers robust defense for military personnel facing misconduct or negligence charges in Jammu and Kashmir, ensuring fair representation and protection of your rights. This service ensures a fair hearing and accurate presentation of the facts.",
+    imageSrc: "/images/court.jpg",
+    altText: "Defending Against Charges of Misconduct and Negligence",
+    practiceArea: [
+      {
+        subHeading: "Handling Charges of Misconduct and Negligence Includes:",
+        details: [
+          "1. Evidence Examination: Meticulously reviewing all evidence and circumstances surrounding the allegations.",
+          "2. Defense Strategy Development: Crafting a strong defense strategy tailored to the specifics of the case.",
+          "3. Fair Hearing Preparation: Ensuring the service member is well-prepared for hearings and that all facts are effectively presented.",
+          "4. Ongoing Legal Support: Providing continuous legal advice and representation throughout the proceedings.",
+          "5. Support for Clients: We support clients by thoroughly examining the evidence, developing robust defense strategies, and representing them during hearings. Our role is to protect their rights, safeguard their careers, and ensure justice prevails. By offering vigorous representation, we help service members navigate the complexities of such charges with confidence.",
+        ],
+      },
+      // {
+      //   subHeading: "Support for Clients:",
+      //   details: [
+      //     "5. Support for Clients: We support clients by thoroughly examining the evidence, developing robust defense strategies, and representing them during hearings. Our role is to protect their rights, safeguard their careers, and ensure justice prevails. By offering vigorous representation, we help service members navigate the complexities of such charges with confidence.",
+      //   ],
+      // },
+    ],
+  }
+  
+  
+  
+];
+
 export const internshipData = {
   heading: "Internships",
   subHeading: "As an Intern, You Will:",
