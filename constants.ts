@@ -522,7 +522,7 @@ export const TRIBUNAL_DATA = [
     title: "Disciplinary Proceedings in the Armed Forces",
     description:
       "Our firm offers comprehensive legal defense for military personnel facing disciplinary actions in Srinagar, Jammu and Kashmir, ensuring your rights are upheld throughout the process. Disciplinary proceedings in the armed forces refer to formal actions taken against defense personnel for violations of military regulations or conduct unbecoming of a service member.",
-    imageSrc:  "/images/court.jpg",
+    imageSrc:  "/images/law45.webp",
     altText: "Disciplinary Proceedings in the Armed Forces",
     practiceArea: [
       {
@@ -539,7 +539,7 @@ export const TRIBUNAL_DATA = [
     title: "Legal Support for Defense Personnel and Veterans",
     description:
       "We provide broad legal support for defense personnel and veterans in Jammu and Kashmir, offering expert advice and representation on military law issues to protect your rights. Legal support for defense personnel and veterans encompasses a wide range of legal services tailored to address the unique challenges faced by individuals who serve or have served in the military.",
-    imageSrc: "/images/court.jpg",
+    imageSrc: "/images/law24.jpg",
     altText: "Legal Support for Defense Personnel and Veterans",
     practiceArea: [
       {
@@ -558,7 +558,7 @@ export const TRIBUNAL_DATA = [
     title: "Service Discharge and Reinstatement Disputes",
     description:
       "Facing service discharge or seeking reinstatement? Our team in Srinagar, Jammu and Kashmir, offers expert legal representation to protect your career and uphold your rights. Service discharge and reinstatement disputes arise when defense personnel are discharged from military service and challenge the legality or fairness of that decision.",
-    imageSrc: "/images/court.jpg",
+    imageSrc: "/images/law25.jpg",
     altText: "Service Discharge and Reinstatement Disputes",
     practiceArea: [
       {
@@ -577,7 +577,7 @@ export const TRIBUNAL_DATA = [
     title: "Legal Support for Defense Personnel and Veterans",
     description:
       "We provide broad legal support for defense personnel and veterans in Jammu and Kashmir, offering expert advice and representation on military law issues to protect your rights. Legal support for defense personnel and veterans encompasses a wide range of legal services tailored to address the unique challenges faced by individuals who serve or have served in the military.",
-    imageSrc: "/images/court.jpg",
+    imageSrc: "/images/law45.webp",
     altText: "Legal Support for Defense Personnel and Veterans",
     practiceArea: [
       {
@@ -596,7 +596,7 @@ export const TRIBUNAL_DATA = [
     title: "Challenging Unlawful Orders and Command Decisions",
     description:
       "We represent defense personnel in Jammu and Kashmir challenging unlawful orders or command decisions, ensuring your rights are protected and justice is served. This service ensures that any unlawful actions are rigorously contested and that the rights of defense personnel are safeguarded.",
-    imageSrc: "/images/court.jpg",
+    imageSrc: "/images/law42.png",
     altText: "Challenging Unlawful Orders and Command Decisions",
     practiceArea: [
       {
@@ -648,7 +648,7 @@ export const TRIBUNAL_DATA = [
     title: "Redressal of Grievances for Military Personnel",
     description:
       "We assist defense personnel in Srinagar, Jammu and Kashmir, with filing and pursuing grievances related to service matters, ensuring your concerns are effectively addressed. This service ensures that grievances are meticulously addressed and taken seriously by the relevant military authorities.",
-    imageSrc: "/images/court.jpg",
+    imageSrc: "/images/law40.jpg",
     altText: "Redressal of Grievances for Military Personnel",
     practiceArea: [
       {
@@ -673,7 +673,7 @@ export const TRIBUNAL_DATA = [
     title: "Defending Against Charges of Misconduct and Negligence",
     description:
       "Our firm offers robust defense for military personnel facing misconduct or negligence charges in Jammu and Kashmir, ensuring fair representation and protection of your rights. This service ensures a fair hearing and accurate presentation of the facts.",
-    imageSrc: "/images/court.jpg",
+    imageSrc: "/images/law39.jpeg",
     altText: "Defending Against Charges of Misconduct and Negligence",
     practiceArea: [
       {
