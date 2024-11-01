@@ -114,13 +114,14 @@ export const Navbar: React.FC = () => {
                     p="s"
                     py="l"
                     borderRadius="s"
+                    alignItems={"center"}
                   >
                     <Box
-                      alignItems="start"
+                      alignItems="center"
                       gap={15}
                       flexDirection="row"
                       flexWrap="wrap"
-                      width="200px"
+                      width={"300px"}
                     >
                       {item.dropdown.map((dropdownItem, idx) => (
                         <StyledLink
@@ -207,18 +208,22 @@ export const Navbar: React.FC = () => {
                     >
                       {item.title}
                       {navbarDropdownOpen === index ? (
-                        <FaChevronUp size={15} />
+                        <FaChevronUp size={17} />
                       ) : (
-                        <FaChevronDown size={15} />
+                        <FaChevronDown size={17} />
                       )}
                     </StyledLink>
                     {navbarDropdownOpen === index && (
                       <Box
+                      border={"3px solid red"}
                         p="s"
                         py="l"
                         borderRadius="s"
                         bg="white"
                         ml="l"
+                        flexDirection={"row"}
+                        flexWrap={"wrap"}
+                        width={"260px"}
                       >
                         {item.dropdown.map((dropdownItem, idx) => (
                           <StyledLink
