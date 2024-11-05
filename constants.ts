@@ -15,7 +15,8 @@ export const NavbarData = [
     link: "/services",
     dropdown: [
       { title: "Criminal Law", link: "/services" },
-      { title: "Armed Force", link: "/services/armed-forces" },
+      { title: "Armed Forces - Tribunal", link: "/services/armed-forces" },
+      { title: "Corporate Law", link: "/services/corporate-law" },
     ],
   },
   // {
@@ -814,3 +815,261 @@ export const ApplySectionData1 = {
   description:
     "Interested candidates should submit their resume, a cover letter detailing their interest in the internship, and any relevant academic transcripts or references. For more information or to apply, please contact us at +91 9419007365 or visit our website www.legalsurface.in",
 };
+
+
+export const CORPORATE_LAW_DATA = [
+  {
+    id: 1,
+    title: "Indian Companies Act",
+    description:
+      "We guide businesses in Srinagar through company incorporation, governance, and compliance with the Indian Companies Act, ensuring smooth and lawful operations. We also provide strategic legal advocacy for resolving disputes related to corporate governance, regulatory issues, and company law compliance. Our team ensures that your company operates within the legal framework, mitigating risks and addressing any legal challenges that may arise.Whether you are starting a new business, managing an existing company, or dealing with corporate compliance issues, LEGAL SURFACE – ADVOCATES & SOLICITORS is committed to delivering effective legal solutions and expert guidance under the Indian Companies Act.",
+    imageSrc: "/images/law39.jpeg", 
+    altText: "Indian Companies Act",
+    practiceArea: [
+      {
+        subHeading: "Our Corporate Law Practice under the Indian Companies Act Includes:",
+        details: [
+          "Expert Legal Counsel: Offering expert legal counsel on matters related to the Indian Companies Act for businesses in Jammu and Kashmir.",
+          "Company Incorporation and Registration: Advising on incorporation, registration of companies, and drafting of corporate documents.",
+          "Corporate Governance: Assistance with preparing annual returns, compliance with board resolutions, and shareholder agreement management.",
+          "Dispute Resolution: Strategic legal advocacy for resolving disputes related to corporate governance and company law compliance.",
+          "Risk Mitigation: Ensuring companies operate within the legal framework, mitigating risks, and addressing legal challenges.",
+          "Comprehensive Support: Delivering effective legal solutions for new businesses, existing companies, and compliance issues under the Indian Companies Act."
+        ],
+      },
+    ],
+  },
+  
+
+  {
+    id: 2,
+    title: "Indian Contract Act",
+    description:
+      "Our expert team provides comprehensive contract services, including drafting, reviewing, and negotiating contracts to ensure clarity, enforceability, and legal compliance for businesses in Jammu and Kashmir.",
+    imageSrc: "/images/law39.jpeg", 
+    altText: "Indian Contract Act",
+    practiceArea: [
+      {
+        subHeading: "Our Contract Law Services Include:",
+        details: [
+          "Tailored Contract Drafting: Precise and clear contracts that define all obligations and rights, tailored to specific business needs.",
+          "Comprehensive Legal Review: Thorough review to ensure compliance with the Indian Contract Act and mitigate legal risks.",
+          "Effective Negotiation: Facilitation of fair and beneficial terms for all parties involved, ensuring robust and enforceable contracts.",
+          "Execution and Compliance: Guidance to ensure contracts are properly executed, adhered to, and legally sound.",
+          "Support for Clients: We provide comprehensive legal support to ensure that contracts are clear, enforceable, and legally compliant, safeguarding the interests of businesses in Jammu and Kashmir."
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 3,
+    title: "Insolvency and Bankruptcy Code",
+    description:
+      "We offer strategic guidance on insolvency, restructuring, and bankruptcy proceedings under the Insolvency and Bankruptcy Code (IBC), safeguarding client interests in complex cases across Jammu and Kashmir. We provide comprehensive support for businesses and individuals navigating the complexities of insolvency and bankruptcy proceedings, aiming to facilitate effective restructuring and resolution.",
+    imageSrc: "/images/law39.jpeg", 
+    altText: "Insolvency and Bankruptcy Code",
+    practiceArea: [
+      {
+        subHeading: "Our Insolvency and Bankruptcy Services Include:",
+        details: [
+          "Insolvency Proceedings: Expert advice on initiating and managing insolvency cases for businesses and individuals.",
+          "Corporate Restructuring: Guidance on restructuring to facilitate smooth recovery and resolution.",
+          "Representation at NCLT: Skilled advocacy and representation before the National Company Law Tribunal.",
+          "Creditor Negotiations: Facilitation of negotiations with creditors for favorable outcomes.",
+          "Resolution Planning: Assistance in formulating effective resolution plans in the best interest of stakeholders.",
+          "IBC Compliance: Ensuring strict adherence to IBC regulations throughout all legal processes."
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 4,
+    title: "Mergers and Acquisitions (M&A)",
+    description:
+      "Our team assists businesses with structuring, negotiating, and executing M&A transactions in Srinagar, ensuring regulatory compliance and smooth integration. our corporate law practice provides expert legal counsel on mergers and acquisitions (M&A) in Jammu and Kashmir. We specialize in facilitating complex transactions, ensuring that mergers, acquisitions, and corporate restructurings are executed smoothly and in compliance with legal and regulatory requirements.",
+    imageSrc: "/images/law39.jpeg", 
+    altText: "Mergers and Acquisitions",
+    practiceArea: [
+      {
+        subHeading: "Our M&A Services Include:",
+        details: [
+          "Deal Structuring and Negotiation: Expert guidance on structuring and negotiating M&A transactions to achieve strategic alignment with business goals.",
+          "Due Diligence: Comprehensive due diligence to assess risks, verify assets, and confirm legal and financial status of target companies.",
+          "Transaction Document Preparation: Drafting and reviewing transaction documents to ensure accuracy, compliance, and protection of client interests.",
+          "Regulatory Approvals: Assistance with securing necessary regulatory approvals to ensure a legally compliant transaction.",
+          "Agreement Drafting and Negotiation: Skillful drafting and negotiation of agreements to finalize terms and conditions that benefit all parties.",
+          "Post-Transaction Integration: Strategic planning and support for integrating operations, employees, and systems post-transaction.",
+          "Legal Advocacy: Addressing any arising issues with proactive legal solutions to facilitate a smooth M&A process."
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Antitrust and Competition Law",
+    description:
+      "We offer expert advice on compliance with competition regulations, resolving competitive disputes, and addressing antitrust violations in Jammu and Kashmir. At LEGAL SURFACE – ADVOCATES & SOLICITORS, our corporate law practice offers expert legal counsel on antitrust and competition law matters in Jammu and Kashmir. We specialize in addressing issues related to antitrust violations, ensuring compliance with competition regulations, and providing strategic guidance for managing and resolving competitive disputes.",
+    imageSrc: "/images/law39.jpeg", 
+    altText: "Antitrust and Competition Law",
+    practiceArea: [
+      {
+        subHeading: "Our Antitrust and Competition Law Services Include:",
+        details: [
+          "Antitrust Compliance: Advising on adherence to competition regulations to prevent anti-competitive practices.",
+          "Investigation of Allegations: Conducting investigations into alleged anti-competitive behaviors such as monopolistic practices and cartel formation.",
+          "Representation Before Authorities: Advocacy and representation before regulatory bodies to address competition law concerns.",
+          "Defense Against Allegations: Preparing and executing defense strategies to manage allegations of antitrust violations.",
+          "Market Dominance and Cartel Issues: Handling cases related to monopolistic behavior, market dominance, and cartel activities.",
+          "Restrictive Trade Practices: Addressing issues involving restrictive trade practices to ensure fair competition.",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 6,
+    title: "Corporate Intellectual Property Rights (IPR)",
+    description:
+      "We protect and manage corporate IP assets, including patents, trademarks, and copyrights, ensuring robust defense of your intellectual property. At LEGAL SURFACE – ADVOCATES & SOLICITORS, our corporate law practice offers expert legal counsel on corporate intellectual property (IP) rights in Jammu and Kashmir. We specialize in managing and protecting your company's valuable IP assets, ensuring that your intellectual property is safeguarded and strategically leveraged to enhance your business’s competitive edge.",
+    imageSrc: "/images/tr.jpg",
+    altText: "Corporate IP Representation",
+    practiceArea: [
+      {
+        subHeading: "Our Corporate Intellectual Property Practice Area Includes:",
+        details: [
+          "IP Acquisition and Registration: Guidance on acquiring and registering patents, trademarks, copyrights, and trade secrets.",
+          "Agreements and Licensing: Drafting and negotiating IP-related agreements, including licensing, assignments, and non-disclosure agreements.",
+          "Dispute Resolution: Strategic legal advocacy for resolving IP disputes and protection against infringement.",
+          "Compliance and Risk Management: Ensuring adherence to IP laws and comprehensive IP risk assessments.",
+          "Portfolio Management: Developing IP strategies that align with business goals, including portfolio management and IP risk assessment.",
+        ],
+      },
+    ],
+  },
+  
+  
+  {
+    id: 7,
+    title: "White Collar Crimes",
+    description:
+      "We provide strong legal defense against financial crime allegations, including fraud, embezzlement, and money laundering, safeguarding your corporate reputation. At LEGAL SURFACE – ADVOCATES & SOLICITORS, our criminal law practice provides expert legal counsel on white collar crimes in Jammu and Kashmir. We specialize in defending individuals and businesses accused of non-violent financial crimes, ensuring a robust and strategic defense against allegations of fraud, embezzlement, and other financial misconduct.",
+    imageSrc: "/images/law39.jpeg",
+    altText: "White Collar Crimes Representation",
+    practiceArea: [
+      {
+        subHeading: "Our White Collar Crimes Practice Area Includes:",
+        details: [
+          "Defense Strategy: Expert guidance on strategic defense against fraud, embezzlement, and financial misconduct charges.",
+          "Regulatory Compliance: Assistance with regulatory compliance to minimize risks associated with financial crimes.",
+          "Investigation Support: Management of investigations and representation before regulatory bodies.",
+          "Litigation and Settlement: Robust defense during litigation and support in negotiating settlements when applicable.",
+          "Court Representation: Comprehensive legal representation in court, aiming to protect your rights and reputation.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 8,
+    title: "Corporate Audits and Taxation",
+    description:
+      "Our firm supports businesses in corporate audits, risk management, and tax strategy optimization, ensuring compliance and financial efficiency. At LEGAL SURFACE – ADVOCATES & SOLICITORS, our corporate law practice offers expert legal counsel on corporate audits and taxation in Jammu and Kashmir. We provide comprehensive support to businesses in managing their audit requirements and navigating complex taxation issues, ensuring compliance with legal and regulatory standards while optimizing tax strategies.",
+    imageSrc: "/images/court.jpg",
+    altText: "Corporate Audits and Taxation Services",
+    practiceArea: [
+      {
+        subHeading: "Our Corporate Audits and Taxation Services Include:",
+        details: [
+          "Corporate Audits: Expert assistance in preparing and executing both internal and external audits to meet regulatory standards.",
+          "Risk Management: Comprehensive support in identifying and managing financial risks related to audits.",
+          "Tax Compliance: Guidance on preparing tax returns and ensuring compliance with corporate taxation laws.",
+          "Tax Strategy Optimization: Strategic planning to minimize tax liabilities and enhance financial efficiency.",
+          "Dispute Resolution: Legal advocacy in addressing tax disputes and navigating audits by tax authorities.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 9,
+    title: "Contract Drafting",
+    description:
+      "We specialize in drafting and reviewing contracts that are comprehensive, legally sound, and tailored to your business needs in Srinagar and Jammu and Kashmir. At LEGAL SURFACE – ADVOCATES & SOLICITORS, our corporate law practice provides expert legal counsel on contract drafting in Jammu and Kashmir. We specialize in creating clear, precise, and legally sound contracts tailored to meet the specific needs of your business, ensuring that all agreements are comprehensive and enforceable.",
+    imageSrc: "/images/court.jpg",
+    altText: "Contract Drafting Services",
+    practiceArea: [
+      {
+        subHeading: "Our Contract Drafting Services Include:",
+        details: [
+          "Contract Drafting: Creating clear and legally sound contracts for various business needs.",
+          "Contract Review: Thorough review of existing agreements to ensure compliance and protection of interests.",
+          "Negotiation Support: Assisting in negotiating contract terms to mitigate risks and safeguard your rights.",
+          "Tailored Agreements: Drafting contracts specifically designed to meet your business requirements.",
+          "Legal Advocacy: Providing support in resolving issues that arise during contract negotiations.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: "Corporate Litigation",
+    description:
+      "Our experienced team represents businesses in complex legal disputes, including shareholder conflicts and regulatory issues, ensuring effective dispute resolution. At LEGAL SURFACE – ADVOCATES & SOLICITORS, we specialize in corporate litigation in Jammu and Kashmir, managing disputes to protect your company's interests and achieve favorable outcomes.",
+    imageSrc: "/images/court.jpg",
+    altText: "Corporate Litigation Services",
+    practiceArea: [
+      {
+        subHeading: "Our Corporate Litigation Services Include:",
+        details: [
+          "Dispute Resolution: Effective management of commercial disputes, breach of contract claims, and shareholder conflicts.",
+          "Regulatory Representation: Navigating regulatory investigations and compliance issues.",
+          "Litigation Support: Comprehensive assistance throughout all litigation stages, from strategy development to courtroom representation.",
+          "Settlement Negotiations: Skilled advocacy in negotiating favorable settlements.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: "Public-Private Partnerships (PPP)",
+    description:
+      "We provide legal guidance on forming and managing public-private partnerships, from contract negotiation to project implementation, ensuring compliance with local laws. At LEGAL SURFACE – ADVOCATES & SOLICITORS, we specialize in facilitating collaborative ventures between public entities and private organizations in Jammu and Kashmir.",
+    imageSrc: "/images/court.jpg",
+    altText: "Public-Private Partnerships",
+    practiceArea: [
+      {
+        subHeading: "Our PPP Services Include:",
+        details: [
+          "Contract Formation: Advising on the negotiation and drafting of PPP agreements.",
+          "Risk Management: Developing strategies to manage project risks and ensure compliance with regulations.",
+          "Stakeholder Management: Structuring projects to balance stakeholder interests effectively.",
+          "Dispute Resolution: Providing legal support for issues arising during partnership implementation.",
+        ],
+      },
+    ],
+  }
+  
+  
+  // {
+  //   id: 6,
+  //   title: "Trial Defense",
+  //   description:
+  //     "Our firm offers a robust trial defense for clients facing criminal charges. We meticulously prepare and present each case, using strategic legal arguments and compelling evidence to challenge the prosecution and secure the best possible outcome through skilled representation in court.",
+
+  //   imageSrc: "/images/court.jpg",
+  //   altText: "Bail Applications",
+  //   practiceArea: [
+  //     {
+  //       subHeading: "Our Trial Defense Practice Area Includes:",
+  //       details: [
+  //         "Comprehensive Defense: Robust representation in cases involving bribery, embezzlement, fraud, and other corruption-related offenses.",
+  //         "Appeals and Revisions: Effective representation in appeals to contest unfavorable decisions by our skilled advocates.",
+  //         "Investigation Management: Expert handling of anti-corruption investigations by our top lawyers.",
+  //         "Trial Advocacy: Defense during trials to challenge evidence and protect your rights.",
+  //       ],
+  //     },
+  //   ],
+  // },
+];
