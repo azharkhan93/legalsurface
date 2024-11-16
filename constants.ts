@@ -17,6 +17,7 @@ export const NavbarData = [
       { title: "Criminal Law", link: "/services" },
       { title: "Armed Forces - Tribunal", link: "/services/armed-forces" },
       { title: "Corporate Law", link: "/services/corporate-law" },
+      { title: "Central Admistration - Tribunal", link: "/services/central-administration" },
     ],
   },
   // {
@@ -1050,26 +1051,229 @@ export const CORPORATE_LAW_DATA = [
       },
     ],
   }
-  
-  
-  // {
-  //   id: 6,
-  //   title: "Trial Defense",
-  //   description:
-  //     "Our firm offers a robust trial defense for clients facing criminal charges. We meticulously prepare and present each case, using strategic legal arguments and compelling evidence to challenge the prosecution and secure the best possible outcome through skilled representation in court.",
 
-  //   imageSrc: "/images/court.jpg",
-  //   altText: "Bail Applications",
-  //   practiceArea: [
-  //     {
-  //       subHeading: "Our Trial Defense Practice Area Includes:",
-  //       details: [
-  //         "Comprehensive Defense: Robust representation in cases involving bribery, embezzlement, fraud, and other corruption-related offenses.",
-  //         "Appeals and Revisions: Effective representation in appeals to contest unfavorable decisions by our skilled advocates.",
-  //         "Investigation Management: Expert handling of anti-corruption investigations by our top lawyers.",
-  //         "Trial Advocacy: Defense during trials to challenge evidence and protect your rights.",
-  //       ],
-  //     },
-  //   ],
-  // },
+  
+
+];
+
+export const ADMINISTRATION_DATA = [
+  {
+    id: 1,
+    title: "Central Administrative Tribunal (CAT) Legal Services",
+    description:
+      "We provide comprehensive legal services before CAT, covering a wide range of administrative disputes involving government employees. Whether it’s challenging unjust decisions or seeking redressal for service-related grievances, our legal team is dedicated to achieving favorable results for our clients through structured litigation and advisory services.",
+    imageSrc: "/images/anti.jpg",
+    altText: "Central Administrative Tribunal (CAT) Legal Services",
+    practiceArea: [
+      {
+        subHeading: "Central Administrative Tribunal (CAT) Legal Services",
+        details: [
+          "Legal Process The legal process for cases before the CAT typically involves several steps:",
+          "Initial Consultation: Assessing the merits of the case and advising on potential outcomes.",
+          "Filing an Application: Drafting and submitting a detailed application to the CAT, outlining the grievances and the relief sought.",
+          "Evidence Collection: Compiling relevant documents, records, and other evidence to support the application.",
+          "Pre-Hearing Procedures: Engaging in preliminary meetings or mediations to possibly resolve the issue before a formal hearing.",
+          "Main Hearing: Presenting the case before the Tribunal, including arguments, evidence, and witness testimonies.",
+          "Judgment: The Tribunal reviews the case and issues a decision, which can be challenged or appealed if necessary.",
+        ],
+      },
+    ],
+  },
+  
+
+  {
+    id: 1,
+    title: "Representation before Central Administrative Tribunal (CAT)",
+    description:
+      "Our firm offers expert representation before CAT for clients dealing with complex administrative matters. We represent individuals and organizations across all levels of disputes, providing robust legal advocacy to ensure that our clients’ rights and interests are safeguarded. From initial case preparation to final arguments, our experienced lawyers handle each case with precision and commitment.",
+    imageSrc: "/images/anti.jpg",
+    altText: "Representation before Central Administrative Tribunal (CAT)",
+    practiceArea: [
+      {
+        subHeading: "Representation before Central Administrative Tribunal (CAT)",
+        details: [
+          "Legal Process The steps involved in representing clients before CAT include:",
+          "Case Assessment: Conducting in-depth consultations to understand the client's issues and gather necessary documents.",
+          "Application Filing: Submitting a comprehensive application to CAT and adhering to all procedural requirements.",
+          "Evidence Presentation: Compiling and presenting evidence, including examination and cross-examination of witnesses.",
+          "Hearings: Actively participating in hearings, making oral arguments, and responding to the Tribunal's questions.",
+          "Judgment and Follow-Up: Awaiting the Tribunal's decision and advising clients on next steps, including potential appeals.",
+          "Support for Victims/Clients: We ensure that clients receive expert representation, maintaining open communication throughout the process and vigorously defending their rights and interests.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 3,
+    title: "Legal Counsel for Government Employees in CAT Matters",
+    description:
+      "Government employees often face unique legal challenges that require specialized attention. We provide legal counsel for government employees on matters involving service conditions, promotions, disciplinary actions, and employment disputes. Our firm is dedicated to defending the legal rights of government employees, ensuring compliance with service laws and protecting their professional interests.",
+    imageSrc: "/images/bail3.jpg",
+    altText: "Legal Counsel for Government Employees",
+    practiceArea: [
+      {
+        subHeading: "Our Legal Counsel Services Include:",
+        details: [
+          "Legal Process Handling these matters typically involves:",
+          "Consultation: Meeting with the employee to understand the issues and provide initial legal advice.",
+          "Document Review: Analyzing service records, correspondence, and other relevant documents.",
+          "Application Filing: Drafting and submitting applications or petitions to CAT.",
+          "Representation: Representing the employee in CAT hearings, presenting arguments, and submitting evidence.",
+          "Resolution: Seeking a favorable resolution through negotiation or Tribunal decision.",
+          "Support for Clients: We guide government employees through their legal challenges, ensuring they are well-informed and their cases are handled with expertise and diligence.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 4,
+    title: "Administrative Disputes Resolution at CAT",
+    description:
+      "At Legal Surface, we offer strategic assistance in resolving administrative disputes at CAT. Our legal experts employ a combination of negotiation, mediation, and litigation to resolve disputes effectively, aiming to deliver timely and cost-efficient solutions for our clients.Resolving administrative disputes at CAT involves addressing conflicts arising from administrative decisions, utilizing negotiation, mediation, and litigation to achieve fair outcomes.",
+    imageSrc: "/images/nsdp.webp",
+    altText: "Administrative Disputes Resolution",
+    practiceArea: [
+      {
+        subHeading: "Our Administrative Disputes Resolution Services Include:",
+        details: [
+          "Legal Process The resolution process includes:",
+          "Conflict Assessment: Identifying the core issues and legal grounds for the dispute.",
+          "Negotiation and Mediation: Attempting to resolve the dispute through discussions and mediation to avoid prolonged litigation.",
+          "Litigation: If necessary, proceeding to formal litigation by filing an application with CAT and representing the case in hearings.",
+          "Judgment: The Tribunal issues a decision, which may involve corrective actions or remedies for the aggrieved party.",
+          "Support for Clients: We aim to resolve disputes efficiently, employing strategic legal approaches to minimize costs and achieve timely resolutions for our clients.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 5,
+    title: "Service Matters Litigation at Central Administrative Tribunal",
+    description:
+      "We specialize in service matters litigation before CAT, representing clients in disputes over pay scales, seniority, transfers, promotions, and other service-related issues. Our lawyers have extensive experience in arguing service matters and ensuring that our clients receive justice in all employment-related grievances. Service matters litigation involves representing clients in disputes over employment terms and conditions, such as pay scales, seniority, transfers, promotions, and disciplinary actions.",
+    imageSrc: "/images/pmla.jpeg",
+    altText: "Service Matters Litigation",
+    practiceArea: [
+      {
+        subHeading: "Our Service Matters Litigation Services Include:",
+        details: [
+    
+          "Legal Process The litigation process involves:",
+          "Case Analysis: Reviewing the specifics of the dispute, relevant employment records, and applicable laws.",
+          "Filing Applications: Drafting and submitting applications or petitions to CAT.",
+          "Hearings: Participating in hearings, presenting evidence, and arguing the case.",
+          "Judgment: The Tribunal issues a decision based on the merits of the case.",
+          "Support for Clients: We provide expert legal representation to ensure clients' rights are protected and fair outcomes are achieved in their service-related disputes.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Challenging Disciplinary Actions in CAT",
+    description:
+      "Government employees facing unjust disciplinary actions can seek our assistance in challenging disciplinary actions before CAT. We provide robust legal strategies to dispute wrongful suspensions, terminations, or penalties, ensuring that our clients’ rights are defended and their careers are protected.",
+    imageSrc: "/images/court.jpg",
+    altText: "Challenging Disciplinary Actions in CAT",
+    practiceArea: [
+      {
+        subHeading: "Our Challenging Disciplinary Actions Practice Area Includes:",
+        details: [
+          
+          "Legal Process The process includes:",
+          "Review of Disciplinary Action: Assessing the action taken and gathering supporting evidence.",
+          "Application Filing: Submitting an application to CAT challenging the disciplinary decision.",
+          "Representation: Arguing the case before the Tribunal and presenting relevant evidence.",
+          "Judgment: The Tribunal issues a decision on the disciplinary action.",
+          "Support for Victims/Clients: We develop effective legal strategies to protect clients' careers and defend their rights against unjust disciplinary measures.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 7,
+    title: "Filing Appeals in Central Administrative Tribunal",
+    description:
+      "When administrative decisions are unfavorable, we assist clients in filing appeals before CAT. Our expert appellate services are designed to re-examine and challenge flawed decisions, ensuring that justice is served through a meticulous review of facts and legal principles.",
+    imageSrc: "/images/tr.jpg",
+    altText: "Filing Appeals in Central Administrative Tribunal",
+    practiceArea: [
+      {
+        subHeading: "Our Filing Appeals Practice Area Includes:",
+        details: [
+          "Legal Process The appeal process involves:",
+          "Case Review: Reviewing the original decision and identifying grounds for appeal.",
+          "Appeal Submission: Filing an appeal with CAT and ensuring all procedural requirements are met.",
+          "Appeal Hearing: Presenting the case before the Tribunal and arguing for a reversal or modification of the decision.",
+          "Decision: The Tribunal issues a decision on the appeal.",
+          "Support for Victims/Clients: We provide meticulous legal advocacy, ensuring that the appeal process is thorough and clients' interests are vigorously represented.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 8,
+    title: "Legal Support for Government Pension Disputes at CAT",
+    description:
+      "We provide expert legal support for pension-related disputes in CAT, helping retired government employees contest improper pension decisions or delays in payments. Our team ensures that pension entitlements are enforced, and disputes regarding pension benefits are resolved favorably.",
+    imageSrc: "/images/uapa.jpg",
+    altText: "Legal Support for Pension Disputes",
+    practiceArea: [
+      {
+        subHeading: "Our Government Pension Disputes Practice Area Includes:",
+        details: [
+          "Case Assessment: Reviewing pension entitlements and identifying discrepancies or delays.",
+          "Application and Hearing: Filing an application with CAT and representing clients in hearings.",
+          "Resolution: Seeking enforcement of pension entitlements and addressing disputes.",
+          "Support for Victims/Clients: Ensuring that clients receive their entitled pension benefits through expert representation and effective resolution of disputes.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 9,
+    title: "Employment Termination & Reinstatement Cases at CAT",
+    description:
+      "Wrongful termination can be devastating for any employee. We represent clients in employment termination disputes at CAT, working diligently to secure reinstatement or compensation where applicable. Our legal strategies are focused on ensuring a fair hearing and advocating for just outcomes.",
+    imageSrc: "/images/white collar.jpg",
+    altText: "Employment Termination & Reinstatement",
+    practiceArea: [
+      {
+        subHeading: "Our Employment Termination & Reinstatement Practice Area Includes:",
+        details: [
+          "Case Evaluation: Assessing the termination and gathering relevant evidence.",
+          "Filing an Application: Submitting an application with CAT challenging the termination.",
+          "Hearing and Judgment: Presenting the case before the Tribunal and arguing for reinstatement or compensation.",
+          "Support for Victims/Clients: We provide diligent legal representation to ensure clients receive a fair hearing and just outcomes in wrongful termination cases.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 10,
+    title: "Promotions and Transfers Disputes at CAT",
+    description:
+      "Disputes over promotions and transfers are common in the public sector. We specialize in handling promotions and transfers disputes at CAT, ensuring that our clients’ rights are upheld in accordance with service rules. Our experienced team addresses issues of unfair denial of promotions or transfers and works to rectify the situation legally.Handling promotions and transfers disputes at CAT involves addressing issues of unfair denial of promotions or transfers and ensuring compliance with service rules.",
+    imageSrc: "/images/cyber.png",
+    altText: "Promotions and Transfers Disputes",
+    practiceArea: [
+      {
+        subHeading: "Our Promotions and Transfers Disputes Practice Area Includes:",
+        details: [
+          "Review of Dispute: Analyzing the promotion or transfer dispute and relevant service records.",
+          "Application Filing: Submitting an application with CAT to address the dispute.",
+          "Representation in Hearings: Arguing the case before the Tribunal and presenting necessary evidence.",
+          "Support for Victims/Clients: Our goal is to rectify injustices through legal means, ensuring that clients' rights are upheld in accordance with service rules.",
+        ],
+      },
+    ],
+  },
+ 
 ];
