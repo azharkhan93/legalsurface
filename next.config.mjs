@@ -21,10 +21,6 @@ const nextConfig = {
 //     hostname: "mvp-lit-list-dev.s3.eu-west-2.amazonaws.com" ,
 //     port: ""
 
-     
-//   }]
-// }
-
 };
 
 export default nextConfig;
