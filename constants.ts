@@ -16,7 +16,9 @@ export const NavbarData = [
     dropdown: [
       { title: "Criminal Law", link: "/services" },
       { title: "Armed Forces - Tribunal", link: "/services/armed-forces" },
+      { title: "Consumer Protection", link: "/services/consumer-protection" },
       { title: "Corporate Law", link: "/services/corporate-law" },
+      { title: "Dispute Resolution", link: "/services/dispute-resolution" },
       { title: "Central Admistration - Tribunal", link: "/services/central-administration" },
     ],
   },
@@ -1276,4 +1278,220 @@ export const ADMINISTRATION_DATA = [
     ],
   },
  
+];
+
+
+export const DISPUTE__DATA = [
+  {
+    id: 1,
+    title: "Arbitration Services",
+    description:
+      "We offer expert arbitration services as a faster, confidential, and cost-effective alternative to traditional litigation. Serving clients across Jammu and Kashmir, our experienced team handles both domestic and international arbitration disputes with professionalism and efficiency. we prioritize efficiency and fairness in all arbitration proceedings, helping clients achieve favorable outcomes without the time and expense of traditional litigation. Our comprehensive legal services ensure that every aspect of your case is handled professionally, giving you peace of mind.",
+    imageSrc: "/images/anti.jpg",
+    altText: "Arbitration Services",
+    practiceArea: [
+      {
+        subHeading: "Our Arbitration Services Include:",
+        details: [
+          "Expert Legal Counsel: Providing expert legal advice on both domestic and international arbitration matters.",
+          "Commercial Disputes: Representing clients in resolving commercial disputes through arbitration.",
+          "Contract Disputes: Handling contract disputes efficiently through arbitration procedures.",
+          "Construction Arbitration: Addressing construction-related arbitration disputes, offering timely and fair resolutions.",
+          "Intellectual Property Disputes: Resolving intellectual property disagreements through arbitration.",
+          "Arbitration Clauses Drafting: Assisting clients in drafting robust arbitration clauses for contracts.",
+          "Legal Advocacy: Providing comprehensive legal advocacy before arbitral tribunals to ensure a fair hearing.",
+          "Expertise in Arbitration and Conciliation Act: Knowledge of the Arbitration and Conciliation Act, 1996, ensuring proper procedures and protections.",
+          "Cost-Effective Alternative: Arbitration as a faster, confidential, and more affordable alternative to traditional litigation.",
+          "Efficient Dispute Resolution: Our team works towards resolving disputes quickly and fairly, reducing the time and expense typically associated with court cases.",
+        ],
+      },
+    ],
+  },
+
+  
+  {
+    id: 2,
+    title: "Mediation Services",
+    description:
+      "Our mediation services provide a collaborative, cost-effective approach to dispute resolution. We help clients in Jammu and Kashmir reach mutually beneficial settlements without lengthy litigation, focusing on preserving relationships and achieving fair outcomes. At LEGAL SURFACE, we aim to empower our clients through legal advocacy that focuses on collaboration rather than confrontation. Our experienced mediators are skilled in managing complex discussions and ensuring that each party’s concerns are addressed. By offering tailored legal services throughout the mediation process, we enable faster resolutions and help our clients save time, money, and stress.",
+    imageSrc: "/images/anti.jpg",
+    altText: "Mediation Services",
+    practiceArea: [
+      {
+        subHeading: "Our Mediation Services Include:",
+        details: [
+          "Confidential and Cost-Effective: Offering a confidential and cost-effective method of dispute resolution.",
+          "Preserving Relationships: Focused on preserving relationships by facilitating mutually beneficial solutions.",
+          "Wide Range of Disputes: Handling disputes across family matters, business conflicts, property disputes, contract disagreements, and more.",
+          "Collaborative Approach: Promoting a collaborative environment to encourage effective communication and understanding.",
+          "Expert Mediation: Providing skilled mediators to guide parties through the mediation process.",
+          "Structured Negotiations: Assisting clients in structured negotiations, ensuring all concerns are addressed.",
+          "Legal Counsel: Offering tailored legal support throughout the mediation process to protect clients' rights.",
+          "Flexibility and Control: Providing flexibility and control for the parties involved to reach an amicable resolution.",
+          "Faster Resolution: Enabling faster resolution compared to traditional litigation, saving time, money, and stress.",
+          "Avoiding Legal Complications: Helping clients avoid further legal complications by resolving disputes at an early stage.",
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 3,
+    title: "Conveyancing Services",
+    description:
+      "We offer comprehensive conveyancing services to ensure smooth property transactions. Whether buying or selling in Jammu and Kashmir, our legal team ensures every step is handled efficiently, minimizing risk and safeguarding your property rights we offer expert Conveyancing services to ensure smooth and legally sound property transactions. Whether you're buying, selling, or transferring property in Jammu and Kashmir, our skilled team of advocates provides thorough legal counsel at every step of the process.",
+    imageSrc: "/images/anti.jpg",
+    altText: "Conveyancing Services",
+    practiceArea: [
+      {
+        subHeading: "Our Conveyancing Services Include:",
+        details: [
+          "Comprehensive Legal Counsel: Offering expert legal counsel throughout the property transaction process.",
+          "Title Searches: Conducting thorough title searches to ensure the property’s legal status and ownership.",
+          "Drafting Sale Agreements: Drafting clear and legally sound sale agreements to protect your interests.",
+          "Registration and Compliance: Ensuring that property registrations comply with local laws and regulations.",
+          "Residential, Commercial, and Agricultural Properties: Representing clients in all property types including residential, commercial, and agricultural transactions.",
+          "Risk Minimization: Identifying and mitigating potential risks in the property transaction process.",
+          "Dispute Prevention: Addressing and preventing potential disputes through thorough due diligence.",
+          "Maximizing Value: Ensuring that property transactions proceed smoothly to maximize value for clients.",
+        ],
+      },
+    ],
+  },
+ 
+];
+
+export const CONSUMER_DATA = [
+  {
+    id: 1,
+    title: "Filing Consumer Complaints",
+    description:
+      "We offer expert assistance in filing consumer complaints under the Consumer Protection Act, 2019. Our team guides clients through every step of the process, from drafting the complaint to representing the consumer before relevant forums. Whether your grievance involves defective products, inadequate services, or unfair trade practices, we ensure your concerns are presented clearly and compellingly to maximize the chances of a favorable outcome.",
+    imageSrc: "/images/armed.webp",
+    altText: "Filing Consumer Complaints",
+    practiceArea: [
+      {
+        subHeading: "Our Consumer Complaint Filing Services Include:",
+        details: [
+          "1. Legal Process: The process begins with an in-depth consultation to understand the specifics of your grievance. Our team then drafts a complaint that adheres to legal requirements, ensuring it is clear, concise, and persuasive. We represent consumers before the District Consumer Dispute Redressal Commission, State Consumer Dispute Redressal Commission, and the National Consumer Disputes Redressal Commission (NCDRC).",
+          "2. Drafting Complaints: We meticulously draft consumer complaints, ensuring they are legally sound and compelling to maximize your chances of a favorable resolution.",
+          "3. Representation: We provide expert representation before consumer forums, advocating on behalf of our clients to secure the best possible outcomes.",
+          "4. Expert Guidance: Offering strategic advice on the Consumer Protection Act and the best course of action for your specific grievance.",
+          "5. Comprehensive Support: We guide you through every stage of the complaint process, keeping you informed and involved, ensuring a smooth and efficient resolution.",
+          "6. Preventing Complications: By seeking our assistance early, we can help you avoid further complications and increase the chances of a favorable outcome in your case.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Understanding Consumer Disputes",
+    description:
+      "We provide in-depth legal counsel on consumer disputes, explaining the scope of legal protection available to clients. A consumer dispute arises when there is a disagreement between a consumer and a business regarding goods or services. Our experienced team helps consumers identify actionable disputes and pursue legal remedies efficiently. we offer comprehensive legal counsel on the nature of consumer disputes. We meticulously detail the scope of legal protection available to our clients, ensuring they are well-informed and prepared to take action. Our experienced team helps consumers identify actionable disputes and pursue legal remedies efficiently.",
+    imageSrc: "/images/armed2.jpeg",
+    altText: "Understanding Consumer Disputes",
+    practiceArea: [
+      {
+        subHeading: "Our Consumer Dispute Services Include:",
+        details: [
+          "1. Legal Process: We provide comprehensive legal counsel to understand the nature of consumer disputes, ensuring that clients are well-informed about their rights and legal options. We assist in identifying actionable disputes and guide clients in resolving them effectively.",
+          "2. Identification of Disputes: We help consumers recognize and understand whether their grievances are actionable under consumer protection laws, ensuring they are well-prepared for legal proceedings.",
+          "3. Strategic Advice: Our team provides precise legal advice tailored to your case, offering clear guidance on how best to navigate the dispute resolution process and ensure your rights are upheld.",
+          "4. Legal Representation: We represent clients before relevant forums, such as consumer courts or tribunals, and advocate for the resolution of their grievances. Our representation is aimed at securing the most favorable outcome for our clients.",
+          "5. Resolution of Grievances: We ensure that consumer grievances are effectively addressed, advocating for fair remedies and ensuring that consumers' rights are protected throughout the process.",
+          "6. Early Intervention: Seeking our assistance early in a dispute can significantly improve the likelihood of resolving the issue swiftly and efficiently, avoiding prolonged conflicts."
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 3,
+    title: "E-commerce Disputes",
+    description:
+      "With the rise of online shopping, e-commerce disputes have become increasingly prevalent. We specialize in handling cases involving fraudulent online transactions, non-delivery of products, defective goods, and false advertising. Our firm provides tailored legal support for consumers facing issues with e-commerce platforms, ensuring swift resolutions through consumer forums or arbitration.",
+    imageSrc: "/images/armed3.jpg",
+    altText: "E-commerce Disputes",
+    practiceArea: [
+      {
+        subHeading: "Our E-commerce Dispute Services Include:",
+        details: [
+          "1. Legal Process: Our services include comprehensive legal guidance through the entire process of resolving e-commerce disputes. This often involves engaging with e-commerce platforms, drafting and filing complaints with consumer forums, and initiating arbitration if needed. We work diligently to secure a quick and favorable resolution for our clients.",
+          "2. Case Handling: We specialize in handling cases involving fraudulent online transactions, non-delivery of products, defective goods, and false advertising. Our legal team ensures that all relevant evidence is gathered, and that cases are presented clearly and effectively before the appropriate authorities.",
+          "3. Tailored Support: We provide customized legal support based on the specific nature of the e-commerce dispute. Our team understands the unique challenges of online transactions and is equipped to tackle a wide range of issues in the e-commerce space.",
+          "4. Swift Resolutions: We prioritize fast and efficient resolution of disputes. Whether through consumer forums or arbitration, we aim to resolve issues as quickly as possible, minimizing any impact on our clients.",
+          "5. Strategic Advice: Our firm offers strategic legal advice on how to best handle e-commerce disputes, ensuring our clients are well-informed and positioned for success in their case.",
+          "6. Protection of Rights: We work tirelessly to ensure that consumer rights are upheld, protecting clients from fraudulent practices, defective products, and false advertising by e-commerce platforms."
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 4,
+    title: "Real Estate and Housing Disputes",
+    description:
+      "Real estate and housing consumer disputes often involve issues like delayed possession, substandard construction quality, or misleading advertisements by builders and developers. Our lawyers have extensive experience in dealing with such disputes, representing homebuyers in cases related to the Real Estate (Regulation and Development) Act, 2016, or through consumer forums, to secure rightful compensation or the resolution of grievances.",
+    imageSrc: "/images/armed4.jpg",
+    altText: "Real Estate and Housing Disputes",
+    practiceArea: [
+      {
+        subHeading: "Our Real Estate and Housing Disputes Practice Area Includes:",
+        details: [
+          "1. Legal Process: Our firm specializes in representing homebuyers in disputes related to delayed possession, substandard construction, and misleading advertisements by developers and builders. We assist in filing complaints under the Real Estate (Regulation and Development) Act, 2016, and engage with consumer forums to resolve grievances. The legal process typically involves thorough documentation, evidence collection, and presenting the case before relevant authorities to ensure that justice is served.",
+          "2. Representation: We provide strong legal representation for homebuyers in disputes regarding housing and real estate. Whether the issue concerns delayed possession of a property or concerns over construction quality, we work to ensure our clients' interests are protected and that they receive due compensation or resolution from builders and developers.",
+          "3. Strategic Advice: Our legal team provides tailored advice based on the specifics of each dispute. We ensure that clients are fully informed about their rights under the Real Estate (Regulation and Development) Act, 2016, and other relevant laws, providing clarity on the best course of action to take.",
+          "4. Grievance Resolution: Our lawyers are skilled in navigating the complexities of consumer forums to achieve effective dispute resolution. We represent our clients at all stages of the grievance redressal process, ensuring that the issue is resolved efficiently.",
+          "5. Compensation: We assist clients in securing rightful compensation for grievances such as delayed property possession, substandard construction, and misleading builder advertisements. Our goal is to ensure that clients receive fair compensation or that the builder/developer meets their obligations."
+        ],
+      },
+    ],
+  },
+  
+  {
+    id: 5,
+    title: "Medical Negligence and Healthcare Service Disputes",
+    description:
+      "Medical negligence and healthcare service disputes require sensitive and expert handling due to their complex nature. We provide legal representation to clients who have suffered due to substandard medical treatment, negligence, or misdiagnosis. Our experienced legal team is skilled in evaluating medical evidence and pursuing compensation for physical, emotional, and financial damages caused by healthcare providers.",
+    imageSrc: "/images/armed5.jpg",
+    altText: "Medical Negligence and Healthcare Service Disputes",
+    practiceArea: [
+      {
+        subHeading: "Our Medical Negligence and Healthcare Service Disputes Practice Area Includes:",
+        details: [
+          "1. Legal Representation: We provide expert legal representation to clients who have suffered due to medical negligence, substandard healthcare treatment, or misdiagnosis. Our team of experienced lawyers ensures that clients’ rights are upheld and that they receive due compensation for the harm they have suffered.",
+          "2. Evidence Evaluation: Our legal team meticulously analyzes medical records, treatment histories, and other relevant evidence to build a strong case. We work with medical experts to evaluate the standard of care provided and determine whether negligence or substandard treatment played a role in the client's condition.",
+          "3. Pursuing Compensation: We help clients pursue compensation for the physical, emotional, and financial damages they have incurred due to medical negligence. This includes seeking restitution for medical costs, lost wages, pain and suffering, and any long-term effects resulting from the substandard treatment or misdiagnosis.",
+          "4. Thorough Case Handling: From initial consultation to final resolution, we handle every aspect of the case with care and diligence. Our team works closely with clients to gather all necessary information, ensure the case is thoroughly examined, and ensure a comprehensive approach to achieving a favorable outcome."
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Representation in Consumer Forums",
+    description:
+      "Our lawyers provide exceptional representation in state and national consumer forums, ensuring that consumer grievances are addressed at every level. Whether filing petitions in the District Consumer Dispute Redressal Commission, State Consumer Dispute Redressal Commission, or the National Consumer Disputes Redressal Commission, our firm is dedicated to advocating for consumers' rights with the highest standards of legal expertise.",
+    imageSrc: "/images/law45.webp",
+    altText: "Representation in Consumer Forums",
+    practiceArea: [
+      {
+        subHeading: "Our Representation in Consumer Forums Practice Area Includes:",
+        details: [
+          "1. Petition Filing: We assist clients in filing petitions in consumer forums at all levels, including the District Consumer Dispute Redressal Commission, State Consumer Dispute Redressal Commission, and National Consumer Disputes Redressal Commission. Our expertise ensures that each petition is properly filed, adhering to the required legal procedures.",
+          "2. Case Preparation: Our team meticulously prepares each case, gathering all necessary documentation, evidence, and witness statements to support the consumer's grievance. We carefully construct legal arguments to ensure the best possible outcome in the forums.",
+          "3. Legal Representation: We offer steadfast legal representation in all stages of the consumer dispute process. Our lawyers ensure that clients' rights are vigorously defended and advocate on their behalf to secure a favorable resolution.",
+          "4. Consumer Advocacy: We are dedicated to protecting and advancing consumers' rights. Whether the issue concerns product defects, service failures, or unfair practices, we provide the legal support needed to address grievances and secure just compensation or resolution."
+        ],
+      },
+    ],
+  },
+  
+
+  
+ 
+  
+ 
+  
+  
 ];

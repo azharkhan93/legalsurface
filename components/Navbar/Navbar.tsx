@@ -105,23 +105,25 @@ export const Navbar: React.FC = () => {
                   )}
                 </StyledLink>
                 {navbarDropdownOpen === index && (
-                  <Box
+                  <Row
+                  flexDirection={"row"}
                     border="2px solid #D4BDE8"
                     position="absolute"
                     top={30}
                     left={0}
                     bg="secondary"
                     p="s"
-                    py="l"
+                    py="xl"
                     borderRadius="s"
                     alignItems={"center"}
                   >
                     <Box
                       alignItems="center"
+                      justifyContent={"center"}
                       gap={15}
                       flexDirection="row"
                       flexWrap="wrap"
-                      width={"300px"}
+                      width={"590px"}
                     >
                       {item.dropdown.map((dropdownItem, idx) => (
                         <StyledLink
@@ -132,7 +134,7 @@ export const Navbar: React.FC = () => {
                         </StyledLink>
                       ))}
                     </Box>
-                  </Box>
+                  </Row>
                 )}
               </Box>
             ) : (
@@ -215,15 +217,16 @@ export const Navbar: React.FC = () => {
                     </StyledLink>
                     {navbarDropdownOpen === index && (
                       <Box
-                      border={"3px solid red"}
                         p="s"
                         py="l"
                         borderRadius="s"
                         bg="white"
-                        ml="l"
+                        justifyContent={"center"}
+                        // ml="l"
+
                         flexDirection={"row"}
                         flexWrap={"wrap"}
-                        width={"260px"}
+                        width={"350px"}
                       >
                         {item.dropdown.map((dropdownItem, idx) => (
                           <StyledLink
