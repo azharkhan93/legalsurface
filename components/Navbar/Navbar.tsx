@@ -60,6 +60,7 @@ export const Navbar: React.FC = () => {
         position="fixed"
         top={0}
         width="100%"
+        py={"s"}
         justifyContent="space-between"
         alignItems="center"
         bg={isScrolled ? "grey" : "transparent"} 
@@ -70,7 +71,7 @@ export const Navbar: React.FC = () => {
         }}
       >
         <CenterBox>
-          <Image src="" alt="Logo" width={100} height={100} />
+          <Image src="/logo2.png" alt="Logo" width={110} height={100} style={{borderRadius: "5px"}} />
         </CenterBox>
         <Box display={["flex", "none"]} flexDirection="row" gap="xl">
           <Box onClick={handleToggle}>
@@ -169,13 +170,14 @@ export const Navbar: React.FC = () => {
             zIndex={9999}
             display={["flex", "none"]}
             position="fixed"
+            py={"s"}
             top={0}
             left={0}
             gap="header"
             px="l"
           >
             <CenterBox position="absolute" top={0} left={0}>
-              <Image src="" alt="Logo" width={100} height={100} />
+              <Image src="/logo2.png" alt="Logo" width={100} height={100} />
             </CenterBox>
             <Box
               position="absolute"
