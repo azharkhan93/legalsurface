@@ -14,6 +14,7 @@ import { FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
@@ -63,7 +64,7 @@ export const Navbar: React.FC = () => {
         py={"s"}
         justifyContent="space-between"
         alignItems="center"
-        bg={isScrolled ? "grey" : "transparent"} 
+        bg={isScrolled ? "grey" : "grey"} 
         px={["s", "xxl"]}
         style={{
           transition: "background-color 0.3s ease", 
@@ -71,7 +72,7 @@ export const Navbar: React.FC = () => {
         }}
       >
         <CenterBox>
-          <Image src="/logo2.png" alt="Logo" width={110} height={100} style={{borderRadius: "5px"}} />
+          <Image src="/lg.png" alt="Logo" width={110} height={100}  />
         </CenterBox>
         <Box display={["flex", "none"]} flexDirection="row" gap="xl">
           <Box onClick={handleToggle}>
@@ -146,7 +147,7 @@ export const Navbar: React.FC = () => {
           )}
         </Box>
 
-       
+       <Link href={"/contact"}>
         <Button
           variant="primary"
           display={["none", "block"]}
@@ -154,10 +155,11 @@ export const Navbar: React.FC = () => {
           borderRadius="circle"
           px="xl"
           bg="black"
-          style={{ background: "black", borderBottom: "3px solid White" }}
+          style={{ background: "black", borderBottom: "3px solid White", textDecoration: "none" }}
         >
           Book A Consultation
         </Button>
+        </Link>
 
         
         {isOpen ? (

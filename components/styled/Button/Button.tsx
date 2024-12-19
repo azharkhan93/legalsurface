@@ -53,6 +53,6 @@ export const Button = styled.button.withConfig(StyledWithConfig)<ButtonProps>`
   })}
   &:hover {
     background-color: ${BASE_COLORS.grey};
-    color: black;
+    color: white;
   }
 `;
