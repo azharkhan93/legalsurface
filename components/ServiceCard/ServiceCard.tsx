@@ -1,11 +1,15 @@
-import { Box, Text, Button } from "@/components";
+"use client";
+
+import { Box, Text, Button, CenterBox } from "@/components";
 import { IconType } from "react-icons";
+import Link from "next/link";
 
 type ServiceCardProps = {
   icon: IconType;
   title: string;
   description: string;
   link: string;
+  image: string;
 };
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -13,10 +17,12 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   link,
+  image,
 }) => (
   <Box
-  borderRight={"5px solid grey"}
-  borderLeft={"5px solid darkgrey"}
+    position="relative"
+    borderRight={"5px solid grey"}
+    borderLeft={"5px solid darkgrey"}
     borderRadius="m"
     gap={"xl"}
     alignItems={"flex-start"}
@@ -24,23 +30,44 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
     px={"m"}
     py={"m"}
     style={{
-      backgroundImage: `url('/images/legal.jpg')`,
+      backgroundImage: `url('${image}')`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
     }}
   >
-    <Box fontSize="40px" color="white" mt={"s"}>
+    {/* Overlay */}
+    <Box
+      borderRadius={"s"}
+      position="absolute"
+      top={0}
+      left={0}
+      width="95%"
+      height="100%"
+      zIndex={1}
+      style={{
+        backgroundColor: "rgba(0, 0, 0, 0.3)",
+      }}
+    ></Box>
+
+    {/* Content */}
+    <Box fontSize="40px" color="white" mt={"s"} zIndex={2}>
       <Icon />
     </Box>
-    <Text variant="heading" color="white">
+    <Text variant="heading" color="white" zIndex={2}>
       {title}
     </Text>
-    <Text variant="body" color="white">
+    <Text variant="body" color="white" zIndex={2}>
       {description}
     </Text>
-    <Button variant="primary" px={"xl"} py={"s"} borderRadius={"s"}>
-      Learn More
-    </Button>
+    <CenterBox zIndex={2}>
+      <Link href={link} passHref>
+        <Button variant="primary" px={"xl"} py={"s"} borderRadius={"s"}>
+          Learn More
+        </Button>
+      </Link>
+    </CenterBox>
   </Box>
 );
+
+

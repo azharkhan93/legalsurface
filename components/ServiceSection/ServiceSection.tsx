@@ -14,6 +14,7 @@ import {
   FaShieldAlt,
   FaArrowRight,
 } from "react-icons/fa";
+import Link from "next/link"
 
 export const ServiceSection = () => {
   return (
@@ -75,38 +76,43 @@ export const ServiceSection = () => {
         >
           <ServiceCard
             icon={FaGavel}
-            title="Legal Consultation"
+            title="Family Law"
             description="Get expert legal advice and consultation from our experienced attorneys."
+            image="/images/family.jpg"
             link="/contact"
           />
           <ServiceCard
             icon={FaBriefcase}
             title="Corporate Law"
             description="We handle all aspects of corporate law, including mergers and acquisitions."
-            link="/contact"
+            link="/services/corporate-law"
+            image="/images/corporate.jpg"
           />
           <ServiceCard
             icon={FaShieldAlt}
-            title="Personal Injury"
+            title="Criminal Law"
             description="Receive compensation for injuries caused by accidents or negligence."
-            link="/contact"
+            link="/services"
+            image="/images/criminal.jpg"
+            
           />
         </Box>
       </Column>
       <CenterBox position="relative" mt={["l", "none"]}>
-        <Button
-          borderTopLeftRadius={"xl"}
-          py={"m"}
-          px={"header"}
-          variant="primary"
-          // pr={"xxl"}
-        >
-          Explore More
-          <Box position={"absolute"} right="20px">
-            <FaArrowRight size={20} />
-          </Box>
-        </Button>
-      </CenterBox>
+  <Link href="/services" passHref style={{ textDecoration: "none" }}>
+    <Button
+      borderTopLeftRadius={"xl"}
+      py={"m"}
+      px={"header"}
+      variant="primary"
+    >
+      Explore More
+      <Box position={"absolute"} right="20px">
+        <FaArrowRight size={20} />
+      </Box>
+    </Button>
+  </Link>
+</CenterBox>
     </Box>
   );
 };
