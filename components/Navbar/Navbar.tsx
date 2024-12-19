@@ -168,7 +168,7 @@ export const Navbar: React.FC = () => {
             justifyContent="center"
             width="100vw"
             height="100vh"
-            bg="secondary"
+            bg="grey"
             zIndex={9999}
             display={["flex", "none"]}
             position="fixed"
