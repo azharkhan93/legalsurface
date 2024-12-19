@@ -147,7 +147,7 @@ export const Navbar: React.FC = () => {
           )}
         </Box>
 
-       <Link href={"/contact"}>
+       {/* <Link href={"/contact"}> */}
         <Button
           variant="primary"
           display={["none", "block"]}
@@ -155,11 +155,11 @@ export const Navbar: React.FC = () => {
           borderRadius="circle"
           px="xl"
           bg="black"
-          style={{ background: "black", borderBottom: "3px solid White", textDecoration: "none" }}
+          style={{ background: "black", borderBottom: "3px solid White", textDecoration: "none", border: "3px solid white" }}
         >
           Book A Consultation
         </Button>
-        </Link>
+        {/* </Link> */}
 
         
         {isOpen ? (
@@ -179,7 +179,7 @@ export const Navbar: React.FC = () => {
             px="l"
           >
             <CenterBox position="absolute" top={0} left={0}>
-              <Image src="/logo2.png" alt="Logo" width={100} height={100} />
+              <Image src="/lg.png" alt="Logo" width={100} height={100} />
             </CenterBox>
             <Box
               position="absolute"
