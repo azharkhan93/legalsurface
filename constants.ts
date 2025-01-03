@@ -79,7 +79,7 @@ export const reviews = [
     alt: "#1157 picture",
   },
   {
-    text: "The day of the hearing was nerve-wracking, but Legal Surface confidence and calm demeanor made a world of difference. He presented my case compellingly and with undeniable clarity",
+    text: "The day of the hearing was nerve-wracking, but Legal Surface confidence and calm demeanor made a world of difference. He presented my case compellingly and with undeniable clarity. I highly recommend their services!",
     name: "Ms Sumaira",
     title: "Regular Client",
     image: "/images/nik.png",
