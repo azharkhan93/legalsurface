@@ -39,23 +39,39 @@ export const NavbarData = [
     link: "/careers",
   },
 ];
-
 export const slidesData = [
   {
     title:
       "Legal Surface prides itself on a collaborative approach to legal practice.",
     subtitle:
       "As noted by one of our senior lawyers, at Legal Surface, we don't just represent clients — we champion their causes with integrity and dedication. Our approach is grounded in meticulous preparation and a relentless commitment to achieving justice.",
+    image: "/images/n1.jpg", 
   },
-
   {
     title:
       "Trust Legal Surface for reliable and dedicated legal representation.",
-
     subtitle:
-      "Navigate complex legal challenges with unwavering confidence. Our experienced team is committed to offering clear, strategic, and effective guidance tailored to your unique situation. Whether you're dealing with personal or business matters, we stand by you every step of the way, ensuring your legal journey is as smooth and successful as possible",
+      "Navigate complex legal challenges with unwavering confidence. Our experienced team is committed to offering clear, strategic, and effective guidance tailored to your unique situation. Whether you're dealing with personal or business matters, we stand by you every step of the way, ensuring your legal journey is as smooth and successful as possible.",
+    image: "/images/jin.jpg", 
   },
 ];
+
+// export const slidesData = [
+//   {
+//     title:
+//       "Legal Surface prides itself on a collaborative approach to legal practice.",
+//     subtitle:
+//       "As noted by one of our senior lawyers, at Legal Surface, we don't just represent clients — we champion their causes with integrity and dedication. Our approach is grounded in meticulous preparation and a relentless commitment to achieving justice.",
+//   },
+
+//   {
+//     title:
+//       "Trust Legal Surface for reliable and dedicated legal representation.",
+
+//     subtitle:
+//       "Navigate complex legal challenges with unwavering confidence. Our experienced team is committed to offering clear, strategic, and effective guidance tailored to your unique situation. Whether you're dealing with personal or business matters, we stand by you every step of the way, ensuring your legal journey is as smooth and successful as possible",
+//   },
+// ];
 export const reviews = [
   {
     text: "Thank you, before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...",
