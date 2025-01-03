@@ -45,7 +45,7 @@ export const slidesData = [
       "Legal Surface prides itself on a collaborative approach to legal practice.",
     subtitle:
       "As noted by one of our senior lawyers, at Legal Surface, we don't just represent clients — we champion their causes with integrity and dedication. Our approach is grounded in meticulous preparation and a relentless commitment to achieving justice.",
-    image: "/images/n1.jpg", 
+    image: "/images/jk.jpg", 
   },
   {
     title:
