@@ -9,14 +9,13 @@ export const About: React.FC = () => {
   return (
     <>
       <AnimatedColumn
-      ref={refColumn}
-      isInView={isInViewColumn}
-
+        ref={refColumn}
+        isInView={isInViewColumn}
         width={"100%"}
         height={"100vh"}
         alignItems={"flex-start"}
         style={{
-          backgroundImage: `url('/images/lg2.jpeg')`,
+          backgroundImage: `url('/images/ligo.jpeg')`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -40,14 +39,15 @@ export const About: React.FC = () => {
             Facilitating commercial legal solutions
           </Text>
           <Text variant={"body"}>
-          Our journey from a single legal professional to a team of over fifty is a
-reflection of our dedication to improving legal aid. Each case we handle is a testament to our
-commitment to excellence and our relentless pursuit of justice for those we serve.
+            Our journey from a single legal professional to a team of over fifty
+            is a reflection of our dedication to improving legal aid. Each case
+            we handle is a testament to our commitment to excellence and our
+            relentless pursuit of justice for those we serve.
           </Text>
           <AnimatedRow
-          ref={refRow}
-          isInView={isInViewRow}
-          flexDirection={["row", "row"]}
+            ref={refRow}
+            isInView={isInViewRow}
+            flexDirection={["row", "row"]}
             width={"100%"}
             gap={["l", "header"]}
             justifyContent={"space-between"}
