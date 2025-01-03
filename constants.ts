@@ -56,58 +56,42 @@ export const slidesData = [
   },
 ];
 
-// export const slidesData = [
-//   {
-//     title:
-//       "Legal Surface prides itself on a collaborative approach to legal practice.",
-//     subtitle:
-//       "As noted by one of our senior lawyers, at Legal Surface, we don't just represent clients — we champion their causes with integrity and dedication. Our approach is grounded in meticulous preparation and a relentless commitment to achieving justice.",
-//   },
-
-//   {
-//     title:
-//       "Trust Legal Surface for reliable and dedicated legal representation.",
-
-//     subtitle:
-//       "Navigate complex legal challenges with unwavering confidence. Our experienced team is committed to offering clear, strategic, and effective guidance tailored to your unique situation. Whether you're dealing with personal or business matters, we stand by you every step of the way, ensuring your legal journey is as smooth and successful as possible",
-//   },
-// ];
 export const reviews = [
   {
-    text: "Thank you, before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...",
-    name: "Max Conversion",
-    title: "LittleSnippets.net",
+    text: "The lawyers at Legal Surface are truly experts in their field. They handled my case with precision and provided valuable advice throughout the process. I felt secure knowing I was in good hands.",
+    name: "Mr Feroz",
+    title: "Regular Client",
     image: "/images/nik.png",
     alt: "Max Conversion picture",
   },
   {
-    text: "You know sometimes when I'm talking, my words can't keep up with my thoughts...",
-    name: "Pelican Steve",
-    title: " LittleSnippets.net",
+    text: "If you're looking for a well-written review for a law firm in Srinagar that highlights them as the best lawyers, here's a suggestion I recently had the pleasure of working with the best lawyer in Srinagar.",
+    name: "Mr Kamran",
+    title: "Regular Client",
     image: "/images/nik.png",
     alt: "Pelican Steve picture",
   },
   {
-    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
-    name: "#1157",
-    title: " LittleSnippets.net",
+    text: "They guided me with integrity and kept me informed every step of the way.I am so grateful to have found the best lawyer in Srinagar. Legal Surface worked diligently on my case, achieving impressive results.",
+    name: "Mr Sameer",
+    title: "Regular Client",
     image: "/images/nik.png",
     alt: "#1157 picture",
   },
   {
-    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
-    name: "#1157",
-    title: " LittleSnippets.net",
+    text: "The day of the hearing was nerve-wracking, but Legal Surface confidence and calm demeanor made a world of difference. He presented my case compellingly and with undeniable clarity",
+    name: "Ms Sumaira",
+    title: "Regular Client",
     image: "/images/nik.png",
     alt: "#1157 picture",
   },
-  {
-    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
-    name: "#1157",
-    title: " LittleSnippets.net",
-    image: "/images/nik.png",
-    alt: "#1157 picture",
-  },
+  // {
+  //   text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+  //   name: "#1157",
+  //   title: " LittleSnippets.net",
+  //   image: "/images/nik.png",
+  //   alt: "#1157 picture",
+  // },
 ];
 
 export const services = [
