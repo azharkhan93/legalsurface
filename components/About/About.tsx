@@ -15,7 +15,7 @@ export const About: React.FC = () => {
         height={"100vh"}
         alignItems={"flex-start"}
         style={{
-          backgroundImage: `url('/images/ligo.jpeg')`,
+          backgroundImage: `url('/images/h.jpg')`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
