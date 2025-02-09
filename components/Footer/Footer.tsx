@@ -150,13 +150,13 @@ export const Footer = () => {
 
             <Column justifyContent={"center"} gap={"xxxl"}>
               <Text variant="body" color="white">
-                +91 9419007365
+                Contact Number: +91 9419007365
               </Text>
               {/* <Text variant="body" color="white">
                 skuastlansoil@gmail.com
               </Text> */}
               <Text variant="body" color="white">
-                legalsurfaceinfo@gmail.cm
+                legalsurfaceinfo@gmail.com
               </Text>
               <Text variant="body" color="white" width={["100%","250px"]}>
                 03,Stadium Road, Shergarhi Hazuri Bagh, Srinagr, J&K, 190006
