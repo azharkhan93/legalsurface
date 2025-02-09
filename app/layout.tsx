@@ -21,7 +21,10 @@ export default function RootLayout({
       <Head>
         <title>Contact Us For Quality Legal Aid </title>
         <meta name="description" content="Get in touch with us for quality legal aid." />
-        <link rel="icon" href="/lg.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* <link rel="icon" type="image/png" href="/lg.png" />
+        <link rel="apple-touch-icon" href="/lg.png" /> */}
       </Head>
       <body>
         <GlobalStyle />
