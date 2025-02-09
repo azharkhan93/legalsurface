@@ -1,4 +1,5 @@
 "use client";
+import Head from "next/head";
 import { Box, GlobalStyle } from "@/components";
 import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
@@ -15,26 +16,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //     easing: 'ease-in-out',
-  //     once: true,
-  //   });
-  // }, []);
-
-  // const router = useRouter();
-  // useEffect(() => {
-  //   if (localStorage.getItem("token") === null) {
-  //     router.push("/");
-  //   }
-  // }, [router]);
-
   return (
     <html lang="en">
+      <Head>
+        <title>Contact Us For Quality Legal Aid </title>
+        <meta name="description" content="Get in touch with us for quality legal aid." />
+        <link rel="icon" href="/lg.png" />
+      </Head>
       <body>
         <GlobalStyle />
-
         <AppThemeProvider>
           <LoaderProvider>
             <Navbar />
@@ -46,3 +36,4 @@ export default function RootLayout({
     </html>
   );
 }
+
