@@ -94,10 +94,10 @@ export default function Page({ params }: PageProps) {
                       {post.title}
                     </Text>
 
-                    <Text variant="body" color="white">
+                    {/* <Text variant="body" color="white">
                       {`Created by: ${post.createdBy || "Unknown"}`}
-                    </Text>
-                    <Row width={"90%"} justifyContent={"space-between"}>
+                    </Text> */}
+                    {/* <Row width={"90%"} justifyContent={"space-between"}>
                       <Text variant="body" color="white">
                         {`Created on: ${new Date(
                           post.createdDate || ""
@@ -106,7 +106,7 @@ export default function Page({ params }: PageProps) {
                       <Text variant="body" color="white">
                         {post.status || "No status available"}
                       </Text>
-                    </Row>
+                    </Row> */}
                   </Column>
                 </Box>
               ) : (
