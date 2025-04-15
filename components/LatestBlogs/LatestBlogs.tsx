@@ -20,11 +20,8 @@ export const LatestBlogs = () => {
         </Text>
       </Column>
       <Text color={"secondary"} variant={"body"} width={["100%","800px"]} px={["none","xl"]}>
-        Here is an overview of the various departments at our university. Each
-        department offers unique programs and services designed to help you
-        achieve your academic and career goals. Explore our departments to learn
-        more about the opportunities available.
-      </Text>
+    Stay updated with our latest blogs, insights, and articles curated to keep you informed and inspired. Discover expert opinions, trending topics, and valuable tips across various domains.
+  </Text>
       <CenterBox
       width={"100%"}
       bg={"grey"}

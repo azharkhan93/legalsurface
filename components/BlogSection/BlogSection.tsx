@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Box } from "../styled";
+import { Box, Column, Text } from "../styled";
 import { PostCards } from "./components/PostCards";
 import { LoadingCard } from "./components/LoadingCard";
 
@@ -47,6 +47,24 @@ export const BlogSection = ({ limit }: { limit?: number }) => {
   const itemsToRender = loading ? skeletons : posts.slice(0, limit);
 
   return (
+    <>
+    <Column alignItems={"flex-start"} gap={"xl"} px={"m"}  bg={"secondary"} py={"xxxl"} >
+      <Text variant={"heading"} fontWeight={"bold"} color={"white"}>
+        Blogs
+      </Text>
+      <Box
+        height={"3px"}
+        bg={"white"}
+        width={"20%"}
+        borderRadius={"circle"}
+        ml={"header"} />
+      <Text variant={"subHeading"} fontWeight={"bold"} color={"white"}>
+        Explore Now
+      </Text>
+      <Text color={"white"} variant={"body"} width={["100%", "800px"]} px={["none", "xl"]}>
+        Stay updated with our latest blogs, insights, and articles curated to keep you informed and inspired. Discover expert opinions, trending topics, and valuable tips across various domains.
+      </Text>
+    </Column>
     <Box
       display="flex"
       flexWrap="wrap"
@@ -57,19 +75,20 @@ export const BlogSection = ({ limit }: { limit?: number }) => {
       py={["xl", "header"]}
       bg={"secondary"}
     >
-      {itemsToRender.map((item, index) => {
-        if (loading && item === null) {
-          return <LoadingCard key={index} />;
-        }
 
-        return (
-          <PostCards
-            key={(item as Post).id}
-            post={item as Post}
-            loading={false}
-          />
-        );
-      })}
-    </Box>
+
+        {itemsToRender.map((item, index) => {
+          if (loading && item === null) {
+            return <LoadingCard key={index} />;
+          }
+
+          return (
+            <PostCards
+              key={(item as Post).id}
+              post={item as Post}
+              loading={false} />
+          );
+        })}
+      </Box></>
   );
 };
