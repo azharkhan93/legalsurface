@@ -159,7 +159,7 @@ export const Footer = () => {
                 Mail Us: legalsurface3@gmail.com
               </Text>
               <Text variant="body" color="white" width={["100%","250px"]}>
-                03,Stadium Road, Shergarhi Hazuri Bagh, Srinagr, J&K, 190006
+                Lambert Lane Wani Complex, Srinagr, J&K, 190001
               </Text>
             </Column>
           </Box>
