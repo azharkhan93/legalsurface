@@ -36,9 +36,11 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
   return (
     <Column
       width={{ xs: "100%", sm: "48%", md: "30%" }}
-      border="2px solid white"
+      borderTop="2px solid gray"
+      borderBottom={"2px solid gray"}
       borderRadius="xl"
       overflow={"hidden"}
+      height={"auto"}
       bg={"white"}
     >
       {post.file ? (
@@ -47,7 +49,7 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
           alt={post.title || "Post Image"}
           width={500}
           height={270}
-          style={{ width: "100%", height: "auto", borderRadius: "0 0 0 0" }}
+          style={{ width: "100%", height: "250px", borderRadius: "0 0 0 0" }}
         />
       ) : (
         <Box
@@ -59,7 +61,7 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
         />
       )}
       <Column alignItems="flex-start" gap="l" px="m" py="xxxl">
-        <Text variant="subHeading" >
+        <Text variant="body" >
           {post.title || "Untitled Post"}
         </Text>
         <Text variant="body" color="secondary">
@@ -86,21 +88,21 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
           flexDirection={"row"}
           justifyContent={"space-between"}
         >
-          <Text variant="body" color="secondary">
+          {/* <Text variant="body" color="secondary">
             {post.createdBy
               ? `Created by: ${post.createdBy}`
               : "Author not available"}
           </Text>
           <Text variant="body" color="secondary">
             {post.status ? `Status: ${post.status}` : "Status not available"}
-          </Text>
+          </Text> */}
           
         </Box>
-        <Text variant="body" color="secondary">
+        {/* <Text variant="body" color="secondary">
           {post.createdDate
             ? `Created on: ${new Date(post.createdDate).toLocaleDateString()}`
             : "Date not available"}
-        </Text>
+        </Text> */}
       </Column>
     </Column>
   );
