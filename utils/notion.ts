@@ -9,7 +9,7 @@ export async function getBlogPosts() {
 
     const blogPosts = await Promise.all(
       response.results.map(async (page: any) => {
-        console.log("Raw page data:", page);
+        // console.log("Raw page data:", page);
         const slug = page.properties["slug"]?.rich_text?.[0]?.plain_text || "";
         const file =
           page.properties["Files & media"]?.files?.[0]?.type === "external"
