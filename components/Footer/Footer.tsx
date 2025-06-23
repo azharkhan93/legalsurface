@@ -15,6 +15,7 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
+  FaYoutube,
 } from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import { useRouter } from "next/navigation";
@@ -117,9 +118,30 @@ export const Footer = () => {
               our. With a strong foundation in,
             </Text>
             <CenterBox gap={"xl"} flexDirection={"row"} width={"100%"}>
-              <FaInstagram size={25} fill="white" />
-              <FaFacebook size={25} fill="white" />
-              <FaLinkedin size={25} fill="white" />
+              {/* <a href="#" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={25} fill="white" />
+              </a> */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61573509342855"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook size={25} fill="white" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/legal-surface-74217427b/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={25} fill="white" />
+              </a>
+              <a
+                href="https://www.youtube.com/@legalsurface-yv1dh"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube size={25} fill="white" />
+              </a>
             </CenterBox>
           </Column>
           <Box
@@ -152,9 +174,6 @@ export const Footer = () => {
               <Text variant="body" color="white">
                 Contact Number: +91 9419007365
               </Text>
-              {/* <Text variant="body" color="white">
-                skuastlansoil@gmail.com
-              </Text> */}
               <Text variant="body" color="white">
                 Mail Us: legalsurface3@gmail.com
               </Text>
@@ -209,7 +228,7 @@ export const Footer = () => {
 
       <CenterBox py={"m"} bg={"secondary"}>
         <Text variant={"body"} color={"white"}>
-          © 2024 Legal Surface. All Rights Reserved
+          © 2025 Legal Surface. All Rights Reserved
         </Text>
       </CenterBox>
     </>
